@@ -17,14 +17,14 @@ const fetchLanguageData = async (language: string) => {
 };
 
 // Function to get translated text
-export const translateText = (keys: string[], formatArgs?: any[]): string => {
+export const translateText = (key: string, formatArgs?: any[]): string => {
   const { t } = useTranslation();
 
   // Construct the key path for i18next
-  const keyPath = keys.join('.');
+  // const keyPath = keys.join('.');
 
   // Get the translated text
-  let translatedText = t(keyPath);
+  let translatedText = t(key);
 
   // If there are format arguments, replace placeholders in the translated text
   if (formatArgs && formatArgs.length > 0) {

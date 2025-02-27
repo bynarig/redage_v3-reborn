@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {translateText} from '#/shared/locale'
+import {translateText} from '#/shared/locale/index'
 import './assets/css/playerlist.css';
 // @ts-ignore
 import SmallLogo from '#/shared/assets/images/logo.png';
@@ -55,19 +55,19 @@ const PlayerList: React.FC = () => {
                             onClick={() => sortPlayers(1)}
                             className={`${playersSort === 1 ? 'selectedSort' : ''} ${sortRevert ? 'reversedSort' : ''}`}
                         >
-                            {/*{translateText('admin', 'Никнейм')}*/}
+                            {translateText('admin', 'Никнейм')}
                         </th>
                         <th
                             onClick={() => sortPlayers(2)}
                             className={`${playersSort === 2 ? 'selectedSort' : ''} ${sortRevert ? 'reversedSort' : ''}`}
                         >
-                            {/*{translateText('admin', 'Уровень')}*/}
+                            {translateText('admin', 'Уровень')}
                         </th>
                         <th
                             onClick={() => sortPlayers(3)}
                             className={`${playersSort === 3 ? 'selectedSort' : ''} ${sortRevert ? 'reversedSort' : ''}`}
                         >
-                            {/*{translateText('admin', 'Пинг')}*/}
+                            {translateText('admin', 'Пинг')}
                         </th>
                     </tr>
                     </thead>
