@@ -1,9 +1,9 @@
 <script>
     import { format } from 'api/formatter'
     import { slide, fade } from 'svelte/transition';
-    export let selectDropMain;
-    export let active;
-    export let menu;
+    export const selectDropMain;
+    export const active;
+    export const menu;
 
     const selectdropMain = (id) => {
         selectDropMain(id);

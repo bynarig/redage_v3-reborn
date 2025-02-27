@@ -1,6 +1,6 @@
 <script>
 
-    export let phoneNotification;
+    export const phoneNotification;
 
     import { formatMessage } from "@/views/player/hudevo/phonenew/components/messages/data";
 

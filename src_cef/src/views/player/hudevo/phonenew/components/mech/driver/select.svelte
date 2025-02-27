@@ -1,9 +1,9 @@
 <script>
     import { translateText } from 'lang'
     import {executeClient, executeClientToGroup} from "api/rage";
-    export let closeMenu;
+    export const closeMenu;
 
-    export let selectMech;
+    export const selectMech;
 
     const onStartPoint = () => {
         executeClient ("createWaypoint", selectMech.pos.x, selectMech.pos.y);

@@ -1,8 +1,8 @@
 <script>
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage';
-    export let model;
-    export let owner;
+    export const model;
+    export const owner;
 
     let value = "";
 </script>

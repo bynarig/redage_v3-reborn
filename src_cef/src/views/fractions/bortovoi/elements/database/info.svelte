@@ -1,5 +1,5 @@
 <script>
-    export let onChangePage;
+    export const onChangePage;
     import { translateText } from 'lang'
 
 </script>

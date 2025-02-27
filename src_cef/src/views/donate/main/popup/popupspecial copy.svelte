@@ -1,5 +1,5 @@
 <script>
-    export let popupData;
+    export const popupData;
     let popupNabor = false;
 </script>
 <div class="newdonate__special">

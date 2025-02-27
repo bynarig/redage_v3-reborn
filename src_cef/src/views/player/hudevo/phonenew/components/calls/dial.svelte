@@ -3,7 +3,7 @@
     import { executeClientToGroup } from 'api/rage'
     import { validate } from 'api/validation';
 
-    export let updateView;
+    export const updateView;
 
     import AddContact from "./addContact.svelte";
 

@@ -1,15 +1,15 @@
 <script>
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage';
-    export let fname;
-    export let lname;
-    export let pass;
-    export let fraction_name;
-    export let phonenumber;
-    export let gender;
-    export let lvl;
-    export let lic;
-    export let houseInfo;
+    export const fname;
+    export const lname;
+    export const pass;
+    export const fraction_name;
+    export const phonenumber;
+    export const gender;
+    export const lvl;
+    export const lic;
+    export const houseInfo;
 
     let value = "";
 </script>

@@ -1,6 +1,6 @@
 <script>
-    export let selectedId;
-    export let onSelectedView;
+    export const selectedId;
+    export const onSelectedView;
 
 
     let isLoad = false;

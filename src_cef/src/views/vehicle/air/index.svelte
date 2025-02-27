@@ -8,7 +8,7 @@
     import rangeslider from 'components/rangeslider/index'
     import { format } from 'api/formatter'
     import { executeClient } from 'api/rage'
-    export let viewData;
+    export const viewData;
 
     if (!viewData) viewData = '[]';
 

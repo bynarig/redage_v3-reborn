@@ -8,7 +8,7 @@
     import { serverDateTime, isEvent } from 'store/server'
     import { TimeFormat } from 'api/moment'
 
-    export let visible = false;
+    export const visible = false;
     
     let selectView = "Inventory";
     let timerView = "Inventory";

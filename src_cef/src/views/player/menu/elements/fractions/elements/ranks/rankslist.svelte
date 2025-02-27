@@ -3,7 +3,7 @@
     import { executeClientToGroup, executeClientAsyncToGroup } from "api/rage";
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
 
-    export let ranks;
+    export const ranks;
 
     import { format } from 'api/formatter'
 
@@ -47,7 +47,7 @@
 
     //
 
-    export let onSettings;
+    export const onSettings;
 
     import { spring } from 'svelte/motion';
 

@@ -1,8 +1,8 @@
 <script>
     import { translateText } from 'lang'
-    export let onSelectedCategory;
-    export let closeMenu;
-    export let updateHeightMap;
+    export const onSelectedCategory;
+    export const closeMenu;
+    export const updateHeightMap;
 
 
     import { executeClientAsyncToGroup } from 'api/rage'

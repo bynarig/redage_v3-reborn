@@ -1,7 +1,7 @@
 <script>
     import { setGroup, executeClient, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
 
-    export let selectView;
+    export const selectView;
 
     import { translateText } from 'lang'
 

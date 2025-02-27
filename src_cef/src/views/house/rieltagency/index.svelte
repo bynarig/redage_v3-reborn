@@ -9,7 +9,7 @@
     import RieltInfoBusiness from './elements/brielt-info.svelte'
 
     
-    export let viewData;
+    export const viewData;
 
     if (!viewData) viewData = {
         buyPrice: 5000,

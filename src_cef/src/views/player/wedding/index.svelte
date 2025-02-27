@@ -5,7 +5,7 @@
     import './main.sass';
     import InputCustom from 'components/input/index.svelte'
     import { validate } from 'api/validation';
-    export let viewData;
+    export const viewData;
 
     const price = viewData.price;
 

@@ -7,7 +7,7 @@
     import { format } from 'api/formatter'
     import { storeQuests, selectQuest } from 'store/quest'
     import { executeClient } from 'api/rage'
-    export let visible;
+    export const visible;
 
     let QuestsList = [];
     let OldQuest = [];

@@ -5,7 +5,7 @@
     import { onDestroy } from 'svelte'
     import './css/main.sass';
     import './fontlicenses/style.css';
-    export let viewData;
+    export const viewData;
 
 /*     let viewData = {
             page: "lsnews",

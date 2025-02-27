@@ -4,12 +4,12 @@
 
     import { loadImage, loadAwaitImage } from 'api/functions'
 
-    export let getPosition = false;
+    export const getPosition = false;
 
-    export let elementWidth = 0;
-    export let elementHeight = 0;
+    export const elementWidth = 0;
+    export const elementHeight = 0;
 
-    export let onSelectItem;
+    export const onSelectItem;
 
     let posXToMap,
         posYToMap;
@@ -33,7 +33,7 @@
 
     import { fade } from 'svelte/transition'
 
-    export let zones;
+    export const zones;
 
     let isDown;
 
@@ -745,7 +745,7 @@
     import vokzal from './svg/vokzal.svelte'
     import speedcarrent from './svg/speedcarrent.svelte'
 
-    export let selectItem;
+    export const selectItem;
 </script>
 
 {#if getPosition}

@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
-    export let SetPopup;
-    export let popupData;
+    export const SetPopup;
+    export const popupData;
     import { format } from 'api/formatter'
     import {executeClient, executeClientAsync} from 'api/rage'
 

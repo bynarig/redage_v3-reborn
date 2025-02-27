@@ -479,7 +479,7 @@
     onDestroy(() => {
         SaveData ();
     });
-    export let visible;
+    export const visible;
     $: {
         if (!visible && isUpdate) {
             SaveData ();

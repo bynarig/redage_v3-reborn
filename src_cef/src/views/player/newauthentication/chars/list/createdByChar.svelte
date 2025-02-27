@@ -6,8 +6,8 @@
     import moment from 'moment';
     import { setTime, elapsed } from 'api/moment'
     import { executeClient } from 'api/rage'
-    export let charid;
-    export let char;
+    export const charid;
+    export const char;
     
     const charData = char.Data;
     
@@ -32,10 +32,10 @@
             updateTime (char.Data.DeleteData)
     });
 
-    //export let FractionID;
-    //export let Money;
-    //export let BankMoney;
-    //export let CustomIsCreated;
+    //export const FractionID;
+    //export const Money;
+    //export const BankMoney;
+    //export const CustomIsCreated;
     
     const GetMaxExp = (lvl) => {
         return 3 + lvl * 3;

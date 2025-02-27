@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { fade } from 'svelte/transition'
     import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from "api/rage";
-    export let onSelectedView;
+    export const onSelectedView;
 
     const soundList = [
         {

@@ -4,7 +4,7 @@
     import HouseBuyPanel from './elements/housebuypanel.svelte';
     import HousePopup from './elements/popup.svelte';
 
-    export let viewData;
+    export const viewData;
 
     if (!viewData)
         viewData = {

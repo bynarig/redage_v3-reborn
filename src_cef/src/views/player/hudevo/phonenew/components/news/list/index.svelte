@@ -11,7 +11,7 @@
             newsList = JSON.parse(result);
     });
 
-    export let onSelectedView;
+    export const onSelectedView;
 
     let isFilter = false;
     import Filter from './filter.svelte'

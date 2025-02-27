@@ -3,12 +3,12 @@
     import {translateText} from "lang";
     import {executeClient, executeClientToGroup} from "api/rage";
 
-    export let url;
-    export let uuid;
-    export let cls;
-    export let setAvatar;
+    export const url;
+    export const uuid;
+    export const cls;
+    export const setAvatar;
 
-    export let cameraLink;
+    export const cameraLink;
     const updateCameraToggled = () => {
         if (cameraLink == true) {
             return window.notificationAdd(4, 9, translateText('fractions', 'Фотография загружается'), 3000);

@@ -2,9 +2,9 @@
     import { translateText } from 'lang'
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
 
-    export let departments;
-    export let onSelectDepartment;
-    export let onDepartmentDelete;
+    export const departments;
+    export const onSelectDepartment;
+    export const onDepartmentDelete;
 
     let searchText = ""
     const filterCheck = (elText, text) => {

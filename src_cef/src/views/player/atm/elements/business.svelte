@@ -1,7 +1,7 @@
 <script>
     import { executeClient } from 'api/rage'
-    export let type;
-    export let subdata;
+    export const type;
+    export const subdata;
 
     const emulPress = (index) => {
         executeClient ("atmCB", type, index);

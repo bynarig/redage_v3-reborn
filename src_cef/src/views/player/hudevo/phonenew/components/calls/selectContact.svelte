@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { addListernEvent } from 'api/functions'
 
-    export let updateListContacts;
+    export const updateListContacts;
 
     import { validate } from 'api/validation';
     import { selectedImage, selectedImageFunc, selectNumber } from './../../stores'

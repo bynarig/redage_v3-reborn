@@ -3,7 +3,7 @@
     import { executeClient } from 'api/rage'
     import { fly } from 'svelte/transition';
     import { translateText } from 'lang'
-    export let popupData;
+    export const popupData;
 
     let title = popupData.title,
         text = popupData.text;

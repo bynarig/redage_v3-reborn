@@ -1,18 +1,18 @@
 <script>
     import './main.sass';
     
-    export let isLine = true;
+    export const isLine = true;
     
-    export let key = "";
-    export let x = 0;
-    export let y = 0;
+    export const key = "";
+    export const x = 0;
+    export const y = 0;
 
-    export let xLeftName = "";
-    export let xRightName = "";
-    export let yTopName = "";
-    export let yBottomName = "";
+    export const xLeftName = "";
+    export const xRightName = "";
+    export const yTopName = "";
+    export const yBottomName = "";
 
-    export let onChange;
+    export const onChange;
 
     let use = false;
 

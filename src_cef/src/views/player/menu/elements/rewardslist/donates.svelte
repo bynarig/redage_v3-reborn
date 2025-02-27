@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import Donate from './elements/donate.svelte';
-    export let onSetLoad;
+    export const onSetLoad;
     import { executeClient } from "api/rage";
     executeClient ("client.rewardslist.donate.load");
 

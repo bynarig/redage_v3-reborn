@@ -2,8 +2,8 @@
     import { translateText } from 'lang'
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
 
-    export let settings;
-    export let onSettings;
+    export const settings;
+    export const onSettings;
 
     //search
 

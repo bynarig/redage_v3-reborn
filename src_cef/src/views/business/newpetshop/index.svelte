@@ -2,7 +2,7 @@
     import {hasJsonStructure} from "api/functions";
     import { translateText } from 'lang'
 
-    export let viewData;
+    export const viewData;
 
     if (hasJsonStructure (viewData))
         viewData = JSON.parse(viewData);

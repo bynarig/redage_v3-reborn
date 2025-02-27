@@ -1,10 +1,10 @@
 <script>
     import characteristics from './characteristics.js';
 
-    export let key = "";
-    export let active = false;
-    export let preset = 0;
-    export let onChange;
+    export const key = "";
+    export const active = false;
+    export const preset = 0;
+    export const onChange;
 
     const OnChangePreset = (change) => {
         if (onChange)

@@ -1,7 +1,7 @@
 <script>
     import './main.sass'
     import { executeClient, executeClientAsync, executeClientAsyncToGroup } from "api/rage";
-    export let viewData;
+    export const viewData;
 
     $: if (viewData && typeof viewData === "string") 
         viewData = JSON.parse (viewData)

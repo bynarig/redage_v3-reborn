@@ -1,8 +1,8 @@
 <script>
 
     import { executeClientToGroup } from "api/rage";
-    export let count;
-    export let selectPage;
+    export const count;
+    export const selectPage;
 
     const maxPage = 5;
 

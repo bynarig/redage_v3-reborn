@@ -1,8 +1,8 @@
 <script>
     import { businessType } from 'json/realEstate.js'
     import { format } from 'api/formatter'
-    export let selectData;
-    export let buyPrice;
+    export const selectData;
+    export const buyPrice;
 </script>
 
 <div class="rielt__rielt_info">

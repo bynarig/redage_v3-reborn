@@ -7,7 +7,7 @@
     import { serverDonatMultiplier, serverId } from 'store/server'
     import './main.sass'
 
-    export let popupData;
+    export const popupData;
 
     if (!popupData) popupData = {
         id: 0,

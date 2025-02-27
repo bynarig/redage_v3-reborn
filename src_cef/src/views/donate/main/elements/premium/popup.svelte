@@ -1,8 +1,8 @@
 <script>
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage'
-    export let popupData;
-    export let SetPopup;
+    export const popupData;
+    export const SetPopup;
     import { accountSubscribe } from 'store/account'
 
     const onBuy = () => {

@@ -12,7 +12,7 @@
         donateToggled = true,
         donateText = "1";
 
-    export let popupData;
+    export const popupData;
 
 	const onHandleInput = (value) => {
         value = Math.round(value.replace(/\D+/g, ""));

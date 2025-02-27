@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import {executeClientAsyncToGroup, executeClientToGroup} from "api/rage";
     import {hasJsonStructure} from "api/functions";
-    export let onSelectedView;
+    export const onSelectedView;
 
     let itemList = [];
     executeClientAsyncToGroup("auction.getItem").then((result) => {

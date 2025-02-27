@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import { fly } from 'svelte/transition';
-    export let SafeSone;
+    export const SafeSone;
 
     let
         isCase = false,

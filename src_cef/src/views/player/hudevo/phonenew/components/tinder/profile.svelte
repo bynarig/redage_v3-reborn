@@ -5,7 +5,7 @@
     import {selectedImage, selectedImageFunc} from "@/views/player/hudevo/phonenew/stores";
     import {messageType} from "@/views/player/hudevo/phonenew/components/messages/data";
 
-    export let isCreate;
+    export const isCreate;
 
     let avatar = "";
     let text = "";
@@ -31,7 +31,7 @@
 
     let isEdit;
 
-    export let setLoad;
+    export const setLoad;
 
     const onEdit = () => isEdit = true;
 

@@ -1,5 +1,5 @@
 <script>
-    export let onSetLoad;
+    export const onSetLoad;
     import { executeClientToGroup } from 'api/rage'
     executeClientToGroup('tasksLoad')
 

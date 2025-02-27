@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import Days from './elements/days.svelte';
-    export let onSetLoad;
+    export const onSetLoad;
     import { executeClient } from "api/rage";
     executeClient ("client.rewardslist.day.load");
 

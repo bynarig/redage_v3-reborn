@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import { daysName, getPngUrl, getTypeToTitle, statusType, getTimeFromMins } from './data'
-    export let item;
+    export const item;
 
 </script>
 

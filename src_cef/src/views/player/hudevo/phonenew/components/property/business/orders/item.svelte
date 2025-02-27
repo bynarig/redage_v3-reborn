@@ -5,9 +5,9 @@
     import {addListernEvent, hasJsonStructure} from "api/functions";
     import { getPng } from './../data'
 
-    export let selectedOrderName;
-    export let onSelectedOrderName;
-    export let onSelectedViewOrder;
+    export const selectedOrderName;
+    export const onSelectedOrderName;
+    export const onSelectedViewOrder;
 
     let order = {};
 

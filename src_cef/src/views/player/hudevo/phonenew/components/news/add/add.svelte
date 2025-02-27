@@ -4,10 +4,10 @@
     import { format } from 'api/formatter'
     import { executeClientAsyncToGroup } from "api/rage";
 
-    export let onSelected;
-    export let onBack;
-    export let onAdd;
-    export let isPremium;
+    export const onSelected;
+    export const onBack;
+    export const onAdd;
+    export const isPremium;
 
     let maxSymbol = 150;
     let text = "";

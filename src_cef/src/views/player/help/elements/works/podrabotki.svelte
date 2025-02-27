@@ -1,7 +1,7 @@
 <script>
     import image from '../../images/waxta.jpg'
 	import image2 from '../../images/lesorub.jpg'
-    export let onWayPoint;
+    export const onWayPoint;
 </script>
 
 <div class="text">

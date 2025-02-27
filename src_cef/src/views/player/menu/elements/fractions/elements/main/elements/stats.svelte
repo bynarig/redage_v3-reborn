@@ -15,7 +15,7 @@
     getStats ();
     import { isFraction } from "../../../data";
 
-    export let settings;
+    export const settings;
     
     const onCopyDiscord = () => {
         copy(`https://discord.gg/${settings.discord}`)

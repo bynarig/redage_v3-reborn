@@ -1,5 +1,5 @@
 <script>
-    export let onSelectedViewHouse;
+    export const onSelectedViewHouse;
     import { translateText } from 'lang'
 
     import { format } from 'api/formatter'

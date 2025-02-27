@@ -5,7 +5,7 @@
     import { validate } from 'api/validation';
     let selectIndex = 0;
 
-    export let SetPopup;
+    export const SetPopup;
     const getDonate = (text) => {
         if (text < 0) text = 0;
         else if (text > 999999) text = 999999;

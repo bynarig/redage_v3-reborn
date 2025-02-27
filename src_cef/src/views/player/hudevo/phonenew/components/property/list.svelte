@@ -3,8 +3,8 @@
     import {currentPage} from '../../stores'
     import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from "api/rage";
     import { hasJsonStructure } from "api/functions";
-    export let onSelectedView;
-    export let onSelectedId;
+    export const onSelectedView;
+    export const onSelectedId;
 
     /*{
         type: 0,

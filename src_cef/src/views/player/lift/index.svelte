@@ -2,7 +2,7 @@
     import { executeClient } from 'api/rage'
 
     import './assets/sass/lift.sass'
-    export let viewData;
+    export const viewData;
 
     let floors = viewData,
         floor = 0;

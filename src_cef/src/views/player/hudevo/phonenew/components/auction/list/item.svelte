@@ -8,7 +8,7 @@
     import { categorieName, getPng } from "@/views/player/hudevo/phonenew/components/auction/data";
     import { charUUID } from 'store/chars';
 
-    export let onSelectedView;
+    export const onSelectedView;
 
     let selectItem = {}
     const onUpdate = () => {

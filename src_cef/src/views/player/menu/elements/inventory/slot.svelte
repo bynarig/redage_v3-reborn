@@ -2,10 +2,10 @@
     import { ItemType, itemsInfo, ItemId } from 'json/itemsInfo.js'
     import { getPng } from './getPng.js'
 
-    export let item;
-    export let defaultIcon;
-    export let defaultName;
-    export let defaultStyle;
+    export const item;
+    export const defaultIcon;
+    export const defaultName;
+    export const defaultStyle;
 
     let iconInfo = itemsInfo [item.ItemId];
 

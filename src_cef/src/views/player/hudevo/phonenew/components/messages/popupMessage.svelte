@@ -4,8 +4,8 @@
 
     import {validate} from "api/validation";
     import {executeClientToGroup} from "api/rage";
-    export let onSelectNumber;
-    export let closePopup;
+    export const onSelectNumber;
+    export const closePopup;
 
     let numberValue;
     let inputValue;

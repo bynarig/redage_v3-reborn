@@ -4,10 +4,10 @@
 
     import { loadImage, loadAwaitImage } from 'api/functions'
 
-    export let getPosition = false;
+    export const getPosition = false;
 
-    export let elementWidth = 0;
-    export let elementHeight = 0;
+    export const elementWidth = 0;
+    export const elementHeight = 0;
 
     let posXToMap,
         posYToMap;

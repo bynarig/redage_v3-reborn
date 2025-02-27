@@ -3,11 +3,11 @@
     import moment from 'moment';
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
 
-    export let members;
-    export let onSelectMember;
-    export let onlineData;
-    export let onPlayerDelete;
-    export let playerUuid;
+    export const members;
+    export const onSelectMember;
+    export const onlineData;
+    export const onPlayerDelete;
+    export const playerUuid;
 
     let searchText = ""
     const filterCheck = (elText, text) => {
@@ -27,7 +27,7 @@
         onPlayerDelete (item)
     }
 
-    export let settings;
+    export const settings;
 
     const getProgress = (value, max) => {
         let perc = Math.round(value / max * 100);

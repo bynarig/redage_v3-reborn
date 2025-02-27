@@ -12,7 +12,7 @@
     });
 
     let adsList;
-    export let getCount;
+    export const getCount;
 
     const getList = () => {
 
@@ -28,7 +28,7 @@
 
     addListernEvent ("updateListAdverts", getList)
 
-    export let onSelectAdvert;
+    export const onSelectAdvert;
 
     import { categorieName } from "@/views/player/hudevo/phonenew/components/news/data";
 </script>

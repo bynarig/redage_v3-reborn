@@ -5,7 +5,7 @@
     import weaponsinfo from '../../business/weaponshop/assets/js/weaponsinfo'
     import '../../business/weaponshop/assets/sass/weaponshop.sass'
 
-    export let viewData;
+    export const viewData;
 
     let category = ['Пистолеты', 'Дробовики', 'Пистолеты пулеметы', 'Штурмовые винтовки'/*, 'Снайперские винтовки'*/],
         sumAmmo = 0,

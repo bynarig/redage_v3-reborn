@@ -3,10 +3,10 @@
 
 
     let selectedSortKey = "";
-    export let columns = [];
-    export let elements = [];
+    export const columns = [];
+    export const elements = [];
 
-    export let searchKey = "";
+    export const searchKey = "";
     let searchText = "";
 
     const sortByProperty = (a, b, property) => {

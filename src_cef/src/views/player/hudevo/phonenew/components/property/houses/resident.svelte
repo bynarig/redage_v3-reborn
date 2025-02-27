@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import {popudData, selectPopup} from "@/views/house/menu/stores";
 
-    export let onSelectedViewHouse;
+    export const onSelectedViewHouse;
 
     import { TimeFormat } from 'api/moment'
     import { hasJsonStructure } from "api/functions";

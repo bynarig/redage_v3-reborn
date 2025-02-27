@@ -1,6 +1,6 @@
 <script>
-    export let onSelectedView;
-    export let selectedId;
+    export const onSelectedView;
+    export const selectedId;
 
     import LoaderSmall from './../../loadersmall.svelte'
 

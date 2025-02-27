@@ -16,7 +16,7 @@
     import wood_maple from './assets/images/wood_maple.png'
     import wood_pine from './assets/images/wood_pine.png'
     
-    export let viewData;
+    export const viewData;
 
     let SellType = 0;
     if (viewData && viewData[0] >= 0 && viewData[1]) {

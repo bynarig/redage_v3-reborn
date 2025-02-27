@@ -35,9 +35,9 @@
         executeClientToGroup ("house.openPark");
     }
 
-    export let onSelectedViewHouse;
-    export let onSelectedView;
-    export let selectedId;
+    export const onSelectedViewHouse;
+    export const onSelectedView;
+    export const selectedId;
 </script>
 <div class="newphone__rent_list">
     <div class="newphone__rent_none hover">

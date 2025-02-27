@@ -3,7 +3,7 @@
     import { format } from 'api/formatter'
     import { accountUnique } from 'store/account'
 
-    export let SetPopup;
+    export const SetPopup;
 
     const onToServer = (item) => {
         SetPopup ("PopupDpPopup", item);

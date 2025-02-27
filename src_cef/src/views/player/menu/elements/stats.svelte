@@ -7,7 +7,7 @@
     import fraction from 'json/fraction.js'
     import jobs from 'json/jobs.js'
     import vipinfo from 'json/vipinfo.js'
-    export let visible;
+    export const visible;
 
     let selectCharData = $charData;   
 

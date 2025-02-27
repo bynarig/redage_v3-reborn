@@ -6,8 +6,8 @@
 
     import { messageType, messageStatus, chatStatusName, formatMessage, getMessageUniqueKey, inputMaxLength } from './data.js'
 
-    export let onSelectNumber;
-    export let selectedNumber;
+    export const onSelectNumber;
+    export const selectedNumber;
 
     let inputValue = "";
     executeClientAsyncToGroup("getDraftMessages", selectedNumber).then((result) => {

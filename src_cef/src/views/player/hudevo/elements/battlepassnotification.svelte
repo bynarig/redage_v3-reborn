@@ -1,6 +1,6 @@
 <script>
     import { fly } from 'svelte/transition';
-    export let SafeSone;
+    export const SafeSone;
 
     import { addListernEvent } from "api/functions";
 

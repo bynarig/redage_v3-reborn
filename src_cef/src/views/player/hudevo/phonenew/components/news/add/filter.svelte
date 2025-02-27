@@ -1,8 +1,8 @@
 <script>
     import { translateText } from 'lang'
     import { categorieName } from './../data'
-    export let onSelected;
-    export let onBack;
+    export const onSelected;
+    export const onBack;
     import { fade } from 'svelte/transition'
 
 </script>

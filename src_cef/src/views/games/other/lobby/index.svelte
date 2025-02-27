@@ -19,7 +19,7 @@
 
     import ProgressBar from 'progressbar.js';
     
-    export let viewData;
+    export const viewData;
 
     let ProgressBarId;
     

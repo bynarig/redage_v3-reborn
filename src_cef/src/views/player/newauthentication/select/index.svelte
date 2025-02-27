@@ -4,7 +4,7 @@
     import './main.sass'
     import { fly } from 'svelte/transition';
 
-    export let popupData;
+    export const popupData;
 
     let title = popupData.title,
         elements = [];

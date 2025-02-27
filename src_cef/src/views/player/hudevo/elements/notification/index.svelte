@@ -36,7 +36,7 @@
         executeClient ("notifyClear", index);
     }
 
-    export let night;
+    export const night;
 
 </script>
 

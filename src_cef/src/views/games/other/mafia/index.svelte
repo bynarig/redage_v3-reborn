@@ -18,7 +18,7 @@
     import act_night from '../images/action/night.png';
     import act_unknown from '../images/action/unknown.png';
 
-    export let viewData;
+    export const viewData;
 
     let
         timesday = viewData[2], // day/ night

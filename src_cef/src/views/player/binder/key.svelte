@@ -64,10 +64,10 @@ export default Key;-->
 
     import { bindList } from './state.js'
 
-    export let title;
-    export let style = "";
-    export let disabled = false;
-    export let code = -1;
+    export const title;
+    export const style = "";
+    export const disabled = false;
+    export const code = -1;
 
     let active = false; 
     let use = false; 

@@ -8,8 +8,8 @@
 
     import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
 
-    export let selectPage = 0;
-    export let currentLvl = 0;
+    export const selectPage = 0;
+    export const currentLvl = 0;
 
     let awardsList = [];
     const getAwards = (index) => {

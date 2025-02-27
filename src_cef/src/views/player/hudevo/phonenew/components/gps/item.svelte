@@ -1,13 +1,13 @@
 <script>
     import { translateText } from 'lang'
     import { executeClientAsyncToGroup, executeClientToGroup, executeClient } from "api/rage";
-    export let updateHeightMap;
+    export const updateHeightMap;
 
-    export let selectedCategory;
-    export let selectedList;
-    export let setPosition;
+    export const selectedCategory;
+    export const selectedList;
+    export const setPosition;
 
-    export let closeMenu;
+    export const closeMenu;
 
     let data = {}
 

@@ -3,7 +3,7 @@
     import { onDestroy } from 'svelte'
 
     import './css/main.css'
-    export let viewData;
+    export const viewData;
 
     let firstname = viewData[0],
         lastname = viewData[1],

@@ -5,9 +5,9 @@
     import { format } from 'api/formatter'
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
 
-    export let departmentId;
-    export let selectRank;
-    export let onSelectRank;
+    export const departmentId;
+    export const selectRank;
+    export const onSelectRank;
 
     executeClientToGroup('rankAccessInit', JSON.stringify(selectRank.access), JSON.stringify(selectRank.lock))
 

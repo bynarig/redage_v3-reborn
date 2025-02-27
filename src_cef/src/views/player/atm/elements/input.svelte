@@ -2,11 +2,11 @@
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage'
     import { format } from 'api/formatter'
-    export let activeMain;
-    export let subdata;
-    export let type;
-    export let placeholder;
-    export let menuItem;
+    export const activeMain;
+    export const subdata;
+    export const type;
+    export const placeholder;
+    export const menuItem;
 
     let value = "";
     let icon = 'dollar';

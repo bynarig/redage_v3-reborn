@@ -5,7 +5,7 @@ function replaceAll(string, search, replace) {
 const newRankPattern = /^[а-яА-Яa-zA-Z0-9_\-.\s]+$/;
 const textPattern = /[^0-9a-zA-Zа-яА-Яё_ @*()-=?«»"[\]!#$%:;.,^"'\s\d]/g;
 
-export let format = (name, value) =>
+export const format = (name, value) =>
 {
     try {
         let text = "";

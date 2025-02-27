@@ -3,7 +3,7 @@
     import { fade } from 'svelte/transition'
     import { executeClientAsyncToGroup, executeClientToGroup } from 'api/rage';
 
-    export let onSelectedView;
+    export const onSelectedView;
 
     const wallpapers = [
         document.cloud + "img/iphone/wallpapers/1.png",

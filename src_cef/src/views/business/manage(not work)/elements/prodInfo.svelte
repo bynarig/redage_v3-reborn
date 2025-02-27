@@ -1,5 +1,5 @@
 <script>
-    export let selectProd;
+    export const selectProd;
 
 </script>
 

@@ -8,7 +8,7 @@
     import { spring } from 'svelte/motion';
     import { executeClient } from 'api/rage'
     import KeyAnimation from '@/components/keyAnimation/index.svelte';
-    export let viewData;
+    export const viewData;
     import keys from 'store/keys'
     import keysName from 'json/keys.js'
     

@@ -2,8 +2,8 @@
     import { translateText } from 'lang'
     import {executeClientToGroup, executeClientAsyncToGroup} from "api/rage";
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
-    export let selectMember;
-    export let member;
+    export const selectMember;
+    export const member;
 
     //Логи
 

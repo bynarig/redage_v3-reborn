@@ -1,14 +1,14 @@
 <script>
     import rangeslider from 'components/rangeslider/index'
     import { executeClient } from 'api/rage'
-    export let id;
-    export let leftIcon;
-    export let rightIcon;
-    export let min;
-    export let max;
-    export let step;
-    export let callback;
-    export let value;
+    export const id;
+    export const leftIcon;
+    export const rightIcon;
+    export const min;
+    export const max;
+    export const step;
+    export const callback;
+    export const value;
 
     const createSlider = () => {
 

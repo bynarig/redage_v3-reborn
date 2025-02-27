@@ -3,8 +3,8 @@
     import { format } from 'api/formatter'
     import { executeClient } from 'api/rage'
     import { accountRedbucks } from 'store/account'
-    export let popupData;
-    export let SetPopup;
+    export const popupData;
+    export const SetPopup;
 
     const onBuy = () => {
         if ($accountRedbucks < popupData.price)

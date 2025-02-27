@@ -8,7 +8,7 @@
     import keysName from 'json/keys.js'
 
 
-    export let viewData;
+    export const viewData;
 
     $: if (viewData && typeof viewData === "string") {
         viewData = JSON.parse (viewData)

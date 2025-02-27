@@ -7,7 +7,7 @@
     import { TimeFormat } from 'api/moment'
     import { format } from 'api/formatter'
 
-    export let settings;
+    export const settings;
 
     const getUsersName = (count) => {
         if (count >= 2 && 4 <= count)

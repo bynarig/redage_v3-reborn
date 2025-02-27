@@ -2,8 +2,8 @@
     import { translateText } from 'lang'
     import { accountUnique } from 'store/account'
     import { format } from 'api/formatter'
-    export let SetView;
-    export let SetPopup;
+    export const SetView;
+    export const SetPopup;
 
 
     let ItemList = {

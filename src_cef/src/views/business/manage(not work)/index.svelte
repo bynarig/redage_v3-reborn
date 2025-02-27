@@ -5,7 +5,7 @@
 
     import { serverDateTime } from 'store/server'
     import { TimeFormat } from 'api/moment'
-    export let visible = false;
+    export const visible = false;
     
     let selectView = "Main";
 

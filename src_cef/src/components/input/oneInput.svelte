@@ -1,9 +1,9 @@
 <script>
-    export let placeholder;
-    export let type;
-    export let setValue;
-    export let value;
-    export let cl;
+    export const placeholder;
+    export const type;
+    export const setValue;
+    export const value;
+    export const cl;
     import { isInput } from '@/views/player/newauthentication/store.js';
 
     let TextInput;

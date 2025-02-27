@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage'
     import './assets/sass/stock.sass'
-    export let viewData;
+    export const viewData;
 
     let title = "",
         style = "",

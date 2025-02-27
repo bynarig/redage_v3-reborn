@@ -4,7 +4,7 @@
     import { format } from 'api/formatter'
     import moment from 'moment'
     import { executeClient } from 'api/rage'
-    export let viewData;
+    export const viewData;
 
     if (!viewData)
         viewData = []

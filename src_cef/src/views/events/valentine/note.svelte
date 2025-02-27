@@ -3,7 +3,7 @@
     import KeyAnimation from '@/components/keyAnimation/index.svelte';
     import { executeClient } from 'api/rage'
     import { format } from 'api/formatter'
-    export let viewData;
+    export const viewData;
 
     let nameValue = "";
     let textValue = "";

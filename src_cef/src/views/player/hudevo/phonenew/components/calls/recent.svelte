@@ -5,7 +5,7 @@
     import { currentPage, selectNumber } from './../../stores'
     import { validate } from 'api/validation';
 
-    export let updateView;
+    export const updateView;
 
     let recents = [];
 

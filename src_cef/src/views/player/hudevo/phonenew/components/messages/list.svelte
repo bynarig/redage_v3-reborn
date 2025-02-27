@@ -5,7 +5,7 @@
     import { TimeFormatStartOf } from 'api/moment'
     import { messageType, formatMessage } from './data.js'
 
-    export let onSelectNumber;
+    export const onSelectNumber;
 
     let messages = [];
 

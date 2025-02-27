@@ -3,13 +3,13 @@
     import { accessType } from "../../data";
     import { executeClientToGroup } from "api/rage";
 
-    export let isSkip = false;
-    export let executeName;
-    export let itemId;
-    export let title;
-    export let mainScroll = "";
-    export let clsScroll = "";
-    export let isSelector = true;
+    export const isSkip = false;
+    export const executeName;
+    export const itemId;
+    export const title;
+    export const mainScroll = "";
+    export const clsScroll = "";
+    export const isSelector = true;
 
     let selectItemId = itemId;
     let isWeaponAccess = false;

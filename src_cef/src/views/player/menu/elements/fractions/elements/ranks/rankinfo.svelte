@@ -3,13 +3,13 @@
     import { executeClientToGroup } from "api/rage";
     import { format } from 'api/formatter'
     import { onInputFocus, onInputBlur } from "@/views/player/menu/elements/fractions/data.js";
-    export let settings;
+    export const settings;
 
     import Access from '../access/index.svelte'
 
     executeClientToGroup('rankAccessLoad', settings.id)
 
-    export let onSettings;
+    export const onSettings;
 
     let rankName = "";
     const onUpdateName = () => {

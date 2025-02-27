@@ -3,7 +3,7 @@
     import  './assets/css/circle.sass';
     import { charFractionID, charOrganizationID } from 'store/chars'
     import { executeClient } from 'api/rage'
-    export let popupData;
+    export const popupData;
 
 
     $: if (popupData && typeof popupData === "string") 

@@ -4,7 +4,7 @@
     import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
     import { selectNumber } from './../../stores'
 
-    export let updateView;
+    export const updateView;
 
     import AddContact from "./addContact.svelte";
     import SelectContact from "./selectContact.svelte";

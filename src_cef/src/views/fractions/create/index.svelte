@@ -5,7 +5,7 @@
 
     import './main.sass' 
 
-    export let viewData;
+    export const viewData;
 
     let isCrime = false;
     const onSelectType = (_isCrime) => {

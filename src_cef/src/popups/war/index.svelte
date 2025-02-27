@@ -53,7 +53,7 @@
 
     let selectMap = 0;
 
-    export let popupData;
+    export const popupData;
 
 
     $: if (popupData && typeof popupData === "string") 

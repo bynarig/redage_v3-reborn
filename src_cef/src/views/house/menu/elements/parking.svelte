@@ -151,7 +151,7 @@
             selectPopup.set ("popupUpdateGarage")
     }
 
-    export let onExit;
+    export const onExit;
 </script>
     
 <svelte:window on:keyup={handleKeyUp} />

@@ -1,14 +1,14 @@
 <script>
     import './main.sass';
-    export let placeholder;
-    export let type;
-    export let icon;
-    export let setValue;
-    export let value;
-    export let isFocus = false;
-    export let updateLang;
-    export let settingsClass;
-    export let settingsMargin;
+    export const placeholder;
+    export const type;
+    export const icon;
+    export const setValue;
+    export const value;
+    export const isFocus = false;
+    export const updateLang;
+    export const settingsClass;
+    export const settingsMargin;
     import { isInput } from '@/views/player/newauthentication/store.js';
 
     let TextInput;

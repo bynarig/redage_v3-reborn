@@ -6,7 +6,7 @@
     import { format } from 'api/formatter'
     import CustomKey from './Key.svelte'
     import { isInputToggled, isHelp } from 'store/hud'
-    export let SafeSone;
+    export const SafeSone;
     //
     let selectChat = 0;
     const ChatTegs = [

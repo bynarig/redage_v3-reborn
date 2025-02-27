@@ -4,9 +4,9 @@
     import {addListernEvent, hasJsonStructure} from "api/functions";
     import { getPrefix } from './../data'
 
-    export let selectedProductName;
-    export let onSelectedViewProduct;
-    export let onSelectedProductName;
+    export const selectedProductName;
+    export const onSelectedViewProduct;
+    export const onSelectedProductName;
 
     let product = {};
 

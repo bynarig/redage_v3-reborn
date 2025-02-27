@@ -1,8 +1,8 @@
 <script>
 
-    export let active = false;
-    export let name = "";
-    export let onChange;
+    export const active = false;
+    export const name = "";
+    export const onChange;
 
     const OnChangUse = (change) => {
         if (onChange)

@@ -1,6 +1,6 @@
 <script>
     import { executeClient } from 'api/rage'
-    export let viewData;
+    export const viewData;
 
     import './assets/css/index.css'
 

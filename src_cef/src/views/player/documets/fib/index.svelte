@@ -3,8 +3,8 @@
 	import Female from './../images/female.png'
 	import Fib_logo from './images/fib_logo.png'
 
-	export let gender;
-	export let name;
+	export const gender;
+	export const name;
 </script>
 <div class="card_leather" id="card">
 	<div class="b1">

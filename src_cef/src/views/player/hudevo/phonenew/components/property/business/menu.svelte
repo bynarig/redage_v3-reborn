@@ -1,8 +1,8 @@
 <script>
     import { translateText } from 'lang'
-    export let onMainPage;
+    export const onMainPage;
     import { format } from 'api/formatter'
-    export let selectedId;
+    export const selectedId;
 
 
     import { executeClient, executeClientAsyncToGroup, executeClientToGroup } from "api/rage";
@@ -34,8 +34,8 @@
     updateData ();
     addListernEvent ("phoneBusinessUpdate", updateData);
 
-    export let onSelectedViewBusiness;
-    export let onSelectedView;
+    export const onSelectedViewBusiness;
+    export const onSelectedView;
 
     const onSell = () => {
         if (!window.loaderData.delay ("business.sell", 1.5))

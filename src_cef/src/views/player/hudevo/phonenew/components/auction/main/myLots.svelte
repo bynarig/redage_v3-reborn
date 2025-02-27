@@ -6,7 +6,7 @@
     import { hasJsonStructure } from "api/functions";
     import { charUUID } from 'store/chars';
     import { getPng } from "@/views/player/hudevo/phonenew/components/auction/data";
-    export let onSelectedView;
+    export const onSelectedView;
 
     let myList = []   
     const onUpdate = () => {

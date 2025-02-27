@@ -1,8 +1,8 @@
 <script>
     import { TimeFormat } from 'api/moment'
     import { translateText } from 'lang'
-    export let selectedCar;
-    export let OnUpdatePage;
+    export const selectedCar;
+    export const OnUpdatePage;
 
     import { format } from 'api/formatter'
     import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from 'api/rage'

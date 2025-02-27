@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import { selectIndex, selectType, settings } from './../store.js';
-    export let charid;
+    export const charid;
 
     const onSelectSlot = () => {
         selectIndex.set (charid);

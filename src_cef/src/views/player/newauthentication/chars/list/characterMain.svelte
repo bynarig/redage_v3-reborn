@@ -1,6 +1,6 @@
 <script>
-    export let charid;
-    export let char;
+    export const charid;
+    export const char;
 
     import CreatedByChar from './createdByChar.svelte'
     import ToCreateChar from './toCreateChar.svelte'

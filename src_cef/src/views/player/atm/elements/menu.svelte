@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
-    export let onSelectMain;
-    export let menuItem;
+    export const onSelectMain;
+    export const menuItem;
 
 
 </script>

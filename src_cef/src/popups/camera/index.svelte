@@ -3,7 +3,7 @@
     import { translateText } from 'lang'
     import { onMount, onDestroy } from 'svelte'
 
-    export let popupData;
+    export const popupData;
     import router from "router";
     import { executeClient } from "api/rage";
 

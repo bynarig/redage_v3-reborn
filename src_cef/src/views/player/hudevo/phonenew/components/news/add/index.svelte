@@ -7,7 +7,7 @@
     import {pageBack} from "@/views/player/hudevo/phonenew/stores";
     import {executeClientToGroup} from "api/rage";
 
-    export let onSelectedView;
+    export const onSelectedView;
 
     let views = {
         Filter,

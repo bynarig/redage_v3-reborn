@@ -2,9 +2,9 @@
     import { translateText } from 'lang'
     import { categorieName } from './../data'
 
-    export let isTypeFilter;
-    export let updateFilter;
-    export let closeFilter;
+    export const isTypeFilter;
+    export const updateFilter;
+    export const closeFilter;
 
 
     let filter = isTypeFilter;

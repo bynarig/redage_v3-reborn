@@ -1,14 +1,14 @@
 <script>
     import { executeClient } from 'api/rage'
 
-    export let UUID;
-    export let FractionID;
-    export let OrganizationID;
-    export let houseId;
-    export let isBan;
-    export let DeleteData;
-    //export let BankMoney;
-    //export let CustomIsCreated;
+    export const UUID;
+    export const FractionID;
+    export const OrganizationID;
+    export const houseId;
+    export const isBan;
+    export const DeleteData;
+    //export const BankMoney;
+    //export const CustomIsCreated;
     
     $: {
         if (FractionID || OrganizationID || houseId) {

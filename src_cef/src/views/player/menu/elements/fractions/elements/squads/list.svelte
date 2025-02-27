@@ -6,11 +6,11 @@
     import moment from 'moment';
     import {setPopup} from "../../data";
 
-    export let departmentId;
-    export let members;
-    export let onSelectMember;
-    export let onlineData;
-    export let ranks;
+    export const departmentId;
+    export const members;
+    export const onSelectMember;
+    export const onlineData;
+    export const ranks;
 
     let searchText = ""
     const filterCheck = (elText, text) => {

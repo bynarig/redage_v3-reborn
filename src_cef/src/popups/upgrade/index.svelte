@@ -3,7 +3,7 @@
     import './main.sass'
     import { executeClient } from 'api/rage'
     import { fly } from 'svelte/transition';
-    export let popupData;
+    export const popupData;
     
     const HandleKeyDown = (event) => {
         const { keyCode } = event;

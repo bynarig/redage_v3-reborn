@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { format } from 'api/formatter'
 
-    export let onSelectedViewBusiness;
+    export const onSelectedViewBusiness;
 
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("business.loadStats");

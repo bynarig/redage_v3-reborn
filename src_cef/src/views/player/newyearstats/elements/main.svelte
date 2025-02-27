@@ -1,6 +1,6 @@
 <script>
     import { fade } from 'svelte/transition';
-    export let SelectCategories;
+    export const SelectCategories;
 </script>
 <div class="newyearstats__main" class:year_2020={new Date().getFullYear() == 2020}>
     <div class="newyearstats__button-block" on:click={() => SelectCategories("Stats")}>

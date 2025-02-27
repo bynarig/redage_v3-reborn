@@ -7,7 +7,7 @@
     import { charFractionID, charOrganizationID } from 'store/chars'
     import CustomKey from './Key.svelte'
 
-    export let SafeSone;
+    export const SafeSone;
 
     let isWorld = true;
     window.hudStore.isWorld = (value) => isWorld = value;

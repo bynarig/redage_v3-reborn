@@ -1,13 +1,13 @@
 <script>
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage'
-    export let id;
-    export let icon;
-    export let text;
-    export let price;
-    export let onSelectItem;
-    export let selectItem;
-    export let lvl = false;
+    export const id;
+    export const icon;
+    export const text;
+    export const price;
+    export const onSelectItem;
+    export const selectItem;
+    export const lvl = false;
 
     const onSelect = (index) => {
         onSelectItem (index);

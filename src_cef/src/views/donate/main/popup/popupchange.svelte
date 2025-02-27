@@ -2,7 +2,7 @@
     import { executeClient } from 'api/rage'
     import { accountRedbucks } from 'store/account'
     import { serverDonateDoubleConvert } from 'store/server'
-    export let SetPopup;
+    export const SetPopup;
 
     let 
         changeRbBtn = 10,

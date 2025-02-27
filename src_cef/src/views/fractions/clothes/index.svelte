@@ -7,7 +7,7 @@
     import { menu, getClothesDictionary, clothesEmpty } from 'json/clothes.js'
     import { clothesName } from '@/views/player/menu/elements/inventory/functions.js';
 
-    export let viewData;
+    export const viewData;
 
     if (!viewData)
         viewData = "{}";

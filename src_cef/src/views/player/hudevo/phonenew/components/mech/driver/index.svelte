@@ -8,9 +8,9 @@
 
     import { fade } from 'svelte/transition'
 
-    export let getPosition;
-    export let setPosition;
-    export let setOtherElement;
+    export const getPosition;
+    export const setPosition;
+    export const setOtherElement;
 
     function closeMenu () {
         currentPage.set("mainmenu")

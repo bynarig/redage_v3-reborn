@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import './main.sass'
 
-    export let viewData;
+    export const viewData;
 
     if (!viewData)
         viewData = false;

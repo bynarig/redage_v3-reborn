@@ -3,10 +3,10 @@
     import clothes from './clothes.js';
 
 
-    export let id = 0;
-    export let key = "";
-    export let active = false;
-    export let onChange;
+    export const id = 0;
+    export const key = "";
+    export const active = false;
+    export const onChange;
 
     const OnChangeCloth = (change) => {
         if (onChange)

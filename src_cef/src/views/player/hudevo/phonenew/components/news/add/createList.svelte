@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
-    export let onSelected;
-    export let onBack;
+    export const onSelected;
+    export const onBack;
     import { fade } from 'svelte/transition'
 </script>
 

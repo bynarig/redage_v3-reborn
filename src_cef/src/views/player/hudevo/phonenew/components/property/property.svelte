@@ -20,8 +20,8 @@
     import TopOrders from './business/toporders.svelte'
     import TopClients from './business/topclients.svelte'
 
-    export let selectedItem = null;
-    export let selectedPage = null;
+    export const selectedItem = null;
+    export const selectedPage = null;
 
     const changePage = (el) => {
         selectedPage = el;
@@ -31,7 +31,7 @@
         selectedItem = el;
     }
 
-    export let propertyList = []
+    export const propertyList = []
     import { fade } from 'svelte/transition'
 </script>
 <div class="newphone__rent" in:fade>

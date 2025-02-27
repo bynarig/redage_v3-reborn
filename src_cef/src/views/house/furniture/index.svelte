@@ -5,7 +5,7 @@
     import './fonts/style.css'
     import { ItemType, itemsInfo } from 'json/itemsInfo.js'
 
-    export let viewData;
+    export const viewData;
 
     if (!viewData)
         viewData = [];

@@ -8,7 +8,7 @@
     import { executeClient } from 'api/rage';
     import Achivment from '@/views/quests/achivment/index.svelte';   
     
-    export let viewData;
+    export const viewData;
 
     const volumeSound = 0.25;
 

@@ -1,7 +1,7 @@
 <script>
-    export let viewData;
-    export let onBuy;
-    export let onExit;
+    export const viewData;
+    export const onBuy;
+    export const onExit;
     import { format } from 'api/formatter'
         
     const descToClass = [

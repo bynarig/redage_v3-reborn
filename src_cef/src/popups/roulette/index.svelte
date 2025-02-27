@@ -1,6 +1,6 @@
 <script>
     import { translateText } from 'lang'
-    export let popupData;
+    export const popupData;
     import { onDestroy } from 'svelte';
     import {executeClient, executeClientAsync} from 'api/rage'
     import './main.sass';

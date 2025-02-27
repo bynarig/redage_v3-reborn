@@ -2,7 +2,7 @@
 <script>
 	import { fade } from 'svelte/transition';
     import './main.sass'
-    export let view = "";
+    export const view = "";
     let useView = "";
     let visible = false;
 

@@ -4,10 +4,10 @@
     import { executeClientToGroup } from 'api/rage'
     import { selectNumber } from './../../stores'
 
-    export let updateView;
-    export let updateListContacts;
+    export const updateView;
+    export const updateListContacts;
 
-    export let numberValue;
+    export const numberValue;
     let nameValue;
 
     const onAddContact = () => {

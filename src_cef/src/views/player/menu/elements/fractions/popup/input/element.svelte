@@ -1,5 +1,5 @@
 <script>
-    export let data;
+    export const data;
 </script>
 
 

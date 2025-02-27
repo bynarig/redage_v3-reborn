@@ -6,7 +6,7 @@
     import { fly } from 'svelte/transition';
     import { format } from 'api/formatter'
     import CountUp from 'api/countup';
-    export let SafeSone;
+    export const SafeSone;
     
     let userData = {
         targetMoney: 0,

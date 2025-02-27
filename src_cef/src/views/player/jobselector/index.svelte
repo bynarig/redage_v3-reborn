@@ -11,7 +11,7 @@
     import {hasJsonStructure} from "api/functions";
 
 
-    export let viewData;
+    export const viewData;
 
     if (hasJsonStructure (viewData))
         viewData = JSON.parse(viewData);

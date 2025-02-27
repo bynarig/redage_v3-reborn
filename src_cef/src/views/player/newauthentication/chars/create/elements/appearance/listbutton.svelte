@@ -3,10 +3,10 @@
 
     import appearances from './appearances.js';
 
-    export let key = "";
-    export let active = false;
-    export let id = 0;
-    export let onChange;
+    export const key = "";
+    export const active = false;
+    export const id = 0;
+    export const onChange;
 
     const OnChangeAppearance = (change) => {
         if (onChange)

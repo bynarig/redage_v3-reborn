@@ -5,10 +5,10 @@
 
     import { loadImage } from 'api/functions'
 
-    export let getPosition = false;
+    export const getPosition = false;
 
-    export let mainElement = false;
-    export let otherElement = false;
+    export const mainElement = false;
+    export const otherElement = false;
 
     let posXToMap,
         posYToMap;

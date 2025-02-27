@@ -1,13 +1,13 @@
 <script>
-    export let title;
-    export let isEnterAnim;
-    export let use;
-    export let isFavorite;
-    export let isBind = false;
-    export let onDell;
-    export let addFavorite;
-    export let dellFavorite;
-    export let onPlayAnimation;
+    export const title;
+    export const isEnterAnim;
+    export const use;
+    export const isFavorite;
+    export const isBind = false;
+    export const onDell;
+    export const addFavorite;
+    export const dellFavorite;
+    export const onPlayAnimation;
 
     let currentTime;
     let duration;

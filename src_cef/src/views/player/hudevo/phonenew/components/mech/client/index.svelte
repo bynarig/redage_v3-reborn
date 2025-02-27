@@ -2,10 +2,10 @@
     import HomeButton from './../../homebutton.svelte'
     import { translateText } from 'lang'
 
-    export let getPosition;
-    export let setPosition;
-    export let setOtherElement;
-    export let closeMenu;
+    export const getPosition;
+    export const setPosition;
+    export const setOtherElement;
+    export const closeMenu;
 
 
     import { executeClientAsync, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
@@ -45,7 +45,7 @@
 
     let selectMech = {}
 
-    export let position;
+    export const position;
 
     const getData = () => {
         executeClientAsyncToGroup("mech.getOrder").then((result) => {

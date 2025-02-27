@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import './css/main.css'
     import { executeClient } from 'api/rage'
-    export let viewData;
+    export const viewData;
     let
         name = "",
         weapons = [],

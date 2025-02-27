@@ -1,6 +1,6 @@
 <script>
     import Element from './elements/index.svelte';
-    export let onSetLoad;
+    export const onSetLoad;
 
     let rewardList = [];
 

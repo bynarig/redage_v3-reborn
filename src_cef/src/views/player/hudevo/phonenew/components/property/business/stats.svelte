@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("business.loadStats");
-    export let onSelectedViewBusiness;
+    export const onSelectedViewBusiness;
 
     import LoaderSmall from './../../loadersmall.svelte'
     let isLoad = false;

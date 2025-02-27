@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import './main.sass'    
-    export let popupData;
+    export const popupData;
 
     const statuses = [
         {

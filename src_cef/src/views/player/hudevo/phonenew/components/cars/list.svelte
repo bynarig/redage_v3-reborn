@@ -5,7 +5,7 @@
 
     import { executeClient, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
     import {hasJsonStructure} from "api/functions";
-    export let OnUpdatePage;
+    export const OnUpdatePage;
     let carsList = [{
         number: "222133218 2132",
         model: "adder",

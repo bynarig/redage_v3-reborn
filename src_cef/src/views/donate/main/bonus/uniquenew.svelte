@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
     import { executeClient } from 'api/rage';
-    export let SetPopup;
+    export const SetPopup;
 
     let selectListId = {
         id: 0,

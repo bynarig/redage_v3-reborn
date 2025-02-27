@@ -7,8 +7,8 @@
     //questsnewdialogicon-
 	import { fade, fly } from 'svelte/transition';
     import { format } from 'api/formatter'
-    export let questData;
-    export let onEnter;
+    export const questData;
+    export const onEnter;
 </script>
 <div id="questsprise">
     <div class="questsprise-header" in:fly={{y: -200, duration: 1000}}>

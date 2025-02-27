@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { categorieName } from "@/views/player/hudevo/phonenew/components/auction/data";
 
-    export let onSelectedView;
+    export const onSelectedView;
 
     import { executeClientToGroup } from "api/rage";
     const onSelect = (index) => {

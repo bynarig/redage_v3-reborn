@@ -6,7 +6,7 @@
     import {executeClientAsyncToGroup, executeClientToGroup} from "api/rage";
     import {hasJsonStructure} from "api/functions";
     import { charUUID } from 'store/chars';
-    export let onSelectedView;
+    export const onSelectedView;
 
     let categoryId = 0;
     executeClientAsyncToGroup("auction.getCategory").then((result) => {

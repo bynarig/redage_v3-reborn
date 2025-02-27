@@ -1,8 +1,8 @@
 <script>
     import {executeClient, executeClientToGroup} from "api/rage";
-    export let closeMenu;
+    export const closeMenu;
 
-    export let selectTrucker;
+    export const selectTrucker;
 
     const onStartPoint = () => {
         executeClient ("createWaypoint", selectTrucker.pos.x, selectTrucker.pos.y);

@@ -4,9 +4,9 @@
 
     import { fade } from 'svelte/transition'
 
-    export let setOtherElement;
-    export let onSelectView;
-    export let closeMenu;
+    export const setOtherElement;
+    export const onSelectView;
+    export const closeMenu;
 
 </script>
 

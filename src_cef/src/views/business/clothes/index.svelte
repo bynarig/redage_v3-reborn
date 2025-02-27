@@ -10,7 +10,7 @@
     import { clothesName } from '@/views/player/menu/elements/inventory/functions.js';
     import InputBlock from './input_item.svelte';
 
-    export let viewData;
+    export const viewData;
 
     if (!viewData) {
         viewData = {

@@ -7,7 +7,7 @@
     import { TimeFormat } from 'api/moment'
 
     import { charMoney } from 'store/chars'
-    export let viewData;
+    export const viewData;
     let
         bet = viewData,
         betWin = 0,

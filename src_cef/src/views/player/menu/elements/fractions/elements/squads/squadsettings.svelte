@@ -4,13 +4,13 @@
     import moment from 'moment';
 
 
-    export let onSelectDepartment;
-    export let onDepartmentDelete;
-    export let onSettings;
+    export const onSelectDepartment;
+    export const onDepartmentDelete;
+    export const onSettings;
 
-    export let department;
-    export let members;
-    export let onlineData;
+    export const department;
+    export const members;
+    export const onlineData;
 
 
     import { executeClientToGroup } from 'api/rage'

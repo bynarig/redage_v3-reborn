@@ -474,8 +474,8 @@
         new ColorPicker();
     });
 
-    export let title;
-    export let lists
+    export const title;
+    export const lists
 </script>
 <div class="color-picker-panel" class:big={lists} on:mouseenter={() => executeClient("client.camera.toggled", false)} on:mouseleave={() => executeClient("client.camera.toggled", true)}>
     <h2 class="panel-header top">{title}</h2>

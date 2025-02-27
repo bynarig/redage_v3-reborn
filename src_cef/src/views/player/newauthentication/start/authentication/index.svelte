@@ -5,7 +5,7 @@
     import InputCustom from 'components/input/index.svelte'
     import { accountLogin } from 'store/account'
     import { onMount } from 'svelte'
-    export let OnSelectViews;
+    export const OnSelectViews;
     let loginInput;
     let loginIsFocus = false;
     let passwordInput;

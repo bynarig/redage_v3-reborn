@@ -2,8 +2,8 @@
 <script>
     import { format } from "api/formatter";
     import { executeClientToGroup , executeClientAsyncToGroup } from "api/rage";
-    export let closeMenu;
-    export let onSelectItem;
+    export const closeMenu;
+    export const onSelectItem;
 
     let countLoad = 10;
 

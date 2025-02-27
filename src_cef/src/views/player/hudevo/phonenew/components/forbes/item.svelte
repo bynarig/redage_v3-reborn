@@ -3,8 +3,8 @@
     import { executeClientAsyncToGroup } from "api/rage";
     import { format } from 'api/formatter'
 
-    export let selectIndex;
-    export let onSelectIndex;
+    export const selectIndex;
+    export const onSelectIndex;
 
     let selectItem = {}
 

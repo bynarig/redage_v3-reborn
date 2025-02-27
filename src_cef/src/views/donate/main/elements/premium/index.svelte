@@ -6,7 +6,7 @@
     import { GetTime } from 'api/moment'
     import moment from 'moment';
 
-    export let SetPopup;
+    export const SetPopup;
 
 
     const Bool = (text) => {

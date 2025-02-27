@@ -7,7 +7,7 @@
     import { executeClient } from 'api/rage'
 	import router from 'router';
 
-    export let viewData;
+    export const viewData;
 
     if (!viewData)
         viewData = {

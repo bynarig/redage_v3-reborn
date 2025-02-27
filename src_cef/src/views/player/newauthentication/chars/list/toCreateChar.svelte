@@ -1,6 +1,6 @@
 <script>
     import { translateText } from 'lang'
-    export let charid;
+    export const charid;
 
     import InputCustom from 'components/input/oneInput.svelte'
     import { selectIndex, selectType, settings } from './../store.js';

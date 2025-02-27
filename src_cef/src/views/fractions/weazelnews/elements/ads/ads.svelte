@@ -3,8 +3,8 @@
     import { executeClientAsyncToGroup, executeClientToGroup } from 'api/rage'
     import {format} from "api/formatter";
 
-    export let selectedAddId;
-    export let onBackAdvert;
+    export const selectedAddId;
+    export const onBackAdvert;
     let answerText;
 
     let advert = false;

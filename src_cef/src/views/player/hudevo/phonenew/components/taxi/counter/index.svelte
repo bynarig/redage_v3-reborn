@@ -1,9 +1,9 @@
 <script>
     import HomeButton from './../../homebutton.svelte'
 
-    export let setPosition;
-    export let setOtherElement;
-    export let closeMenu;
+    export const setPosition;
+    export const setOtherElement;
+    export const closeMenu;
 
     import { format } from "api/formatter";
 

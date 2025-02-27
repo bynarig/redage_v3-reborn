@@ -1,6 +1,6 @@
 <script>
 
-    export let onSelectedViewBusiness;
+    export const onSelectedViewBusiness;
 
     import List from './list.svelte'
     import Item from './item.svelte'

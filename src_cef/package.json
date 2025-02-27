@@ -37,6 +37,7 @@
     "autoprefixer": "^9.8.8",
     "axios": "^1.4.0",
     "babel-loader": "^8.2.5",
+    "build": "^0.1.4",
     "cache-loader": "^4.1.0",
     "canvas-scratch-card": "^1.0.4",
     "clipboard-copy": "^4.0.1",

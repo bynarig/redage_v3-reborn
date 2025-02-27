@@ -22,3 +22,6 @@ client_packages/main.js
 
 dlcpacks/*
 client_packages/DISABLE_ENCRYPTION_LIST
+
+.DS_Store
+.idea

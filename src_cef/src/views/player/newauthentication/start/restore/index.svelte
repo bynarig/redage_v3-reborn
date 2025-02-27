@@ -1,5 +1,5 @@
 <script>
-    export let OnSelectViews;
+    export const OnSelectViews;
 
     import { executeClient } from 'api/rage'
     import InputCustom from 'components/input/index.svelte'

@@ -1,17 +1,17 @@
 <script>
     let buttonEl;
-    export let keyCode = 0;
-    export let keyLocation = 0;
-    export let callback;
-    export let click;
-    export let classData = "";
-    export let style = "";
-    export let disabled = false;
-    export let nonactive = false;
-    export let keyDetector = false;
-    export let keyDonate = false;
-    export let keyPet = false;
-    export let bottom = false;
+    export const keyCode = 0;
+    export const keyLocation = 0;
+    export const callback;
+    export const click;
+    export const classData = "";
+    export const style = "";
+    export const disabled = false;
+    export const nonactive = false;
+    export const keyDetector = false;
+    export const keyDonate = false;
+    export const keyPet = false;
+    export const bottom = false;
     let state = false;
     let laststate = false;
 

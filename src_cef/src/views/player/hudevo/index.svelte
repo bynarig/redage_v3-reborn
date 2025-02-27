@@ -2,7 +2,7 @@
     import {format} from "api/formatter";
     import { executeClientAsyncToGroup } from "api/rage";
 
-    export let visible;
+    export const visible;
     import { isPlayer, isPhone } from 'store/hud'
     import './main.sass';
     import './fonts/style.css';

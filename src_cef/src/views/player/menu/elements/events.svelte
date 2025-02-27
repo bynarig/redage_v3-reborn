@@ -4,7 +4,7 @@
     import { charGender } from 'store/chars';
     import { executeClient } from 'api/rage'
     import { ItemId } from 'json/itemsInfo.js'
-    export let visible;
+    export const visible;
 
     const eventItem = ItemId.Giftcoin;
 

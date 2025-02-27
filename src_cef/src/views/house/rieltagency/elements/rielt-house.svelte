@@ -1,8 +1,8 @@
 <script>
     import { houseType } from 'json/realEstate.js'
     import { format } from 'api/formatter'
-    export let houseData;
-    export let onSelectData;
+    export const houseData;
+    export const onSelectData;
 
     let sortType = [
         0

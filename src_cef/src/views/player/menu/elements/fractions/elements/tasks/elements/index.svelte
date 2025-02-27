@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import { getPngUrl, getTimeFromMins } from './data'
     import { getPngToItemId } from '@/views/player/menu/elements/inventory/getPng.js'
-    export let item;
+    export const item;
     
     let intervalId = null;
     if (!item.status) {

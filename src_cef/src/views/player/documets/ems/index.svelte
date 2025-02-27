@@ -4,9 +4,9 @@
 	import Female from './../images/female.png'
 	import Serial from './images/serial.png'
 
-	export let gender;
-	export let name;
-	export let cardNO;
+	export const gender;
+	export const name;
+	export const cardNO;
 
 	const pad = (str, max = 6) => {
 		str = str.toString();

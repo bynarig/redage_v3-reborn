@@ -3,7 +3,7 @@
     import { executeClient } from 'api/rage'
 
     import './assets/sass/mats.sass'
-    export let viewData;
+    export const viewData;
 
     let isArmy = false,
         isMed = false;

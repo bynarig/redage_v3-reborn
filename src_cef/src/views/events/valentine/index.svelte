@@ -4,7 +4,7 @@
     import './fonts/style.css';
     import KeyAnimation from '@/components/keyAnimation/index.svelte';
     import { executeClient } from 'api/rage'
-    export let viewData;
+    export const viewData;
 
     import LoveNote from './loveNote.svelte'
     import Note from './note.svelte'

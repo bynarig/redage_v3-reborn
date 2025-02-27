@@ -3,10 +3,10 @@
 	import Male from './../images/male.png'
 	import Female from './../images/female.png'
 
-	export let gender;
-	export let name;
-	export let surname;
-	export let cardNO;
+	export const gender;
+	export const name;
+	export const surname;
+	export const cardNO;
 
 	const pad = (str, max = 6) => {
 		str = str.toString();

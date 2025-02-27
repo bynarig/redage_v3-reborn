@@ -1,7 +1,7 @@
 <script>
     import { translateText } from 'lang'
-    export let SetView;
-    export let SetPopup;
+    export const SetView;
+    export const SetPopup;
 
     import ImgShop from './assets/images/menu/shop.png'
     import ImgPackages from './assets/images/menu/packages.png'

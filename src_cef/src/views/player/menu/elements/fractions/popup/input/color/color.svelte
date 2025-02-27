@@ -198,8 +198,8 @@
     ]
     import { onMount } from 'svelte'
 
-    export let defaultColor;
-    export let setHandleColor;
+    export const defaultColor;
+    export const setHandleColor;
 
     onMount(() => {
         let canvas;
@@ -480,7 +480,7 @@
         }, 0);
     });
 
-    export let lists
+    export const lists
 </script>
 <div id="inputcolorsettings" class:big={lists}>
     <div class="panel-row">

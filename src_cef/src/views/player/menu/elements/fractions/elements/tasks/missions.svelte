@@ -103,7 +103,7 @@
         "red",
     ]
 
-    export let onSetLoad;
+    export const onSetLoad;
 
     onSetLoad (true);
     const updateLoad = (json) => {

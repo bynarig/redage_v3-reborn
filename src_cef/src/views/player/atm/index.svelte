@@ -10,7 +10,7 @@
     import Input from './elements/input.svelte'
     import Menu from './elements/menu.svelte'
 
-    export let viewData;
+    export const viewData;
 
     let SelectViews = "Menu";
 

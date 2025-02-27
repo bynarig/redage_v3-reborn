@@ -1,15 +1,15 @@
 <script>
     import { translateText } from 'lang'
-    export let updateHeightMap;
+    export const updateHeightMap;
 
-    export let onSelectedList;
-    export let closeMenu;
+    export const onSelectedList;
+    export const closeMenu;
 
     import { executeClientAsyncToGroup } from 'api/rage'
 
     let data = []
 
-    export let selectedCategory;
+    export const selectedCategory;
 
     executeClientAsyncToGroup("gps.getList", selectedCategory).then((result) => {
         if (result && typeof result === "string")

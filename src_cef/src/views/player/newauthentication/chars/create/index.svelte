@@ -1,6 +1,6 @@
 <script>    
     import { translateText } from 'lang'
-    export let isSendCreator = false;
+    export const isSendCreator = false;
     import { executeClient } from 'api/rage'
     import { gender, FirstName, LastName } from 'store/customization';
     import { selectIndex } from './../store.js';

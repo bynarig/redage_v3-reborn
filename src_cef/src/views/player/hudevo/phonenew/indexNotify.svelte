@@ -1,7 +1,7 @@
 <script>
     import { fly } from 'svelte/transition';
-    export let phoneNotification;
-    export let isHudNewPhone;
+    export const phoneNotification;
+    export const isHudNewPhone;
 
     import Notification from './notification.svelte'
     import Header from './components/header.svelte'

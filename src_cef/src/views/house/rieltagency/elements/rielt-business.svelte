@@ -1,8 +1,8 @@
 <script>
     import { businessType } from 'json/realEstate.js'
     import { format } from 'api/formatter'
-    export let businessData;
-    export let onSelectData;
+    export const businessData;
+    export const onSelectData;
 </script>
 
 <div class="rielt__rielt_grid">

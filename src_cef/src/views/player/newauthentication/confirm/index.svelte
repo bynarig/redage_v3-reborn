@@ -3,8 +3,8 @@
     import './main.sass'
     import { executeClient } from 'api/rage'
     import { fly } from 'svelte/transition';
-    export let onClickRandom;
-    export let onPopupToogle;
+    export const onClickRandom;
+    export const onPopupToogle;
 
     const HandleKeyDown = (event) => {
         const { keyCode } = event;

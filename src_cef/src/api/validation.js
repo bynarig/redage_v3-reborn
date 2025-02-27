@@ -7,7 +7,7 @@ let
     emailPattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
     textAdPattern = /^[0-9a-zA-Zа-яА-Яё_ @*()-=?«»[\]!#$%:;.,^]+$/;
 
-export let validate = (validator, value) => {
+export const validate = (validator, value) => {
     text = "";
     switch(validator) {
         case "login":

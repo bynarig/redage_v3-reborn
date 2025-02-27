@@ -1,7 +1,7 @@
 <script>
     import { executeClient } from 'api/rage';
     import { translateText } from 'lang'
-    export let wantedData;
+    export const wantedData;
 </script>
 
 <h1>{translateText('fractions', 'Сейчас в розыске')}</h1>

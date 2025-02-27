@@ -4,10 +4,10 @@
     import { selectNumber, selectedImageFunc, selectedImage } from "@/views/player/hudevo/phonenew/stores";
 
 
-    export let sendGeo;
-    export let sendImage;
-    export let onClosePopup;
-    export let selectedNumber;
+    export const sendGeo;
+    export const sendImage;
+    export const onClosePopup;
+    export const selectedNumber;
 
     let contactData = {};
 

@@ -10,7 +10,7 @@
             richList = JSON.parse(result);
     });
 
-    export let onSelectIndex;
+    export const onSelectIndex;
 
     const onSelectItem = (item, index) => {
         //if (!item.IsShowForbes)

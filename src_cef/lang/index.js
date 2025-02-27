@@ -1,29 +1,5 @@
 const url = "https://cloud.redage.net/lang";
 
-/*
-import { writable } from "svelte/store";
-export const langText = writable({});
-
-const getData = async (lang) => {
-    const response = await fetch(`${url}/${lang}.json`);
-    const ajax = await response.json();
-    langText.set(ajax);
-}
-
-export const currentLang = writable('ru');
-currentLang.subscribe(value => {
-    getData (value);
-});
-
-
-export const translateText = (_langText, key) => {
-    if (_langText && _langText[key])
-        return _langText[key];
-
-    return {};
-}*/
-
-//import { get, isString } from "lodash";
 import { writable } from "svelte/store";
 
 import test from './ru.json'

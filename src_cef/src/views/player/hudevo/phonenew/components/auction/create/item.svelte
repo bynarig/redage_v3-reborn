@@ -60,7 +60,7 @@
         executeClientToGroup ("auction.add", text, !cameraLink ? "" : cameraLink, priceVal)
     }
 
-    export let onSelectedView;
+    export const onSelectedView;
 
     import { onDestroy } from 'svelte'
     onDestroy(() => {

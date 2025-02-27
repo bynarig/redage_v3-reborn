@@ -4,7 +4,7 @@
     import { charUUID } from 'store/chars';
     import { TimeFormat } from 'api/moment'
 
-    export let settings;
+    export const settings;
     let board = { };
     let selectPage = 1;
 

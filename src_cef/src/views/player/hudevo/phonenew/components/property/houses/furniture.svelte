@@ -2,7 +2,7 @@
     import { translateText } from 'lang'
     import {currentPage} from '../../../stores'
 
-    export let onSelectedViewHouse;
+    export const onSelectedViewHouse;
 
     import {addListernEvent, hasJsonStructure} from "api/functions";
     import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from "api/rage";

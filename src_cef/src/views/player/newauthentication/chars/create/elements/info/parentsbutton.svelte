@@ -1,10 +1,10 @@
 <script>
     import parents from './parents.js';
     
-    export let gender = false;
-    export let value = 0;
-    export let active = false;
-    export let onChange;
+    export const gender = false;
+    export const value = 0;
+    export const active = false;
+    export const onChange;
 
     const OnChangeParent = (change) => {
         value += change;

@@ -6,7 +6,7 @@
     import './css/main.sass'
     import { serverDateTime } from 'store/server'
     import { TimeFormat } from 'api/moment'
-    export let viewData;
+    export const viewData;
 
     let 
         value = "50",

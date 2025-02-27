@@ -111,7 +111,7 @@
     });
 
     import Notification from './notification.svelte'
-    export let phoneNotification;
+    export const phoneNotification;
 </script>
 
 <svelte:window on:keyup={onKeyUp} />

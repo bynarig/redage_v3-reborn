@@ -1,6 +1,6 @@
 <script>
     import { translateText } from 'lang'
-    export let visible;
+    export const visible;
     import { charGender, charMoney } from 'store/chars'
     import { executeClient } from 'api/rage'
     import { ItemType, ItemId, itemsInfo } from 'json/itemsInfo.js'

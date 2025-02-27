@@ -2,8 +2,8 @@
     import { translateText } from 'lang'
     import { executeClientToGroup } from 'api/rage'
 
-    export let selectedName;
-    export let closePopup;
+    export const selectedName;
+    export const closePopup;
 
     const handleKeyUp = (event) => {
         const { keyCode } = event;

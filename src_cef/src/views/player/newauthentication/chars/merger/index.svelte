@@ -3,8 +3,8 @@
     import './main.sass'
     import { executeClient } from 'api/rage'
     
-    export let isMerger;
-    export let SetMerger;
+    export const isMerger;
+    export const SetMerger;
 
 
     let password = "";
