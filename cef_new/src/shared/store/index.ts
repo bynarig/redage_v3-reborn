@@ -1,8 +1,31 @@
 import {configureStore} from '@reduxjs/toolkit';
-import userSlice from '#/shared/store/user/userSlice';
+import charReducer from './chars';
+import accountSlice from './account';
+import animationSlice from './animation';
+import customisationSlice from './customization';
+import hudSlice from './hud';
+import keysSlice from './keys';
+import inputSlice from './input';
+import loaderSlice from './loader';
+import newsSlice from './news';
+import questSlice from './quest';
+import serverSlice from './server';
+import settingsSlice from './settings';
+
 export const store = configureStore({
   reducer: {
-    user: userSlice,
+    account: accountSlice,
+    animation: animationSlice,
+    char: charReducer,
+    customisation: customisationSlice,
+    hud: hudSlice,
+    input: inputSlice,
+    keys: keysSlice,
+    loader: loaderSlice,
+    news: newsSlice,
+    quest: questSlice,
+    server: serverSlice,
+    settings: settingsSlice
   },
 });
 
