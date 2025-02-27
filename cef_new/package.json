@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --port 6789 --host",
     "lint": "eslint src",
-    "prod": "vite build",
+    "build": "vite build",
     "pretty": "prettier './**/**.{ts,tsx,js,jsx,mjs,cjs,css,scss,sass,md,*.json,.prettierrc,.lintstagedrc,.babelrc,.eslintrc,*.webmanifest}'",
     "format": "pnpm pretty --write"
   },

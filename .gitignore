@@ -18,6 +18,7 @@ client_packages/interface/build/bundle.js
 client_packages/interface/build/bundle.css.map
 client_packages/interface/build/bundle.css
 client_packages/interface/index.html
+
 client_packages/main.js
 
 dlcpacks/*
