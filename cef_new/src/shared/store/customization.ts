@@ -2,10 +2,10 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./index";
 import { executeClient } from "#/shared/api/rage";
 import CreateNewCustomization from "../../entities/createNewCustomisation";
-import appearances from "@/views/player/newauthentication/chars/create/elements/appearance/appearances.js";
-import parents from "@/views/player/newauthentication/chars/create/elements/info/parents.js";
-import characteristicsIndexes from "@/views/player/newauthentication/chars/create/elements/characteristics/indexes.js";
-import clothes from "@/views/player/newauthentication/chars/create/elements/clothes/clothes.js";
+import appearances from "#/store/player/newauthentication/chars/create/elements/appearance/appearances.js";
+import parents from "#/store/player/newauthentication/chars/create/elements/info/parents.js";
+import characteristicsIndexes from "#/store/player/newauthentication/chars/create/elements/characteristics/indexes.js";
+import clothes from "#/store/player/newauthentication/chars/create/elements/clothes/clothes.js";
 
 interface CharacterCustomization {
     FirstName?: string;

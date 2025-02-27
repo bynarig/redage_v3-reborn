@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { executeClient } from '#/shared/api/rage';
 
 interface AnimationState {
+    storeAnimBind: any;
     animFavorites: string[];
     animBind: number[];
 }

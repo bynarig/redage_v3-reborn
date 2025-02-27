@@ -1,10 +1,10 @@
 import * as data from 'store/customization';
 
-import appearances from '@/views/player/newauthentication/chars/create/elements/appearance/appearances.js';
-import parents from '@/views/player/newauthentication/chars/create/elements/info/parents.js';
-import characteristics from '@/views/player/newauthentication/chars/create/elements/characteristics/characteristics.js';
+import appearances from '#/store/player/newauthentication/chars/create/elements/appearance/appearances.js';
+import parents from '#/store/player/newauthentication/chars/create/elements/info/parents.js';
+import characteristics from '#/store/player/newauthentication/chars/create/elements/characteristics/characteristics.js';
 
-import clothes from '@/views/player/newauthentication/chars/create/elements/clothes/clothes.js';
+import clothes from '#/store/player/newauthentication/chars/create/elements/clothes/clothes.js';
 
 const randomHelper = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
