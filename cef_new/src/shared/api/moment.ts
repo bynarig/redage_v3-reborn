@@ -1,74 +1,68 @@
 import moment from 'moment-timezone';
-import { readable, derived } from 'svelte/store';
+import {readable, derived} from 'svelte/store';
 
 /*export default (time, format) => {
     if (!time) return moment().tz("Europe/Moscow").format(format);
     else return moment(time).tz("Europe/Moscow").format(format);
 }*/
 
-
-export const TimeFormat = (time = undefined, format = undefined) => {    
-    return moment(time).tz("Europe/Moscow").format(format);
-}
+export const TimeFormat = (time = undefined, format = undefined) => {
+  return moment(time).tz('Europe/Moscow').format(format);
+};
 
 export const TimeFormatStartOf = (time = undefined, unitOfTime = undefined) => {
-	return moment(time).tz("Europe/Moscow").startOf(unitOfTime).fromNow();
-}
+  return moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow();
+};
 
-export const TimeFormatEndOf = (time = undefined, unitOfTime = undefined, format = 'YYYY-MM-DD HH:mm:ss') => {
-	return moment(time).tz("Europe/Moscow").endOf(unitOfTime).format(format);
-}
+export const TimeFormatEndOf = (
+  time = undefined,
+  unitOfTime = undefined,
+  format = 'YYYY-MM-DD HH:mm:ss',
+) => {
+  return moment(time).tz('Europe/Moscow').endOf(unitOfTime).format(format);
+};
 
-export const TimeFormatStartOfReadable = (time = undefined, unitOfTime = undefined) => readable(null, function start(set) {
-	const interval = setInterval(() => {
-		set(moment(time).tz("Europe/Moscow").startOf(unitOfTime).fromNow());
-	}, 1000);
+export const TimeFormatStartOfReadable = (time = undefined, unitOfTime = undefined) =>
+  readable(null, function start(set) {
+    const interval = setInterval(() => {
+      set(moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow());
+    }, 1000);
 
-	return function stop() {
-		clearInterval(interval);
-	};
-});
-
-
+    return function stop() {
+      clearInterval(interval);
+    };
+  });
 
 //moment(message.Date).startOf('hour').fromNow()
 
-export const GetTime = (time = undefined) => {    
-    return moment(!time ? window.serverStore.getDateTime() : time).tz("Europe/Moscow");
-}
+export const GetTime = (time = undefined) => {
+  return moment(!time ? window.serverStore.getDateTime() : time).tz('Europe/Moscow');
+};
 
 let updateTime = false;
 
 export const setTime = (dateTime) => {
-    updateTime = GetTime (dateTime);
+  updateTime = GetTime(dateTime);
 };
 
 export const time = readable(new Date(), function start(set) {
-	const interval = setInterval(() => {
-		set(GetTime ());
-	}, 50);
+  const interval = setInterval(() => {
+    set(GetTime());
+  }, 50);
 
-	return function stop() {
-		clearInterval(interval);
-	};
+  return function stop() {
+    clearInterval(interval);
+  };
 });
 
-export const elapsed = derived(
-	time,
-	$time => {
-        if (updateTime === "-")
-            return;
+export const elapsed = derived(time, ($time) => {
+  if (updateTime === '-') return;
 
-        return GetTime (updateTime).diff($time);
-    }
-);
+  return GetTime(updateTime).diff($time);
+});
 
-export const elapsedUp = derived(
-	time,
-	$time => {
-		if (updateTime === "-")
-			return;
+export const elapsedUp = derived(time, ($time) => {
+  if (updateTime === '-') return;
 
-		return GetTime ($time).diff(updateTime);
-	}
-);
+  return GetTime($time).diff(updateTime);
+});

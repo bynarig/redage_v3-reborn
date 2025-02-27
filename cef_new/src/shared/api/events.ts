@@ -22,30 +22,30 @@
 //         delete eventsPool [eventName];
 //     }
 // };
-import {EventCallback} from "#/shared/types";
+import {EventCallback} from '#/shared/types';
 
- export default new class EventSystem {
-    private eventsPool: Map<string, EventCallback> = new Map();
+export default new (class EventSystem {
+  private eventsPool: Map<string, EventCallback> = new Map();
 
-    callEvent(eventName: string, ...args: any[]): boolean {
-        if (!this.eventsPool.has(eventName)) {
-            console.warn(`[events] Error, event "${eventName}" not found in pool.`);
-            return false;
-        }
-
-        const callback = this.eventsPool.get(eventName)!;
-        callback(...args);
-        return true;
+  callEvent(eventName: string, ...args: any[]): boolean {
+    if (!this.eventsPool.has(eventName)) {
+      console.warn(`[events] Error, event "${eventName}" not found in pool.`);
+      return false;
     }
 
-    addEvent(eventName: string, callback: EventCallback): void {
-        this.removeEvent(eventName);
-        this.eventsPool.set(eventName, callback);
-    }
+    const callback = this.eventsPool.get(eventName)!;
+    callback(...args);
+    return true;
+  }
 
-    removeEvent(eventName: string): void {
-        if (this.eventsPool.has(eventName)) {
-            this.eventsPool.delete(eventName);
-        }
+  addEvent(eventName: string, callback: EventCallback): void {
+    this.removeEvent(eventName);
+    this.eventsPool.set(eventName, callback);
+  }
+
+  removeEvent(eventName: string): void {
+    if (this.eventsPool.has(eventName)) {
+      this.eventsPool.delete(eventName);
     }
-}
+  }
+})();

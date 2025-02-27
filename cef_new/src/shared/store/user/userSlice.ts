@@ -2,13 +2,13 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 interface UserState {
-  isLogged: boolean,
-  id: string | undefined,
-  name: string | undefined,
-  surname: string | undefined,
-  email: string | undefined,
-  role: string | undefined,
-  avatar: string | undefined
+  isLogged: boolean;
+  id: string | undefined;
+  name: string | undefined;
+  surname: string | undefined;
+  email: string | undefined;
+  role: string | undefined;
+  avatar: string | undefined;
 }
 
 // Check localStorage for existing user data
@@ -16,14 +16,14 @@ const storedUser = localStorage.getItem('user');
 const initialState: UserState = storedUser
   ? JSON.parse(storedUser)
   : {
-    isLogged: false,
-    id: undefined,
-    name: undefined,
-    surname: undefined,
-    email: undefined,
-    role: undefined,
-    avatar: undefined
-  };
+      isLogged: false,
+      id: undefined,
+      name: undefined,
+      surname: undefined,
+      email: undefined,
+      role: undefined,
+      avatar: undefined,
+    };
 
 const userSlice = createSlice({
   name: 'user',

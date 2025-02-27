@@ -6,7 +6,6 @@ import {fileURLToPath} from 'node:url';
 import js from '@eslint/js';
 import {FlatCompat} from '@eslint/eslintrc';
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
@@ -22,7 +21,7 @@ export default [
   {
     plugins: {
       prettier,
-      react
+      react,
     },
 
     languageOptions: {
@@ -39,9 +38,7 @@ export default [
   {
     files: ['./cypress/**'],
 
-    plugins: [
-      'cypress',
-    ],
+    plugins: ['cypress'],
 
     languageOptions: {
       globals: {
@@ -79,8 +76,8 @@ export default [
 
       parserOptions: {
         project: './tsconfig.json',
-        'ecmaFeatures': {
-          'jsx': true,
+        ecmaFeatures: {
+          jsx: true,
         },
       },
     },

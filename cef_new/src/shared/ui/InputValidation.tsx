@@ -21,7 +21,14 @@ type InputValidationProps = {
   className?: string;
 };
 
-export default function InputValidation({ type, placeholder, pattern, isHint, hint, className }: InputValidationProps) {
+export default function InputValidation({
+  type,
+  placeholder,
+  pattern,
+  isHint,
+  hint,
+  className,
+}: InputValidationProps) {
   // Only use pattern if the type is not 'email'
   const inputPattern = type !== 'email' ? pattern || data[type]?.pattern : undefined;
 

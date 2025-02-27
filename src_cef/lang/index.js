@@ -1,4 +1,3 @@
-const url = "https://cloud.redage.net/lang";
 
 import { writable } from "svelte/store";
 
