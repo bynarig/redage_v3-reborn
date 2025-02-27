@@ -1,68 +1,64 @@
 import moment from 'moment-timezone';
-import {readable, derived} from 'svelte/store';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '#/shared/store'; // Adjust the import according to your Redux store setup
 
-/*export default (time, format) => {
-    if (!time) return moment().tz("Europe/Moscow").format(format);
-    else return moment(time).tz("Europe/Moscow").format(format);
-}*/
-
-export const TimeFormat = (time = undefined, format = undefined) => {
+// Utility functions
+export const TimeFormat = (time: moment.MomentInput = undefined, format: string = 'YYYY-MM-DD HH:mm:ss'): string => {
   return moment(time).tz('Europe/Moscow').format(format);
 };
 
-export const TimeFormatStartOf = (time = undefined, unitOfTime = undefined) => {
+export const TimeFormatStartOf = (time: moment.MomentInput = undefined, unitOfTime: moment.unitOfTime.StartOf = 'hour'): string => {
   return moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow();
 };
 
 export const TimeFormatEndOf = (
-  time = undefined,
-  unitOfTime = undefined,
-  format = 'YYYY-MM-DD HH:mm:ss',
-) => {
+  time: moment.MomentInput = undefined,
+  unitOfTime: moment.unitOfTime.StartOf = 'day',
+  format: string = 'YYYY-MM-DD HH:mm:ss',
+): string => {
   return moment(time).tz('Europe/Moscow').endOf(unitOfTime).format(format);
 };
 
-export const TimeFormatStartOfReadable = (time = undefined, unitOfTime = undefined) =>
-  readable(null, function start(set) {
+// Custom hook for readable time
+export const useTimeFormatStartOfReadable = (time: moment.MomentInput = undefined, unitOfTime: moment.unitOfTime.StartOf = 'hour'): string => {
+  const [formattedTime, setFormattedTime] = useState<string>('');
+
+  useEffect(() => {
     const interval = setInterval(() => {
-      set(moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow());
+      setFormattedTime(moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow());
     }, 1000);
 
-    return function stop() {
-      clearInterval(interval);
-    };
-  });
+    return () => clearInterval(interval);
+  }, [time, unitOfTime]);
 
-//moment(message.Date).startOf('hour').fromNow()
-
-export const GetTime = (time = undefined) => {
-  return moment(!time ? window.serverStore.getDateTime() : time).tz('Europe/Moscow');
+  return formattedTime;
 };
 
-let updateTime = false;
-
-export const setTime = (dateTime) => {
-  updateTime = GetTime(dateTime);
+export const GetTime = (time: moment.MomentInput = undefined): moment.Moment => {
+  const serverDateTime = useSelector((state: RootState) => state.server.serverDateTime); // Adjust according to your Redux state structure
+  return moment(!time ? serverDateTime : time).tz('Europe/Moscow');
 };
 
-export const time = readable(new Date(), function start(set) {
-  const interval = setInterval(() => {
-    set(GetTime());
-  }, 50);
+// Custom hook for elapsed time
+export const useElapsedTime = (): { elapsed: number | null, elapsedUp: number | null } => {
+  const [updateTime, setUpdateTime] = useState<moment.Moment | null>(null);
+  const [elapsed, setElapsed] = useState<number | null>(null);
+  const [elapsedUp, setElapsedUp] = useState<number | null>(null);
 
-  return function stop() {
-    clearInterval(interval);
-  };
-});
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentTime = GetTime();
+      if (updateTime) {
+        setElapsed(updateTime.diff(currentTime));
+        setElapsedUp(currentTime.diff(updateTime));
+      }
+    }, 50);
 
-export const elapsed = derived(time, ($time) => {
-  if (updateTime === '-') return;
+    return () => clearInterval(interval);
+  }, [updateTime]);
 
-  return GetTime(updateTime).diff($time);
-});
+  return { elapsed, elapsedUp };
+};
 
-export const elapsedUp = derived(time, ($time) => {
-  if (updateTime === '-') return;
-
-  return GetTime($time).diff(updateTime);
-});
+// Example usage in a component

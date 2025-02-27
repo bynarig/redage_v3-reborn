@@ -1,14 +1,14 @@
 let groupName = '';
-import {onDestroy} from 'svelte';
+// import {onDestroy} from 'svelte';
 
 export const setGroup = (_groupName: string) => {
   groupName = _groupName;
 
-  onDestroy(() => {
-    setTimeout(() => {
-      groupName = '';
-    }, 0);
-  });
+  // onDestroy(() => {
+  //   setTimeout(() => {
+  //     groupName = '';
+  //   }, 0);
+  // });
 };
 
 export const executeClientToGroup = (eventName: string, ...args: any) => {

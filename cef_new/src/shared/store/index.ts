@@ -11,13 +11,14 @@ import newsSlice from './news';
 import questSlice from './quest';
 import serverSlice from './server';
 import settingsSlice from './settings';
+import playerListSlice from "./playerList";
 
 export const store = configureStore({
   reducer: {
     account: accountSlice,
     animation: animationSlice,
     char: charReducer,
-    customisation: customisationSlice,
+    // customisation: customisationSlice,
     hud: hudSlice,
     input: inputSlice,
     keys: keysSlice,
@@ -25,9 +26,10 @@ export const store = configureStore({
     news: newsSlice,
     quest: questSlice,
     server: serverSlice,
-    settings: settingsSlice
+    settings: settingsSlice,
+    playerList: playerListSlice
   },
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = any;
 export type AppDispatch = typeof store.dispatch;

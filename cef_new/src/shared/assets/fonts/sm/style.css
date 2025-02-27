@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'sm-icon';
-  src:  url('./sm-icon.eot?fhlhmr');
-  src:  url('./sm-icon.eot?fhlhmr#iefix') format('embedded-opentype'),
-    url('./sm-icon.ttf?fhlhmr') format('truetype'),
-    url('./sm-icon.woff?fhlhmr') format('woff'),
-    url('./sm-icon.svg?fhlhmr#sm-icon') format('svg');
+  src:  url('sm-icon.eot?fhlhmr');
+  src:  url('sm-icon.eot?fhlhmr#iefix') format('embedded-opentype'),
+    url('sm-icon.ttf?fhlhmr') format('truetype'),
+    url('sm-icon.woff?fhlhmr') format('woff'),
+    url('sm-icon.svg?fhlhmr#sm-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

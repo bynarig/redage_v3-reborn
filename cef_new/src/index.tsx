@@ -4,11 +4,12 @@ import './app/index.css';
 import App from './app/App';
 import {Provider} from "react-redux";
 import {store} from "#/shared/store";
+import Test from "#/app/Test";
 
 createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
       <StrictMode>
-        <App />
+        <Test />
       </StrictMode>
     </Provider>,
 );
