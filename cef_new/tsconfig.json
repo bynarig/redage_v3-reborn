@@ -19,7 +19,9 @@
     "jsx": "preserve",
     "paths": {
       "#/*": ["./src/*"],
-      "#api/*": ["./src/shared/api/*"]
+      "#api/*": ["./src/shared/api/*"],
+      "#mock/*": ["./src/shared/data/mock/*"],
+      "#shared/*": ["./src/shared/*"]
     },
     "types": ["./node_modules/@ragempcommunity/types-cef"]
 

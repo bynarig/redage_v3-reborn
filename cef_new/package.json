@@ -14,12 +14,16 @@
     "format": "pnpm pretty --write"
   },
   "imports": {
-    "#/*": "./src/*"
+    "#/*": "./src/*",
+    "#api/*": "./src/shared/api/*",
+    "#mock/*": "./src/shared/data/mock/*",
+    "#shared/*": "./src/shared/*"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
     "@reduxjs/toolkit": "^2.6.0",
+    "@tabler/icons-react": "^3.30.0",
     "@vitejs/plugin-react": "^4.3.4",
     "axios": "^1.7.9",
     "buffer": "^6.0.3",
@@ -34,6 +38,7 @@
     "move-js": "^0.5.0",
     "rage-rpc": "^0.4.0",
     "react": "^19.0.0",
+    "react-colorful": "^5.6.1",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
     "react-redux": "^9.2.0",

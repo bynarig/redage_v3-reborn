@@ -10,6 +10,7 @@ interface Window {
   chat: any;
   router: any;
   playerlist: any;
+  authShop: () => void;
 
 
 }

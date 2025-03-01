@@ -1,5 +1,5 @@
 import i18n from 'i18next';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
 // Assuming your locale file is already configured as shown in your question
 // and the language is predefined and cannot be changed by the user.
@@ -17,24 +17,21 @@ const fetchLanguageData = async (language: string) => {
 };
 
 // Function to get translated text
-export const translateText = (key: string, formatArgs?: any[]): string => {
+export const useTranslateText = () => {
   const { t } = useTranslation();
 
-  // Construct the key path for i18next
-  // const keyPath = keys.join('.');
+  return (key: string, formatArgs?: any): string => {
+    let translatedText = t(key);
 
-  // Get the translated text
-  let translatedText = t(key);
+    if (formatArgs && formatArgs.length > 0) {
+      translatedText = translatedText.replace(/{(\d+)}/g, (match, index) => {
+        const argIndex = parseInt(index, 10);
+        return formatArgs[argIndex] !== undefined ? formatArgs[argIndex] : match;
+      });
+    }
 
-  // If there are format arguments, replace placeholders in the translated text
-  if (formatArgs && formatArgs.length > 0) {
-    translatedText = translatedText.replace(/{(\d+)}/g, (match, index) => {
-      const argIndex = parseInt(index, 10);
-      return formatArgs[argIndex] !== undefined ? formatArgs[argIndex] : match;
-    });
-  }
-
-  return translatedText;
+    return translatedText;
+  };
 };
 
 // Example usage:
@@ -53,4 +50,4 @@ const preloadLanguage = async (language: string) => {
 // Preload the predefined language (e.g., 'ru')
 preloadLanguage('ru');
 
-export default translateText;
+// export default translateText;

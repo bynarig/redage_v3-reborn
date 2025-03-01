@@ -1,200 +1,219 @@
+import React, {useEffect, useState} from "react";
+import {executeClient} from "#api/rage";
+import {useTranslateText} from "#shared/locale";
+import {format} from "#api/formatter";
+import carInfo from "./carInfo.js";
+import {IconArmchair, IconArrowBigRightLines, IconBrandCashapp, IconBrandSpeedtest, IconPackage, IconSteeringWheel} from "@tabler/icons-react";
+import {generateMockCars} from "#mock/cars";
+import Button from "#shared/ui/Button";
+import ColorPicker from "#shared/ui/ColorPicker";
 
-<script>
-    import { executeClient } from 'api/rage'
-    import { translateText } from 'lang'
-    import { format } from 'api/formatter'
-    import './css/main.sass';
-    import './fonts/style.css';
-    import authInfo from './authInfo.js';
-    const authColors =[
-        "#000",
-        "#fff",
-        "#e60000",
-        "#ff7300",
-        "#f0f000",
-        "#00e600",
-        "#00cdff",
-        "#0000e6",
-        "#be3ca5",
-    ];
-    let list = [];
-    let select = 0;
-    let selectTime = -1;
-    let sordId = -1;
-    let colorId = 0;
+const AutoShop: React.FC = () => {
+    const [selectedColor, setSelectedColor] = useState<string>("#000000");
 
-    let isDonateAutoroom = false;
+    const handleColorChange = (color: string) => {
+        setSelectedColor(color);
+        executeClient("auto", "color", color); // Send the color to the backend
+    };
+    const translateText = useTranslateText();
+    const [list, setList] = useState<any[]>([]);
+    const [select, setSelect] = useState<number>(-1);
+    const [sordId, setSordId] = useState<string>("");
+    const [colorId, setColorId] = useState<number>(0);
+    const [isDonateAutoroom, setIsDonateAutoroom] = useState<boolean>(false);
 
-    window.authShop = {
-        data: (value, isDonate = false) => {
-            let returnList = [];
-            let modelInfo;
-            JSON.parse(value).forEach(value => {
-                modelInfo = authInfo [value.modelName] || false;
-                
-                returnList = [
-                    ...returnList, {
-                        ...value,
-                        speed: (!modelInfo || (modelInfo && !modelInfo.maxSpeed)) ? value.speed : modelInfo.maxSpeed,
-                        boost: (!modelInfo || (modelInfo && !modelInfo.acceleration)) ? value.boost : modelInfo.acceleration,
-                        seat: (!modelInfo || (modelInfo && !modelInfo.seats)) ? value.seat : modelInfo.seats,
-                        invslots: (value.invslots !== undefined) ? value.invslots : 25,
-                        desc: !modelInfo ? false : modelInfo.desc,
-                    }
-                ];
-            });
-            list = returnList;
-            isDonateAutoroom = isDonate;
-            return;
+    useEffect(() => {
+        if (process.env.NODE_ENV === "development") {
+            const mockCars = generateMockCars();
+            setList(mockCars);
+        } else {
+            window.authShop = {
+                data: (value: string, isDonate: boolean = false) => {
+                    let returnList: any[] = [];
+                    let modelInfo;
+                    JSON.parse(value).forEach((value: any) => {
+                        modelInfo = carInfo[value.modelName] || false;
+
+                        returnList = [
+                            ...returnList,
+                            {
+                                ...value,
+                                speed: !modelInfo || (modelInfo && !modelInfo.maxSpeed) ? value.speed : modelInfo.maxSpeed,
+                                boost: !modelInfo || (modelInfo && !modelInfo.acceleration) ? value.boost : modelInfo.acceleration,
+                                seat: !modelInfo || (modelInfo && !modelInfo.seats) ? value.seat : modelInfo.seats,
+                                invslots: value.invslots !== undefined ? value.invslots : 25,
+                                desc: !modelInfo ? false : modelInfo.desc,
+                            },
+                        ];
+                    });
+                    setList(returnList);
+                    setIsDonateAutoroom(isDonate);
+                },
+            };
         }
-    }
 
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.keyCode === 27) {
+                executeClient("closeAuto");
+            }
+        };
 
-    const sort = (value) => {
+        window.addEventListener("keyup", handleKeyDown);
+        return () => window.removeEventListener("keyup", handleKeyDown);
+    }, []);
+
+    const sort = (value: string) => {
         if (sordId === value) return;
-        let sortList = list;
+        let sortList = [...list];
         let sortSelect = -1;
         if (select !== -1 && list[select]) sortSelect = list[select].index;
-        sordId = value;
-        sortList.sort(( a, b ) =>  b[value] - a[value]);
+        setSordId(value);
+        sortList.sort((a, b) => b[value] - a[value]);
         if (sortSelect !== -1) {
             sortList.forEach((value, index) => {
                 if (sortSelect === value.index) {
-                    select = index;
+                    setSelect(index);
                 }
             });
         }
-        list = sortList;
-    }
+        setList(sortList);
+    };
 
-
-    const setItem = (index) => {
+    const setItem = (index: number) => {
         if (!list[index]) return;
         else if (index === select) return;
-        //else if (selectTime > new Date().getTime()) return;
-        //selectTime = new Date().getTime() + 1000;
-        select = index;
-        executeClient ('auto', 'model', list[index].index);
-    }
+        setSelect(index);
+        executeClient("auto", "model", list[index].index);
+    };
 
-    const setColor = (index) => {
+    const setColor = (index: number) => {
         if (index === colorId) return;
-        colorId = index;
-        executeClient ('auto', 'color', index);
-    }
+        setColorId(index);
+        executeClient("auto", "color", index);
+    };
 
-    const startTestDrive = (type) => {
+    const setRgbColor = (color: string) => {
+        executeClient("auto", "rgbColor", color);
+    };
+
+    const startTestDrive = (type: number) => {
         if (select === -1 || !list[select]) return;
-        executeClient ('testDrive', type);
-    }
+        executeClient("testDrive", type);
+    };
 
-    const HandleKeyDown = (event) => {
-        const { keyCode } = event;
-        if (keyCode !== 27) return;
-
-        executeClient ('closeAuto');
-    }
-</script>
-
-<svelte:window on:keyup={HandleKeyDown} />
-<div id="autoshop">
-    <div class="box-KeyInfo relative">
-        <div class="KeyInfo"><span class="autoshop-mouse" /></div>
-        {translateText('business', 'ЛКМ - осмотреть')}
-    </div>
-
-    <div class="box-content">
-        <div class="box-auto-list" on:mouseenter={() => executeClient ("client.camera.toggled", false)} on:mouseleave={() => executeClient ("client.camera.toggled", true)}>
-            <span class="autoshop-racing logo" />
-            <div class="title">{translateText('business', 'Автосалон')}</div>
-            <div class="box-sort">
-                <button class="btn-sort" class:active={sordId === "price"}>
-                    <span class="autoshop-money" on:click={() => sort ("price")} />
-                </button>
-                <button class="btn-sort" class:active={sordId === "speed"}>
-                    <span class="autoshop-speed" on:click={() => sort ("speed")} />
-                </button>
-                <button class="btn-sort" class:active={sordId === "seat"}>
-                    <span class="autoshop-seat" on:click={() => sort ("seat")} />
-                </button>
-                <button class="btn-sort" class:active={sordId === "boost"}>
-                    <span class="autoshop-boost" on:click={() => sort ("boost")} />
-                </button>
-            </div>
-            <div class="box-list">
-            {#each list as value, index}
-                <div class="box-item" class:active={select === index} on:click={() => setItem (index)}>
-                    {@html value.modelName}
-                    <span>{format("money", value.price)}{isDonateAutoroom === true ? 'RB' : '$'}</span>
+    return (
+        <div className="absolute w-full h-full flex flex-col items-center justify-between pt-20 pb-20 pl-8 pr-8 text-white font-bold">
+            <div className="flex  justify-between w-full ">
+                <div className="w-96 h-auto pt-2.5 pb-2.5 flex flex-col items-center bg-[rgba(1,22,39,0.8)] rounded-lg" onMouseEnter={() => executeClient("client.camera.toggled", false)} onMouseLeave={() => executeClient("client.camera.toggled", true)}>
+                    <IconSteeringWheel stroke={2}/>
+                    <div className="mt-7 text-2xl">{translateText("business.Автосалон")}</div>
+                    <div className="mt-6 w-[330px] flex justify-between">
+                        <button className={`w-16 h-16 border border-[#C1C1C1] bg-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all ${sordId === "price" ? "border-0 bg-white" : ""}`} onClick={() => sort("price")}>
+                            <IconBrandCashapp stroke={2}/>
+                        </button>
+                        <button className={`w-16 h-16 border border-[#C1C1C1] bg-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all ${sordId === "speed" ? "border-0 bg-white" : ""}`} onClick={() => sort("speed")}>
+                            <IconBrandSpeedtest stroke={2}/>
+                        </button>
+                        <button className={`w-16 h-16 border border-[#C1C1C1] bg-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all ${sordId === "seat" ? "border-0 bg-white" : ""}`} onClick={() => sort("seat")}>
+                            <IconArmchair stroke={2}/>
+                        </button>
+                        <button className={`w-16 h-16 border border-[#C1C1C1] bg-transparent rounded-lg flex items-center justify-center cursor-pointer transition-all ${sordId === "boost" ? "border-0 bg-white" : ""}`} onClick={() => sort("boost")}>
+                            <IconArrowBigRightLines stroke={2}/>
+                        </button>
+                    </div>
+                    <div className="w-full h-80 mt-2.5 mr-2.5 pl-10 pr-6 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-track-[#131924] scrollbar-thumb-white scrollbar-rounded">
+                        {list.map((value, index) => (
+                            <div key={index} className={`h-9 flex items-center justify-between pl-4 pr-3.5 text-xl cursor-pointer rounded-sm font-medium text-[#C1C1C1] transition-all ${select === index ? "bg-white text-black" : ""}`} onClick={() => setItem(index)}>
+                                <div dangerouslySetInnerHTML={{__html: value.modelName}}/>
+                                <span className="font-bold">{format("money", value.price)}{isDonateAutoroom ? "RB" : "$"}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            {/each}
+                {select !== -1 && list[select] && (
+                    <div className="flex flex-col items-center bg-[rgba(1,22,39,0.8)] rounded-lg w-96 pt-8 pb-7" onMouseEnter={() => executeClient("client.camera.toggled", false)} onMouseLeave={() => executeClient("client.camera.toggled", true)}>
+                        <div className="w-[330px] flex items-center justify-between">
+                            <div className="text-3xl leading-9">{list[select].modelName}</div>
+                            <span className="text-white text-5xl"/>
+                        </div>
+                        {list[select].desc && (
+                            <div className="mt-2.5 w-[330px] text-sm leading-3 text-[#C1C1C1]">
+                                <span className="text-white">{list[select].modelName} - </span>
+                                {list[select].desc}
+                            </div>
+                        )}
+                        <div className="w-[330px] text-2xl leading-6 mt-6">{translateText("business.Характеристики")}:</div>
+                        <div className="w-[330px] text-xl leading-5 mt-3.5">
+                            <div className="w-full mt-5 flex items-center justify-between">
+                                <div className="text-[#C1C1C1] font-medium flex items-center">
+                                    <IconBrandCashapp stroke={2}/>
+                                    {translateText("business.Гос.стоимость")}:
+                                </div>
+                                {format("money", list[select].gosPrice)}
+                            </div>
+                            <div className="w-full mt-5 flex items-center justify-between">
+                                <div className="text-[#C1C1C1] font-medium flex items-center">
+                                    <IconBrandSpeedtest stroke={2}/>
+                                    {translateText("business.Макс.скорость")}:
+                                </div>
+                                {list[select].speed}
+                            </div>
+                            <div className="w-full mt-5 flex items-center justify-between">
+                                <div className="text-[#C1C1C1] font-medium flex items-center">
+                                    <IconArrowBigRightLines stroke={2}/>
+                                    {translateText("business.Разгон")}:
+                                </div>
+                                {list[select].boost}
+                            </div>
+                            <div className="w-full mt-5 flex items-center justify-between">
+                                <div className="text-[#C1C1C1] font-medium flex items-center">
+                                    <IconArmchair stroke={2}/>
+                                    {translateText("business.Кол-во мест")}:
+                                </div>
+                                {list[select].seat}
+                            </div>
+                            <div className="w-full mt-5 flex items-center justify-between">
+                                <div className="text-[#C1C1C1] font-medium flex items-center">
+                                    <IconPackage stroke={2}/>
+                                    {translateText("business.Багажных мест")}:
+                                </div>
+                                {list[select].invslots}
+                            </div>
+                        </div>
+                        <div className="w-[330px] text-2xl leading-6 mt-6">{translateText("business.Цвет")}:</div>
+                        <ColorPicker
+                            selectedColor={selectedColor}
+                            onColorChange={handleColorChange}
+                        />
+                        <button className="mt-6 w-[330px] h-14 border-0 bg-white flex items-center justify-center text-xl rounded-md cursor-pointer text-black font-bold hover:opacity-80" onClick={() => startTestDrive(1)}>
+                            {translateText("business.Тест-драйв")} (100$)
+                        </button>
+                        <button className="mt-6 w-[330px] h-14 border-0 bg-white flex items-center justify-center text-xl rounded-md cursor-pointer text-black font-bold hover:opacity-80" onClick={() => startTestDrive(2)}>
+                            {translateText("business.Тест-драйв FT")} (300$)
+                        </button>
+                    </div>
+                )}
+            </div>
+            <div className="relative" onMouseEnter={() => executeClient("client.camera.toggled", false)} onMouseLeave={() => executeClient("client.camera.toggled", true)}>
+                {select !== -1 && list[select] && (
+                    <>
+                        <Button
+                            name={`${translateText("business.business.Купить за")} ${isDonateAutoroom ? `${format("money", list[select].price)}RB` : `$${format("money", list[select].price)}`}`}
+                            onClick={() => executeClient("buyAuto", 1)}
+                        />
+                        <Button
+                            name={`${translateText("business.Купить для семьи за")} ${isDonateAutoroom ? `${format("money", list[select].price)}RB` : `$${format("money", list[select].gosPrice)}`}`}
+                            onClick={() => executeClient("buyAuto", 2)}
+                        />
+                    </>
+                )}
+                <Button
+                    name={`${translateText("business.Выйти")}`}
+                    onClick={() => executeClient("closeAuto")}
+                />
             </div>
         </div>
-        {#if (select !== -1 && list [select])}
-        <div class="box-auto-info" on:mouseenter={() => executeClient ("client.camera.toggled", false)} on:mouseleave={() => executeClient ("client.camera.toggled", true)}>
-            <div class="box-title">
-                <div class="title">{list [select].modelName}</div>
-                <span class="autoshop-racing logo" />
-            </div>
-            {#if list [select].desc}
-            <div class="desc">
-                <span>{list [select].modelName} - </span>{list [select].desc}
-            </div>
-            {/if}
-            <div class="info">{translateText('business', 'Характеристики')}:</div>
-            <div class="box-info">
-                <div class="box-item">
-                    <div class="box-icon">
-                        <span class="autoshop-money" />
-                        {translateText('business', 'Гос.стоимость')}:
-                    </div>
-                    {format("money", list [select].gosPrice)}
-                </div>
-                <div class="box-item">
-                    <div class="box-icon">
-                        <span class="autoshop-speed" />
-                        {translateText('business', 'Макс.скорость')}:
-                    </div>
-                    {list [select].speed}
-                </div>
-                <div class="box-item">
-                    <div class="box-icon">
-                        <span class="autoshop-boost" />
-                        {translateText('business', 'Разгон')}:
-                    </div>
-                    {list [select].boost}
-                </div>
-                <div class="box-item">
-                    <div class="box-icon">
-                        <span class="autoshop-seat" />
-                        {translateText('business', 'Кол-во мест')}:
-                    </div>
-                    {list [select].seat}
-                </div>
-                <div class="box-item">
-                    <div class="box-icon">
-                        <span class="autoshop-invslots" />
-                        {translateText('business', 'Багажных мест')}:
-                    </div>
-                    {list [select].invslots}
-                </div>
-            </div>
-            <div class="info">{translateText('business', 'Цвет')}:</div>
-            <div class="box-colors">
-            {#each authColors as value, index}
-                <i key={index} class={`color ${colorId !== index || "active"}`} on:click={() => setColor (index)} style="background: {value}" />
-            {/each}
-            </div>
-            <button class="btn-test-drive" on:click={() => startTestDrive (1)}>{translateText('business', 'Тест-драйв')} (100$)</button>
-            <button class="btn-test-drive" on:click={() => startTestDrive (2)}>{translateText('business', 'Тест-драйв FT')} (300$)</button>
-        </div>
-        {/if}
-    </div>
-    <div class="box-KeyInfo relative" on:mouseenter={() => executeClient ("client.camera.toggled", false)} on:mouseleave={() => executeClient ("client.camera.toggled", true)}>
-        {#if (select !== -1 && list [select])}
-            <button class="btn-footer" on:click={() => executeClient ('buyAuto', 1)}>{translateText('business', 'Купить за')} {isDonateAutoroom === true ? `${format("money", list [select].price)}RB` : `$${format("money", list [select].price)}`}</button>
-            <button class="btn-footer" on:click={() => executeClient ('buyAuto', 2)}>{translateText('business', 'Купить для семьи за')} {isDonateAutoroom === true ? `${format("money", list [select].price)}RB` : `$${format("money", list [select].gosPrice)}`}</button>
-        {/if}
-        <button class="btn-footer" on:click={() => executeClient ('closeAuto')}>{translateText('business', 'Выйти')}</button>
-    </div>
-</div>
+    );
+};
+
+export default AutoShop;

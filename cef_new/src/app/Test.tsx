@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayerList from "#/pages/admin/playersview";
+import AutoShop from "#/pages/business/autoshop";
 // import {useDispatch, useSelector} from 'react-redux';
 // import {RootState} from '#/shared/store'; // Adjust path as needed
 // import {executeClient} from '#/shared/api/rage'
@@ -179,7 +179,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <PlayerList/>
+            <AutoShop/>
             {/*<div*/}
             {/*    onKeyDown={handleKeydown}*/}
             {/*    onKeyUp={handleKeyup}*/}
