@@ -38,7 +38,7 @@ import PlayerRestart from '#/pages/player/restart/index.tsx';
 //Бизнес
 import BusinessAutoShop from '#/pages/business/autoshop/index.tsx';
 import BusinessWeaponShop from '#/pages/business/weaponshop/index.tsx';
-import BusinessPetShop from '#/pages/business/petshop/index.tsx';
+import BusinessPetShop from '#/pages/business/petshop-untoched/index.tsx';
 import BusinessMenu from '#/pages/business/menu/index.tsx';
 import BusinessNewPetShop from '#/pages/business/newpetshop/index.tsx';
 import BusinessClothes from '#/pages/business/clothes/index.tsx';

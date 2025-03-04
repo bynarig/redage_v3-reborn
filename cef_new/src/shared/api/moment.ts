@@ -5,11 +5,11 @@ import { RootState } from '#/shared/store'; // Adjust the import according to yo
 
 // Utility functions
 export const TimeFormat = (time: moment.MomentInput = undefined, format: string = 'YYYY-MM-DD HH:mm:ss'): string => {
-  return moment(time).tz('Europe/Moscow').format(format);
+  return moment(time).tz('Europe/Kyiv').format(format);
 };
 
 export const TimeFormatStartOf = (time: moment.MomentInput = undefined, unitOfTime: moment.unitOfTime.StartOf = 'hour'): string => {
-  return moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow();
+  return moment(time).tz('Europe/Kyiv').startOf(unitOfTime).fromNow();
 };
 
 export const TimeFormatEndOf = (
@@ -17,7 +17,7 @@ export const TimeFormatEndOf = (
   unitOfTime: moment.unitOfTime.StartOf = 'day',
   format: string = 'YYYY-MM-DD HH:mm:ss',
 ): string => {
-  return moment(time).tz('Europe/Moscow').endOf(unitOfTime).format(format);
+  return moment(time).tz('Europe/Kyiv').endOf(unitOfTime).format(format);
 };
 
 // Custom hook for readable time
@@ -26,7 +26,7 @@ export const useTimeFormatStartOfReadable = (time: moment.MomentInput = undefine
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFormattedTime(moment(time).tz('Europe/Moscow').startOf(unitOfTime).fromNow());
+      setFormattedTime(moment(time).tz('Europe/Kyiv').startOf(unitOfTime).fromNow());
     }, 1000);
 
     return () => clearInterval(interval);
@@ -37,7 +37,7 @@ export const useTimeFormatStartOfReadable = (time: moment.MomentInput = undefine
 
 export const GetTime = (time: moment.MomentInput = undefined): moment.Moment => {
   const serverDateTime = useSelector((state: RootState) => state.server.serverDateTime); // Adjust according to your Redux state structure
-  return moment(!time ? serverDateTime : time).tz('Europe/Moscow');
+  return moment(!time ? serverDateTime : time).tz('Europe/Kyiv');
 };
 
 // Custom hook for elapsed time

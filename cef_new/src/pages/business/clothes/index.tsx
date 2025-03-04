@@ -1,764 +1,611 @@
-// components/NewBarberShop.tsx
-import React, { useEffect, useState, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '#/shared/store';
-import { useTranslateText } from '#/shared/locale';
-import { executeClient } from '#api/rage';
-import { TimeFormat } from '#api/moment';
-import { format } from '#api/formatter';
-import {getClothesDictionary, getBarberDictionary, getTattooDictionary, menu} from "#shared/data/clothes";
-// import { clothesName } from '#views/player/menu/elements/inventory/functions';
-import InputBlock from './InputItem';
-import {clothesEmpty} from "#shared/data/clothes";
+import React, {useEffect, useRef, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {format} from '#shared/api/formatter';
+import {translateText} from '#shared/locale';
+import {TimeFormat} from '#shared/api/moment';
+import {RootState} from '#shared/store';
+import InputItem from './InputItem';
+import {ENVIRONMENT} from "#/env.ts";
+import {mockViewData} from "#mock/shops/clothes";
+import {getBarberDictionary, getClothesDictionary, getTattooDictionary, menu} from "#shared/data/clothes.ts";
+import {safeExecuteClient} from "#api/clientExicutor.ts";
 
-const NewBarberShop: React.FC = () => {
-      const translateText = useTranslateText();
+// Types and interfaces
+interface MenuItem {
+    id: number;
+    type: string;
+    title: string;
+    dictionary: string;
+    icon: string;
+    count: number;
+    camera: string;
+    function?: {
+        event: string;
+        componentId: number;
+        overlayID?: number;
+        colorType?: number;
+    }[];
+    gender?: string;
+    isHair?: boolean;
+    color?: boolean;
+    colorHighlight?: boolean;
+    opacity?: boolean;
+    tattooId?: number;
+}
 
-  const dispatch = useDispatch();
-  const serverDateTime = useSelector((state: RootState) => state.server.dateTime);
-  const charGender = useSelector((state: RootState) => state.char.gender);
+interface DictionaryItem {
+    Id: number;
+    Variation: number;
+    Name: string;
+    Textures: number[];
+    TName?: string;
+    Price?: number;
+    Donate?: number;
+    Torsos?: Record<number, number>;
+    Torso?: number;
+    IsHair?: boolean;
+    IsHat?: boolean;
+    IsGlasses?: boolean;
+    descName?: string | number;
+    Dictionary?: string;
+    MaleHash?: string;
+    FemaleHash?: string;
+    Slots?: string[];
+}
 
-  const [viewData, setViewData] = useState({
-    type: 'clothes',
-    menuList: '',
-    priceType: 0,
-    priceList: '{"Masks":[{"DrawableId":36,"Textures":[36]},{"DrawableId":46,"Textures":[46]},{"DrawableId":175,"Textures":[175]}],"Undershirts":[{"DrawableId":31,"Textures":[31]},{"DrawableId":32,"Textures":[32]},{"DrawableId":33,"Textures":[33,1]},{"DrawableId":34,"Textures":[34,1]},{"DrawableId":69,"Textures":[69,1]}],"Shoes":[{"DrawableId":1,"Textures":[1,1,2,13,14,15]},{"DrawableId":7,"Textures":[7,1,2]},{"DrawableId":9,"Textures":[9,1,2]},{"DrawableId":21,"Textures":[21,1,2,3,4,5,6,7,8,9,10,11]},{"DrawableId":24,"Textures":[24]},{"DrawableId":25,"Textures":[25]},{"DrawableId":36,"Textures":[36,1,2,3]},{"DrawableId":71,"Textures":[71,3,4]},{"DrawableId":73,"Textures":[73]}],"Legs":[{"DrawableId":10,"Textures":[10,1,2]},{"DrawableId":20,"Textures":[20]},{"DrawableId":24,"Textures":[24,1,5]},{"DrawableId":25,"Textures":[25,1,5]},{"DrawableId":28,"Textures":[28,1,3,6,8,10,14,15]},{"DrawableId":52,"Textures":[52]},{"DrawableId":129,"Textures":[129]}],"Accessories":[{"DrawableId":10,"Textures":[10,1,2]},{"DrawableId":11,"Textures":[11]},{"DrawableId":12,"Textures":[12,1,2]},{"DrawableId":36,"Textures":[36]},{"DrawableId":115,"Textures":[115,1]},{"DrawableId":127,"Textures":[127]},{"DrawableId":126,"Textures":[126]}],"Tops":[{"DrawableId":29,"Textures":[29,5,7]},{"DrawableId":31,"Textures":[31,5,7]},{"DrawableId":234,"Textures":[234]},{"DrawableId":337,"Textures":[337,5]},{"DrawableId":348,"Textures":[348,2,5,8,10,12]},{"DrawableId":349,"Textures":[349,2,5,8,10,12]}],"Decals":[{"DrawableId":57,"Textures":[57]},{"DrawableId":58,"Textures":[58,1]}],"Hat":[{"DrawableId":122,"Textures":[122,1]}],"Glasses":[{"DrawableId":18,"Textures":[18,2,3,5,6,7,9,10]},{"DrawableId":5,"Textures":[5,1,2,3,4,5,6,7,8,9,10]},{"DrawableId":25,"Textures":[25]},{"DrawableId":26,"Textures":[26]}]}',
-    gender: charGender,
-  });
+interface ColorData {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
+    gtaid: number;
+}
 
-  let [menuData, setMenuData] = useState([]);
-  let [selectMenu, setSelectMenu] = useState({});
-  let [isFraction, setIsFraction] = useState(viewData.priceType === 2);
-  let [isLoad, setIsLoad] = useState(false);
-  let [selectDictionary, setSelectDictionary] = useState(false);
-  let [selectTexture, setSelectTexture] = useState(0);
-  let [dictionaryData, setDictionaryData] = useState([]);
-  let [textureSort, setTextureSort] = useState([]);
-  let [selectSort, setSelectSort] = useState(0);
-  let [torso, setTorso] = useState(clothesEmpty[charGender ? "Male" : "Female"][3]);
-  let [torsos, setTorsos] = useState({});
-  let [torsosTexture, setTorsosTexture] = useState(0);
-  let [colorsData, setColorsData] = useState([]);
-  let [colorsDataSort, setColorsDataSort] = useState([]);
-  let [selectColor, setSelectColor] = useState(0);
-  let [colorsHighlightData, setColorsHighlightData] = useState([]);
-  let [colorsHighlightDataSort, setColorsHighlightDataSort] = useState([]);
-  let [selectColorHighlight, setSelectColorHighlight] = useState(0);
-  let [selectOpacity, setSelectOpacity] = useState(100);
+interface ViewData {
+    type: string;
+    gender: boolean;
+    priceType: number;
+    priceList: string;
+    menuList?: string;
+}
 
-  const refCategory = useRef(null);
+const ClothesShop: React.FC<{ viewData: ViewData }> = ({viewData}) => {
+    const dispatch = useDispatch();
+    const serverDateTime = useSelector((state: RootState) => state.server.serverDateTime);
+    const charGender = useSelector((state: RootState) => state.char.charGender);
+    if (ENVIRONMENT === 'development') viewData = mockViewData
+    const gender = viewData.gender ? "Male" : "Female";
+    const isFraction = viewData.priceType === 2;
 
-  useEffect(() => {
-    OnOpen(viewData.type, viewData.menuList);
-  }, [viewData.type, viewData.menuList]);
+    // State management
+    const [menuData, setMenuData] = useState<MenuItem[]>([]);
+    const [selectMenu, setSelectMenu] = useState<MenuItem | null>(null);
+    const [isLoad, setIsLoad] = useState(false);
+    const [dictionaryData, setDictionaryData] = useState<DictionaryItem[]>([]);
+    const [selectDictionary, setSelectDictionary] = useState<DictionaryItem | null>(null);
+    const [selectTexture, setSelectTexture] = useState(0);
+    const [textureSort, setTextureSort] = useState<number[]>([]);
+    const [selectSort, setSelectSort] = useState(0);
+    const [torso, setTorso] = useState(0);
+    const [torsos, setTorsos] = useState<Record<number, number>>({});
+    const [torsosTexture, setTorsosTexture] = useState(0);
+    const [colorsData, setColorsData] = useState<ColorData[]>([]);
+    const [colorsDataSort, setColorsDataSort] = useState<ColorData[]>([]);
+    const [selectColor, setSelectColor] = useState(0);
+    const [colorsHighlightData, setColorsHighlightData] = useState<ColorData[]>([]);
+    const [colorsHighlightDataSort, setColorsHighlightDataSort] = useState<ColorData[]>([]);
+    const [selectColorHighlight, setSelectColorHighlight] = useState(0);
+    const [selectOpacity, setSelectOpacity] = useState(100);
+    const [searchText, setSearchText] = useState("");
 
-  const OnOpen = (type, menuList) => {
-    if (menuList) menuList = JSON.parse(menuList);
-    else menuList = false;
+    const categoryRef = useRef<HTMLDivElement>(null);
+    const length = 8;
 
-    let newMenu = [];
-    menu.forEach(data => {
-      if (data.type == type && (!menuList || menuList.includes(data.dictionary)) && (!data.gender || data.gender === (charGender ? "Male" : "Female"))) {
-        newMenu.push(data);
-      }
-    });
+    const getDictionary = (dictionary, clothesData) => {
 
-    setMenuData(newMenu);
-    onSelectMenu(newMenu[0]);
-  };
+        //
 
-  const onSelectMenu = data => {
-    if (selectMenu == data) return;
+        clothesData = JSON.parse(clothesData);
 
-    setSelectDictionary(false);
-    setIsLoad(true);
-    setSelectMenu(data);
-    setSelectSort(0);
+        const priceList = JSON.parse(viewData.priceList);
+        const priceType = viewData.priceType;
 
-    switch (viewData.type) {
-      case "clothes":
-        setSelectTexture(0);
-        executeClient('client.clothes.getDictionary', getDictionary(data.dictionary, getClothesDictionary(charGender ? "Male" : "Female", data.dictionary)));
-        executeClient('client.clothes.updateCameraToBone', data.camera);
-        break;
-      case "barber":
-        setSelectColor(0);
-        setSelectColorHighlight(0);
-        setSelectOpacity(100);
-        executeClient('client.clothes.getDictionary', getDictionary(data.dictionary, getBarberDictionary(charGender ? "Male" : "Female", data.dictionary)));
-        executeClient('client.clothes.updateCameraToBone', data.camera);
-        break;
-      case "tattoo":
-        executeClient('client.clothes.getDictionary', getDictionary(data.dictionary, getTattooDictionary(data.dictionary)));
-        executeClient('client.clothes.updateCameraToBone', data.camera);
-        break;
-    }
-  };
 
-  const getDictionary = (dictionary, clothesData) => {
-    clothesData = JSON.parse(clothesData);
-    const priceList = JSON.parse(viewData.priceList);
-    const priceType = viewData.priceType;
+        let returnData = {};
 
-    let returnData = {};
+        if (priceType === 2) {
+            if (!["Tops", "Legs", "Shoes"].includes(dictionary))
+                returnData [-1] = {"Id": -1, "Variation": 0, "Name": "Пусто", "Textures": [0]}
 
-    if (priceType === 2) {
-      if (!["Tops", "Legs", "Shoes"].includes(dictionary))
-        returnData[-1] = { "Id": -1, "Variation": 0, "Name": "Пусто", "Textures": [0] };
+            if (dictionary === "Undershort")
+                returnData [-1] = {"Id": -1, "Variation": 0, "Name": "Пусто", "Textures": [0]}
 
-      if (dictionary === "Undershort")
-        returnData[-1] = { "Id": -1, "Variation": 0, "Name": "Пусто", "Textures": [0] };
-
-      if (dictionary === "Tops" && priceList && priceList["Undershort"])
-        returnData[-1] = { "Id": -1, "Variation": 0, "Name": "Пусто", "Textures": [0] };
-    }
-
-    if (priceList && clothesData && priceList[dictionary]) {
-      priceList[dictionary].forEach((data) => {
-        if (clothesData[data[0]]) {
-          returnData[data[0]] = clothesData[data[0]];
-
-          if (priceType === 0)
-            returnData[data[0]].Price = Number(data[1]);
-          else if (priceType === 1)
-            returnData[data[0]].Donate = Number(data[1]);
-          else if (priceType === 2)
-            returnData[data[0]].Textures = data[1].sort((a, b) => a - b);
+            if (dictionary === "Tops" && priceList && priceList && priceList ["Undershort"])
+                returnData [-1] = {"Id": -1, "Variation": 0, "Name": "Пусто", "Textures": [0]}
         }
-      });
+
+        if (priceList && clothesData && priceList [dictionary]) {
+            priceList [dictionary].forEach((data) => {
+                if (clothesData [data[0]]) {
+                    returnData [data[0]] = clothesData [data[0]];
+
+                    if (priceType === 0)
+                        returnData [data[0]].Price = Number(data[1]);
+                    else if (priceType === 1)
+                        returnData [data[0]].Donate = Number(data[1]);
+                    else if (priceType === 2)
+                        returnData [data[0]].Textures = data[1].sort((a, b) => a - b);
+                }
+            })
+        }
+
+        return JSON.stringify(returnData);
     }
 
-    return JSON.stringify(returnData);
-  };
+    // Event handlers
 
-  const UpdateDictionary = (json) => {
-    if (refCategory.current)
-      refCategory.current.scrollTop = 0;
+    const onSelectMenu = (data: MenuItem) => {
+        if (selectMenu === data) return;
 
-    setDictionaryData(JSON.parse(json));
-    OnSelectDictionary(dictionaryData[0]);
-    OnSettingConditions();
-
-    window.loaderData.delay("clothes.OnBuy", 1.5, false);
-    setIsLoad(false);
-    window.loaderData.delay("clothes.OnBuy", 1.5, false);
-  };
-
-  const OnSelectDictionary = data => {
-    if (selectDictionary == data) return;
-
-    setSelectDictionary(data);
-
-    switch (viewData.type) {
-      case "clothes":
+        setSelectDictionary(null);
+        setIsLoad(true);
+        setSelectMenu(data);
         setSelectSort(0);
-        if (data.Textures) {
-          setTextureSort(data.Textures.slice(0, 8));
-          OnSelectClothes(data.Textures[0]);
-        }
-        break;
-      case "barber":
-        setSelectSort(1);
-        if (selectMenu.dictionary == "Hair") {
-          OnSelectHair();
-          OnSelectColor(selectColor);
-        } else if (selectMenu.dictionary == "Eyes")
-          OnSelectEyes();
-        else {
-          OnSelectOverlay();
-          OnSelectColor(selectColor);
-        }
-        break;
-      case "tattoo":
-        OnSetDecoration();
-        break;
-    }
-  };
 
-  const OnSelectClothes = (index) => {
-    setSelectSort(0);
-    setSelectTexture(index);
-    executeClient('client.shop.getIndexToTextureName', selectDictionary.Name, selectDictionary.TName, selectTexture, selectDictionary.Id);
-
-    const func = selectMenu.function;
-    if (func && func[0] && func[0].event) {
-      if (selectMenu.dictionary === "Torsos") {
-        if (selectDictionary.Torsos[torso]) {
-          executeClient('client.clothes.setComponentVariation', 3, selectDictionary.Torsos[torso], selectTexture);
+        switch (viewData.type) {
+            case "clothes":
+                setSelectTexture(0);
+                safeExecuteClient('client.clothes.getDictionary', getDictionary(data.dictionary, getClothesDictionary(gender, data.dictionary)));
+                safeExecuteClient('client.clothes.updateCameraToBone', data.camera);
+                break;
+            case "barber":
+                setSelectColor(0);
+                setSelectColorHighlight(0);
+                setSelectOpacity(100);
+                safeExecuteClient('client.clothes.getDictionary', getDictionary(data.dictionary, getBarberDictionary(gender, data.dictionary)));
+                safeExecuteClient('client.clothes.updateCameraToBone', data.camera);
+                break;
+            case "tattoo":
+                safeExecuteClient('client.clothes.getDictionary', getDictionary(data.dictionary, getTattooDictionary(data.dictionary)));
+                safeExecuteClient('client.clothes.updateCameraToBone', data.camera);
+                break;
         }
-      } else {
-        let variation = selectDictionary.Variation;
+    };
 
-        if (selectDictionary.Id == -1) {
-          if (func[0].event === "setComponentVariation")
-            variation = clothesEmpty[charGender ? "Male" : "Female"][func[0].componentId];
-          else
-            variation = -1;
+    const onOpen = (type: string, menuList: string | null) => {
+        let parsedMenuList: number[] | false = false;
+
+        if (menuList) {
+            parsedMenuList = JSON.parse(menuList);
         }
 
-        executeClient('client.clothes.' + func[0].event, func[0].componentId, variation, selectTexture);
-      }
-    }
-
-    OnInitConditions();
-  };
-
-  const OnSelectHair = () => {
-    const func = selectMenu.function;
-    if (func && func[0] && func[0].event)
-      executeClient('client.clothes.setComponentVariation', func[0].componentId, selectDictionary.Variation, 0);
-    OnInitConditions();
-  };
-
-  const OnSelectEyes = () => {
-    const func = selectMenu.function;
-    if (func && func[0] && func[0].event)
-      executeClient('client.clothes.setEyeColor', selectDictionary.Variation);
-    OnInitConditions();
-  };
-
-  const OnSelectOverlay = () => {
-    const func = selectMenu.function;
-    if (func && func[0] && func[0].event)
-      executeClient('client.clothes.setHeadOverlay', func[0].overlayID, selectDictionary.Variation, selectOpacity);
-    OnInitConditions();
-  };
-
-  const OnSetDecoration = () => {
-    if (charGender ? "Male" : "Female" == "Male")
-      executeClient('client.clothes.setDecoration', selectMenu.tattooId, JSON.stringify(selectDictionary.Slots), selectDictionary.Dictionary, selectDictionary.MaleHash);
-    else
-      executeClient('client.clothes.setDecoration', selectMenu.tattooId, JSON.stringify(selectDictionary.Slots), selectDictionary.Dictionary, selectDictionary.FemaleHash);
-    OnInitConditions();
-  };
-
-  const OnSelectColor = (colorId) => {
-    setSelectSort(1);
-    setSelectColor(colorId);
-    const func = selectMenu.function;
-    if (func && func[1] && func[1].event) {
-      if (selectMenu.dictionary == "Hair")
-        executeClient('client.clothes.setHairColor', selectColor, selectColorHighlight);
-      else if (func[1].overlayID)
-        executeClient('client.clothes.setHeadOverlayColor', func[1].overlayID, func[1].colorType, selectColor);
-    }
-    OnInitConditions();
-  };
-
-  const OnSelectColorHighlight = (colorId) => {
-    setSelectSort(2);
-    setSelectColorHighlight(colorId);
-    const func = selectMenu.function;
-    if (func && func[1] && func[1].event) {
-      if (selectMenu.dictionary == "Hair")
-        executeClient('client.clothes.setHairColor', selectColor, selectColorHighlight);
-    }
-    OnInitConditions();
-  };
-
-  const OnSelectOpacity = (opacity) => {
-    setSelectOpacity(opacity);
-    const func = selectMenu.function;
-    if (func && func[0] && func[0].event) {
-      executeClient('client.clothes.setHeadOverlay', func[0].overlayID, selectDictionary.Variation, selectOpacity);
-      executeClient('client.clothes.setHeadOverlayColor', func[1].overlayID, func[1].colorType, selectColor);
-    }
-    OnInitConditions();
-  };
-
-  const getName = (name) => {
-    if (typeof name == "number") {
-      if (clothesName[`${selectMenu.dictionary}_${name}_${charGender ? "Male" : "Female"}`]) name = clothesName[`${selectMenu.dictionary}_${name}_${charGender ? "Male" : "Female"}`];
-      else if (clothesName[`${selectMenu.dictionary}_${name}`]) name = clothesName[`${selectMenu.dictionary}_${name}`];
-      else name = `#${name}`;
-    }
-    return name;
-  };
-
-  const MouseUse = (toggled) => {
-    executeClient("client.camera.toggled", toggled);
-  };
-
-  const OnSettingConditions = () => {
-    if (["Body", "Torso", "LeftArm", "RightArm"].includes(selectMenu.dictionary) || (selectDictionary && selectDictionary.Torso != undefined)) {
-      executeClient('client.clothes.getTorso');
-    }
-
-    if (selectDictionary && selectDictionary.Torsos != undefined) {
-      executeClient('client.clothes.getTop');
-    }
-
-    if (selectMenu.color != undefined) {
-      executeClient('client.clothes.getColor', selectMenu.isHair);
-    }
-  };
-
-  const GetTorso = (drawable, texture) => {
-    setTorsos({});
-    setTorsosTexture(texture);
-    const defaultTorsos = [0, 1, 2, 4, 5, 6, 8, 11, 12, 14, 15, 112, 113, 114];
-    if (!defaultTorsos.includes(drawable)) {
-      const torsosData = JSON.parse(getClothesDictionary(charGender ? "Male" : "Female", "Torsos"));
-      Object.values(torsosData).forEach((data) => {
-        if (data && data.Torsos && Object.values(data.Torsos)) {
-          Object.values(data.Torsos).forEach((torso) => {
-            if (torso === drawable) {
-              setTorsos(data.Torsos);
+        const newMenu: MenuItem[] = [];
+        menu.forEach(data => {
+            if (data.type === type && (!parsedMenuList || parsedMenuList.includes(data.dictionary)) && (!data.gender || data.gender === gender)) {
+                newMenu.push(data);
             }
-          });
-        }
-      });
-    }
-    OnInitConditions();
-  };
-
-  const GetTop = (drawable) => {
-    setTorso(clothesEmpty[charGender ? "Male" : "Female"][3]);
-    if (torso != drawable) {
-      let isSuccess = false;
-      const topsData = JSON.parse(getClothesDictionary(charGender ? "Male" : "Female", "Tops"));
-      Object.values(topsData).forEach((data) => {
-        if (data && data.Variation == drawable) {
-          setTorso(data.Torso);
-          isSuccess = true;
-        }
-      });
-      if (!isSuccess) {
-        const undershortData = JSON.parse(getClothesDictionary(charGender ? "Male" : "Female", "Undershort"));
-        Object.values(undershortData).forEach((data) => {
-          if (data && data.Variation == drawable) {
-            setTorso(data.Torso);
-          }
         });
-      }
-    }
-    OnInitConditions();
-  };
 
-  const OnInitConditions = () => {
-    if (selectDictionary && selectDictionary.Torso != undefined) {
-      executeClient('client.clothes.setComponentVariation', 8, clothesEmpty[charGender ? "Male" : "Female"][8], 0, false);
-
-      if (torsos[selectDictionary.Torso])
-        executeClient('client.clothes.setComponentVariation', 3, torsos[selectDictionary.Torso], torsosTexture, false);
-      else
-        executeClient('client.clothes.setComponentVariation', 3, selectDictionary.Torso, torsosTexture, false);
-    }
-
-    if (selectDictionary.IsHair != undefined) {
-      executeClient('client.clothes.setComponentVariation', 2, 0, 0, false);
-    }
-
-    if (selectDictionary.IsHat != undefined) {
-      executeClient('client.clothes.clearProp', 0);
-    }
-
-    if (selectDictionary.IsGlasses != undefined) {
-      executeClient('client.clothes.clearProp', 1);
-      executeClient('client.clothes.clearProp', 2);
-    }
-
-    if (["Masks"].includes(selectMenu.dictionary)) {
-      executeClient('client.clothes.clearMask');
-    }
-
-    if (["Hat", "Glasses", "Ears"].includes(selectMenu.dictionary)) {
-      executeClient('client.clothes.setComponentVariation', 1, clothesEmpty[charGender ? "Male" : "Female"][1], 0, false);
-    }
-
-    if (["Hair", "Beard", "Eyebrows", "Eyes", "Lips", "Palette", "Makeup"].includes(selectMenu.dictionary)) {
-      executeClient('client.clothes.setComponentVariation', 1, clothesEmpty[charGender ? "Male" : "Female"][1], 0, false);
-      executeClient('client.clothes.clearProp', 0);
-    }
-
-    if (["Eyebrows", "Eyes", "Makeup"].includes(selectMenu.dictionary)) {
-      executeClient('client.clothes.clearProp', 1);
-    }
-
-    if (["Body"].includes(selectMenu.dictionary)) {
-      if (torsos[clothesEmpty[charGender ? "Male" : "Female"][3]])
-        executeClient('client.clothes.setComponentVariation', 3, torsos[clothesEmpty[charGender ? "Male" : "Female"][3]], torsosTexture, false);
-      else
-        executeClient('client.clothes.setComponentVariation', 3, clothesEmpty[charGender ? "Male" : "Female"][3], torsosTexture, false);
-
-      executeClient('client.clothes.setComponentVariation', 8, clothesEmpty[charGender ? "Male" : "Female"][8], 0, false);
-      executeClient('client.clothes.setComponentVariation', 11, clothesEmpty[charGender ? "Male" : "Female"][11], 0, false);
-    }
-
-    if (["Head"].includes(selectMenu.dictionary)) {
-      executeClient('client.clothes.setComponentVariation', 1, clothesEmpty[charGender ? "Male" : "Female"][1], 0, false);
-      executeClient('client.clothes.clearProp', 0);
-    }
-
-    if (["Torso", "LeftArm", "RightArm"].includes(selectMenu.dictionary)) {
-      if (torsos[clothesEmpty[charGender ? "Male" : "Female"][3]])
-        executeClient('client.clothes.setComponentVariation', 3, torsos[clothesEmpty[charGender ? "Male" : "Female"][3]], torsosTexture, false);
-      else
-        executeClient('client.clothes.setComponentVariation', 3, clothesEmpty[charGender ? "Male" : "Female"][3], torsosTexture, false);
-
-      executeClient('client.clothes.setComponentVariation', 8, clothesEmpty[charGender ? "Male" : "Female"][8], 0, false);
-      executeClient('client.clothes.setComponentVariation', 11, clothesEmpty[charGender ? "Male" : "Female"][11], 0, false);
-    }
-
-    if (["LeftLeg", "RightLeg"].includes(selectMenu.dictionary)) {
-      executeClient('client.clothes.setComponentVariation', 4, clothesEmpty[charGender ? "Male" : "Female"][4], 0, false);
-    }
-  };
-
-  const SplitColorsArray = (select, array, sortArray) => {
-    let index = array.findIndex(a => a == sortArray[0]);
-    if (index != -1 && (index - 1) === select) {
-      return array.slice((index - 1), (index - 1) + 8);
-    }
-
-    index = array.findIndex(a => a == sortArray[7]);
-    if (index != -1 && (index + 1) === select) {
-      index = array.findIndex(a => a == sortArray[0]);
-      if (index != -1)
-        return array.slice((index + 1), (index + 1) + 8);
-    }
-    return -1;
-  };
-
-  const GetColor = (json) => {
-    setColorsData(JSON.parse(json));
-    setColorsDataSort(colorsData.slice(0, 8));
-
-    if (selectMenu.colorHighlight) {
-      setColorsHighlightData(colorsData);
-      setColorsHighlightDataSort(colorsDataSort);
-    }
-  };
-
-  const handleKeyDown = (event) => {
-    const { keyCode } = event;
-
-    if (keyCode != 13)
-      window.loaderData.delay("clothes.OnBuy", 1.5, false);
-
-    switch (keyCode) {
-      case 69: {
-        if (!menuData)
-          return;
-
-        let index = menuData.findIndex(a => a == selectMenu);
-        if (menuData[index + 1] === undefined)
-          return;
-
-        index++;
-        onSelectMenu(menuData[index]);
-        break;
-      }
-      case 81: {
-        if (!menuData)
-          return;
-
-        let index = menuData.findIndex(a => a == selectMenu);
-        if (menuData[index - 1] === undefined)
-          return;
-
-        index--;
-        onSelectMenu(menuData[index]);
-        break;
-      }
-      case 38: {
-        if (!dictionaryData)
-          return;
-
-        let index = dictionaryData.findIndex(a => a == selectDictionary);
-        if (dictionaryData[index - 1] === undefined)
-          return;
-
-        index--;
-        OnSelectDictionary(dictionaryData[index]);
-
-        const el = document.querySelector(`#menu_${index}`);
-        const bounds = el.getBoundingClientRect();
-        refCategory.current.scrollTop = (bounds.height * index) + ((bounds.height / 10) * index);
-        break;
-      }
-      case 40: {
-        if (!dictionaryData)
-          return;
-
-        let index = dictionaryData.findIndex(a => a == selectDictionary);
-        if (dictionaryData[index + 1] === undefined)
-          return;
-
-        index++;
-        OnSelectDictionary(dictionaryData[index]);
-
-        const el = document.querySelector(`#menu_${index}`);
-        const bounds = el.getBoundingClientRect();
-        refCategory.current.scrollTop = (bounds.height * index) + ((bounds.height / 10) * index);
-        break;
-      }
-      case 37:
-        switch (selectSort) {
-          case 0:
-            if (!selectDictionary.Textures)
-              return;
-
-            let index = selectDictionary.Textures.findIndex(a => a == selectTexture);
-            if (selectDictionary.Textures[index - 1] === undefined)
-              return;
-
-            OnSelectClothes(selectDictionary.Textures[index - 1]);
-
-            let returnSort = SplitColorsArray(selectTexture, selectDictionary.Textures, textureSort);
-
-            if (returnSort != -1)
-              setTextureSort(returnSort);
-            break;
-          case 1:
-            if (--selectColor < 0)
-              setSelectColor(0);
-            else {
-              OnSelectColor(selectColor);
-              let returnSort = SplitColorsArray(selectColor, colorsDataSort, colorsData);
-              if (returnSort != -1)
-                setColorsDataSort(returnSort);
-            }
-            break;
-          case 2:
-            if (--selectColorHighlight < 0)
-              setSelectColorHighlight(0);
-            else {
-              OnSelectColorHighlight(selectColorHighlight);
-              let returnSort = SplitColorsArray(selectColorHighlight, colorsHighlightDataSort, colorsHighlightData);
-              if (returnSort != -1)
-                setColorsHighlightDataSort(returnSort);
-            }
-            break;
+        setMenuData(newMenu);
+        if (newMenu.length > 0) {
+            onSelectMenu(newMenu[0]);
         }
-        break;
-      case 39:
-        switch (selectSort) {
-          case 0:
-            if (selectDictionary.Textures === undefined)
-              return;
+    };
 
-            let index = selectDictionary.Textures.findIndex(a => a == selectTexture);
-            if (selectDictionary.Textures[index + 1] === undefined)
-              return;
-
-            OnSelectClothes(selectDictionary.Textures[index + 1]);
-
-            let returnSort = SplitColorsArray(selectTexture, selectDictionary.Textures, textureSort);
-
-            if (returnSort != -1)
-              setTextureSort(returnSort);
-            break;
-          case 1:
-            if (++selectColor > colorsData.length - 1)
-              setSelectColor(colorsData.length - 1);
-            else {
-              OnSelectColor(selectColor);
-              let returnSort = SplitColorsArray(selectColor, colorsDataSort, colorsData);
-              if (returnSort != -1)
-                setColorsDataSort(returnSort);
-            }
-            break;
-          case 2:
-            if (++selectColorHighlight > colorsHighlightData.length - 1)
-              setSelectColorHighlight(colorsHighlightData.length - 1);
-            else {
-              OnSelectColorHighlight(selectColorHighlight);
-              let returnSort = SplitColorsArray(selectColorHighlight, colorsHighlightDataSort, colorsHighlightData);
-              if (returnSort != -1)
-                setColorsHighlightDataSort(returnSort);
-            }
-            break;
+    const updateDictionary = (json: string) => {
+        if (categoryRef.current) {
+            categoryRef.current.scrollTop = 0;
         }
-        break;
-      case 13:
-        OnBuy();
-        break;
-    }
-  };
 
-  const handleKeyUp = (event) => {
-    const { keyCode } = event;
-    switch (keyCode) {
-      case 27:
-        OnExit();
-        break;
-    }
-  };
+        const parsedData = JSON.parse(json) as DictionaryItem[];
+        setDictionaryData(parsedData);
+        if (parsedData.length > 0) {
+            onSelectDictionary(parsedData[0]);
+        }
+        // onSettingConditions();
 
-  const OnExit = () => {
-    executeClient('client.shop.close');
-  };
+        // Simulating the window.loaderData.delay functionality
+        setTimeout(() => {
+            setIsLoad(false);
+        }, 1500);
+    };
 
-  const OnBuy = () => {
-    if (!selectDictionary)
-      return;
+    const onSelectDictionary = (data: DictionaryItem) => {
+        if (selectDictionary === data) return;
 
-    if (isLoad)
-      return;
+        setSelectDictionary(data);
 
-    if (!window.loaderData.delay("clothes.OnBuy", 1.5))
-      return;
+        switch (viewData.type) {
+            case "clothes":
+                setSelectSort(0);
+                if (data.Textures) {
+                    setTextureSort(data.Textures.slice(0, length));
+                    onSelectClothes(data.Textures[0]);
+                }
+                break;
+                break;
+            case "barber":
+                setSelectSort(1);
+                if (selectMenu?.dictionary === "Hair") {
+                    const handleHairSelection = () => {
+                        if (!selectDictionary || !selectMenu?.function?.[0]) return;
+                        safeExecuteClient('client.clothes.setHair',
+                            selectDictionary.Id,
+                            selectColor,
+                            selectColorHighlight);
+                    };
+                    handleHairSelection();
+                    setSelectColor(selectColor);
+                } else if (selectMenu?.dictionary === "Eyes") {
+                    const handleEyesSelection = () => {
+                        if (!selectDictionary) return;
+                        safeExecuteClient('client.clothes.setEyes', selectDictionary.Id);
+                    };
+                    handleEyesSelection();
+                } else {
+                    const handleOverlaySelection = () => {
+                        if (!selectDictionary || !selectMenu?.function?.[0]) return;
+                        safeExecuteClient('client.clothes.setHeadOverlay',
+                            selectMenu.function[0].overlayID || 0,
+                            selectDictionary.Id,
+                            selectOpacity / 100,
+                            selectColor,
+                            selectMenu.function[0].colorType || 0);
+                    };
+                    handleOverlaySelection();
+                    setSelectColor(selectColor);
+                }
+                break;
+            case "tattoo":
+                const handleDecorationSelection = () => {
+                    if (!selectDictionary) return;
+                    safeExecuteClient('client.clothes.setDecoration',
+                        selectDictionary.Dictionary || "",
+                        selectDictionary.MaleHash || "",
+                        selectDictionary.FemaleHash || "",
+                        selectDictionary.Slots || []);
+                };
+                handleDecorationSelection();
+                break;
 
-    switch (viewData.type) {
-      case "clothes":
-        if (!isFraction)
-          executeClient(`client.clothes.buy`, selectMenu.dictionary, selectDictionary.Id, selectTexture);
-        else
-          executeClient(`client.table.editClothingSet`, selectMenu.dictionary, selectDictionary.Id, selectTexture);
-        break;
-      case "barber":
-        executeClient(`client.barber.buy`, selectMenu.dictionary, selectDictionary.Id, selectColor, selectColorHighlight, selectOpacity);
-        break;
-      case "tattoo":
-        executeClient(`client.tattoo.buy`, selectMenu.dictionary, selectDictionary.Id);
-        break;
-    }
-  };
+        }
+    };
 
-  return (
-    <div id="newbarbershop" onKeyUp={handleKeyUp} onKeyDown={handleKeyDown} tabIndex={0}>
-      <div className="box-date">
-        <div className="box-time">
-          <div className="time">{TimeFormat(serverDateTime, "H:mm")}</div>
-          {TimeFormat(serverDateTime, "DD.MM.YYYY")}
-        </div>
-      </div>
-      <div className="newbarbershop__top">
-        <div className="newbarbershop__top_header" onMouseEnter={() => MouseUse(false)} onMouseLeave={() => MouseUse(true)}>
-          <div className="newbarbershop__button">
-            Q
-          </div>
-          {menuData.map((data, index) => (
-            <div key={index} className={`newbarbershop__category ${selectMenu == data ? 'active' : ''}`} onClick={() => onSelectMenu(data)}>
-              <div className={`${data.icon} newbarbershop__category_icon`}></div>
+    const onSelectClothes = (index: number) => {
+        setSelectSort(0);
+        setSelectTexture(index);
+
+        if (selectDictionary) {
+            safeExecuteClient('client.shop.getIndexToTextureName', selectDictionary.Name, selectDictionary.TName, index, selectDictionary.Id);
+
+            const func = selectMenu?.function;
+            if (func && func[0] && func[0].event) {
+                if (selectMenu.dictionary === "Torsos") {
+                    if (selectDictionary.Torsos && selectDictionary.Torsos[torso]) {
+                        safeExecuteClient('client.clothes.setComponentVariation',
+                            3,
+                            selectDictionary.Torsos[torso],
+                            index);
+                    }
+                } else {
+                    let variation = selectDictionary.Variation;
+
+                    if (selectDictionary.Id === -1) {
+                        if (func[0].event === "setComponentVariation") {
+                            // Need to implement clothesEmpty functionality
+                            variation = 0; // Placeholder
+                        } else {
+                            variation = -1;
+                        }
+                    }
+
+                    safeExecuteClient(`client.clothes.${func[0].event}`,
+                        func[0].componentId,
+                        variation,
+                        index);
+                }
+            }
+        }
+
+        // onInitConditions();
+    };
+
+    // Event handlers for keyboard navigation
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+        const {keyCode} = e;
+
+        if (keyCode !== 13) {
+            // Reset buy timeout
+        }
+
+        switch (keyCode) {
+            case 69: // E key
+                if (!menuData.length) return;
+
+                const nextMenuIndex = menuData.findIndex(a => a === selectMenu) + 1;
+                if (menuData[nextMenuIndex]) {
+                    onSelectMenu(menuData[nextMenuIndex]);
+                }
+                break;
+
+            case 81: // Q key
+                if (!menuData.length) return;
+
+                const prevMenuIndex = menuData.findIndex(a => a === selectMenu) - 1;
+                if (menuData[prevMenuIndex]) {
+                    onSelectMenu(menuData[prevMenuIndex]);
+                }
+                break;
+
+            case 38: // Up arrow
+                // Navigate up in dictionary items
+                break;
+
+            case 40: // Down arrow
+                // Navigate down in dictionary items
+                break;
+
+            case 37: // Left arrow
+                // Navigate left based on selection type
+                break;
+
+            case 39: // Right arrow
+                // Navigate right based on selection type
+                break;
+
+            case 13: // Enter
+                onBuy();
+                break;
+        }
+    };
+
+    const handleKeyUp = (e: React.KeyboardEvent<HTMLDivElement>) => {
+        if (e.keyCode === 27) { // ESC key
+            onExit();
+        }
+    };
+
+    const onExit = () => {
+        safeExecuteClient('client.shop.close');
+    };
+
+    const onBuy = () => {
+        if (!selectDictionary || isLoad) return;
+
+        // Implement buy timeout logic
+
+        switch (viewData.type) {
+            case "clothes":
+                if (!isFraction) {
+                    safeExecuteClient('client.clothes.buy', selectMenu?.dictionary, selectDictionary.Id, selectTexture);
+                } else {
+                    safeExecuteClient('client.table.editClothingSet', selectMenu?.dictionary, selectDictionary.Id, selectTexture);
+                }
+                break;
+            case "barber":
+                safeExecuteClient('client.barber.buy', selectMenu?.dictionary, selectDictionary.Id, selectColor, selectColorHighlight, selectOpacity);
+                break;
+            case "tattoo":
+                safeExecuteClient('client.tattoo.buy', selectMenu?.dictionary, selectDictionary.Id);
+                break;
+        }
+    };
+
+    // Additional handlers and utilities would be implemented here
+
+    // Setup event listeners
+    useEffect(() => {
+        // Set up event listeners for client-server communication
+        const eventHandlers = {
+            "cef.clothes.updateDictionary": updateDictionary,
+            "cef.clothes.setName": (name: string) => {
+                // Update dictionary item name
+            },
+            "cef.clothes.getTorso": (drawable: number, texture: number) => {
+                // Handle torso data
+            },
+            "cef.clothes.getTop": (drawable: number) => {
+                // Handle top data
+            },
+            "cef.clothes.getColor": (json: string) => {
+                // Handle color data
+            }
+        };
+
+        // Add event listeners
+        Object.entries(eventHandlers).forEach(([event, handler]) => {
+            // window.events.addEvent(event, handler);
+        });
+
+        // Initial setup
+        onOpen(viewData.type, viewData.menuList || null);
+
+        // Cleanup event listeners
+        return () => {
+            Object.entries(eventHandlers).forEach(([event, handler]) => {
+                // window.events.removeEvent(event, handler);
+            });
+        };
+    }, []);
+
+    // Mouse control handlers
+    const handleMouseUse = (toggled: boolean) => {
+        safeExecuteClient("client.camera.toggled", toggled);
+    };
+
+    return (
+        <div
+            id="newbarbershop"
+            className="w-full h-full flex flex-col bg-black/80 text-white"
+            tabIndex={0}
+            onKeyDown={handleKeyDown}
+            onKeyUp={handleKeyUp}
+        >
+            {/* Time display */}
+            <div className="absolute top-4 right-4">
+                <div className="text-lg font-bold">{TimeFormat(serverDateTime, "H:mm")}</div>
+                <div className="text-sm text-gray-300">{TimeFormat(serverDateTime, "DD.MM.YYYY")}</div>
             </div>
-          ))}
-          <div className="newbarbershop__button">
-            E
-          </div>
-        </div>
-        <div className="newbarbershop__text">
-          {translateText('business', 'Выбор категории')}
-        </div>
-      </div>
-      <div className="newbarbershop__center">
-        <div className="newbarbershop__menu">
-          <div className="box-flex">
-            <div className="newbarbershop__button">
-              <span className="newbarbershopicons-updown"></span>
-            </div>
-            <div>{translateText('business', 'Выбор')} {selectMenu.title}</div>
-          </div>
-          <div className="newbarbershop__menu_info">{translateText('business', 'В ассортименте')} {dictionaryData.length} {translateText('business', 'шт.')}.</div>
-          <div className="newbarbershop__menu_list" ref={refCategory} onMouseEnter={() => MouseUse(false)} onMouseLeave={() => MouseUse(true)}>
-            {dictionaryData.map((data, index) => (
-              <div key={index} className={`newbarbershop__menu_element ${data === selectDictionary ? 'active' : ''}`} id={`menu_${index}`} onClick={() => OnSelectDictionary(data)}>
-                <div className="newbarbershop__menu_element-absolute"></div>
-                <div className="newbarbershop__menu_name">{getName(data.descName)}</div>
-                {data.Donate > 0 && !isFraction && (
-                  <div className="newbarbershop__menu_price">{format("money", data.Donate)} RB</div>
-                )}
-                {data.Price > 0 && !isFraction && (
-                  <div className="newbarbershop__menu_price">$ {format("money", data.Price)}</div>
-                )}
-              </div>
-            ))}
-          </div>
-          {selectDictionary.Textures && selectDictionary.Textures.length > 0 && (
-            <div className="newbarbershop__menu_info box-flex" style={{ opacity: selectSort == 0 ? 1 : 0.5 }}>
-              <div className="newbarbershop__button">
-                <span className="newbarbershopicons-leftright"></span>
-              </div>
-              {translateText('business', 'Вариаций')}: {selectDictionary.Textures.length} {translateText('business', 'шт')}.
-            </div>
-          )}
-          {selectDictionary.Textures && selectDictionary.Textures.length > 0 && (
-            <div className="newbarbershop__menu_colors textures" onMouseEnter={() => MouseUse(false)} onMouseLeave={() => MouseUse(true)}>
-              {textureSort.map((index, _) => (
-                <div key={index} className={`newbarbershop__menu_color ${selectTexture === index ? 'active' : ''}`} id={`texture_${index}`} onClick={() => OnSelectClothes(index)}>{index}</div>
-              ))}
-            </div>
-          )}
-          {selectMenu.color && colorsData.length > 0 && (
-            <div className="newbarbershop__menu_info box-flex box-flex" style={{ opacity: selectSort == 1 ? 1 : 0.5 }}>
-              <div className="newbarbershop__button">
-                <span className="newbarbershopicons-leftright"></span>
-              </div>
-              {translateText('business', 'На выбор')} {colorsData.length} {translateText('business', 'цвета')}
-            </div>
-          )}
-          {selectMenu.color && colorsData.length > 0 && (
-            <div className="newbarbershop__menu_colors" onMouseEnter={() => MouseUse(false)} onMouseLeave={() => MouseUse(true)}>
-              {colorsDataSort.map((data, index) => (
-                <div key={index} className={`newbarbershop__menu_color ${selectColor === data.gtaid ? 'active' : ''}`} id={`colors_${index}`} onClick={() => OnSelectColor(data.gtaid)} style={{ background: `rgba(${data.r}, ${data.g}, ${data.b}, ${data.a})` }}>{data.gtaid}</div>
-              ))}
-            </div>
-          )}
-          {selectMenu.colorHighlight && colorsHighlightData.length > 0 && (
-            <div className="newbarbershop__menu_info box-flex" style={{ opacity: selectSort == 2 ? 1 : 0.5 }}>
-              <div className="newbarbershop__button">
-                <span className="newbarbershopicons-leftright"></span>
-              </div>
-              {translateText('business', 'Второй цвет - тоже')} {colorsHighlightData.length} {translateText('business', 'шт')}.
-            </div>
-          )}
-          {selectMenu.colorHighlight && colorsHighlightData.length > 0 && (
-            <div className="newbarbershop__menu_colors" onMouseEnter={() => MouseUse(false)} onMouseLeave={() => MouseUse(true)}>
-              {colorsHighlightDataSort.map((data, index) => (
-                <div key={index} className={`newbarbershop__menu_color ${selectColorHighlight === data.gtaid ? 'active' : ''}`} id={`colorsHighlight_${index}`} onClick={() => OnSelectColorHighlight(data.gtaid)} style={{ background: `rgba(${data.r}, ${data.g}, ${data.b}, ${data.a})` }}>{data.gtaid}</div>
-              ))}
-            </div>
-          )}
-          {selectMenu.opacity && (
-            <InputBlock
-              id="selectOpacity"
-              leftText="0"
-              centerText="Насыщенность"
-              rightText="100"
-              step={0.1}
-              min={0}
-              max={1}
-              value={selectOpacity}
-              callback={newvalue => OnSelectOpacity(newvalue)}
-            />
-          )}
-        </div>
-        <div className="newbarbershop__help">
-          <div className="newbarbershop__help_img"></div>
-          <div className="newbarbershop__help_main">
-            <div className="newbarbershop__help_text">{translateText('business', 'Используйте горячие клавиши для быстрого перемещения по интерфейсу')}:</div>
-            <div className="box-between">
-              <div className="newbarbershop__button">
-                <span className="newbarbershopicons-leftright"></span>
-              </div>
-              <div className="newbarbershop__button">
-                <div className="newbarbershop__button">
-                  <span className="newbarbershopicons-updown"></span>
+
+            {/* Top menu - categories */}
+            <div className="w-full p-4 border-b border-gray-700">
+                <div
+                    className="flex items-center justify-center space-x-2"
+                    onMouseEnter={() => handleMouseUse(false)}
+                    onMouseLeave={() => handleMouseUse(true)}
+                >
+                    <div className="px-3 py-1 bg-gray-700 rounded">Q</div>
+
+                    {menuData.map((data, index) => (
+                        <div
+                            key={`category-${index}`}
+                            className={`p-2 rounded cursor-pointer ${selectMenu === data ? 'bg-primary text-white' : 'bg-gray-800 hover:bg-gray-700'}`}
+                            onClick={() => onSelectMenu(data)}
+                        >
+                            <div className={`${data.icon} text-xl`}></div>
+                        </div>
+                    ))}
+
+                    <div className="px-3 py-1 bg-gray-700 rounded">E</div>
                 </div>
-              </div>
-              <div className="newbarbershop__button">
-                Q
-              </div>
-              <div className="newbarbershop__button">
-                E
-              </div>
+                <div className="text-center mt-2 text-gray-300">
+                    {translateText('business', 'Выбор категории')}
+                </div>
             </div>
-          </div>
+
+            {/* Main content area */}
+            <div className="flex flex-1 p-4">
+                {/* Item selection menu */}
+                <div className="w-1/3 bg-gray-900 p-4 rounded-lg mr-4">
+                    <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center">
+                            <div className="px-2 py-1 bg-gray-700 rounded mr-2">
+                                <span className="icon-updown"></span>
+                            </div>
+                            <div>{translateText('business', 'Выбор')} {selectMenu?.title}</div>
+                        </div>
+                        <div className="text-sm text-gray-400">
+                            {translateText('business', 'В ассортименте')} {dictionaryData.length} {translateText('business', 'шт.')}.
+                        </div>
+                    </div>
+
+                    <div
+                        className="h-64 overflow-y-auto pr-2"
+                        ref={categoryRef}
+                        onMouseEnter={() => handleMouseUse(false)}
+                        onMouseLeave={() => handleMouseUse(true)}
+                    >
+                        {dictionaryData.map((data, index) => (
+                            <div
+                                key={`item-${index}`}
+                                id={`menu_${index}`}
+                                className={`p-3 mb-2 rounded cursor-pointer relative ${selectDictionary === data ? 'bg-primary text-white' : 'bg-gray-800 hover:bg-gray-700'}`}
+                                onClick={() => onSelectDictionary(data)}
+                            >
+                                <div className="flex justify-between items-center">
+                                    <div className="font-medium">{data.descName}</div>
+                                    {!isFraction && (
+                                        data.Donate > 0 ? (
+                                            <div className="text-yellow-400">{format("money", data.Donate.toString())} RB</div>
+                                        ) : data.Price > 0 ? (
+                                            <div className="text-green-400">$ {format("money", data.Price.toString())}</div>
+                                        ) : null
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Texture/Color selectors would be rendered here based on conditions */}
+                    {selectDictionary?.Textures && selectDictionary.Textures.length > 0 && (
+                        <div className="mt-4">
+                            <div className="flex items-center mb-2 opacity-50">
+                                <div className="px-2 py-1 bg-gray-700 rounded mr-2">
+                                    <span className="icon-leftright"></span>
+                                </div>
+                                <div>{translateText('business', 'Вариаций')}: {selectDictionary.Textures.length} {translateText('business', 'шт')}.</div>
+                            </div>
+
+                            <div className="flex flex-wrap gap-2" onMouseEnter={() => handleMouseUse(false)} onMouseLeave={() => handleMouseUse(true)}>
+                                {textureSort.map((index) => (
+                                    <div
+                                        key={`texture-${index}`}
+                                        className={`w-8 h-8 flex items-center justify-center rounded cursor-pointer ${selectTexture === index ? 'bg-primary' : 'bg-gray-700 hover:bg-gray-600'}`}
+                                        onClick={() => onSelectClothes(index)}
+                                    >
+                                        {index}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {selectMenu?.opacity && (
+                        <div className="mt-4">
+                            <InputItem
+                                id="selectOpacity"
+                                leftText="0"
+                                centerText="Насыщенность"
+                                rightText="100"
+                                step={0.1}
+                                min={0}
+                                max={1}
+                                value={selectOpacity}
+                                callback={(newValue) => setSelectOpacity(newValue)}
+                                className="mt-2"
+                            />
+                        </div>
+                    )}
+                </div>
+
+                {/* Help panel */}
+                <div className="flex-1 bg-gray-900 p-4 rounded-lg">
+                    <div className="text-lg mb-4">{translateText('business', 'Используйте горячие клавиши для быстрого перемещения по интерфейсу')}:</div>
+
+                    <div className="grid grid-cols-2 gap-4 mt-8">
+                        <div className="flex items-center">
+                            <div className="px-3 py-1 bg-gray-700 rounded mr-2">←→</div>
+                            <div>{translateText('business', 'Выбор варианта')}</div>
+                        </div>
+                        <div className="flex items-center">
+                            <div className="px-3 py-1 bg-gray-700 rounded mr-2">↑↓</div>
+                            <div>{translateText('business', 'Выбор предмета')}</div>
+                        </div>
+                        <div className="flex items-center">
+                            <div className="px-3 py-1 bg-gray-700 rounded mr-2">Q</div>
+                            <div>{translateText('business', 'Предыдущая категория')}</div>
+                        </div>
+                        <div className="flex items-center">
+                            <div className="px-3 py-1 bg-gray-700 rounded mr-2">E</div>
+                            <div>{translateText('business', 'Следующая категория')}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom buttons */}
+            <div className="flex items-center justify-between p-4 border-t border-gray-700">
+                <div className="flex items-center">
+                    <div className="px-3 py-1 bg-gray-700 rounded mr-2">Enter</div>
+                    <button
+                        className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
+                        onClick={onBuy}
+                    >
+                        {!isFraction ? translateText('business', 'Купить') : translateText('business', 'Установить')}
+                    </button>
+                </div>
+                <div className="flex items-center">
+                    <button
+                        className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded mr-2"
+                        onClick={onExit}
+                    >
+                        {translateText('business', 'Выйти')}
+                    </button>
+                    <div className="px-3 py-1 bg-gray-700 rounded">ESC</div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div className="newbarbershop__bottom">
-        <div className="box-flex">
-          <div className="newbarbershop__button">Enter</div>
-          <div onClick={OnBuy}>{!isFraction ? "Купить" : "Установить"}</div>
-        </div>
-        <div className="box-flex">
-          <div>{translateText('business', 'Выйти')}</div>
-          <div className="newbarbershop__button" onClick={OnExit}>ESC</div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default NewBarberShop;
+export default ClothesShop;

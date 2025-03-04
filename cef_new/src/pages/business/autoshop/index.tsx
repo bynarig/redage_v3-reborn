@@ -4,7 +4,7 @@ import {useTranslateText} from "#shared/locale";
 import {format} from "#api/formatter";
 import carInfo from "./carInfo.js";
 import {IconArmchair, IconArrowBigRightLines, IconBrandCashapp, IconBrandSpeedtest, IconPackage, IconSteeringWheel} from "@tabler/icons-react";
-import {generateMockCars} from "#mock/cars";
+import {generateMockCars} from "src/shared/data/mock/shops/cars";
 import Button from "#shared/ui/Button";
 import ColorPicker from "#shared/ui/ColorPicker";
 
