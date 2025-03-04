@@ -11,6 +11,7 @@
     "skipLibCheck": true,
     "lib": ["dom", "dom.iterable", "esnext", "es5", "es6"],
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
