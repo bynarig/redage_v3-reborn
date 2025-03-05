@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import SearchPerson from './elements/searchperson.svelte'
     import SearchVehicle from './elements/searchvehicle.svelte'
     import SuPerson from './elements/superson.svelte'

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 </script>
 <div class="policecomputer__title mt-20">{translateText('fractions', 'Розыск преступников')}</div>
 <div class="policecomputer__input_descr">

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { onDestroy } from 'svelte';
     import {executeClient, executeClientAsync} from 'api/rage'
     import { selectCase } from './state.js'

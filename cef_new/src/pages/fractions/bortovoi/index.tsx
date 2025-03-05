@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './main.sass'
     import './assets/style.css'
     import { TimeFormat, GetTime } from 'api/moment'

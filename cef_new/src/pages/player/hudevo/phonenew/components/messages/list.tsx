@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClientAsyncToGroup } from 'api/rage'
     import { loadImage } from 'api/functions'
     import { TimeFormatStartOf } from 'api/moment'

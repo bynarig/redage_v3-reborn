@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { format } from "api/formatter";
     import { executeClientToGroup , executeClientAsyncToGroup } from "api/rage";
     export const closeMenu;

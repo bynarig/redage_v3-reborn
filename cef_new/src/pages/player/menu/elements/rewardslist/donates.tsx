@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import Donate from './elements/donate.svelte';
     export const onSetLoad;
     import { executeClient } from "api/rage";

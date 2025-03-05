@@ -2,7 +2,7 @@
     import './main.sass'
     import { executeClient } from 'api/rage'
     import { fly } from 'svelte/transition';
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 </script>
 <div class="popup__newhud">
     <div class="popup__newhud_box">

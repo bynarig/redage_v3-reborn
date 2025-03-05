@@ -1,6 +1,6 @@
 <script>
     export const onSelectedViewHouse;
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     import { format } from 'api/formatter'
     import {addListernEvent, hasJsonStructure} from "api/functions";

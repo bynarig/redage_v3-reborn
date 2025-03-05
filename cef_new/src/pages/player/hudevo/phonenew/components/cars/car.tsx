@@ -1,6 +1,6 @@
 <script>
     import { TimeFormat } from 'api/moment'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const selectedCar;
     export const OnUpdatePage;
 

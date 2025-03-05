@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { daysName, getPngUrl, getTypeToTitle, statusType, getTimeFromMins } from './data'
     export const item;
 

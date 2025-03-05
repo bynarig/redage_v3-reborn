@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 </script>
 <div class="bortovoie__tablet_element title">
     <div class="number">{translateText('fractions', 'Статус')}:</div>

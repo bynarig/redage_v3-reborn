@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { accountIsSession } from 'store/account'
     import { executeClient } from 'api/rage'
     import InputCustom from 'components/input/index.svelte'

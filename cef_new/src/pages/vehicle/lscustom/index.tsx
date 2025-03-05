@@ -1,9 +1,9 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './main.sass'
     import './fonts/style.css'
     import Item from './item.svelte'
-    import { format } from 'api/formatter';
+    import { format } from '#/shared/api/formatter';
     import Color from './color.svelte'
     import { executeClient } from 'api/rage'
     import { charMoney } from 'store/chars'

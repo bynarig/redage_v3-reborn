@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import {executeClient, executeClientAsync} from 'api/rage'
 	import News from './../news/index.svelte';
 	import Chars from './chars.svelte';

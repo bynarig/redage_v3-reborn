@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import Missions from './missions.svelte'
     import Personal from './myList.svelte'
     import Fraction from './fractionList.svelte'

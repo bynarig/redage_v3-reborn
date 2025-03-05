@@ -1,6 +1,6 @@
 <script>
     import { executeClientAsyncToGroup } from 'api/rage'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     let tasksDay = [];
     executeClientAsyncToGroup("getTasksDay").then((result) => {

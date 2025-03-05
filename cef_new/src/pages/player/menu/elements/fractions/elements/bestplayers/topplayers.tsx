@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { onInputFocus, onInputBlur } from "#/store/player/menu/elements/fractions/data.js";
 </script>
 <div class="fractions__content backgr extrabig mt-20">

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './main.sass';
     import './fonts/inv/style.css';
     import './fonts/items/style.css';

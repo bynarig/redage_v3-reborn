@@ -1,7 +1,7 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { fade } from 'svelte/transition'
-    import { executeClientAsyncToGroup, executeClientToGroup } from 'api/rage';
+    import { executeClientAsyncToGroup, executeClientToGroup } from '#/shared/api/rage';
 
     export const onSelectedView;
 

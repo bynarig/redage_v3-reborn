@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import moment from 'moment';
     import { executeClient, invokeMethod } from 'api/rage'
     import Commands from 'json/commands.js'

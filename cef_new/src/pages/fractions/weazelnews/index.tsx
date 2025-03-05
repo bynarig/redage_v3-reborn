@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { setGroup, executeClientAsyncToGroup } from 'api/rage'
     import { charName, FractionLVL } from 'store/chars';
     import { TimeFormat, GetTime } from 'api/moment'

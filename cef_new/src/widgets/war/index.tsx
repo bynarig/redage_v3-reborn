@@ -2,7 +2,7 @@
     import { executeClient } from "api/rage";
     import './main.sass'
     import { fly } from 'svelte/transition';
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     import { typeBattle, composition, weaponsCategory } from './data'
 

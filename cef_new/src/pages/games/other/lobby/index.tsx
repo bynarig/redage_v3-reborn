@@ -1,8 +1,8 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import '../sass/games.sass';
-    import { format } from 'api/formatter';
-    import { executeClient } from 'api/rage';
+    import { format } from '#/shared/api/formatter';
+    import { executeClient } from '#/shared/api/rage';
 
     import map_0 from '../images/maps/map_0.png';
     import map_1 from '../images/maps/map_1.png';

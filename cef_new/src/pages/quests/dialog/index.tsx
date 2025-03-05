@@ -1,11 +1,11 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './main.sass';
     import './fonts/style.css';
 
     import { getQuest, getActors } from 'json/quests/quests.js';
 	import { fade, fly } from 'svelte/transition';
-    import { executeClient } from 'api/rage';
+    import { executeClient } from '#/shared/api/rage';
     import Achivment from '#/store/quests/achivment/index.svelte';
     
     export const viewData;

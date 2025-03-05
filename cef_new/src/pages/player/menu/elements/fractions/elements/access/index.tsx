@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { accessType } from "../../data";
     import { executeClientToGroup } from "api/rage";
 

@@ -1,6 +1,6 @@
 <script>
     export const onChangePage;
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
 </script>
 <div class="policecomputer__back" on:click={() => onChangePage("DataBase")}>

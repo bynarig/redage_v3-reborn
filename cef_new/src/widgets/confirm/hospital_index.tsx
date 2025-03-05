@@ -1,7 +1,7 @@
 <script>
     import './main.sass'
     import { executeClient } from 'api/rage'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { fly } from 'svelte/transition';
     export const popupData;
 

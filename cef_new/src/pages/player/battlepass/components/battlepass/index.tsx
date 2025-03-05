@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { onMount } from 'svelte';
 
     import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'

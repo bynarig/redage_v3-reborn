@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import InputCustom from 'components/input/index.svelte'
     import { accountLogin } from 'store/account'
     

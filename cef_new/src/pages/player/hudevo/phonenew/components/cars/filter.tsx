@@ -17,7 +17,7 @@
         filter = filter;
     }
     import { fade } from 'svelte/transition'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClientAsyncToGroup } from "api/rage";
     import { hasJsonStructure } from "api/functions";
 

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import BattlePass from './components/battlepass/index.svelte'
     import Missions from './components/missions.svelte'
     import { isPopupInfoOpened, isPopupLvlOpened, isPopupBuyOpened } from './stores.js'

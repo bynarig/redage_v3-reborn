@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { onInputFocus, onInputBlur } from "#/store/player/menu/elements/fractions/data.js";
 </script>
 <div class="fractions__stats_subtitle gray hover mt-20 large">&#x2190; {translateText('player1', 'Вернуться к списку наборов')}</div>

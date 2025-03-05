@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { selectIndex, selectType, settings } from './../store.js';
     export const charid;
 

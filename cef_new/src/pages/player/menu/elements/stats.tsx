@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'    
+    import { translateText } from '#/shared/locale'    
     import { otherStatsData } from 'store/account'
     import { charData } from 'store/chars';
     import { format } from 'api/formatter'

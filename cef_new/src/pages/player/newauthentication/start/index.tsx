@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 	import Authentication from './authentication/index.svelte';
 	import Registration from './registration/index.svelte';
 	import News from './../news/index.svelte';

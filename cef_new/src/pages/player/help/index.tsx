@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { slide, fade } from 'svelte/transition';
     import { executeClient } from 'api/rage'
     import './css/main.sass';

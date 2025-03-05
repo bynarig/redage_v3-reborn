@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './assets/sass/main.sass'
     import { charGender } from 'store/chars';
     import { executeClient } from 'api/rage'

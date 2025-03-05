@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     let isLive = false; 
     let isCallList = false; 
 </script>

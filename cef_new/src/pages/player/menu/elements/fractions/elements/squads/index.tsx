@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import SquadsList from './squadslist.svelte'
     import SquadSettings, {id} from './squadsettings.svelte'
     import SquadRanks from './squadranks.svelte'

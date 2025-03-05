@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { onInputFocus, onInputBlur } from "#/store/player/menu/elements/fractions/data.js";
     import Logo from '../other/logo.svelte'
 </script>

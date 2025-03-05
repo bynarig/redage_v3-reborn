@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import {executeClient, executeClientAsync} from 'api/rage'
     import { selectCase } from './state.js'
     import { format } from 'api/formatter'

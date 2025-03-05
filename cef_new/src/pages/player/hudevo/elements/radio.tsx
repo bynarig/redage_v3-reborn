@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { fade } from 'svelte/transition';
     let playerData = [];
     window.voice = {

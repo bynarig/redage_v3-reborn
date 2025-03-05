@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { charIsPet } from 'store/chars'
     import { fly } from 'svelte/transition';
     import { isInputToggled, isHelp } from 'store/hud'

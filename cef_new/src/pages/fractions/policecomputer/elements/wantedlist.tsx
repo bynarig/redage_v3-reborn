@@ -1,6 +1,6 @@
 <script>
-    import { executeClient } from 'api/rage';
-    import { translateText } from 'lang'
+    import { executeClient } from '#/shared/api/rage';
+    import { translateText } from '#/shared/locale'
     export const wantedData;
 </script>
 

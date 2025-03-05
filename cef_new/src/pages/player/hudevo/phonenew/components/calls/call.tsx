@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import Header from '../header.svelte'
     import HomeButton from '../homebutton.svelte'
     import dial from './dial.svelte'

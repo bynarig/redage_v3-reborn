@@ -1,6 +1,6 @@
 <script>
     import { fade } from 'svelte/transition';
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     let
         isOpened = false,        
         title = "",

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 </script>
 <div class="weazelnews__title">{translateText('fractions', 'Государственная волна')}</div>
 <textarea class="weazelnews__textarea w-100 mt-32" placeholder="Введите текст.." ></textarea>

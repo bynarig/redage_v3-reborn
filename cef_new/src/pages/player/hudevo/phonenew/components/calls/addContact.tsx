@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { validate } from 'api/validation';
     import { executeClientToGroup } from 'api/rage'
     import { selectNumber } from './../../stores'

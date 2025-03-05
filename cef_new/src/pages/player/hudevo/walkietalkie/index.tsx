@@ -1,7 +1,7 @@
 <script>
     import './main.sass';
     import './fonts/style.css';
-    import { executeClient } from 'api/rage';
+    import { executeClient } from '#/shared/api/rage';
     import { storeSettings } from 'store/settings'
 
     let SettingsList = {};

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("business.loadStats");
     export const onSelectedViewBusiness;

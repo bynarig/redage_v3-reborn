@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const charid;
 
     import InputCustom from 'components/input/oneInput.svelte'

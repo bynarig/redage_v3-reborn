@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import {executeClientAsyncToGroup} from "api/rage";
     import { selectNumber, selectedImageFunc, selectedImage } from "#/store/player/hudevo/phonenew/stores";
 

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClient } from 'api/rage'
     import { onMount } from 'svelte'
     import { onDestroy } from 'svelte'

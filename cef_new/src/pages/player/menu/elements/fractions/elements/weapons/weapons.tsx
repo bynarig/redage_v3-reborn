@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import WeaponsList from './weaponslist.svelte'
     import WeaponsAccess from './weaponsaccess.svelte'
     import Logo from '../other/logo.svelte'

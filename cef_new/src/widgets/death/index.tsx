@@ -2,7 +2,7 @@
     import './main.sass'
     import { executeClient } from 'api/rage'
     import { fly } from 'svelte/transition';
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const popupData;
 
     let title = popupData.title,

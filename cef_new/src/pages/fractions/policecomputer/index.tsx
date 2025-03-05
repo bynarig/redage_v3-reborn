@@ -1,7 +1,7 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './css/main.css'
-    import { executeClient } from 'api/rage';
+    import { executeClient } from '#/shared/api/rage';
     let
         vehicleData = {model: "", owner: ""},
         userData = {fname: "", lname: "", pass: "", phonenumber: "", gender: "", lvl: "", lic: "", houseInfo: ""},

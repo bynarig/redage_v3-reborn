@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import Days from './elements/days.svelte';
     export const onSetLoad;
     import { executeClient } from "api/rage";

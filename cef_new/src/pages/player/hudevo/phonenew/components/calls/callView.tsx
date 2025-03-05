@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import moment from 'moment';
     import { setTime, elapsedUp } from 'api/moment'
     import Header from '../header.svelte'

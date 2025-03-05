@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const onSelected;
     export const onBack;
     import { fade } from 'svelte/transition'

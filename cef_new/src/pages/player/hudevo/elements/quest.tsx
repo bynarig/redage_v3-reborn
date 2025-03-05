@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { fly } from 'svelte/transition';
     import { getQuest } from 'json/quests/quests.js';
     import { storeQuests, selectQuest } from 'store/quest'

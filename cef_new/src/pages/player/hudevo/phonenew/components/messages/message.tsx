@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import {executeClientAsync, executeClientToGroup, executeClientAsyncToGroup, executeClient} from 'api/rage'
     import { addListernEvent, hasJsonStructure, loadImage } from 'api/functions'
     import moment from 'moment';

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import {executeClientToGroup, executeClientAsyncToGroup} from "api/rage";
     import { onInputFocus, onInputBlur } from "#/store/player/menu/elements/fractions/data.js";
     import { charUUID } from 'store/chars';

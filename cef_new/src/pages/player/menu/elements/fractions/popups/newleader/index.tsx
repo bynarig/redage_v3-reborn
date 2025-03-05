@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { fly } from 'svelte/transition';
     import { setPopup } from "../../data";
     import { charUUID } from 'store/chars';

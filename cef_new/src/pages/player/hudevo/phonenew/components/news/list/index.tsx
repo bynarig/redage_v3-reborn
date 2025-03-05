@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { TimeFormat } from 'api/moment'
     import { executeClientAsyncToGroup } from "api/rage";
     import { hasJsonStructure } from "api/functions";

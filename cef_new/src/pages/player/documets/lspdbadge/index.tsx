@@ -1,5 +1,5 @@
 <script>
-	import { translateText } from 'lang'
+	import { translateText } from '#/shared/locale'
 	import Male from './images/ava.png'
 	import Female from './../images/female.png'
 	import Fib_logo from './images/6.png'

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClientToGroup, executeClientAsyncToGroup } from "api/rage";
     import RanksList from './rankslist.svelte'
     import RankInfo from './rankinfo.svelte'

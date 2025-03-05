@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const SetPopup;
     export const popupData;
     import { format } from 'api/formatter'

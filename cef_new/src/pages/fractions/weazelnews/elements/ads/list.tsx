@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import moment from 'moment';
     import {executeClientAsyncToGroup, executeClientToGroup} from 'api/rage'
     import { addListernEvent } from 'api/functions'

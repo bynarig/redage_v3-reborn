@@ -1,6 +1,6 @@
 <script>
     import './main.sass'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { onMount, onDestroy } from 'svelte'
 
     export const popupData;

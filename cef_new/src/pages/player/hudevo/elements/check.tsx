@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { TimeFormat, GetTime } from 'api/moment'
     import { serverDateTime } from 'store/server'
     import { charFractionID } from 'store/chars'

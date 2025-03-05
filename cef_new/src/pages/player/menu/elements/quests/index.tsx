@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import './main.sass';
     import './fonts/style.css';
     import KeyAnimation from '#/components/keyAnimation/index.svelte';

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import ProgressBar from 'progressbar.js';
     import { selectChar, selectType, selectIndex, settings } from './../store.js';
     import { updateIndex } from 'store/customization';

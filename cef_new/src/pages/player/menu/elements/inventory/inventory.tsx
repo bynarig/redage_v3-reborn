@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const visible;
     import { charGender, charMoney } from 'store/chars'
     import { executeClient } from 'api/rage'

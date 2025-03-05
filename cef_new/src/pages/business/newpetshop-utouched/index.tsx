@@ -1,6 +1,6 @@
 <script>
     import {hasJsonStructure} from "api/functions";
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     export const viewData;
 

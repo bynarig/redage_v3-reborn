@@ -1,6 +1,6 @@
 <script>
     import HomeButton from './../../homebutton.svelte'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     export const getPosition;
     export const setPosition;

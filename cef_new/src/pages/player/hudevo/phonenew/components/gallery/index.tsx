@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     import { TimeFormat } from 'api/moment'
     import { loadImage } from 'api/functions'

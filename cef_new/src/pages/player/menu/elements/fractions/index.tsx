@@ -3,7 +3,7 @@
 
     export const selectView;
 
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 
     import './main.sass';
     import './assets/style.css'

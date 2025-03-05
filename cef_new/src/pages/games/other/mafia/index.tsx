@@ -1,7 +1,7 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import '../sass/games.sass';
-    import { executeClient } from 'api/rage';
+    import { executeClient } from '#/shared/api/rage';
     
     //roles
     import unknown from '../images/roles/unknown.png';

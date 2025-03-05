@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import axios from 'axios';
     import qs from 'querystring';
     import { executeClient } from 'api/rage'

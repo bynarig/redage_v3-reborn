@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { charSim } from 'store/chars';
     import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
     import { selectNumber } from './../../stores'

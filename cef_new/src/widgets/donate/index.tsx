@@ -3,7 +3,7 @@
     import qs from 'querystring';
     import { executeClient } from 'api/rage'
     import { accountLogin } from 'store/account'
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { serverDonatMultiplier, serverId } from 'store/server'
     import './main.sass'
 

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import Houses from './elements/houses.svelte'
     import Vehicles from './elements/vehicles.svelte'
     import Licenses from './elements/licenses.svelte'

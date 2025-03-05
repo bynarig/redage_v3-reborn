@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const addSmile;
 
     import { getListData, getEmojiList, getEmojiCategory } from './data';

@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClientToGroup, executeClientAsyncToGroup} from "api/rage";
     import {addListernEvent, hasJsonStructure} from "api/functions";
     import { getPrefix } from './../data'

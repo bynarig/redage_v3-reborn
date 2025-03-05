@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import TopPlayers from './topplayers.svelte'
     import TopReward from './topreward.svelte'
     import Logo from '../other/logo.svelte'

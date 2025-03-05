@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import ProgressBar from 'progressbar.js';
     import { fade } from 'svelte/transition';
     import { executeClient } from 'api/rage'

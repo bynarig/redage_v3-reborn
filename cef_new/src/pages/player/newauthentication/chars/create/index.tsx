@@ -1,5 +1,5 @@
 <script>    
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     export const isSendCreator = false;
     import { executeClient } from 'api/rage'
     import { gender, FirstName, LastName } from 'store/customization';

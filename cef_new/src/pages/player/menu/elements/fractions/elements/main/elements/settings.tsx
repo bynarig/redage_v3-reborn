@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { executeClientToGroup, executeClientAsyncToGroup } from "api/rage";
     import copy from 'copy-to-clipboard';
     import { isFraction } from "#/store/player/menu/elements/fractions/index.svelte";

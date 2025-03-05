@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import Logo from '../other/logo.svelte'
 </script>
 <div class="fractions__header">

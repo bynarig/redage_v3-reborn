@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { loadImage } from 'api/functions'
 
     import {executeClient, executeClientAsyncToGroup} from "api/rage";

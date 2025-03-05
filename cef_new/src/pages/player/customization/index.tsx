@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { gender, updateGender, updateIndex, initCustom } from 'store/customization';
     import Create from '#/store/player/newauthentication/chars/create/index.svelte';
     import CreateNewCustomization from 'store/random/index.js'

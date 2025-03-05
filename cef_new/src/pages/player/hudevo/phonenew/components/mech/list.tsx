@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import HomeButton from '../homebutton.svelte'
 
     import { fade } from 'svelte/transition'

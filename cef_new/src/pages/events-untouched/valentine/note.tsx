@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
     import { executeClient } from 'api/rage'
     import { format } from 'api/formatter'

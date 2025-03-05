@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { categorieName } from "#/store/player/hudevo/phonenew/components/auction/data";
     import { onInputFocus, onInputBlur } from "#/store/player/hudevo/phonenew/data";
     import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from "api/rage";

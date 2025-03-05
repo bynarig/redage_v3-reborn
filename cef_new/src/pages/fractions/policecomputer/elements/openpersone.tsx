@@ -1,6 +1,6 @@
 <script>
-    import { translateText } from 'lang'
-    import { executeClient } from 'api/rage';
+    import { translateText } from '#/shared/locale'
+    import { executeClient } from '#/shared/api/rage';
     export const fname;
     export const lname;
     export const pass;

@@ -43,6 +43,7 @@
     "react-i18next": "^15.4.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
+    "scratchcard-js": "^1.5.5",
     "serve": "^14.2.4",
     "tailwindcss": "^4.0.8",
     "tinycolor2": "^1.6.0",

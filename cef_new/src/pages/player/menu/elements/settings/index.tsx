@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
     import { accountData, accountIsSession } from 'store/account'
     import './main.sass';
     import { storeSettings } from 'store/settings'

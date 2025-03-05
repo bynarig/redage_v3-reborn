@@ -1,5 +1,5 @@
 <script>
-    import { translateText } from 'lang'
+    import { translateText } from '#/shared/locale'
 </script>
 <div class="fractions__content backgr h-fit mt-20">
     <div class="fractions__main_head box-between mb-0">
