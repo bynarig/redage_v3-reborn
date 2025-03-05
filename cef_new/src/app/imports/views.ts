@@ -5,7 +5,7 @@ import FilterBlur from './components/filterblur/index.tsx';
 
 //Игрока'
 import PlayerBattlePass from '#/pages/player/battlepass/index.tsx';
-import PlayerRentCar from '#/pages/player/rentcar/index.tsx';
+import PlayerRentCar from '#/pages/business/rentcar/index.tsx';
 import PlayerAuthentication from '#/pages/player/newauthentication/index.tsx';
 import PlayerCustomization from '#/pages/player/customization/index.tsx';
 import PlayerAtm from '#/pages/player/atm/index.tsx';
@@ -18,7 +18,7 @@ import PlayerLicense from '#/pages/player/license/index.tsx';
 import PlayerPassport from '#/pages/player/passport/index.tsx';
 import PlayerDropinfo from '#/pages/player/dropinfo/index.tsx';
 import PlayerLift from '#/pages/player/lift/index.tsx';
-import PlayerGasStation from '#/pages/player/gasStation/index.tsx';
+import PlayerGasStation from '#/pages/business/gasStation/index.tsx';
 import PlayerBreakingLock from '#/pages/player/breakingLock/index.tsx';
 import PlayerTransfer from '#/pages/player/transfer/index.tsx';
 import PlayerJobSelector from '#/pages/player/jobselector/index.tsx';
@@ -27,7 +27,7 @@ import PlayerReports from '#/pages/player/reports/index.tsx';
 //import PlayerNewYearStats from '#/pages/player/newyearstats/index.tsx';
 import PlayerAnimations from '#/pages/player/animations/index.tsx';
 import PlayerOresSale from '#/pages/player/oressale/index.tsx';
-import PlayerMetro from '#/pages/player/metro/index.tsx';
+import PlayerMetro from '#/pages/business/metro/index.tsx';
 import PlayerWedding from '#/pages/player/wedding/index.tsx';
 import PlayerTickets from '#/pages/player/tickets/index.tsx';
 import PlayerRestart from '#/pages/player/restart/index.tsx';
@@ -45,14 +45,14 @@ import BusinessClothes from '#/pages/business/clothes/index.tsx';
 
 //Фракции
 // /import FractionsAdverts from '#/pages/fractions/adverts/index.tsx';
-import FractionsBSearch from '#/pages/fractions/bsearch/index.tsx';
+import FractionsBSearch from '#/pages/fractions/search-report/index.tsx';
 import FractionsMats from '#/pages/fractions/mats/index.tsx';
 import FractionsCraft from '#/pages/fractions/craft/index.tsx';
 import FractionsCreate from '#/pages/fractions/create/index.tsx';
 import FractionsStock from '#/pages/fractions/stock/index.tsx';
 import FractionsPolicecomputer from '#/pages/fractions/policecomputer/index.tsx';
 import FractionsTicket from '#/pages/fractions/ticket/index.tsx';
-import FractionsBortovoi from '#/pages/fractions/bortovoi/index.tsx';
+import FractionsBortovoi from '#/pages/fractions/onboardcomputer/index.tsx';
 import FractionsWeazelNews from '#/pages/fractions/weazelnews/index.tsx';
 import FractionsWar from '#/pages/fractions/war/index.tsx';
 
@@ -62,8 +62,8 @@ import CasinoHorse from '#/pages/casino/horse/index.tsx';
 import CasinoJacpot from '#/pages/casino/jacpot/index.tsx';
 import CasinoRoullete from '#/pages/casino/roullete/index.tsx';
 
-import VehicleAir from '#/pages/vehicle/air/index.tsx';
-import VehicleLsCustom from '#/pages/vehicle/lscustom/index.tsx';
+import VehicleAir from '#/pages/business/air/index.tsx';
+import VehicleLsCustom from '#/pages/business/lscustom/index.tsx';
 
 //Games
 import GamesOtherMain from '#/pages/games/other/index.tsx';
@@ -76,7 +76,7 @@ import DonateMain from '#/pages/donate/main/index.tsx';
 import DonateSapper from '#/pages/donate/sapper/index.tsx';
 
 
-import QuestsDialog from '#/pages/quests/dialog/index.tsx';
+import QuestsDialog from '#/pages/player/quests/dialog/index.tsx';
 
 //import QuestsDialog1 from '#/pages/quests/questsnew/questsnewdialog/index.tsx';
 //import QuestsDialog2 from '#/pages/quests/questsnew/questsnewlist/index.tsx';
