@@ -1,0 +1,76 @@
+@import #/store/assets/css/main.sass
+
+@import #/../fonts/style.css
+
+	
+.newdonate__change
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100%
+	align-items: center
+	justify-content: center
+	@include fluid("padding-top", 220)
+	.newdonate__change-block
+		@include fluid("margin-top", 38)
+		@include fluid("width", 915)
+		@include fluid("height", 460)
+		background: linear-gradient(360deg, rgba(199, 51, 51, 0.8) 0%, #1B1E28 100%)
+		box-shadow: 0px 0px 44px rgba(0, 0, 0, 0.5)
+		display: flex
+		flex-direction: column
+		align-items: center
+		@include fluid("padding-top", 45)
+		@include fluid("padding-right", 122)
+		@include fluid("padding-bottom", 35)
+		@include fluid("padding-left", 122)
+		.newdonate__change-top
+			display: flex
+			justify-content: space-between
+			width: 100%
+			.newdonate__change-element
+				display: flex
+				flex-direction: column
+				align-items: center
+				.newdonate__change-img
+					@include fluid("width", 200)
+					@include fluid("height", 200)
+					@include fluid("min-width", 200)
+					@include fluid("min-height", 200)
+					background-repeat: no-repeat
+					background-size: contain
+					background-position: center
+					&.redbucks
+						background-image: url('images/big-redbucks.png')
+					&.progress
+						background-image: url('images/progress.png')
+					&.money
+						background-image: url('images/money.png')
+				
+				.newdonate__change-input
+					@include fluid("margin-top", 50)
+					font-weight: 500
+					@include fluid("font-size", 16)
+					@include fluid("line-height", 22)
+					@include fluid("width", 140)
+					@include fluid("height", 52)
+					@include fluid("min-height", 52)
+					font-family: 'UniNeue'
+					background: #2B1C23
+					@include fluid("border", 2, "solid rgba(123, 119, 119, 0.2)")
+					@include fluid("border-radius", 4)
+					color: white
+					text-align: center
+				
+				.newdonate__change-curs
+					@include fluid("margin-top", 62)
+					font-weight: 800
+					@include fluid("font-size", 22)
+					@include fluid("line-height", 30)
+
+		.newdonate__change-bottom
+			width: 100%
+			height: 100%
+			display: flex
+			align-items: flex-end
+			justify-content: center

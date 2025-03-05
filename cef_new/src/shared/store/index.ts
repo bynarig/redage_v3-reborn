@@ -12,6 +12,7 @@ import questSlice from './quest';
 import serverSlice from './server';
 import settingsSlice from './settings';
 import playerListSlice from "./playerList";
+import DonateSlice from "./donate";
 
 export const store = configureStore({
   reducer: {
@@ -27,7 +28,8 @@ export const store = configureStore({
     quest: questSlice,
     server: serverSlice,
     settings: settingsSlice,
-    playerList: playerListSlice
+    playerList: playerListSlice,
+    donate: DonateSlice,
   },
 });
 
