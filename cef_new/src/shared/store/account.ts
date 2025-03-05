@@ -113,4 +113,5 @@ export const {
 } = accountSlice.actions;
 //@ts-ignore
 export const selectAccount = (state: RootState) => state.account;
+export const selectAccountVip = (state: RootState) => state.account.Vip;
 export default accountSlice.reducer;

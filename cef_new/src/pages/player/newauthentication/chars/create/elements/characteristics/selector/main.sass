@@ -3,7 +3,7 @@
 .xygrid
     position: relative
     line-height: 0.8
-    @include fluid("height", 245)
+    height: 245px
 
     .top,
     .bottom,
@@ -12,44 +12,44 @@
         text-align: center
 
     .top
-        @include fluid("margin-bottom", 14)
+        margin-bottom: 14px
     .bottom
-        @include fluid("margin-top", 14)
+        margin-top: 14px
 
     .r,
     .l
         position: absolute
         text-align: center
-        @include fluid("width", 82)
-        @include fluid("height", 16)
+        width: 82px
+        height: 16px
 
     .r
         left: 0
-        @include fluid("top", 112)
-        @include fluid("margin-left", 10)
+        top: 112px
+        margin-left: 10px
         transform: rotate(-90deg)
 
     .l
         right: 0
-        @include fluid("top", 110)
-        @include fluid("margin-right", 10)
+        top: 110px
+        margin-right: 10px
         transform: rotate(90deg)
 
     &.small 
         .r
-            @include fluid("top", 15)
+            top: 15px
             @include fluid("margin-left", -10)
             transform: rotate(0deg)
     &.small
         .l
-            @include fluid("top", 15)
+            top: 15px
             @include fluid("margin-right", -10)
             transform: rotate(0deg)
 
     .grid
         position: relative
-        @include fluid("width", 193)
-        @include fluid("height", 193)
+        width: 193px
+        height: 193px
         margin: 0 auto
         padding: 0
         background-image: url('./img/GridBig.svg')
@@ -58,9 +58,9 @@
         background-repeat: no-repeat
 
     &.small
-        @include fluid("height", 42)
+        height: 42px
         .grid
-            @include fluid("height", 42)
+            height: 42px
             background: url('./img/Grid.svg')
             background-position: center
             background-size: cover
@@ -71,7 +71,7 @@
             position: absolute
             left: 0
             top: 0
-            @include fluid("width", 16)
-            @include fluid("height", 16)
+            width: 16px
+            height: 16px
             background: #D33437
             border-radius: 50%

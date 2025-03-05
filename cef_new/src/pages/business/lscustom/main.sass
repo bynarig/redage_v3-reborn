@@ -131,12 +131,12 @@
                     display: flex
                     align-items: center
                     height: 120px
-                    @include fluid("border-left", 6, "solid #333844")
+                    // @include fluid("border-left", 6, "solid #333844")
                     transition: all ease .2s
 
                     &:hover:not(.star), &.active:not(.star)
                         background-color: rgba(255,255,255,0.05)                      
-                        @include fluid("border-left", 6, "solid white")
+                        // @include fluid("border-left", 6, "solid white")
 
                     &:hover .icon
                         color: #fff
@@ -157,7 +157,7 @@
                         font-style: normal
                         font-weight: 500
                         width: 200px
-                        @include fluid("letter-spacing", 0.005)
+                        // @include fluid("letter-spacing", 0.005)
 
                     .icon 
                         font-size: 64px
@@ -370,8 +370,8 @@
         li
             background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L7.76336 3.57295L11.7063 4.1459L8.85317 6.92705L9.52671 10.8541L6 9L2.47329 10.8541L3.14683 6.92705L0.293661 4.1459L4.23664 3.57295L6 0Z' fill='%23171921'/%3E%3C/svg%3E%0A")
             width: 12px
-            @include fluid("height", 12, '!important')
-            @include fluid("margin-right", 5, '!important')
+            // @include fluid("height", 12, '!important')
+            // @include fluid("margin-right", 5, '!important')
             background-size: cover
 
             &.active

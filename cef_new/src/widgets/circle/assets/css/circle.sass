@@ -5,23 +5,23 @@
   top: 50% 
   left: 50% 
   transform: translate(-50%, -50%)
-  @include fluid("width", 480)
-  @include fluid("height", 480)
+  width: 480px
+  height: 480px
   position: absolute
   font-family: 'TTNorms-Medium'
   .circle__text
     text-align: center
     font-family: 'TTNorms-Medium'
     font-weight: 500
-    @include fluid("height", 48)
-    @include fluid("font-size", 14)
-    @include fluid("line-height", 16)
+    height: 48px
+    font-size: 14px
+    line-height: 16px
   .circle__close
     top: 50% 
     left: 50% 
     transform: translate(-50%, -50%)
-    @include fluid("width", 200)
-    @include fluid("height", 200)
+    width: 200px
+    height: 200px
     border-radius: 50%
     position: absolute
     display: flex
@@ -30,7 +30,7 @@
     color: white
     font-family: 'TTNorms-Bold'
     font-weight: 500
-    @include fluid("font-size", 20)
+    font-size: 20px
     .box-column
       position: absolute
       left: 50%
@@ -38,9 +38,9 @@
       align-items: center
       transform: translate(-50%, -50%)
     .circle__image
-      @include fluid("margin-bottom", 8)
-      @include fluid("width", 36)
-      @include fluid("height", 56)
+      margin-bottom: 8px
+      width: 36px
+      height: 56px
       z-index: -1
       background-image: url('../images/mouse_back.png')
       background-size: contain
@@ -50,7 +50,7 @@
       &.active
         background-image: url('../images/mouse.png')
 .icons-circle
-  @include fluid("font-size", 24)
+  font-size: 24px
   pointer-events: none
 
 .circle
@@ -76,13 +76,13 @@
     cursor: pointer
 
     .contents
-      @include fluid("width", 280)
-      @include fluid("height", 48)
-      @include fluid("padding-left", 14)
-      @include fluid("padding-right", 14)
-      @include fluid("padding-top", 14)
-      @include fluid("padding-bottom", 14)
-      @include fluid("border-radius", 12)
+      width: 280px
+      height: 48px
+      padding-left: 14px
+      padding-right: 14px
+      padding-top: 14px
+      padding-bottom: 14px
+      border-radius: 12px
       position: absolute
       color: #1E262F
       display: flex
@@ -90,7 +90,7 @@
       justify-content: space-between
       background: #1E262F
       color: #FFFFFF
-      @include fluid("font-size", 14)
+      font-size: 14px
       line-height: 100%
       transition: background 0.5s ease
       z-index: 10000
@@ -108,31 +108,31 @@
         font-family: 'Montserrat-Medium'
         font-style: normal
         transition: background 0.5s ease
-        @include fluid("width", 24)
-        @include fluid("height", 24)
+        width: 24px
+        height: 24px
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("font-size", 16)
+        font-size: 16px
         font-weight: 600
         color: #1E262F
-        @include fluid("border-radius", 3)
+        border-radius: 3px
         background: #ffffff
       &.child1
         transform: translate(-50%, -50%)
         left: 50%
-        @include fluid("bottom", 109)
+        bottom: 109px
       &.child2
         transform: translate(-50%, -50%)
-        @include fluid("left", 465)
-        @include fluid("bottom", 23)
+        left: 465px
+        bottom: 23px
       &.child3
         transform: translate(-50%, -50%)
-        @include fluid("left", 505)
+        left: 505px
         @include fluid("bottom", -64)
       &.child4
         transform: translate(-50%, -50%)
-        @include fluid("left", 465)
+        left: 465px
         @include fluid("bottom", -151)
       &.child5
         transform: translate(-50%, -50%)
@@ -149,4 +149,4 @@
       &.child8
         transform: translate(-50%, -50%)
         @include fluid("left", -33)
-        @include fluid("bottom", 23)
+        bottom: 23px

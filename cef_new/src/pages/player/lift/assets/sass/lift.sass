@@ -8,10 +8,10 @@
     flex-direction: column 
     align-items: center 
     justify-content: center 
-    @include fluid("padding-top", 45)    
-    @include fluid("padding-bottom", 45) 
-    @include fluid("padding-left", 144) 
-    @include fluid("padding-right", 144) 
+    padding-top: 45px
+    padding-bottom: 45px
+    padding-left: 144px
+    padding-right: 144px
     color: white 
     font-family: "UniNeue" 
     font-style: normal 
@@ -20,18 +20,18 @@
 
     .module_lift
         background: rgba(27, 30, 40, 0.9)
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         overflow: hidden
-        @include fluid("width", 346) 
-        @include fluid("height", 210) 
+        width: 346px
+        height: 210px
 
         h1 
             width: 100%
-            @include fluid("height", 57)
+            height: 57px
             font-weight: bold
-            @include fluid("font-size", 24)
+            font-size: 24px
             display: flex
-            @include fluid("margin-bottom", 22) 
+            margin-bottom: 22px
             align-items: center
             justify-content: center
             background: rgba(23, 25, 33, 0.9)
@@ -41,13 +41,13 @@
             justify-content: center
 
         .button.up
-            @include fluid("margin-right", 22)
+            margin-right: 22px
 
         .button
             display: flex
             align-items: center
-            @include fluid("width", 140) 
-            @include fluid("height", 109) 
+            width: 140px
+            height: 109px
             justify-content: space-between
             flex-direction: column
             #btn-down:after
@@ -66,8 +66,8 @@
 
             .btn.arrow:after
                 content: ""
-                @include fluid("width", 27)
-                @include fluid("height", 27)
+                width: 27px
+                height: 27px
                 background-size: 100%
                 position: absolute
                 background-repeat: no-repeat
@@ -85,17 +85,17 @@
                 position: relative
                 background: #303648
                 transition: background ease .1s
-                @include fluid("border-radius", 50)   
-                @include fluid("width", 48)
-                @include fluid("height", 48)
+                border-radius: 50px
+                width: 48px
+                height: 48px
 
             .btn.set
                 width: 100%
                 font-weight: bold
                 transition: background ease .1s
-                @include fluid("font-size", 18)
-                @include fluid("border-radius", 2)
-                @include fluid("height", 39)
+                font-size: 18px
+                border-radius: 2px
+                height: 39px
                 align-items: center
                 justify-content: center
                 display: flex

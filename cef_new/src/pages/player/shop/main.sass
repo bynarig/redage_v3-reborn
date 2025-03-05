@@ -9,66 +9,66 @@
     align-items: center
     color: white
     font-family: 'TTNorms-Regular'
-    @include fluid("font-size", 20)
+    font-size: 20px
     font-weight: 500
     z-index: 1
     background-image: url('./assets/background.png')
     background-size: cover
     background-position: center
     background-repeat: no-repeat
-    @include fluid("padding-top", 80)
-    @include fluid("padding-bottom", 80)
-    @include fluid("padding-left", 80)
-    @include fluid("padding-right", 80)
+    padding-top: 80px
+    padding-bottom: 80px
+    padding-left: 80px
+    padding-right: 80px
     .box-between
         display: flex
         align-items: center
         justify-content: space-between
         width: 100%
     .retail__image_lavka
-        @include fluid("width", 140)
-        @include fluid("height", 140)
+        width: 140px
+        height: 140px
         background-image: url('./assets/tent.png')
         background-size: cover
         background-position: center
         background-repeat: no-repeat
-        @include fluid("margin-bottom", 18)
+        margin-bottom: 18px
     .retail__title
-        @include fluid("margin-bottom", 8)
-        @include fluid("font-size", 36)
-        @include fluid("line-height", 42)
+        margin-bottom: 8px
+        font-size: 36px
+        line-height: 42px
         letter-spacing: 0.05em
         font-family: 'TTNorms-Bold'
         font-weight: bold
     .retail__content_flex
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 28)
+        font-size: 24px
+        line-height: 28px
         letter-spacing: 0.05em
         font-family: 'TTNorms-Bold'
         font-weight: bold
         .gray
             color: rgba(255,255,255,0.5)
-            @include fluid("margin-right", 10)
+            margin-right: 10px
         .green
             color: #2BB6A8
     .retail__grid
-        @include fluid("margin-top", 50)
+        margin-top: 50px
         display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-template-rows: repeat(2, 1fr)
-        @include fluid("gap", 10)
+        gap: 10px
         .retail__grid_element
-            @include fluid("width", 80)
-            @include fluid("height", 40)
+            width: 80px
+            height: 40px
             background: rgba(253, 255, 252, 0.05)
             @include fluid("border", 1, "solid rgba(253, 255, 252, 0.7)")
             box-sizing: border-box
-            @include fluid("letter-spacing", 1)
+            letter-spacing: 1px
             font-family: 'TTNorms-Regular';
             font-style: normal;
             font-weight: normal;
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 21)
+            font-size: 14px
+            line-height: 21px
             display: flex
             align-items: center
             justify-content: center
@@ -77,96 +77,96 @@
                 background: white
                 
     .retail__content
-        @include fluid("padding-left", 575)
+        padding-left: 575px
         width: 100%
         height: 100%
         display: flex
-        @include fluid("margin-bottom", 71)
+        margin-bottom: 71px
         justify-content: space-between
         .retail__content_left
-            @include fluid("width", 640)
-            @include fluid("height", 807)
+            width: 640px
+            height: 807px
             display: flex
             flex-direction: column
             align-items: center
-            @include fluid("margin-right", 65)
+            margin-right: 65px
             &.center
                 align-items: center
                 justify-content: center
 
         .retail__content_right
-            @include fluid("height", 807)
+            height: 807px
             display: flex
             flex-direction: column
-            @include fluid("padding-top", 262)
-            @include fluid("width", 374)
+            padding-top: 262px
+            width: 374px
             .retail__inventory
                 display: grid
                 grid-template-columns: repeat(4, 1fr)
                 grid-template-rows: repeat(4, 1fr)
-                @include fluid("gap", 8)
-                @include fluid("height", 545)
+                gap: 8px
+                height: 545px
                 overflow-y: auto
                 overflow-x: hidden
-                @include fluid("padding-right", 14)
-                @include fluid("width", 374)
+                padding-right: 14px
+                width: 374px
                 &::-webkit-scrollbar
-                    @include fluid("width", 6)
+                    width: 6px
 
                 &::-webkit-scrollbar-track
                     background: rgba(255, 255, 255, 0.2)
-                    @include fluid("border-radius", 6)
+                    border-radius: 6px
                 &::-webkit-scrollbar-thumb
                     background: white
-                    @include fluid("border-radius", 6)
+                    border-radius: 6px
 
     .house_bottom_buttons
         z-index: 1
         margin-top: auto
         display: flex
         align-items: center
-        @include fluid("font-size", 18)
+        font-size: 18px
         font-weight: normal
     .retail__content__header
         display: flex
         align-items: center
         align-self: center
-        @include fluid("margin-bottom", 30)
+        margin-bottom: 30px
         .retail__image_lavka
-            @include fluid("width", 102)
-            @include fluid("height", 102)
-            @include fluid("margin-right", 34)
+            width: 102px
+            height: 102px
+            margin-right: 34px
         .retail__progress
             width: 262px
             height: 4px
             display: flex
             background: rgba(255,159,28,0.2)
-            @include fluid("margin-bottom", 5)
+            margin-bottom: 5px
             .retail__progress_current
                 width: 0
                 height: 100%
                 background: #FF9F1C
         .retail__time
             font-weight: bold
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
             letter-spacing: 0.05em
         .retail__subtitle
             font-weight: 500;
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)
+            font-size: 16px
+            line-height: 19px
             letter-spacing: 0.05em
             color: rgba(255,255,255,0.5)
     .retail__button
-        @include fluid("width", 200)
-        @include fluid("height", 40)
+        width: 200px
+        height: 40px
         background: rgba(43,182,168,0.5)
         display: flex
         align-items: center
         justify-content: center
         font-weight: 500
-        @include fluid("font-size", 16)
-        @include fluid("line-height", 19)
+        font-size: 16px
+        line-height: 19px
         letter-spacing: 0.05em
         transition: background 0.5s ease
         &:hover
@@ -186,52 +186,52 @@
                 transition: background 0.5s ease
                 background: rgba(231,29,54,0.8)
     .m-t72
-        @include fluid("margin-top", 72)
+        margin-top: 72px
     .retail__sell_items
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-template-rows: repeat(4, 1fr)
-        @include fluid("gap", 40)
-        @include fluid("height", 545)
+        gap: 40px
+        height: 545px
         overflow-y: auto
-        @include fluid("padding-right", 45)
+        padding-right: 45px
         &::-webkit-scrollbar
-            @include fluid("width", 6)
+            width: 6px
         &::-webkit-scrollbar-track
             background: rgba(255, 255, 255, 0.2)
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         &::-webkit-scrollbar-thumb
             background: white
-            @include fluid("border-radius", 6)
+            border-radius: 6px
 
     .retail__content_element
         display: flex
         flex-direction: column
     .retail__element_title
         font-weight: 500
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 21)
+        font-size: 18px
+        line-height: 21px
         letter-spacing: 0.05em
-        @include fluid("margin-bottom", 16)
+        margin-bottom: 16px
         overflow: hidden
         white-space: nowrap
         text-overflow: ellipsis
-        @include fluid("width", 272)
+        width: 272px
     .retail__item_box
-        @include fluid("width", 80)
-        @include fluid("height", 80)
+        width: 80px
+        height: 80px
         background: #FFFFFF
         opacity: 0.15
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("margin-right", 15)
+        margin-right: 15px
         &.n-m
             margin: 0
         .retail__item_img
-            @include fluid("width", 48)
-            @include fluid("height", 48)
+            width: 48px
+            height: 48px
             background-image: url('./assets/test.png')
             background-size: cover
             background-position: center
@@ -240,54 +240,54 @@
         display: flex
         font-family: 'TTNorms-Regular'
         font-weight: normal
-        @include fluid("letter-spacing", 1)
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 21)
+        letter-spacing: 1px
+        font-size: 14px
+        line-height: 21px
         align-items: center
         color: #DFDFDF
         &:first-child
-            @include fluid("margin-bottom", 20)
+            margin-bottom: 20px
         .retail__info_count
-            @include fluid("font-size", 12)
-            @include fluid("width", 80)
-            @include fluid("height", 30)
+            font-size: 12px
+            width: 80px
+            height: 30px
             background: rgba(253, 255, 252, 0.05)
             @include fluid("border", 1, "solid rgba(255, 255, 255, 0.1)")
             box-sizing: border-box
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("margin-right", 10)
+            margin-right: 10px
 
             &.green
                 color: #2BB6A8
     .retail__player_list
-        @include fluid("width", 670)
-        @include fluid("padding-right", 20)
-        @include fluid("margin-left", 24)
-        @include fluid("height", 650)
+        width: 670px
+        padding-right: 20px
+        margin-left: 24px
+        height: 650px
         overflow-x: hidden
         overflow-y: auto
         &::-webkit-scrollbar
-            @include fluid("width", 6)
+            width: 6px
 
         &::-webkit-scrollbar-track
             background: rgba(255, 255, 255, 0.2)
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         &::-webkit-scrollbar-thumb
             background: white
-            @include fluid("border-radius", 6)
+            border-radius: 6px
     .retail__player_element
         width: 100%
-        @include fluid("height", 100)
+        height: 100px
         background: rgba(71, 71, 71, 0.1)
         @include fluid("border", 1, "solid rgba(255, 255, 255, 0.5)")
         box-sizing: border-box
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         display: flex
         align-items: center
-        @include fluid("padding", 10)
-        @include fluid("margin-bottom", 10)
+        padding: 10px
+        margin-bottom: 10px
         justify-content: space-between
         font-style: normal
         font-weight: normal
@@ -296,45 +296,45 @@
             flex-direction: column
             justify-content: center
         .retail__item_box
-            @include fluid("margin-right", 20)
+            margin-right: 20px
         .retail__buyelement_title
             font-weight: 500
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
             letter-spacing: 0.05em
         .orange
             color: #FF9F1C
         .gray
             color: rgba(255,255,255,0.5)
-            @include fluid("font-size", 12)
-            @include fluid("line-height", 14)
+            font-size: 12px
+            line-height: 14px
         .retail__element_subtitle
-            @include fluid("margin-top", 8)
-            @include fluid("width", 202)
+            margin-top: 8px
+            width: 202px
             color: rgba(255,255,255,0.5)
-            @include fluid("font-size", 12)
-            @include fluid("line-height", 14)
+            font-size: 12px
+            line-height: 14px
             font-style: normal
             font-weight: normal
         .price
             font-weight: 500
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
             letter-spacing: 0.05em
             color: #FFFFFF
-            @include fluid("margin-right", 20)
+            margin-right: 20px
             font-style: normal
             font-weight: bold
         .retail__element_button
-            @include fluid("width", 100)
-            @include fluid("height", 24)
+            width: 100px
+            height: 24px
             background: rgba(43,182,168,0.5)
             display: flex
             align-items: center
             justify-content: center
             font-style: normal
             font-weight: normal
-            @include fluid("font-size", 12)
-            @include fluid("line-height", 14)
+            font-size: 12px
+            line-height: 14px
             letter-spacing: 0.05em
             color: #FFFFFF

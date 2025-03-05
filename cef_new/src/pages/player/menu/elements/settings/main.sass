@@ -7,97 +7,97 @@
     align-items: center
     justify-content: space-between
     font-weight: bold
-    @include fluid("font-size", 18)
-    @include fluid("line-height", 24)
+    font-size: 18px
+    line-height: 24px
     color: #FFFFFF
     font-family: 'TTNorms-Regular'
-    @include fluid("padding-left", 100)
-    @include fluid("padding-right", 100) 
+    padding-left: 100px
+    padding-right: 100px
     .main__button_square
-        @include fluid("width", 62)
-        @include fluid("height", 62)
-        @include fluid("margin-left", 20)
-        @include fluid("border-radius", 2)
+        width: 62px
+        height: 62px
+        margin-left: 20px
+        border-radius: 2px
         background-color: white
         color: black
     .settings__header
-        @include fluid("height", 58)
+        height: 58px
         display: flex
         align-items: center
-        @include fluid("margin-bottom", 61)
+        margin-bottom: 61px
         .settings__icon
-            @include fluid("margin-right", 13) 
-            @include fluid("width", 50)
-            @include fluid("height", 50)
+            margin-right: 13px
+            width: 50px
+            height: 50px
             background-image: url(../../img/settings.svg)
             background-position: center
             background-repeat: no-repeat
             background-size: contain
 
         .settings__header_title
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
         .settings__header_subtitle
                 color: rgba(255,255,255,0.7)
-                @include fluid("margin-top", 14)
+                margin-top: 14px
                 text-decoration: underline
-                @include fluid("font-size", 16)
-                @include fluid("line-height", 19)
+                font-size: 16px
+                line-height: 19px
                 font-family: 'TTNorms-Regular'
                 font-weight: 300
                 &:hover
                     color: rgba(255,255,255,0.4)
     .settings__nav
-        @include fluid("width", 300)
+        width: 300px
         display: flex
         flex-direction: column
-        @include fluid("height", 750)
+        height: 750px
         .settings__title
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
             color: white
-            @include fluid("margin-top", 30)
-            @include fluid("margin-bottom", 20)
+            margin-top: 30px
+            margin-bottom: 20px
             font-weight: bold
             font-family: 'TTNorms-Bold'
             &:first-child
                 margin-top: 0
         .settings__subtitle
             font-weight: bold
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)  
+            font-size: 16px
+            line-height: 19px
             color: rgba(255,255,255,0.5)
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
             &.hover, &.active
                 color: white
     .settings__background
-        @include fluid("width", 730)
-        @include fluid("height", 750)
+        width: 730px
+        height: 750px
         display: flex
         flex-direction: column
         box-sizing: border-box
 
         .settings__box
-            @include fluid("height", 75)
+            height: 75px
             width: 100%
             display: flex
             align-items: center
             justify-content: center
             &.settings__title
-                @include fluid("font-size", 28)
+                font-size: 28px
                 color: white
 
             .settings__button
-                @include fluid("width", 250)
-                @include fluid("height", 50)
+                width: 250px
+                height: 50px
                 @include fluid("border", 1, "solid #3A3E4E")
                 box-sizing: border-box
-                @include fluid("border-radius", 6)
+                border-radius: 6px
                 display: flex
                 align-items: center
                 justify-content: center
-                @include fluid("font-size", 20)
-                @include fluid("line-height", 27)
+                font-size: 20px
+                line-height: 27px
                 cursor: pointer
                 transition: all 0.4s ease
 
@@ -108,27 +108,27 @@
 
         .sound__scroll
             width: 100%
-            @include fluid("height", 600)
+            height: 600px
             overflow-x: hidden
             overflow-y: auto
             &::-webkit-scrollbar 
-                @include fluid("width", 4)
+                width: 4px
             /* Track */
             &::-webkit-scrollbar-track 
                 background: #131924 
-                @include fluid("border-radius", 10)
+                border-radius: 10px
             /* Handle */
             &::-webkit-scrollbar-thumb 
                 background: white
-            @include fluid("border-radius", 10)
-            @include fluid("padding-right", 86) 
+            border-radius: 10px
+            padding-right: 86px
 
             .sound__header
-                @include fluid("font-size", 24)
-                @include fluid("line-height", 32)
+                font-size: 24px
+                line-height: 32px
                 align-self: flex-start
-                @include fluid("margin-top", 20)
-                @include fluid("margin-bottom", 20)
+                margin-top: 20px
+                margin-bottom: 20px
                 color: #C1C1C1
 
                 &:first-child
@@ -138,18 +138,18 @@
             .list__element
                 display: flex
                 background: rgba(255,255,255,0.05)
-                @include fluid("width", 200)
+                width: 200px
                 justify-content: space-between
 
                 .list__title
                     display: flex
                     align-items: center
                     font-weight: 500
-                    @include fluid("font-size", 14)
+                    font-size: 14px
 
                 .list__element__right, .list__element__left
-                    @include fluid("width", 30)
-                    @include fluid("height", 50)
+                    width: 30px
+                    height: 50px
                     display: flex
                     align-items: center
                     justify-content: center
@@ -162,8 +162,8 @@
                 .list__element__left:before, .list__element__right:before 
                     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.18988 1.00033L2 7.95055L9.18988 14.9008' stroke='white' stroke-width='2'/%3e%3c/svg%3e ")
                     content: ""
-                    @include fluid("width", 10)
-                    @include fluid("height", 16)
+                    width: 10px
+                    height: 16px
                     background-repeat: no-repeat
                     background-size: 100%
                     
@@ -175,7 +175,7 @@
                 display: flex
                 justify-content: space-between
                 align-items: center
-                @include fluid("margin-bottom", 40)
+                margin-bottom: 40px
                 
 
                 &:last-child
@@ -185,42 +185,42 @@
                     flex-direction: column
 
                     .sound__title
-                        @include fluid("font-size", 18)
-                        @include fluid("line-height", 21)
-                        @include fluid("margin-bottom", 9)
+                        font-size: 18px
+                        line-height: 21px
+                        margin-bottom: 9px
                         letter-spacing: 0.05em
 
                 .sound__text_small
-                    @include fluid("font-size", 12)
-                    @include fluid("line-height", 16)
+                    font-size: 12px
+                    line-height: 16px
                     color: rgba(255,255,255,0.5)
                     letter-spacing: 0.05em
                     font-family: 'TTNorms-Regular'
                     font-style: normal
                     font-weight: normal
-                    @include fluid("max-width", 340)
+                    max-width: 340px
                 .sound__input-block
                     display: flex
                     flex-direction: column
                     align-items: flex-end
-                    @include fluid("width", 240)
+                    width: 240px
 
                     .rangeslider
-                        @include fluid("height", 4)
-                        @include fluid("border-radius", 11)
+                        height: 4px
+                        border-radius: 11px
                         box-shadow: unset
                         background: rgba(255,255,255,0.4)
                     
                         .rangeslider__fill
                             background: white
                             box-shadow: unset
-                            @include fluid("border-radius", 11)
+                            border-radius: 11px
                         .rangeslider__handle 
                             border: none
                             background: white
-                            @include fluid("top", 2)
-                            @include fluid("width", 10)
-                            @include fluid("height", 10)
+                            top: 2px
+                            width: 10px
+                            height: 10px
 
 
                         
@@ -228,7 +228,7 @@
                         display: flex
                         justify-content: space-between
                         width: 100%
-                        @include fluid("margin-top", 3)
+                        margin-top: 3px
 
 .switch-box
     .switch input 
@@ -239,9 +239,9 @@
         display: inline-block
         background: #131517
         border: 1px solid rgba(255, 255, 255, 0.2)
-        @include fluid("border-radius", 19)
-        @include fluid("width", 60)
-        @include fluid("height", 28)
+        border-radius: 19px
+        width: 60px
+        height: 28px
         .slider
             position: absolute
             cursor: pointer
@@ -256,8 +256,8 @@
             &::before
                 position: absolute
                 content: ""
-                @include fluid("width", 28)
-                @include fluid("height", 28)
+                width: 28px
+                height: 28px
                 left: 0
                 bottom: 0
                 -webkit-transition: .4s
@@ -267,15 +267,15 @@
                 box-sizing: border-box
                 box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
         input:checked + .slider:before  
-            @include fluid("height", 28)
-            @include fluid("left", 32)
+            height: 28px
+            left: 32px
             background: #2BB6A8
             border: 2px solid rgba(22, 69, 64, 0.5)
             box-sizing: border-box
             box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25)
 
         .slider.round
-            @include fluid("border-radius", 34)
+            border-radius: 34px
 
             &::before
                 border-radius: 50%

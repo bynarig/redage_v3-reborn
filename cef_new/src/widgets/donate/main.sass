@@ -31,45 +31,45 @@
         background-position: center
         background-size: cover
         background-repeat: no-repeat
-        @include fluid("width", 588)
-        @include fluid("height", 588)
-        @include fluid("padding-top", 193)
+        width: 588px
+        height: 588px
+        padding-top: 193px
         display: flex
         flex-direction: column
         align-items: center
         &.delete
-            @include fluid("padding-top", 288)
+            padding-top: 288px
             background-image: url('./images/delete-header.png')
             background-position: center
             background-size: cover
             background-repeat: no-repeat
     .popup__title
-        @include fluid("font-size", 44)
-        @include fluid("line-height", 30)
+        font-size: 44px
+        line-height: 30px
         letter-spacing: 1px
         text-transform: uppercase
-        @include fluid("margin-bottom", 36)
+        margin-bottom: 36px
         font-family: "TTNorms-Bold"
         font-weight: bold
         color: #FF9F1C
         white-space: nowrap
     .popup__subtitle
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 25)
-        @include fluid("width", 380)
+        font-size: 18px
+        line-height: 25px
+        width: 380px
         font-weight: 500
-        @include fluid("margin-bottom", 30)
+        margin-bottom: 30px
         text-align: center
     .popup__input
-        @include fluid("width", 380)
-        @include fluid("height", 41)
+        width: 380px
+        height: 41px
         background: rgba(253, 255, 252, 0.05)
         text-align: center
         font-family: inherit
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 21)
+        font-size: 14px
+        line-height: 21px
         border: 1px solid rgba(253, 255, 252, 0.05)
-        @include fluid("margin-bottom", 10)
+        margin-bottom: 10px
         color: #DFDFDF
         display: flex
         align-items: center
@@ -80,26 +80,26 @@
     .box-between
         display: flex
         justify-content: space-between
-        @include fluid("width", 380)
+        width: 380px
     .popup__button
         background: rgba(253, 255, 252, 0.1)
         border: 1px solid rgba(253, 255, 252, 0.7)
         box-sizing: border-box
         border-radius: 4px
-        @include fluid("width", 142)
-        @include fluid("height", 40)
+        width: 142px
+        height: 40px
         color: white
         display: flex
         align-items: center
         justify-content: center
         font-weight: 500
-        @include fluid("font-size", 16)
-        @include fluid("line-height", 19)
+        font-size: 16px
+        line-height: 19px
         z-index: 10000000000000 
         &.orange
             background: #FF9F1C
         &.big
-            @include fluid("width", 221)
+            width: 221px
             border: 1px solid #ff9f1c
         &:hover
             opacity: 0.9
@@ -112,12 +112,12 @@
     .donatepopup__payments
         display: flex
         flex-direction: column
-        @include fluid("width", 546)
+        width: 546px
         .donatepopup__donate_info
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 25)
-            @include fluid("height", 40)
-            @include fluid("margin-top", 15)
+            font-size: 14px
+            line-height: 25px
+            height: 40px
+            margin-top: 15px
             font-weight: 500
             color: #E71D36
             text-align: center
@@ -125,25 +125,25 @@
         .box-between
             display: flex
             justify-content: space-between
-            @include fluid("width", 512)
+            width: 512px
             .donatepopup__nickname
-                @include fluid("font-size", 24)
-                @include fluid("line-height", 25)
+                font-size: 24px
+                line-height: 25px
                 font-weight: 500
-                @include fluid("margin-bottom", 22)
+                margin-bottom: 22px
             .donatepopup__small
-                @include fluid("font-size", 14)
-                @include fluid("line-height", 25)
+                font-size: 14px
+                line-height: 25px
                 font-weight: 500
             .donatepopup__count
-                @include fluid("font-size", 18)
-                @include fluid("line-height", 25)
+                font-size: 18px
+                line-height: 25px
                 font-weight: bold
                 font-family: "TTNorms-Bold"
-                @include fluid("margin-bottom", 22)
+                margin-bottom: 22px
                 .red
                     color: #E71D36
-                    @include fluid("margin-left", 5)
+                    margin-left: 5px
             .donatepopup__button
                 display: flex
                 align-items: center
@@ -151,43 +151,43 @@
                 border: 1px solid #2BB6A8
                 box-sizing: border-box
                 border-radius: 4px
-                @include fluid("width", 240)
-                @include fluid("height", 40)
-                @include fluid("font-size", 16)
-                @include fluid("line-height", 19)
+                width: 240px
+                height: 40px
+                font-size: 16px
+                line-height: 19px
                 .gray
                     color: rgba(255,255,255,0.7)
                     letter-spacing: 0.05em
-                    @include fluid("margin-right", 5)
+                    margin-right: 5px
 
             .donatepopup__logo
                 background-image: url('./images/logo.png')
                 background-position: center
                 background-size: contain
                 background-repeat: no-repeat
-                @include fluid("width", 190)
-                @include fluid("height", 125)
+                width: 190px
+                height: 125px
 
         .popup__button_box
-            @include fluid("width", 512)
-            @include fluid("margin-top", 33)
+            width: 512px
+            margin-top: 33px
 
             .popup__button
-                @include fluid("width", 248)
+                width: 248px
 
         .donatepopup__payments_title
-            @include fluid("margin-top", 41)
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 25)
+            margin-top: 41px
+            font-size: 24px
+            line-height: 25px
             font-weight: 500
         .donatepopup__grid
-            @include fluid("width", 512)
+            width: 512px
             display: grid
             grid-template-columns: repeat(2, 1fr)
             grid-template-rows: repeat(1, 1fr)
-            @include fluid("height", 100)
-            @include fluid("gap", 16)
-            @include fluid("margin-top", 33)
+            height: 100px
+            gap: 16px
+            margin-top: 33px
             z-index: 1000000
 
             .donatepopup__element
@@ -196,7 +196,7 @@
                 align-items: center
                 justify-content: center
                 width: 100%
-                @include fluid("height", 100)
+                height: 100px
                 background: rgba(253, 255, 252, 0.05)
                 border-radius: 4px   
                 border: 1px solid rgba(253, 255, 252, 0)
@@ -208,16 +208,16 @@
                     background-position: center
                     background-size: contain
                     background-repeat: no-repeat
-                    @include fluid("width", 60)
-                    @include fluid("height", 60)
+                    width: 60px
+                    height: 60px
                 .donatepopup__element_label
                     position: absolute
-                    @include fluid("top", 5)
-                    @include fluid("right", 5)
+                    top: 5px
+                    right: 5px
                     background: linear-gradient(90deg, #FF4040 64.73%, #FF7979 116.51%)
                     box-shadow: 0px 0px 40px rgba(255, 64, 64, 0.4)
-                    @include fluid("border-radius", 6)
-                    @include fluid("padding-left", 6)
-                    @include fluid("padding-right", 6)
-                    @include fluid("padding-top", 3)
-                    @include fluid("padding-bottom", 3)
+                    border-radius: 6px
+                    padding-left: 6px
+                    padding-right: 6px
+                    padding-top: 3px
+                    padding-bottom: 3px

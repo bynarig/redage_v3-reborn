@@ -16,15 +16,15 @@
     .box-date
         z-index: 1000
         position: absolute
-        @include fluid("top", 50)
-        @include fluid("right", 50)
-        @include fluid("width", 138)
+        top: 50px
+        right: 50px
+        width: 138px
         font-style: normal
         font-weight: bold
         display: flex
         justify-content: flex-end
-        @include fluid("font-size", 10)
-        @include fluid("line-height", 10)
+        font-size: 10px
+        line-height: 10px
         color: white
 
         .box-time
@@ -32,94 +32,94 @@
             flex-direction: column
             align-items: center
             .time
-                @include fluid("margin-bottom", 5)
-                @include fluid("font-size", 24)
-                @include fluid("line-height", 24)
+                margin-bottom: 5px
+                font-size: 24px
+                line-height: 24px
                 
     .box-KeyInfo
         position: absolute
-        @include fluid("top", 50)
-        @include fluid("left", 50)
+        top: 50px
+        left: 50px
 
     .bet-block
-        @include fluid("width", 400)
+        width: 400px
         background: rgba(1,22,39,0.8)
-        @include fluid("padding-top", 32)
+        padding-top: 32px
         display: flex
         flex-direction: column
         align-items: center
         position: relative
 
         .icon-dollar
-            @include fluid("font-size", 97)
-            @include fluid("margin-bottom", 23)
+            font-size: 97px
+            margin-bottom: 23px
 
         .e-win
-            @include fluid("font-size", 16)
-            @include fluid("height", 32)
+            font-size: 16px
+            height: 32px
         
         .text
-            @include fluid("font-size", 32)
-            @include fluid("margin-bottom", 24)
+            font-size: 32px
+            margin-bottom: 24px
 
         .bet-list
             flex-direction: row
             display: flex
-            @include fluid("width", 205)
+            width: 205px
             
             .bet
-                @include fluid("width", 30)
-                @include fluid("height", 30)
+                width: 30px
+                height: 30px
                 background: rgba(27, 30, 40, 0.4)
                 @include fluid("border", 1, "solid rgba(193, 193, 193, 0.2)")
-                @include fluid("border-radius", 6)
+                border-radius: 6px
                 display: flex
                 align-items: center
                 justify-content: center
-                @include fluid("margin-bottom", 12)
-                @include fluid("margin-left", 10)
+                margin-bottom: 12px
+                margin-left: 10px
 
                 &:first-child
-                    @include fluid("margin-left", 0)
+                    margin-left: 0px
 
                 &:active
                   background: rgba(105, 108, 116, 0.4)  
 
             .bet-45
-                @include fluid("width", 45)
+                width: 45px
                 
         .e-input
-            @include fluid("width", 205)
-            @include fluid("height", 50)
+            width: 205px
+            height: 50px
             resize: none
             background: #111319
             color: white
-            @include fluid("font-size", 28)
+            font-size: 28px
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("padding", 10)
+            padding: 10px
             text-align: center
 
         .bet-button
-            @include fluid("width", 247)
-            @include fluid("height", 61)
+            width: 247px
+            height: 61px
             background: white
-            @include fluid("border-radius", 6)
+            border-radius: 6px
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("font-size", 24)
-            @include fluid("margin-top", 24)
+            font-size: 24px
+            margin-top: 24px
             color: black
 
             &.black        
                 background: rgba(17, 19, 25, 0.9)
                 color: white
-                @include fluid("margin-bottom", 32)
+                margin-bottom: 32px
     .bottom-line
         width: 100%
-        @include fluid("height", 2)
+        height: 2px
         background: white
         position: absolute
         bottom: 0
@@ -127,22 +127,22 @@
     .info-area
         flex-direction: row
         display: flex
-        @include fluid("font-size", 24)
-        @include fluid("height", 30)
+        font-size: 24px
+        height: 30px
         
         .gray-color
             color: #C1C1C1
-            @include fluid("margin-right", 5)
+            margin-right: 5px
 
         .margin-5
-            @include fluid("margin-right", 5)
+            margin-right: 5px
 
     .info-block
-        @include fluid("width", 400)
-        @include fluid("height", 428)
+        width: 400px
+        height: 428px
         background: rgba(1,22,39,0.8)
-        @include fluid("padding-top", 46)
-        @include fluid("margin-top", 59)
+        padding-top: 46px
+        margin-top: 59px
         display: flex
         flex-direction: column
         align-items: center
@@ -155,17 +155,17 @@
             flex-direction: row
             display: flex
             align-items: center
-            @include fluid("margin-bottom", 26)
+            margin-bottom: 26px
 
             .icon-dollar
-                @include fluid("font-size", 42)
-                @include fluid("margin-right", 18)
+                font-size: 42px
+                margin-right: 18px
         
         .info-buttons
-            @include fluid("margin-top", 50)
-            @include fluid("grid-gap", 15)
-            @include fluid("width", 340)
-            @include fluid("height", 135)
+            margin-top: 50px
+            grid-gap: 15px
+            width: 340px
+            height: 135px
             display: grid
             grid-template-columns: repeat(2, 1fr)
             grid-template-rows: repeat(2, 1fr)
@@ -175,8 +175,8 @@
                 height: 100%
                 background: rgba(17, 19, 25, 0.9)
                 color: white
-                @include fluid("border-radius", 6)
+                border-radius: 6px
                 display: flex
                 align-items: center
                 justify-content: center
-                @include fluid("font-size", 24)
+                font-size: 24px

@@ -2,10 +2,10 @@
 
 .box-sortlist
     .box-input
-        @include fluid("height", 65)
+        height: 65px
         .sort-input
             width: 100%
-            @include fluid("padding", 10)
+            padding: 10px
             border: none
             background: none
             @include fluid("border", 1, "solid rgba(0, 0, 0, .1)")
@@ -13,7 +13,7 @@
             background: rgba(0,0,0,0.1)
             margin-bottom: 0px
     .box-header
-        @include fluid("height", 45)
+        height: 45px
         color: #ababab
         display: flex
         @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, .12)")
@@ -23,7 +23,7 @@
             align-items: center
             height: fit-content
             cursor: pointer
-            @include fluid("margin-top", 18)
+            margin-top: 18px
             
             &.active
                 color: #fff
@@ -33,7 +33,7 @@
         
         .triangle
             opacity: 0.15
-            @include fluid("margin-left", 6)
+            margin-left: 6px
             &.up
                 @include fluid("border-left", 5, "solid transparent")
                 @include fluid("border-right", 5, "solid transparent")
@@ -53,15 +53,15 @@
 
     .listScrollBar
         width: 100%
-        @include fluid("height", 320)
+        height: 320px
         overflow: hidden
         overflow-y: scroll
         cursor: auto
-        @include fluid("font-size", 13)
+        font-size: 13px
         font-weight: 400
 
         .box-item
-            @include fluid("height", 48)
+            height: 48px
             @include fluid("border-bottom", 1, "solid rgba(0, 0, 0, .12)")
             display: flex
             align-items: center
@@ -72,9 +72,9 @@
             .box-button
                 display: flex
                 .button
-                    @include fluid("width", 30)
-                    @include fluid("height", 30)
-                    @include fluid("margin-left", 10)
+                    width: 30px
+                    height: 30px
+                    margin-left: 10px
                     background: rgba(255, 255, 255, 0.1)
                     display: flex
                     align-items: center

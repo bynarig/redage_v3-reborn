@@ -31,8 +31,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
   -moz-user-select: none
   -khtml-user-select: none
   user-select: none
-  @include fluid("padding-top", 20)
-  @include fluid("padding-bottom", 20)
+  padding-top: 20px
+  padding-bottom: 20px
   width: 100%
   justify-content: center
   height: 100%
@@ -53,8 +53,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     display: flex
     align-items: center
   .radioList
-    @include fluid("height", 150)
-    @include fluid("margin-right", 14)
+    height: 150px
+    margin-right: 14px
     overflow-y: auto
   ::-webkit-scrollbar 
     width: resize(4)
@@ -82,22 +82,22 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       display: flex
       justify-content: center
       margin: auto
-      @include fluid("width", 510)
-      @include fluid("margin-top", 47)
+      width: 510px
+      margin-top: 47px
       .games-mafia-help-head
         font-weight: 800
-        @include fluid("font-size", 24)
-        @include fluid("margin-bottom", 6)
+        font-size: 24px
+        margin-bottom: 6px
       .games-mafia-help-title
         color: #C1C1C1
         font-weight: 500
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 23)
+        font-size: 14px
+        line-height: 23px
       .games-mafia-help-subtitle
         color: #fff
         font-weight: 700
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 23)
+        font-size: 14px
+        line-height: 23px
       .games-mafia-help-flex-column
         display: flex
         flex-direction: column
@@ -107,28 +107,28 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       flex-direction: column
       font-weight: 800
       text-align: center
-      @include fluid("margin-bottom", 49)
+      margin-bottom: 49px
       .games-mafia-header-title
-        @include fluid("font-size", 24)
-        @include fluid("margin-bottom", 7)
+        font-size: 24px
+        margin-bottom: 7px
       .games-mafia-header-text
-        @include fluid("font-size", 18)
+        font-size: 18px
     .games-mafia-icon
       display: flex
       background-size: cover
 
       &.stars
         background-image: $icon-star
-        @include fluid("width", 80)
-        @include fluid("height", 80)
-        @include fluid("margin-right", 36)
+        width: 80px
+        height: 80px
+        margin-right: 36px
         
       &.day
         background-image: $icon-day
         margin: auto
-        @include fluid("width", 82)
-        @include fluid("height", 82)
-        @include fluid("margin-bottom", 25)
+        width: 82px
+        height: 82px
+        margin-bottom: 25px
         position: relative
         &:after
           content: ""
@@ -138,18 +138,18 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
           top: 0
           bottom: 0
           margin: auto
-          @include fluid("width", 40)
-          @include fluid("height", 40)
-          @include fluid("border-radius", 80)
+          width: 40px
+          height: 40px
+          border-radius: 80px
           box-shadow: 0px -2px 61px 29px rgba(255, 209, 91, 0.25)
 
 
       &.night
         background-image: $icon-night
         margin: auto
-        @include fluid("width", 82)
-        @include fluid("height", 82)
-        @include fluid("margin-bottom", 25)
+        width: 82px
+        height: 82px
+        margin-bottom: 25px
         position: relative
         &:after
           content: ""
@@ -159,22 +159,22 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
           top: 0
           bottom: 0
           margin: auto
-          @include fluid("width", 1)
-          @include fluid("height", 1)
-          @include fluid("border-radius", 80)
+          width: 1px
+          height: 1px
+          border-radius: 80px
           box-shadow: 0px -2px 61px 29px rgba(105, 106, 140, 0.5)
       &.mute
         background-image: $icon-mute
         margin: auto
-        @include fluid("width", 26)
-        @include fluid("height", 26)
-        @include fluid("margin-bottom", 5)
+        width: 26px
+        height: 26px
+        margin-bottom: 5px
       &.unmute
         background-image: $icon-unmute
         margin: auto
-        @include fluid("width", 26)
-        @include fluid("height", 26)
-        @include fluid("margin-bottom", 5)
+        width: 26px
+        height: 26px
+        margin-bottom: 5px
         
     .games-mafia-list
       display: grid
@@ -182,8 +182,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       max-height: 666px
       grid-template-columns: repeat(5, 1fr)
       grid-template-rows: repeat(2, 1fr)
-      @include fluid("grid-row-gap", 18)
-      @include fluid("grid-column-gap", 65)
+      grid-row-gap: 18px
+      grid-column-gap: 65px
       text-align: center
       margin: auto
       position: relative
@@ -193,17 +193,17 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       align-self: center
       width: 90%
       &.pad
-        @include fluid("width", 1035)
-        @include fluid("padding-right", 25)
+        width: 1035px
+        padding-right: 25px
       &::-webkit-scrollbar
-        @include fluid("width", 3)
+        width: 3px
 
       &::-webkit-scrollbar-track
         background: rgba(253,255,252,0.4)
-        @include fluid("border-radius", 4)
+        border-radius: 4px
       &::-webkit-scrollbar-thumb
         background: rgba(253,255,252,0.7)
-        @include fluid("border-radius", 6)
+        border-radius: 6px
       .games-mafia-list-role
         position: relative
 
@@ -214,15 +214,15 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 83.02%)  
         
         .games-mafia-list-action img 
-          @include fluid("width", 163)
-          @include fluid("height", 152) 
+          width: 163px
+          height: 152px
 
         .games-mafia-list-action-title
           font-weight: 800
-          @include fluid("font-size", 18)
+          font-size: 18px
         .games-mafia-list-action-subtitle
           font-weight: bold
-          @include fluid("font-size", 12)
+          font-size: 12px
 
         .games-mafia-list-action.kill
           .games-mafia-list-action-title
@@ -245,43 +245,43 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
             color: #D407CC
       .games-mafia-title
         font-weight: 800
-        @include fluid("font-size", 18)
-        @include fluid("margin-bottom", 3)
+        font-size: 18px
+        margin-bottom: 3px
       .games-mafia-subtitle
-        @include fluid("margin-bottom", 12)
-        @include fluid("font-size", 10)
+        margin-bottom: 12px
+        font-size: 10px
         color: #C1C1C1
       .games-mafia-role
         display: flex
-        @include fluid("width", 150)
-        @include fluid("height", 227) 
+        width: 150px
+        height: 227px
         position: relative
         overflow: hidden
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         .games-mafia-role-img
-          @include fluid("width", 150)
-          @include fluid("height", 227) 
+          width: 150px
+          height: 227px
   .games-lobby-center
-    @include fluid("min-width", 640)
+    min-width: 640px
     align-items: center
 
   .games-lobby-left
-    @include fluid("width", 510)
+    width: 510px
   .games-lobby-right
-    @include fluid("width", 510)
+    width: 510px
     display: flex
     flex-direction: column
     align-items: flex-end
   .games-lobby-settings-maps-input
     @include fluid("border", 1, "solid rgba(255, 255, 255, 0.4)")
-    @include fluid("border-radius", 2)
+    border-radius: 2px
     background: none
-    @include fluid("font-size", 18)
-    @include fluid("width", 140)
-    @include fluid("height", 36)
+    font-size: 18px
+    width: 140px
+    height: 36px
     text-align: center
     color: #FFFFFF
-    @include fluid("margin-bottom", 24)
+    margin-bottom: 24px
   .games-lobby-popup
     position: absolute
     z-index: 1
@@ -295,18 +295,18 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     .games-lobby-popup-h
       font-weight: 800
       text-align: center
-      @include fluid("font-size", 45)
+      font-size: 45px
       z-index: 1
     .games-lobby-popup-content
       position: relative
       z-index: 2
-      @include fluid("width", 350)
-      @include fluid("height", 350)
+      width: 350px
+      height: 350px
       display: flex
       align-items: center
       justify-content: center
       flex-direction: column
-      @include fluid("margin-bottom", 29)
+      margin-bottom: 29px
       
       .games-lobby-popup-content-centerCircle
         position: absolute
@@ -322,10 +322,10 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       .games-lobby-popup-content-title
         
         font-weight: 800
-        @include fluid("font-size", 64)
+        font-size: 64px
       .games-lobby-popup-content-desc
         font-weight: 800
-        @include fluid("font-size", 24)
+        font-size: 24px
         color: #C1C1C1
 
     &:after
@@ -338,23 +338,23 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
   .games-lobby
     display: flex
     width: 100%
-    @include fluid("padding-left", 75)
-    @include fluid("padding-right", 75)
+    padding-left: 75px
+    padding-right: 75px
     box-sizing: border-box
     justify-content: space-between
-    @include fluid("margin-bottom", 60)
+    margin-bottom: 60px
 
     .games-lobby-sett-start
       display: flex
       font-weight: bold
-      @include fluid("font-size", 18)
+      font-size: 18px
       color: #C1C1C1
-      @include fluid("margin-bottom", 41)
+      margin-bottom: 41px
       position: relative
       width: 100%
 
       .form_radio 
-        @include fluid("margin-bottom", 12)
+        margin-bottom: 12px
       .form_radio input[type=radio] 
         display: none
       
@@ -362,20 +362,20 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
         display: inline-block
         cursor: pointer
         position: relative
-        @include fluid("padding-left", 25)
+        padding-left: 25px
         margin-right: 0
-        @include fluid("line-height", 18)
+        line-height: 18px
         user-select: none
         color: #C1C1C1
         transition: ease all .2s
       .form_radio label:before 
         content: ""
         display: inline-block
-        @include fluid("width", 17)
-        @include fluid("height", 17)
+        width: 17px
+        height: 17px
         position: absolute
         left: 0
-        @include fluid("bottom", 1)
+        bottom: 1px
         background-size: 100%
         background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8.5' cy='8.5' r='6.5' fill='%23161826' stroke='%2311131F' stroke-width='4'/%3E%3C/svg%3E%0A")
       
@@ -392,58 +392,58 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     
       &.s1
         & .games-lobby-sett-start-header
-          @include fluid("margin-bottom", 35)
+          margin-bottom: 35px
 
       & li
         display: flex
         flex-direction: column
         position: relative
-        @include fluid("width", 190)
+        width: 190px
         width: 100%
         margin-right: auto    
         margin: 0
         display: flex
         align-items: center
       .games-lobby-sett-start-header
-        @include fluid("margin-bottom", 24)
+        margin-bottom: 24px
         display: flex
         align-items: center
         width: max-content
 
         & .award
           background-image: $icon-award
-          @include fluid("width", 24)
-          @include fluid("height", 24)
-          @include fluid("margin-right", 15)
+          width: 24px
+          height: 24px
+          margin-right: 15px
         & .helmet
           background-image: $icon-helmet
-          @include fluid("width", 24)
-          @include fluid("height", 24)
-          @include fluid("margin-right", 15)
+          width: 24px
+          height: 24px
+          margin-right: 15px
         & .dollar
           background-image: $icon-dollar
-          @include fluid("width", 24)
-          @include fluid("height", 24)
-          @include fluid("margin-right", 15)
+          width: 24px
+          height: 24px
+          margin-right: 15px
         & .closed
           background-image: $icon-closed
-          @include fluid("width", 24)
-          @include fluid("height", 24)
-          @include fluid("margin-right", 15)
+          width: 24px
+          height: 24px
+          margin-right: 15px
         & .maps
           background-image: $icon-maps
-          @include fluid("width", 24)
-          @include fluid("height", 24)
-          @include fluid("margin-right", 15)
+          width: 24px
+          height: 24px
+          margin-right: 15px
         & .aim
           background-image: $icon-aim
-          @include fluid("width", 24)
-          @include fluid("height", 24)
-          @include fluid("margin-right", 15)
+          width: 24px
+          height: 24px
+          margin-right: 15px
 
       & input
         font-weight: bold
-        @include fluid("font-size", 14)
+        font-size: 14px
 
     .games-lobby-flex
       display: flex
@@ -451,8 +451,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     .games-lobby-settings
       display: flex
       flex-direction: column
-      @include fluid("width", 210)
-      @include fluid("padding-left", 20)
+      width: 210px
+      padding-left: 20px
     .games-lobby-settings-maps
       display: flex
       flex-direction: column
@@ -464,13 +464,13 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
           background: #FF2828
       .games-lobby-settings-maps-title
         font-weight: bold
-        @include fluid("font-size", 18)
-        @include fluid("margin-bottom", 29)
+        font-size: 18px
+        margin-bottom: 29px
       .games-lobby-settings-maps-image
         @include fluid("border", 5, "solid rgba(255, 255, 255, 0.2)")
-        @include fluid("width", 290)
-        @include fluid("height", 170)
-        @include fluid("margin-bottom", 4)
+        width: 290px
+        height: 170px
+        margin-bottom: 4px
         position: relative
         overflow: hidden
         &:before
@@ -480,61 +480,61 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
           @include fluid("top", -76)
           @include fluid("left", -76)
           transform: rotate(30deg)
-          @include fluid("width", 191)
-          @include fluid("height", 304)
+          width: 191px
+          height: 304px
           z-index: 1
 
         & img 
           width: 100%
           height: 100%
     .games-lobby-settings-header-desc
-      @include fluid("padding-left", 39)
+      padding-left: 39px
       font-weight: bold
-      @include fluid("font-size", 14)
+      font-size: 14px
       color: #C1C1C1
-      @include fluid("min-height", 22)
+      min-height: 22px
     .games-lobby-settings-header
       display: flex
       font-weight: bold
-      @include fluid("font-size", 18)
-      @include fluid("margin-bottom", 10)
-      @include fluid("height", 24)
+      font-size: 18px
+      margin-bottom: 10px
+      height: 24px
       align-items: center
       & .award
         background-image: $icon-award
-        @include fluid("width", 24)
-        @include fluid("height", 24)
-        @include fluid("margin-right", 15)
+        width: 24px
+        height: 24px
+        margin-right: 15px
       & .dollar
         background-image: $icon-dollar
-        @include fluid("width", 24)
-        @include fluid("height", 24)
-        @include fluid("margin-right", 15)
+        width: 24px
+        height: 24px
+        margin-right: 15px
       & .helmet
         background-image: $icon-helmet
-        @include fluid("width", 24)
-        @include fluid("height", 24)
-        @include fluid("margin-right", 15)
+        width: 24px
+        height: 24px
+        margin-right: 15px
       & .aim
         background-image: $icon-aim
-        @include fluid("width", 24)
-        @include fluid("height", 24)
-        @include fluid("margin-right", 15)
+        width: 24px
+        height: 24px
+        margin-right: 15px
 
     & li 
       display: flex
       flex-direction: column
-      @include fluid("margin-bottom", 27)
-      @include fluid("min-height", 56)
+      margin-bottom: 27px
+      min-height: 56px
 
     .games-lobby-btn
-      @include fluid("width", 140)
-      @include fluid("height", 36)
+      width: 140px
+      height: 36px
       font-weight: bold
-      @include fluid("font-size", 14)
+      font-size: 14px
       display: flex
       justify-content: center
-      @include fluid("border-radius", 2)
+      border-radius: 2px
       align-items: center
       @include fluid("border", 1, "solid rgba(255, 255, 255, 0.4)")
       transition: ease all .2s
@@ -546,43 +546,43 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     .games-lobby-center
       display: flex
       @include fluid("border", 2, "solid rgba(255, 255, 255, 0.4)")
-      @include fluid("width", 640)
-      @include fluid("height", 670)
-      @include fluid("padding-left", 31)
-      @include fluid("padding-right", 31)
-      @include fluid("padding-top", 29)
+      width: 640px
+      height: 670px
+      padding-left: 31px
+      padding-right: 31px
+      padding-top: 29px
       flex-direction: column
 
 
       & .games-lobby-table
         display: flex
-        @include fluid("width", 597)
-        @include fluid("max-height", 488)
+        width: 597px
+        max-height: 488px
         flex-direction: column
         overflow-y: auto
         overflow-x: hidden
 
         &::-webkit-scrollbar 
-          @include fluid("width", 4)   
+          width: 4px
   
         &::-webkit-scrollbar-track 
             background: rgba(255, 255, 255, 0.2)
-            @include fluid("border-radius", 10)
+            border-radius: 10px
         
         &::-webkit-scrollbar-thumb 
             background: linear-gradient(180deg, #FF4040 0%, #C63030 100%)
-            @include fluid("border-radius", 10)
+            border-radius: 10px
 
         & li
           display: flex
-          @include fluid("width", 578)
-          @include fluid("min-height", 59)
+          width: 578px
+          min-height: 59px
 
-          @include fluid("padding-left", 19)
+          padding-left: 19px
           flex-grow: 1
-          @include fluid("padding-right", 19)
+          padding-right: 19px
           font-weight: bold
-          @include fluid("font-size", 14)
+          font-size: 14px
           transition: ease all .2s
           justify-content: space-between
           flex-direction: unset
@@ -593,7 +593,7 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
           & .games-lobby-table-row
             display: flex
             align-items: center
-            @include fluid("margin-right", 16)
+            margin-right: 16px
             &:nth-child(1)
               width: 25%
             &:nth-child(2)
@@ -606,28 +606,28 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
             display: flex
             &.award
               background-image: $icon-award
-              @include fluid("width", 24)
-              @include fluid("height", 24)
-              @include fluid("margin-right", 16)
+              width: 24px
+              height: 24px
+              margin-right: 16px
             &.helmet
               background-image: $icon-helmet
-              @include fluid("width", 24)
-              @include fluid("height", 24)
-              @include fluid("margin-right", 16)
+              width: 24px
+              height: 24px
+              margin-right: 16px
             &.dollar  
               background-image: $icon-dollar
-              @include fluid("width", 24)
-              @include fluid("height", 24)
-              @include fluid("margin-right", 16)
+              width: 24px
+              height: 24px
+              margin-right: 16px
             &.closed  
               background-image: $icon-closed
-              @include fluid("width", 24)
-              @include fluid("height", 24)
+              width: 24px
+              height: 24px
               margin-left: auto
             &.open  
               background-image: $icon-open
-              @include fluid("width", 24)
-              @include fluid("height", 24)
+              width: 24px
+              height: 24px
               margin-left: auto
 
       & .games-lobby-header
@@ -635,15 +635,15 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
         width: 100%
 
         & .games-lobby-btn
-          @include fluid("width", 200)
-          @include fluid("height", 44)
+          width: 200px
+          height: 44px
           justify-content: flex-start
-          @include fluid("padding-left", 16)
+          padding-left: 16px
           & .pencil
             background-image: $icon-pencil
-            @include fluid("width", 24)
-            @include fluid("height", 24)
-            @include fluid("margin-right", 10)
+            width: 24px
+            height: 24px
+            margin-right: 10px
 
     .games-lobby-icon
       display: flex
@@ -651,29 +651,29 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
  
       &.read
         background-image: $icon-read
-        @include fluid("width", 48)
-        @include fluid("height", 48)
-        @include fluid("margin-right", 23)
+        width: 48px
+        height: 48px
+        margin-right: 23px
 
       &.settings
         background-image: $icon-settings
-        @include fluid("width", 48)
-        @include fluid("height", 48)
-        @include fluid("margin-right", 23)
+        width: 48px
+        height: 48px
+        margin-right: 23px
 
 
       &.games
         background-image: $icon-games
-        @include fluid("width", 48)
-        @include fluid("height", 48)
-        @include fluid("margin-right", 23)
+        width: 48px
+        height: 48px
+        margin-right: 23px
 
     .games-lobby-header
       display: flex
       align-items: center
       font-weight: 800
-      @include fluid("font-size", 26)
-      @include fluid("margin-bottom", 16)
+      font-size: 26px
+      margin-bottom: 16px
       width: max-content
 
       .games-lobby-header-title
@@ -686,21 +686,21 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       & .games-lobby-icon
         &.pencil
           background-image: $icon-pencil
-          @include fluid("width", 48)
-          @include fluid("height", 48)
-          @include fluid("margin-right", 31)
+          width: 48px
+          height: 48px
+          margin-right: 31px
 
       &.s1 
-        @include fluid("margin-bottom", 41)
+        margin-bottom: 41px
         width: max-content
       &.s2 
-        @include fluid("margin-bottom", 56)
+        margin-bottom: 56px
         width: max-content
       &.s3 
-        @include fluid("margin-bottom", 44)
+        margin-bottom: 44px
         width: max-content
       &.s4 
-        @include fluid("margin-bottom", 18)
+        margin-bottom: 18px
         width: max-content
 
     .games-lobby-left
@@ -708,8 +708,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       flex-direction: column
       .games-lobby-left-desc
         font-weight: 500
-        @include fluid("font-size", 14)
-        @include fluid("max-width", 510)
+        font-size: 14px
+        max-width: 510px
 
     .games-lobby-left-list
       display: flex
@@ -721,31 +721,31 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
 
         .games-lobby-left-list-content-desc
           font-weight: 500
-          @include fluid("width", 245)
-          @include fluid("font-size", 10)
+          width: 245px
+          font-size: 10px
 
         .games-lobby-left-list-content-flex
           display: flex
           width: 100%
           justify-content: space-between
           align-items: center
-          @include fluid("margin-bottom", 16)
+          margin-bottom: 16px
 
         .games-lobby-left-list-content-text 
           font-weight: 800
-          @include fluid("font-size", 18)
+          font-size: 18px
 
       & li 
         display: flex
-        @include fluid("margin-bottom", 48)
+        margin-bottom: 48px
 
         &:hover .games-lobby-btn
           background: #FF4040
           border-color: #FF4040
 
       .games-lobby-left-list-icon
-        @include fluid("width", 58)
-        @include fluid("height", 58)
+        width: 58px
+        height: 58px
         background-size: 100%
         &.mafia 
             background-image: $icon-mafia
@@ -757,23 +757,23 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       .games-lobby-left-list-leftIcon
         background: linear-gradient(180deg, #754546 0%, rgba(117, 69, 70, 0) 100%)
         @include fluid("border", 3, "solid #FF4040")
-        @include fluid("border-radius", 89)
+        border-radius: 89px
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("margin-right", 27)
-        @include fluid("min-width", 100)
-        @include fluid("min-height", 100)
-        @include fluid("width", 100)
-        @include fluid("height", 100)
+        margin-right: 27px
+        min-width: 100px
+        min-height: 100px
+        width: 100px
+        height: 100px
 
     .games-lobby-left-desc
-      @include fluid("margin-bottom", 48)
+      margin-bottom: 48px
         
   .games-help-info
     display: flex
     flex-direction: column
-    @include fluid("width", 564)
+    width: 564px
 
     &.active
       z-index: 2
@@ -782,63 +782,63 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
         background-image: $icon-closeShadow !important
 
     & p 
-      @include fluid("font-size", 22)
-      @include fluid("letter-spacing", 5)
+      font-size: 22px
+      letter-spacing: 5px
       font-weight: 700
       font-weight: bold
       text-align: center
     .games-help-info-subtitle 
       display: flex
       align-items: center
-      @include fluid("width", 251)
+      width: 251px
       margin: auto
-      @include fluid("height", 110)
-      @include fluid("margin-bottom", 11)
+      height: 110px
+      margin-bottom: 11px
       justify-content: center
     .games-help-info-text 
       font-weight: 800
-      @include fluid("font-size", 64)
+      font-size: 64px
 
     .games-help-info-icon 
       background-image: $icon-close
-      @include fluid("width", 110)
-      @include fluid("height", 110)
+      width: 110px
+      height: 110px
       background-size: 100%
-      @include fluid("margin-right", 24)
+      margin-right: 24px
 
   .games-title
     font-weight: 800
-    @include fluid("font-size", 48)
-    @include fluid("margin-bottom", 71)
+    font-size: 48px
+    margin-bottom: 71px
   
   .games-list
     display: flex
-    @include fluid("margin-bottom", 44)
-    @include fluid("height", 646)
-    @include fluid("width", 894)
+    margin-bottom: 44px
+    height: 646px
+    width: 894px
     justify-content: space-between
     align-items: center
     
     .games-list-title 
       font-weight: 800
-      @include fluid("font-size", 36)
+      font-size: 36px
       
     .games-list-icon 
       display: flex
-      @include fluid("width", 100)
-      @include fluid("height", 100)
+      width: 100px
+      height: 100px
       background-size: 100%
       margin-top: auto
-      @include fluid("margin-bottom", 18)
+      margin-bottom: 18px
 
     & li 
-      @include fluid("width", 260)
-      @include fluid("height", 600)
+      width: 260px
+      height: 600px
 
       display: flex
       flex-direction: column
       align-items: center
-      @include fluid("padding-bottom", 60)
+      padding-bottom: 60px
       transition: ease all .2s
 
       &.active 
@@ -846,14 +846,14 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
         
       &:hover
         filter: blur(0px)
-        @include fluid("width", 280)
-        @include fluid("height", 645)
-        @include fluid("padding-bottom", 83)
+        width: 280px
+        height: 645px
+        padding-bottom: 83px
       & p
         text-align: center
         font-weight: 500
-        @include fluid("font-size", 10)
-        @include fluid("width", 187)
+        font-size: 10px
+        width: 187px
         
       &.mafia
         background: url('../images/mafia.png') no-repeat 0 0 / 100%
@@ -887,8 +887,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     justify-content: center
     .popup-mafia-background
       background: url('../images/popup/person.png')
-      @include fluid("width", 480)
-      @include fluid("height", 480)
+      width: 480px
+      height: 480px
       background-size: contain
       background-position: center
       background-repeat: no-repeat
@@ -899,8 +899,8 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       transform: translate(-50%, -50%)
     .popup-mafia__img-time
       background: url('../images/popup/time.png')
-      @include fluid("width", 172)
-      @include fluid("height", 272)
+      width: 172px
+      height: 272px
       background-size: contain
       background-position: center
       background-repeat: no-repeat
@@ -908,41 +908,41 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
       align-items: center
       justify-content: center
       .popup-mafia__time
-        @include fluid("width", 168)
-        @include fluid("height", 168)
+        width: 168px
+        height: 168px
         border-radius: 50%
         @include fluid("border", 4, "solid #FDFFFC")
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("font-size", 48)
-        @include fluid("line-height", 30)
+        font-size: 48px
+        line-height: 30px
         text-transform: uppercase
         color: #FDFFFC
         font-weight: bold
     .popup-mafia-title
-      @include fluid("margin-top", 45)
-      @include fluid("margin-bottom", 30)
+      margin-top: 45px
+      margin-bottom: 30px
       color: #FF9F1C
-      @include fluid("font-size", 48)
-      @include fluid("line-height", 30)
+      font-size: 48px
+      line-height: 30px
       text-transform: uppercase
       font-weight: bold
       font-family: 'TTNorms-Bold'
     .popup-mafia-subtitle
       font-weight: 500
-      @include fluid("font-size", 18)
-      @include fluid("line-height", 25)
-      @include fluid("width", 830)
-      @include fluid("margin-bottom", 30)
+      font-size: 18px
+      line-height: 25px
+      width: 830px
+      margin-bottom: 30px
     .box-flex
       display: flex
       align-items: center
       .popup-mafia__slider
-        @include fluid("width", 34)
-        @include fluid("height", 7)
+        width: 34px
+        height: 7px
         background: rgba(255,255,255,0.2)
-        @include fluid("margin-right", 6)
+        margin-right: 6px
         &:last-child
           margin-right: 0
         &.active
@@ -951,7 +951,7 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
     .popup-mafia__buttons
       display: flex
       align-items: center
-      @include fluid("margin-top", 30)
+      margin-top: 30px
       .popup-mafia__button
         background: white
         color: black
@@ -959,11 +959,11 @@ $icon-star: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 8
         align-items: center
         justify-content: center
         z-index: 3
-        @include fluid("width", 40)
-        @include fluid("height", 40)
-        @include fluid("border-radius", 6)
-        @include fluid("margin-right", 10)
-        @include fluid("font-size", 36)
+        width: 40px
+        height: 40px
+        border-radius: 6px
+        margin-right: 10px
+        font-size: 36px
         &:last-child
           margin-right: 0
 

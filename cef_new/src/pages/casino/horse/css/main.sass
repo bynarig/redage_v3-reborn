@@ -21,12 +21,12 @@
         li
             background: rgba(255,255,255,0.05)
             display: flex
-            @include fluid("height", 88)
+            height: 88px
             align-items: center
             transition: ease all .2s
-            @include fluid("margin-bottom", 10)
-            @include fluid("padding-left", 40)
-            @include fluid("padding-right", 60)
+            margin-bottom: 10px
+            padding-left: 40px
+            padding-right: 60px
             font-weight: bold
 
             &:hover 
@@ -36,18 +36,18 @@
             &:last-child
                 margin: 0
             .name 
-                @include fluid("font-size", 18)
+                font-size: 18px
             .id
                 justify-self: flex-end
                 margin-left: auto
-                @include fluid("font-size", 24)
+                font-size: 24px
 
             .image 
                 display: flex
                 background-size: cover
-                @include fluid("width", 52)
-                @include fluid("height", 52)
-                @include fluid("margin-right", 33)
+                width: 52px
+                height: 52px
+                margin-right: 33px
 
             &.purple .image, .avatar .purple
                 background-image: url("data:image/svg+xml,%3Csvg width='117' height='117' viewBox='0 0 117 117' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M109.916 94.1942V113.572C109.916 115.492 108.408 117 106.488 117H96.2051L92.7773 110.145L89.3496 117H27.6504L24.2227 110.145L20.7949 117H10.5117C8.59165 117 7.08398 115.492 7.08398 113.572V94.1942C7.08398 87.6128 10.7179 81.7856 16.5442 78.8381L32.1064 71.0918H84.8936L100.456 78.8381C106.282 81.7856 109.916 87.6128 109.916 94.1942Z' fill='%23FF667C'/%3E%3Cpath d='M109.916 94.1942V113.572C109.916 115.492 108.408 117 106.488 117H96.2051L92.7773 110.145L89.3496 117H58.5V71.0918H84.8936L100.456 78.8381C106.282 81.7856 109.916 87.6128 109.916 94.1942Z' fill='%23E63950'/%3E%3Cpath d='M84.8945 71.0918L60.5576 88.4358C59.9408 88.9151 59.2553 89.1213 58.501 89.1213C57.7467 89.1213 57.0611 88.9151 56.4443 88.4358L32.1074 71.0918L44.6526 64.7844H72.3494L84.8945 71.0918Z' fill='%23F2F2FC'/%3E%3Cpath d='M84.8936 71.0918L60.5566 88.4358C59.9398 88.9151 59.2543 89.1213 58.5 89.1213V64.7844H72.3484L84.8936 71.0918Z' fill='%23D8D8FC'/%3E%3Cpath d='M82.4941 34.2776V51.4163C82.4941 64.647 71.7307 75.4104 58.5 75.4104C45.2693 75.4104 34.5059 64.647 34.5059 51.4163V34.2776L43.3492 27.4221H73.6508L82.4941 34.2776Z' fill='%23FFB8A3'/%3E%3Cpath d='M82.4941 34.2776V51.4163C82.4941 64.647 71.7307 75.4104 58.5 75.4104V27.4221H73.6508L82.4941 34.2776Z' fill='%23FF9B7B'/%3E%3Cpath d='M24.2227 95.9768C22.3294 95.9768 20.7949 97.5113 20.7949 99.4045V117H27.6504V99.4045C27.6504 97.5113 26.1159 95.9768 24.2227 95.9768Z' fill='%23E63950'/%3E%3Cpath d='M92.7773 95.9768C90.8841 95.9768 89.3496 97.5113 89.3496 99.4045V117H96.2051V99.4045C96.2051 97.5113 94.6706 95.9768 92.7773 95.9768Z' fill='%23CC2E43'/%3E%3Cpath d='M65.3555 95.9768H58.5V102.832H65.3555C67.2496 102.832 68.7832 101.299 68.7832 99.4045C68.7832 97.5104 67.2496 95.9768 65.3555 95.9768Z' fill='%2353433F'/%3E%3Cpath d='M82.4941 30.8499V34.2776H73.6508L67.7549 40.1047C67.1381 40.7903 66.2463 41.1331 65.3555 41.1331H51.6445C50.7537 41.1331 49.8619 40.7903 49.2451 40.1047L43.3492 34.2776H34.5059V30.8499C34.5059 29.6841 34.7121 28.5192 34.8486 27.4221C36.4938 15.8366 46.4342 6.85571 58.5 6.85571C70.5658 6.85571 80.5062 15.8366 82.1514 27.4221C82.2879 28.5192 82.4941 29.6841 82.4941 30.8499Z' fill='%2353433F'/%3E%3Cpath d='M65.3555 41.1331H58.5V6.85571C70.5658 6.85571 80.5062 15.8366 82.1514 27.4221C82.2879 28.5192 82.4941 29.6841 82.4941 30.8499V34.2776H73.6508L67.7549 40.1047C67.1381 40.7903 66.2463 41.1331 65.3555 41.1331Z' fill='%233E322E'/%3E%3Cpath d='M61.9277 3.42798V17.1389C61.9277 19.0581 60.4201 20.5667 58.5 20.5667C56.5799 20.5667 55.0723 19.0581 55.0723 17.1389V3.42798C55.0723 1.50791 56.5799 0.000244141 58.5 0.000244141C60.4201 0.000244141 61.9277 1.50791 61.9277 3.42798Z' fill='%2353433F'/%3E%3Cpath d='M61.9277 3.42798V17.1389C61.9277 19.0581 60.4201 20.5667 58.5 20.5667V0.000244141C60.4201 0.000244141 61.9277 1.50791 61.9277 3.42798Z' fill='%233E322E'/%3E%3Ccircle cx='58.5' cy='58.5002' r='53.5' stroke='%23D660C3' stroke-width='10'/%3E%3Ccircle cx='58.5' cy='58.5002' r='49.1875' stroke='%238C4481' stroke-width='4'/%3E%3Cg clip-path='url(%23clip1)'%3E%3Cpath d='M109.916 94.1942V113.572C109.916 115.492 108.408 117 106.488 117H96.2051L92.7773 110.145L89.3496 117H27.6504L24.2227 110.145L20.7949 117H10.5117C8.59165 117 7.08398 115.492 7.08398 113.572V94.1942C7.08398 87.6128 10.7179 81.7856 16.5442 78.8381L32.1064 71.0918H84.8936L100.456 78.8381C106.282 81.7856 109.916 87.6128 109.916 94.1942Z' fill='%23FFA3F0'/%3E%3Cpath d='M109.916 94.1942V113.572C109.916 115.492 108.408 117 106.488 117H96.2051L92.7773 110.145L89.3496 117H58.5V71.0918H84.8936L100.456 78.8381C106.282 81.7856 109.916 87.6128 109.916 94.1942Z' fill='%23D660C3'/%3E%3Cpath d='M84.8945 71.0918L60.5576 88.4358C59.9408 88.9151 59.2553 89.1213 58.501 89.1213C57.7467 89.1213 57.0611 88.9151 56.4443 88.4358L32.1074 71.0918L44.6526 64.7844H72.3494L84.8945 71.0918Z' fill='%23F2F2FC'/%3E%3Cpath d='M84.8936 71.0918L60.5566 88.4358C59.9398 88.9151 59.2543 89.1213 58.5 89.1213V64.7844H72.3484L84.8936 71.0918Z' fill='%23D8D8FC'/%3E%3Cpath d='M82.4941 34.2776V51.4163C82.4941 64.647 71.7307 75.4104 58.5 75.4104C45.2693 75.4104 34.5059 64.647 34.5059 51.4163V34.2776L43.3492 27.4221H73.6508L82.4941 34.2776Z' fill='%23FFB8A3'/%3E%3Cpath d='M82.4941 34.2776V51.4163C82.4941 64.647 71.7307 75.4104 58.5 75.4104V27.4221H73.6508L82.4941 34.2776Z' fill='%23FF9B7B'/%3E%3Cpath d='M24.2227 95.9768C22.3294 95.9768 20.7949 97.5113 20.7949 99.4045V117H27.6504V99.4045C27.6504 97.5113 26.1159 95.9768 24.2227 95.9768Z' fill='%23B872AD'/%3E%3Cpath d='M92.7773 95.9768C90.8841 95.9768 89.3496 97.5113 89.3496 99.4045V117H96.2051V99.4045C96.2051 97.5113 94.6706 95.9768 92.7773 95.9768Z' fill='%23853F7A'/%3E%3Cpath d='M65.3555 95.9768H58.5V102.832H65.3555C67.2496 102.832 68.7832 101.299 68.7832 99.4045C68.7832 97.5104 67.2496 95.9768 65.3555 95.9768Z' fill='%2353433F'/%3E%3Cpath d='M82.4941 30.8499V34.2776H73.6508L67.7549 40.1047C67.1381 40.7903 66.2463 41.1331 65.3555 41.1331H51.6445C50.7537 41.1331 49.8619 40.7903 49.2451 40.1047L43.3492 34.2776H34.5059V30.8499C34.5059 29.6841 34.7121 28.5192 34.8486 27.4221C36.4938 15.8366 46.4342 6.85571 58.5 6.85571C70.5658 6.85571 80.5062 15.8366 82.1514 27.4221C82.2879 28.5192 82.4941 29.6841 82.4941 30.8499Z' fill='%2353433F'/%3E%3Cpath d='M65.3555 41.1331H58.5V6.85571C70.5658 6.85571 80.5062 15.8366 82.1514 27.4221C82.2879 28.5192 82.4941 29.6841 82.4941 30.8499V34.2776H73.6508L67.7549 40.1047C67.1381 40.7903 66.2463 41.1331 65.3555 41.1331Z' fill='%233E322E'/%3E%3Cpath d='M61.9277 3.42798V17.1389C61.9277 19.0581 60.4201 20.5667 58.5 20.5667C56.5799 20.5667 55.0723 19.0581 55.0723 17.1389V3.42798C55.0723 1.50791 56.5799 0.000244141 58.5 0.000244141C60.4201 0.000244141 61.9277 1.50791 61.9277 3.42798Z' fill='%2353433F'/%3E%3Cpath d='M61.9277 3.42798V17.1389C61.9277 19.0581 60.4201 20.5667 58.5 20.5667V0.000244141C60.4201 0.000244141 61.9277 1.50791 61.9277 3.42798Z' fill='%233E322E'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='117' height='117' fill='white' transform='translate(0 0.000244141)'/%3E%3C/clipPath%3E%3CclipPath id='clip1'%3E%3Crect width='117' height='117' fill='white' transform='translate(0 0.000244141)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
@@ -69,45 +69,45 @@
 
     .logo
         position: relative
-        @include fluid("width", 193)
-        @include fluid("margin-bottom", 40)
+        width: 193px
+        margin-bottom: 40px
         .gamePlay 
             display: flex
             position: absolute
             justify-content: center
-            @include fluid("top", 83)
+            top: 83px
             left: 0
             right: 0
-            @include fluid("font-size", 64)
-            @include fluid("line-height", 86)
+            font-size: 64px
+            line-height: 86px
             color: #FFEC3E
-            @include fluid("letter-spacing", 10)
+            letter-spacing: 10px
         img
-            @include fluid("width", 181)
-            @include fluid("height", 193)
+            width: 181px
+            height: 193px
         .textLg
             font-weight: bold
-            @include fluid("font-size", 48)
-            @include fluid("line-height", 65)
+            font-size: 48px
+            line-height: 65px
             position: absolute
-            @include fluid("top", 26)
+            top: 26px
             left: 0
             right: 0
             margin: auto
 
     .badge
-        @include fluid("border-radius", 6)
-        @include fluid("font-size", 18)
-        @include fluid("min-width", 54)
-        @include fluid("padding-left", 11)
-        @include fluid("padding-right", 11)
-        @include fluid("padding-top", 3)
-        @include fluid("padding-bottom", 3)
+        border-radius: 6px
+        font-size: 18px
+        min-width: 54px
+        padding-left: 11px
+        padding-right: 11px
+        padding-top: 3px
+        padding-bottom: 3px
         display: flex
         justify-content: center
         align-items: center
         font-weight: bold
-        @include fluid("margin-right", 14)
+        margin-right: 14px
 
 
     .slots
@@ -115,12 +115,12 @@
         flex-direction: column
         & li:not(.slotsIcon)
             display: flex
-            @include fluid("font-size", 18)
+            font-size: 18px
             align-items: center
-            @include fluid("margin-bottom", 13)
+            margin-bottom: 13px
             .ics 
-                @include fluid("width", 20)
-                @include fluid("height", 20)
+                width: 20px
+                height: 20px
                 background-size: cover
                 &.bell
                     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M12.1672 18.5395C11.9434 18.6306 11.6949 18.5809 11.5291 18.4152L1.58544 8.4715C1.4197 8.30576 1.36997 8.05717 1.46114 7.83342C1.55231 7.60971 1.7595 7.46881 1.99981 7.47709C2.90302 7.46881 3.78138 7.1042 4.41114 6.47443L4.48567 6.3999H6.14294L13.6007 13.8577V15.5149L13.5262 15.5895C12.8881 16.2276 12.5235 17.0893 12.5235 18.0008C12.5318 18.2411 12.3909 18.4483 12.1672 18.5395Z' fill='%23FEA832'/%3E%3Cpath d='M12.1666 18.5396C11.9428 18.6308 11.6942 18.581 11.5285 18.4153L6.55664 13.4435L9.87121 10.1289L13.6001 13.8578V15.515L13.5255 15.5896C12.8875 16.2277 12.5229 17.0894 12.5229 18.0009C12.5312 18.2413 12.3903 18.4484 12.1666 18.5396Z' fill='%23FE9923'/%3E%3Cpath d='M19.4842 0.51583C18.7964 -0.171943 17.686 -0.171943 16.9982 0.51583C16.3105 1.20356 16.3105 2.31396 16.9982 3.00177C17.686 3.68954 18.7964 3.6895 19.4842 3.00177C20.172 2.31399 20.172 1.20364 19.4842 0.51583Z' fill='%23FEA832'/%3E%3Cpath d='M16.998 3.00181L19.484 0.515869C20.1718 1.20364 20.1718 2.31399 19.484 3.00181C18.7962 3.68954 17.6858 3.68958 16.998 3.00181Z' fill='%23FE9923'/%3E%3Cpath d='M8.21373 15.9293C7.07022 17.0728 5.21404 17.0728 4.07053 15.9293C2.92701 14.7858 2.92701 12.9296 4.07053 11.7861C4.30256 11.5541 4.66713 11.5541 4.89916 11.7861L8.21373 15.1007C8.44576 15.3327 8.44576 15.6973 8.21373 15.9293Z' fill='%23FEA832'/%3E%3Cpath d='M8.21352 15.9293C7.07 17.0728 5.21383 17.0728 4.07031 15.9293L6.55625 13.4434L8.21352 15.1006C8.44555 15.3327 8.44555 15.6973 8.21352 15.9293Z' fill='%23FE9923'/%3E%3Cpath d='M17.8263 11.2882L13.5994 15.515L4.48438 6.39995L8.71121 2.17315C11.222 -0.337666 15.3155 -0.337666 17.8263 2.17315C20.337 4.68397 20.3371 8.77741 17.8263 11.2882Z' fill='%23FEDB41'/%3E%3Cpath d='M17.8273 11.2881L13.6005 15.515L9.04297 10.9574L17.8273 2.1731C20.3381 4.68392 20.3381 8.77735 17.8273 11.2881Z' fill='%23FCBF29'/%3E%3Cpath d='M12.7714 19.6581C12.3157 20.1139 11.5699 20.1139 11.1142 19.6581L0.341807 8.88579C-0.113936 8.43005 -0.113936 7.68427 0.341807 7.22853C0.797549 6.77278 1.54333 6.77278 1.99907 7.22853L12.7714 18.0009C13.2272 18.4566 13.2272 19.2024 12.7714 19.6581Z' fill='%23FEDB41'/%3E%3Cpath d='M12.7719 19.6582C12.3162 20.1139 11.5704 20.1139 11.1147 19.6582L5.72852 14.272L7.38578 12.6147L12.7719 18.0009C13.2277 18.4566 13.2277 19.2024 12.7719 19.6582Z' fill='%23FCBF29'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='20' height='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A")
@@ -141,15 +141,15 @@
             align-items: center
             & li 
                 margin-bottom: auto
-                @include fluid("margin-right", 9)
+                margin-right: 9px
                 &:last-child 
-                    @include fluid("margin-right", 12)
+                    margin-right: 12px
 
         &.red
             .badge   
                 background: #D33437
         &.purple
-            @include fluid("margin-top", 50)
+            margin-top: 50px
             .badge   
                 background: #B334D3
 
@@ -157,18 +157,18 @@
 
     .fixed
         background: rgba(1,22,39,0.8)
-        @include fluid("border-radius", 6)
-        @include fluid("width", 400)
-        @include fluid("margin-left", 45)
-        @include fluid("padding-top", 40)
+        border-radius: 6px
+        width: 400px
+        margin-left: 45px
+        padding-top: 40px
         margin-right: auto
         
         .avatar
             display: flex
             background-size: cover
-            @include fluid("width", 117)
-            @include fluid("height", 117)
-            @include fluid("margin-bottom", 14)
+            width: 117px
+            height: 117px
+            margin-bottom: 14px
 
 
             &.purple
@@ -190,26 +190,26 @@
 
             .label
                 font-weight: bold
-                @include fluid("font-size", 32)
+                font-size: 32px
                 color: #fff
-                @include fluid("line-height", 43)
-                @include fluid("margin-bottom", 24)
+                line-height: 43px
+                margin-bottom: 24px
 
             .rateNum 
                 display: flex
                 justify-content: space-between
-                @include fluid("margin-bottom", 12)
-                @include fluid("width", 205)
+                margin-bottom: 12px
+                width: 205px
                 li
                     background: rgba(27, 30, 40, 0.4)
-                    @include fluid("border-width", 1)
+                    border-width: 1px
                     border-style: solid
                     border-color: rgba(193, 193, 193, 0.2)
-                    @include fluid("border-radius", 6)
-                    @include fluid("padding", 5)
+                    border-radius: 6px
+                    padding: 5px
                     color: #C1C1C1
                     transition: all ease .2s
-                    @include fluid("font-size", 14)
+                    font-size: 14px
                     &:hover, &.active
                         color: #fff
                         background: rgba(105, 108, 116, 0.4)
@@ -218,28 +218,28 @@
             .inputRate
                 background: rgba(255,255,255,0.1)
                 font-weight: bold
-                @include fluid("width", 205)
-                @include fluid("font-size", 24)
-                @include fluid("height", 50)
+                width: 205px
+                font-size: 24px
+                height: 50px
                 margin: 0 auto
                 font-family: UniNeue
-                @include fluid("border-radius", 6)
+                border-radius: 6px
                 text-align: center
                 color: #fff
-                @include fluid("margin-bottom", 24)
+                margin-bottom: 24px
 
 
             .button  
                 background: white
-                @include fluid("border-radius", 6)
-                @include fluid("height", 61)
-                @include fluid("width", 247)
+                border-radius: 6px
+                height: 61px
+                width: 247px
                 display: flex
                 transition: all ease .2s
                 align-items: center
                 justify-content: center
                 margin: 0 auto
-                @include fluid("font-size", 24)
+                font-size: 24px
                 color: black
                 &:hover
                     opacity: 0.9
@@ -247,37 +247,37 @@
                 &.black   
                     background: rgba(17, 19, 25, 0.9)
                     color: white
-                    @include fluid("margin-top", 20)
-                    @include fluid("margin-bottom", 30)
+                    margin-top: 20px
+                    margin-bottom: 30px
                     &:hover
                         background: rgba(17, 19, 25, 0.7)
 
         .userBlock
             font-weight: bold
-            @include fluid("font-size", 24)
+            font-size: 24px
             color: #C1C1C1
-            @include fluid("line-height", 32)
+            line-height: 32px
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
             margin: 0 auto
-            @include fluid("margin-bottom", 58)
+            margin-bottom: 58px
             span 
                 color: #fff
                 
             .dollarImg
                 background-image: url("data:image/svg+xml,%3Csvg width='117' height='117' viewBox='0 0 117 117' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M58.5 107.25C31.5754 107.25 9.75 85.4246 9.75 58.5C9.75 31.5754 31.5754 9.75 58.5 9.75C85.4246 9.75 107.25 31.5754 107.25 58.5C107.25 85.4246 85.4246 107.25 58.5 107.25ZM58.5 97.5C68.8435 97.5 78.7633 93.3911 86.0772 86.0772C93.3911 78.7633 97.5 68.8434 97.5 58.5C97.5 48.1566 93.3911 38.2368 86.0772 30.9228C78.7633 23.6089 68.8435 19.5 58.5 19.5C48.1566 19.5 38.2368 23.6089 30.9228 30.9228C23.6089 38.2368 19.5 48.1566 19.5 58.5C19.5 68.8434 23.6089 78.7633 30.9228 86.0772C38.2368 93.3911 48.1566 97.5 58.5 97.5ZM41.4375 68.25H68.25C68.8965 68.25 69.5165 67.9932 69.9736 67.5361C70.4307 67.079 70.6875 66.459 70.6875 65.8125C70.6875 65.166 70.4307 64.5461 69.9736 64.0889C69.5165 63.6318 68.8965 63.375 68.25 63.375H48.75C45.5177 63.375 42.4177 62.091 40.1321 59.8054C37.8465 57.5198 36.5625 54.4198 36.5625 51.1875C36.5625 47.9552 37.8465 44.8552 40.1321 42.5696C42.4177 40.284 45.5177 39 48.75 39H53.625V29.25H63.375V39H75.5625V48.75H48.75C48.1035 48.75 47.4836 49.0068 47.0264 49.4639C46.5693 49.9211 46.3125 50.541 46.3125 51.1875C46.3125 51.834 46.5693 52.454 47.0264 52.9111C47.4836 53.3682 48.1035 53.625 48.75 53.625H68.25C71.4823 53.625 74.5823 54.909 76.8679 57.1946C79.1535 59.4802 80.4375 62.5802 80.4375 65.8125C80.4375 69.0448 79.1535 72.1448 76.8679 74.4304C74.5823 76.716 71.4823 78 68.25 78H63.375V87.75H53.625V78H41.4375V68.25Z' fill='%2327AE60'/%3E%3C/svg%3E%0A")
-                @include fluid("width", 117)
-                @include fluid("height", 117)
-                @include fluid("margin-bottom", 14)
+                width: 117px
+                height: 117px
+                margin-bottom: 14px
                 background-size: cover
 
 
     .rightColumn
         background: rgba(1,22,39,0.8)
         height: 100%
-        @include fluid("width", 400)
+        width: 400px
         display: flex
         align-items: center
         justify-content: center

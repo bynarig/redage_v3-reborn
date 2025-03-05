@@ -15,37 +15,37 @@
     overflow-y: scroll
 
     &::-webkit-scrollbar
-        @include fluid("width", 6)
+        width: 6px
 
     &::-webkit-scrollbar-track
         background: rgba(255, 255, 255, 0.2)
-        @include fluid("border-radius", 6)
+        border-radius: 6px
     &::-webkit-scrollbar-thumb
         background: linear-gradient(180deg, #FF4040 0%, #C63030 100%)
-        @include fluid("border-radius", 6)
+        border-radius: 6px
 
     #newdonate__popup
         background: rgba(29, 21, 21, .85)
         z-index: 2
     .newdonate__header
         font-weight: 800
-        @include fluid("font-size", 32)
-        @include fluid("line-height", 43)
-        @include fluid("margin-top", 26)
+        font-size: 32px
+        line-height: 43px
+        margin-top: 26px
     .newdonate__roulette-title
         text-transform: uppercase
         font-weight: 800
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 32)
-        @include fluid("margin-bottom", 26)
+        font-size: 24px
+        line-height: 32px
+        margin-bottom: 26px
     .newdonate__roulette-count
-        @include fluid("width", 318)
+        width: 318px
         display: flex
         justify-content: space-between
-        @include fluid("margin-bottom", 42)
+        margin-bottom: 42px
         .newdonate__roulette-circle
-            @include fluid("width", 50)
-            @include fluid("height", 50)
+            width: 50px
+            height: 50px
             background: rgba(43, 43, 43, 0.4)
             box-sizing: border-box
             border-radius: 50%
@@ -53,8 +53,8 @@
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 32)
+            font-size: 24px
+            line-height: 32px
             cursor: pointer
             &.active
                 @include fluid("border", 2, "solid #FF4040") 
@@ -68,40 +68,40 @@
         height: auto
 
     .newdonate__roulette-main
-        @include fluid("width", 972)
-        @include fluid("min-height", 192)
+        width: 972px
+        min-height: 192px
         overflow: hidden
         display: flex
         align-items: center
         position: relative
-        @include fluid("margin-top", 12)
+        margin-top: 12px
 
         .newdonate__roulette-main-line
             position: absolute
-            @include fluid("width", 2)
-            @include fluid("height", 192)
+            width: 2px
+            height: 192px
             z-index: 1
             background: white
             top: 0%
             left: 50%
 
         .newdonate__roulette-elements
-            @include fluid("width", 9000)
+            width: 9000px
             display: flex
             align-items: center
 
     .newdonate__roulette-element
-        @include fluid("width", 120)
-        @include fluid("height", 120)
+        width: 120px
+        height: 120px
         background: linear-gradient(360deg, rgba(218, 218, 218, 0.2) 0%, rgba(218, 218, 218, 0) 100%)
         @include fluid("border", 2, "solid rgba(218, 218, 218, 0.4)")
         box-sizing: border-box
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         display: flex
         align-items: center
         justify-content: center
         &.margin-22
-            @include fluid("margin-right", 22)
+            margin-right: 22px
         &.red
             background: linear-gradient(360deg, rgba(255, 64, 64, 0.2) 0%, rgba(255, 64, 64, 0) 100%)
             @include fluid("border", 2, "solid rgba(255, 64, 64, 0.4)")
@@ -116,8 +116,8 @@
             @include fluid("border", 2, "solid #FFBD00")
 
         .roulette-element__img
-            @include fluid("width", 60)
-            @include fluid("height", 60)
+            width: 60px
+            height: 60px
             //background-image: url('images/star.png')
             background-repeat: no-repeat
             background-size: contain
@@ -125,8 +125,8 @@
 
     .newdonate__roulette-buttons
         display: flex
-        @include fluid("margin-top", 38)
-        @include fluid("margin-bottom", 18)
+        margin-top: 38px
+        margin-bottom: 18px
         width: 100%
         height: 100%
         justify-content: center
@@ -136,19 +136,19 @@
                 box-shadow: 0px 0px 40px rgba(255, 64, 64, 0.4)
 
     .newdonate__roulette-items
-        @include fluid("width", 972)
+        width: 972px
         height: 100%
         display: grid
         grid-template-rows: repeat(2, 1fr)
         grid-template-columns: repeat(7, 1fr)
-        @include fluid("gap", 22)
-        @include fluid("margin-bottom", 22)
+        gap: 22px
+        margin-bottom: 22px
         
 
     .newdonate__roulette-info
-        @include fluid("width", 240)
-        @include fluid("height", 101)
-        @include fluid("min-height", 101)
+        width: 240px
+        height: 101px
+        min-height: 101px
         background-image: url('images/symbol.png')
         background-repeat: no-repeat
         background-size: contain
@@ -158,10 +158,10 @@
         justify-content: center
         text-transform: uppercase
         font-weight: 800
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 32)
-        @include fluid("margin-bottom", 10)
-        @include fluid("margin-top", 20)
+        font-size: 24px
+        line-height: 32px
+        margin-bottom: 10px
+        margin-top: 20px
     
     .newdonate__roulette_hidden-box
         display: flex
@@ -169,10 +169,10 @@
         align-items: center
 
     .newdonate__button_small
-        @include fluid("margin-left", 19)
+        margin-left: 19px
         transform: skewX(-40deg)
-        @include fluid("width", 250)
-        @include fluid("height", 46)    
+        width: 250px
+        height: 46px
         background: linear-gradient(270deg, #FF6969 -0.04%, #FF4040 87.53%)
         box-shadow: 0px 0px 40px rgba(255, 64, 64, 0.4)
         display: flex
@@ -188,5 +188,5 @@
         .newdonate__button-text
             transform: skewX(40deg)
             font-weight: bold
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 24)
+            font-size: 18px
+            line-height: 24px

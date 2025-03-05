@@ -8,30 +8,30 @@
     flex-direction: column 
     align-items: center 
     justify-content: center 
-    @include fluid("padding-top", 45)    
-    @include fluid("padding-bottom", 45) 
-    @include fluid("padding-left", 144) 
-    @include fluid("padding-right", 144) 
+    padding-top: 45px
+    padding-bottom: 45px
+    padding-left: 144px
+    padding-right: 144px
     color: white 
     font-family: "UniNeue" 
     font-style: normal 
     font-weight: bold 
  
     .i-title
-        @include fluid("font-size", 42)
-        @include fluid("margin-right", 16)
+        font-size: 42px
+        margin-right: 16px
 
     .box-ch  
         display: flex 
         flex-direction: column
         align-items: flex-end 
         background: rgba(1,22,39,0.8) 
-        @include fluid("width", 1000) 
+        width: 1000px
  
         .btn 
-            @include fluid("height", 50) 
+            height: 50px
             font-weight: 500 
-            @include fluid("font-size", 16) 
+            font-size: 16px
             align-items: center 
             display: flex 
             justify-content: center 
@@ -48,31 +48,31 @@
                 color: #656565
          
         li.main-small 
-            @include fluid("width", 318) 
-            @include fluid("height", 50) 
+            width: 318px
+            height: 50px
 
-            @include fluid("padding-left", 15) 
-            @include fluid("padding-right", 15) 
+            padding-left: 15px
+            padding-right: 15px
             background: #222631 
             align-items: center 
             display: flex 
             justify-content: center 
             transition: background 0.2s ease 
-            @include fluid("margin-right", 15) 
+            margin-right: 15px
  
         ul.main li:last-child 
             margin-right: 0px 
  
         ul.main 
             display: flex 
-            @include fluid("padding-left", 30) 
-            @include fluid("padding-bottom", 10) 
+            padding-left: 30px
+            padding-bottom: 10px
             background: rgba(255,255,255,0.05)
-            @include fluid("padding-right", 30) 
+            padding-right: 30px
             width: 100% 
             li 
                 font-weight: bold 
-                @include fluid("font-size", 16) 
+                font-size: 16px
  
                 &:hover:not(.active)  
                     background: rgba(255,255,255,0.1)
@@ -83,38 +83,38 @@
         ul.items 
             width: 100%
             grid-template-columns: 1fr 1fr 1fr 1fr
-            @include fluid("padding-right", 15) 
-            @include fluid("grid-gap", 30)
+            padding-right: 15px
+            grid-gap: 30px
             display: grid
-            @include fluid("height", 478) 
+            height: 478px
             overflow-y: auto
             
             .box 
                 background: rgba(255,255,255,0.05)
-                @include fluid("height", 180) 
+                height: 180px
                 width: 100%
                 display: flex
                 transition: ease background 0.2s
                 flex-direction: column
                 justify-content: center
                 align-items: center
-                @include fluid("padding-top", 14) 
-                @include fluid("padding-bottom", 14) 
-                @include fluid("margin-bottom", 7) 
-                @include fluid("font-size", 16) 
+                padding-top: 14px
+                padding-bottom: 14px
+                margin-bottom: 7px
+                font-size: 16px
                 font-weight: bold
 
 
                 .item-img 
-                    @include fluid("height", 60) 
-                    @include fluid("margin-bottom", 14) 
-                    @include fluid("font-size", 60) 
+                    height: 60px
+                    margin-bottom: 14px
+                    font-size: 60px
                     img 
-                        @include fluid("width", 75) 
-                        @include fluid("height", 75) 
+                        width: 75px
+                        height: 75px
                 .name 
                     color: #C1C1C1
-                    @include fluid("margin-bottom", 14) 
+                    margin-bottom: 14px
                     transition: color ease .2s
                 .price 
                     color: #FFFFFF
@@ -124,10 +124,10 @@
                 display: none
                 
             .item-img img 
-                 @include fluid("max-width", 145) 
+                 max-width: 145px
 
             &::-webkit-scrollbar
-                @include fluid("width", 3)
+                width: 3px
 
             &::-webkit-scrollbar-track
                 background: #131924
@@ -157,23 +157,23 @@
                 background: rgba(255,255,255,0.1)
 
             li 
-                @include fluid("height", 224) 
+                height: 224px
                 flex-direction: column
                 align-items: center 
                 justify-content: center 
                 display: flex 
 
                 .btn 
-                    @include fluid("height", 50) 
+                    height: 50px
                     width: 100%
                 &.empty 
                     background: rgba(16, 18, 22, 0.2) 
                     color: #656565 
-                    @include fluid("font-size", 24) 
+                    font-size: 24px
                     font-weight: bold 
                 &.item 
                     background: #1E222B
-                    @include fluid("padding", 15) 
+                    padding: 15px
                     color: #949494
                     position: relative
                     transition: ease background 0.2s
@@ -205,7 +205,7 @@
                         text-align: end
                         width: 100%
                         color: #fff
-                        @include fluid("font-size", 24) 
+                        font-size: 24px
 
                         span
                             color: #27AE60
@@ -216,31 +216,31 @@
                         justify-content: space-between
 
                         i
-                            @include fluid("font-size", 11) 
+                            font-size: 11px
 
                         & div:nth-child(1) 
                             font-weight: bold
-                            @include fluid("font-size", 16) 
+                            font-size: 16px
                         & div:nth-child(2) 
                             display: flex
                             align-items: center
-                            @include fluid("font-size", 14) 
+                            font-size: 14px
 
                             span 
-                              @include fluid("margin-left", 3) 
+                              margin-left: 3px
                     
         .title  
-            @include fluid("font-size", 18) 
+            font-size: 18px
             font-weight: bold 
             display: flex
             align-items: center
 
         .box-info  
             background: rgba(1,22,39,0.8) 
-            @include fluid("padding-left", 30) 
-            @include fluid("padding-top", 20) 
-            @include fluid("padding-bottom", 20) 
-            @include fluid("padding-right", 30) 
+            padding-left: 30px
+            padding-top: 20px
+            padding-bottom: 20px
+            padding-right: 30px
             justify-content: space-between
             width: 100% 
             align-items: center 
@@ -248,27 +248,27 @@
             display: flex 
  
             .title  
-                @include fluid("font-size", 36) 
-                @include fluid("margin-bottom", 5) 
+                font-size: 36px
+                margin-bottom: 5px
                 img 
-                    @include fluid("margin-right", 10) 
-                    @include fluid("width", 44) 
+                    margin-right: 10px
+                    width: 44px
                     background-size: 100%
                 
             .btn  
-                @include fluid("width", 180) 
+                width: 180px
  
             p  
                 font-weight: 500
-                @include fluid("font-size", 16) 
+                font-size: 16px
                 color: #C1C1C1
-                @include fluid("padding-right", 50) 
+                padding-right: 50px
         .input 
             background: #171921  
             border: none 
             font-weight: 500 
             width: 100%
-            @include fluid("font-size", 14) 
+            font-size: 14px
             color: #C1C1C1 
             transition: all ease 0.2s 
             height: 100%
@@ -280,16 +280,16 @@
             &:focus  
                 color: #fff 
         .item-info  
-            @include fluid("margin-bottom", 15) 
+            margin-bottom: 15px
             display: flex 
             width: 100% 
-            @include fluid("margin-top", 15) 
-            @include fluid("padding-right", 15) 
-            @include fluid("padding-left", 30) 
+            margin-top: 15px
+            padding-right: 15px
+            padding-left: 30px
              
             .l 
-                @include fluid("width", 180) 
-                @include fluid("height", 259) 
+                width: 180px
+                height: 259px
                 display: flex 
                  
  
@@ -299,16 +299,16 @@
                     width: 100% 
                     justify-content: space-between
                     .price  
-                        @include fluid("font-size", 24) 
+                        font-size: 24px
                         font-weight: bold 
                         color: #FFFFFF 
                         text-align: center 
-                        @include fluid("margin-bottom", 17) 
+                        margin-bottom: 17px
  
                         & span 
                             color: #27AE60 
             .c 
-                @include fluid("width", 300) 
+                width: 300px
                 flex-direction: column 
                 display: flex 
                 justify-content: space-between
@@ -316,14 +316,14 @@
                 .inputblock 
                     display: flex
                     align-items: center
-                    @include fluid("height", 50) 
-                    @include fluid("margin-bottom", 10) 
+                    height: 50px
+                    margin-bottom: 10px
                     .butammo 
                         background: #434A5B
-                        @include fluid("width", 83) 
+                        width: 83px
                         transition: background ease 0.2s
                         height: 100%
-                        @include fluid("font-size", 13) 
+                        font-size: 13px
                         display: flex
                         align-items: center
                         justify-content: center
@@ -338,31 +338,31 @@
                     .contein
                         display: flex
                         flex-direction: column
-                        @include fluid("margin-bottom", 5) 
+                        margin-bottom: 5px
                         label 
-                            @include fluid("margin-bottom", 5) 
-                            @include fluid("font-size", 16) 
+                            margin-bottom: 5px
+                            font-size: 16px
                         ul
                             display: flex
-                            @include fluid("height", 6) 
+                            height: 6px
                         li
-                            @include fluid("width", 58) 
+                            width: 58px
                            
-                            @include fluid("margin-right", 4) 
-                            @include fluid("height", 6) 
+                            margin-right: 4px
+                            height: 6px
                             background: #434A5B
                             transition: all ease 0.4s
                             &.active
                                 background: white
                 .title.x2 
                     font-weight: bold 
-                    @include fluid("font-size", 21) 
+                    font-size: 21px
                     justify-content: space-between 
                     display: flex 
-                    @include fluid("margin-bottom", 5) 
+                    margin-bottom: 5px
                  
                 .title.x3
-                    @include fluid("margin-bottom", 5) 
+                    margin-bottom: 5px
                     margin-top: auto
                     display: flex
                     justify-content: space-between
@@ -375,24 +375,24 @@
 
                     & div:nth-child(2) span:nth-child(1)
                         color: #fff
-                        @include fluid("font-size", 18) 
+                        font-size: 18px
 
                         b
                             color: #27AE60
 
                     & div span
                         color: #C1C1C1
-                        @include fluid("font-size", 12) 
+                        font-size: 12px
                 p  
                     color: #C1C1C1 
-                    @include fluid("font-size", 14) 
-                    @include fluid("margin-bottom", 7) 
+                    font-size: 14px
+                    margin-bottom: 7px
                     font-weight: 500
-                    @include fluid("line-height", 17) 
+                    line-height: 17px
 
                 .input  
                     font-family: UniNeue
-                    @include fluid("padding-right", 20) 
-                    @include fluid("padding-left", 20) 
+                    padding-right: 20px
+                    padding-left: 20px
                
  

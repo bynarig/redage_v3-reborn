@@ -8,45 +8,45 @@
     align-items: center
     justify-content: center
     font-weight: bold
-    @include fluid("font-size", 18)
-    @include fluid("line-height", 24)
+    font-size: 18px
+    line-height: 24px
     color: #FFFFFF
     font-family: 'TTNorms-Regular'
     letter-spacing: 0.02em
-    @include fluid("padding-left", 160)
-    @include fluid("padding-right", 160)
-    @include fluid("padding-top", 75)
+    padding-left: 160px
+    padding-right: 160px
+    padding-top: 75px
     .quests-newbutton
         display: flex
         align-items: center
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 1)
+        font-size: 18px
+        line-height: 1px
         .quests-button
             background: #FDFFFC
-            @include fluid("padding-left", 12)
-            @include fluid("padding-right", 12)
-            @include fluid("padding-bottom", 6)
-            @include fluid("padding-top", 6)
-            @include fluid("border-radius", 6)
-            @include fluid("margin-right", 26)
+            padding-left: 12px
+            padding-right: 12px
+            padding-bottom: 6px
+            padding-top: 6px
+            border-radius: 6px
+            margin-right: 26px
             color: black
-            @include fluid("min-height", 40)
+            min-height: 40px
             font-weight: 500
             display: flex
             justify-content: center
             align-items: center
             font-weight: bold
         &.myata
-            @include fluid("margin-bottom", 40)
+            margin-bottom: 40px
             .quests-button
                 background: #2BB6A8
                 color: white
         &.right
-            @include fluid("margin-left", 26)
+            margin-left: 26px
             flex-direction: row-reverse
             .quests-button
                 margin-right: 0
-                @include fluid("margin-left", 26)
+                margin-left: 26px
     ::-webkit-scrollbar 
         width: resize(4)
         margin-right: resize(10)
@@ -67,17 +67,17 @@
         width: 100%
         align-items: flex-start
         .questlist-loop
-            @include fluid("font-size", 64)
-            @include fluid("margin-right", 26)
+            font-size: 64px
+            margin-right: 26px
         .box-column
             display: flex
             flex-direction: column
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
             font-weight: 500
             .questsnewdlist-top-title
                 color: #FDFFFC
-                @include fluid("margin-bottom", 20)
+                margin-bottom: 20px
             .questsnewdlist-top-subtitle
                 color: rgba(253,255,252,0.5)
                 .white
@@ -87,30 +87,30 @@
         height: 100%
         display: flex
         justify-content: space-between
-        @include fluid("margin-top", 58)
+        margin-top: 58px
         .questsnewlist-maintext
             font-weight: bold
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
-            @include fluid("margin-bottom", 26)
+            font-size: 24px
+            line-height: 28px
+            margin-bottom: 26px
         .questsnewlist-list
             display: flex
             flex-direction: column
-            @include fluid("width", 407)
-            @include fluid("height", 412)
+            width: 407px
+            height: 412px
             overflow-y: auto
             .questsnewlist-element
                 @include fluid("border", 1, "solid rgba(253,255,252,0.1)")
-                @include fluid("border-radius", 6)
+                border-radius: 6px
                 box-sizing: border-box
-                @include fluid("padding-top", 14)
-                @include fluid("padding-bottom", 14)
-                @include fluid("padding-left", 24)
-                @include fluid("padding-right", 24)
+                padding-top: 14px
+                padding-bottom: 14px
+                padding-left: 24px
+                padding-right: 24px
                 display: flex
                 flex-direction: column
-                @include fluid("margin-bottom", 10)
-                @include fluid("max-width", 380)
+                margin-bottom: 10px
+                max-width: 380px
                 &.active
                     background: rgba(253,255,252,0.1)
                 &:last-child
@@ -119,9 +119,9 @@
                     font-weight: 300
                 .questsnewlist-count
                     color: black
-                    @include fluid("height", 22)
-                    @include fluid("width", 20)
-                    @include fluid("margin-right", 14)
+                    height: 22px
+                    width: 20px
+                    margin-right: 14px
                     background: url('./images/count.png')
                     background-size: no-repeat
                     background-position: center
@@ -129,122 +129,122 @@
                     display: center
                     justify-content: center
                     display: flex
-                    @include fluid("font-size", 16)
+                    font-size: 16px
                 .questsnewlist-condit
-                    @include fluid("margin-top", 8)
+                    margin-top: 8px
                     font-weight: 100
                     color: #DFDFDF
-                    @include fluid("font-size", 12)
-                    @include fluid("line-height", 14)
+                    font-size: 12px
+                    line-height: 14px
                     display: flex
                     align-items: center
                     .questsnewdialogicon-star
-                        @include fluid("font-size", 18)
-                        @include fluid("line-height", 22)
+                        font-size: 18px
+                        line-height: 22px
                         color: #FF9F1C
-                        @include fluid("margin-right", 8)
+                        margin-right: 8px
     .questsnewlist-center-maintext
         font-weight: bold
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 28)    
+        font-size: 24px
+        line-height: 28px
         letter-spacing: 0.01em
     .questsnewlist-center
         display: flex
         flex-direction: column
-        @include fluid("max-width", 386)
-        @include fluid("height", 710)
+        max-width: 386px
+        height: 710px
         overflow-y: auto
         .box-flex
             align-items: center
         .questsquestion-icon
-            @include fluid("font-size", 36)
+            font-size: 36px
             color: #FF9F1C
-            @include fluid("margin-right", 14)
+            margin-right: 14px
         .questsnewlist-center-text
-            @include fluid("margin-top", 26)
+            margin-top: 26px
             color: #FDFFFC
             letter-spacing: 0.02em
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)      
-            @include fluid("margin-bottom", 38)
+            font-size: 16px
+            line-height: 19px
+            margin-bottom: 38px
         .questsnewlist-center-tasks
             .tasks-title
-                @include fluid("font-size", 18)
-                @include fluid("line-height", 21) 
-                @include fluid("margin-bottom", 30)
+                font-size: 18px
+                line-height: 21px
+                margin-bottom: 30px
             .task-element
                 display: flex
                 align-items: center
-                @include fluid("margin-bottom", 22)
+                margin-bottom: 22px
                 font-weight: 100
                 &:last-child
                     margin-bottom: 0
                 .questsnewdialogicon-done
-                    @include fluid("font-size", 36)
+                    font-size: 36px
                     color: #2BB6A8
-                    @include fluid("margin-right", 16)
+                    margin-right: 16px
                 .questsnewdialogicon-undone
-                    @include fluid("font-size", 36)
+                    font-size: 36px
                     color: #FF9F1C
-                    @include fluid("margin-right", 16)
+                    margin-right: 16px
                 .orange
                     font-weight: bold
                     text-decoration: underline
                     color: #FF9F1C
-                    @include fluid("margin-left", 5)
-                    @include fluid("margin-right", 5)
+                    margin-left: 5px
+                    margin-right: 5px
     .questnewlist-right
-        @include fluid("width", 407)
-        @include fluid("height", 412)
+        width: 407px
+        height: 412px
         position: relative
         .right-backicon
-            @include fluid("font-size", 440)
+            font-size: 440px
             position: absolute
             color: rgba(255,255,255,0.1)
             top: 0%
             left: -6%
             z-index: 0
     .prise-box
-        @include fluid("margin-top", 27)
+        margin-top: 27px
         z-index: 1
         .box-money
-            @include fluid("margin-bottom", 8)
+            margin-bottom: 8px
             display: flex
             align-items: center
             .questsnewdialogicon-money
-                @include fluid("font-size", 24)
-                @include fluid("margin-right", 14)
+                font-size: 24px
+                margin-right: 14px
         .box-exp
             display: flex
             align-items: center
             color: #FF9F1C
             .questsnewdialogicon-exp
-                @include fluid("font-size", 24)
-                @include fluid("margin-right", 14)
+                font-size: 24px
+                margin-right: 14px
         
         .questsnewlist-smalltext
-            @include fluid("margin-top", 26)
-            @include fluid("margin-bottom", 26)
+            margin-top: 26px
+            margin-bottom: 26px
             font-weight: 500
         .questsnewlist-grid
             display: grid
             grid-template-columns: repeat(4, 1fr)
             grid-template-columns: repeat(4, 1fr)
-            @include fluid("gap", 16)
+            gap: 16px
             .questsnewlist-grid__item
                 background: rgba(253, 255, 252, 0.15)
-                @include fluid("width", 80)
-                @include fluid("height", 80)
+                width: 80px
+                height: 80px
                 display: flex
                 align-items: center
                 justify-content: center
 
                 .questsnewlist-grid__item_icon
                     colro: #FFFFFF
-                    @include fluid("font-size", 32)
+                    font-size: 32px
 
     .questsnewlist-bottom
-        @include fluid("height", 120)
+        height: 120px
         width: 100%
         display: flex
         justify-content: center
@@ -253,6 +253,6 @@
             align-items: flex-end
 
     .questsnewlist-margin-right
-        @include fluid("margin-right", 14)
+        margin-right: 14px
     
     

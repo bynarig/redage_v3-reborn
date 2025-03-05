@@ -2,7 +2,7 @@
 @import './fonts/Gilroy/stylesheet.css'
 
 .mt-20
-    @include fluid("margin-top", 20)
+    margin-top: 20px
 
 @keyframes animatedeath
     0%  
@@ -51,8 +51,8 @@ $circleTransitionDelay: 185ms
     justify-content: space-between
     width: 100%
     height: 100%
-    @include fluid("font-size", 16)
-    @include fluid("line-height", 19)
+    font-size: 16px
+    line-height: 19px
     font-family: 'Gilroy'
     font-weight: 500
     box-sizing: border-box
@@ -64,7 +64,7 @@ $circleTransitionDelay: 185ms
     background-position: center
     background-repeat: no-repeat
     .newhud__chat-block
-        @include fluid("height", 308)
+        height: 308px
         width: 40%
     .box-between
         display: flex
@@ -72,7 +72,7 @@ $circleTransitionDelay: 185ms
         align-items: center
         width: 100%
     .hudevo__left
-        @include fluid("min-width", 551)
+        min-width: 551px
         height: 100%
         display: flex
         flex-direction: column
@@ -93,7 +93,7 @@ $circleTransitionDelay: 185ms
         position: relative
         z-index: 2
     .hudevo__right
-        @include fluid("min-width", 551)
+        min-width: 551px
         height: 100%
         display: flex
         flex-direction: column
@@ -106,22 +106,22 @@ $circleTransitionDelay: 185ms
         display: flex
         align-items: flex-start
     .ml-13
-        @include fluid("margin-left", 13)
+        margin-left: 13px
     .buttonsinfo__button
         text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
         font-family: 'Gilroy'
         font-style: normal
         font-weight: 600
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 17)
-        @include fluid("margin-right", 3)
+        font-size: 14px
+        line-height: 17px
+        margin-right: 3px
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("padding-left", 9)
-        @include fluid("padding-right", 9)
-        @include fluid("padding-top", 6)
-        @include fluid("padding-bottom", 6)
+        padding-left: 9px
+        padding-right: 9px
+        padding-top: 6px
+        padding-bottom: 6px
         @include fluid("border", 2, "solid")
         border-image-source: linear-gradient(43.64deg, rgba(248, 40, 71, 0) -1.83%, #F82847 73.21%) !important
         border-image-slice: 1 !important
@@ -129,37 +129,37 @@ $circleTransitionDelay: 185ms
         display: flex
         flex-direction: column
         align-items: center
-        @include fluid("width", 200)
-        @include fluid("height", 170)
+        width: 200px
+        height: 170px
         background-image: url(./images/case.png)
         background-size: contain
         background-position: center
         background-repeat: no-repeat
-        @include fluid("padding-left", 5)
+        padding-left: 5px
         position: absolute
         @include fluid("left", -60)
         top: 0
         .gift__image
-            @include fluid("margin-top", 8)
-            @include fluid("width", 100)    
-            @include fluid("height", 100)
+            margin-top: 8px
+            width: 100px
+            height: 100px
             background-image: url(./images/money.png)
             background-size: contain
             background-position: center
             background-repeat: no-repeat
-            @include fluid("margin-bottom", 5)
+            margin-bottom: 5px
         .gift__text
-            @include fluid("max-width", 100)
+            max-width: 100px
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
             text-align: center
         .gift__subtitle
-            @include fluid("margin-top", 5)
+            margin-top: 5px
             color: gray
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
 
 
     .buttonsinfo
@@ -168,71 +168,71 @@ $circleTransitionDelay: 185ms
         align-items: flex-start
         justify-content: center
         margin-bottom: auto
-        @include fluid("margin-top", 10)
+        margin-top: 10px
         .buttonsinfo__element
-            @include fluid("padding-right", 90)
-            @include fluid("padding-left", 10)
-            @include fluid("padding-top", 6)
-            @include fluid("padding-bottom", 6)
+            padding-right: 90px
+            padding-left: 10px
+            padding-top: 6px
+            padding-bottom: 6px
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 400
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
+            font-size: 14px
+            line-height: 16px
             display: flex
             align-items: center
             justify-content: center
         .box-flex
-            @include fluid("margin-bottom", 5)
+            margin-bottom: 5px
     .hudevo__killlist
         display: flex
         align-items: center
         flex-direction: column-reverse
-        @include fluid("margin-top", 10)
+        margin-top: 10px
         .hudevo__killlist_element
             display: flex
             align-items: center
-            @include fluid("margin-bottom", 6)
+            margin-bottom: 6px
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             position: relative
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
             .killlist_absolute
                 position: absolute
-                @include fluid("width", 3)
-                @include fluid("height", 19)
+                width: 3px
+                height: 19px
                 background: #F82847
             .hudevo__killlist_killer
-                @include fluid("height", 37)
+                height: 37px
                 width: fit-content
                 position: relative
                 display: flex
                 align-items: center
                 justify-content: flex-start
-                @include fluid("padding-right", 49)
-                @include fluid("padding-left", 11)
+                padding-right: 49px
+                padding-left: 11px
                 .killlist_absolute
                     @include fluid("left", -3)
                     top: 50%
                     transform: translate(0, -50%)
             .hudevo__killlist_killed
                 position: relative
-                @include fluid("height", 37)
+                height: 37px
                 width: fit-content
                 display: flex
                 align-items: center
                 justify-content: flex-end
-                @include fluid("padding-left", 49)
-                @include fluid("padding-right", 11)
+                padding-left: 49px
+                padding-right: 11px
                 .killlist_absolute
                     @include fluid("right", -3)
                     top: 50%
                     transform: translate(0, -50%)
         .hudevo__killlist_sprite
-            @include fluid("width", 62)
-            @include fluid("height", 73)
+            width: 62px
+            height: 73px
             background-image: url(./images/killsprite.png)
             z-index: 10
             background-size: contain
@@ -245,13 +245,13 @@ $circleTransitionDelay: 185ms
             top: 50%
             @include fluid("left", -31)
             transform: translate(0, -50%)
-            @include fluid("font-size", 32)
+            font-size: 32px
     .hudevo__radio
         display: flex
         flex-direction: column
         align-items: flex-end
         line-height: initial
-        @include fluid("margin-top", 10)
+        margin-top: 10px
         .hudevo__radio_title
             display: flex
             align-items: center
@@ -259,38 +259,38 @@ $circleTransitionDelay: 185ms
             background: #FFFFFF
             color: #252525
             font-weight: 500
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
-            @include fluid("margin-right", 3)
-            @include fluid("padding-left", 5)
-            @include fluid("padding-right", 5)
+            font-size: 14px
+            line-height: 16px
+            margin-right: 3px
+            padding-left: 5px
+            padding-right: 5px
         .hudevo__radio_subtitle
-            @include fluid("width", 20)
-            @include fluid("height", 20)
+            width: 20px
+            height: 20px
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("font-size", 13)
+            font-size: 13px
             background: #F82847
         .hudevo__radio_element
-            @include fluid("margin-top", 7)
+            margin-top: 7px
             width: fit-content
-            @include fluid("height", 30)
+            height: 30px
             padding-right: 4px
             display: flex
             align-items: center
             justify-content: flex-end
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
-            @include fluid("padding-right", 14)
-            @include fluid("padding-left", 38)
+            padding-right: 14px
+            padding-left: 38px
             position: relative
             .hudevo__radio_absolute
                 position: absolute
-                @include fluid("width", 10)
-                @include fluid("height", 10)
+                width: 10px
+                height: 10px
                 @include fluid("right", -5)
                 top: 50%
                 transform: translate(0, -50%)
@@ -303,7 +303,7 @@ $circleTransitionDelay: 185ms
         flex-direction: column
         align-items: flex-end
         line-height: initial
-        @include fluid("margin-top", 10)
+        margin-top: 10px
         .hudevo__bizwar_title
             display: flex
             align-items: center
@@ -311,35 +311,35 @@ $circleTransitionDelay: 185ms
             background: #FFFFFF
             color: #252525
             font-weight: 500
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
-            @include fluid("margin-bottom", 7)
-            @include fluid("padding-left", 7)
-            @include fluid("padding-right", 7)
+            font-size: 14px
+            line-height: 16px
+            margin-bottom: 7px
+            padding-left: 7px
+            padding-right: 7px
         .hudevo__bizwar_element
-            @include fluid("margin-top", 5)
-            @include fluid("width", 182)
-            @include fluid("height", 30)
+            margin-top: 5px
+            width: 182px
+            height: 30px
             padding-right: 4px
             display: flex
             align-items: center
             justify-content: flex-end
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
         .hudevo__bizwar_score
             background: #F82847
-            @include fluid("height", 22)
-            @include fluid("min-width", 22)
-            @include fluid("padding-left", 6)
-            @include fluid("padding-right", 6)
+            height: 22px
+            min-width: 22px
+            padding-left: 6px
+            padding-right: 6px
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("font-size", 14)
+            font-size: 14px
             font-weight: 600
-            @include fluid("margin-left", 7)
+            margin-left: 7px
 
     .hudevo__speedometr
         display: flex
@@ -349,50 +349,50 @@ $circleTransitionDelay: 185ms
             flex-direction: column
             justify-content: flex-end
             font-weight: 700
-            @include fluid("font-size", 20)
-            @include fluid("line-height", 24)
-            @include fluid("margin-right", 12)
+            font-size: 20px
+            line-height: 24px
+            margin-right: 12px
             .hudevoicon-fuel
                 color: #A6B1BA
-                @include fluid("margin-right", 10)
+                margin-right: 10px
         .hudevo__speedometr_title
             font-weight: 700
-            @include fluid("font-size", 48)
-            @include fluid("line-height", 24)
-            @include fluid("margin-right", 5)
-            @include fluid("width", 74)
+            font-size: 48px
+            line-height: 24px
+            margin-right: 5px
+            width: 74px
         .hudevoicon-left
-            @include fluid("font-size", 18)
-            @include fluid("margin-right", 8)
+            font-size: 18px
+            margin-right: 8px
             color: #A6B1BA
         .hudevoicon-right
             color: #A6B1BA
-            @include fluid("font-size", 18)
+            font-size: 18px
         .hudevo__speedometr_gray
-            @include fluid("margin-top", 5)
+            margin-top: 5px
             color: #A6B1BA
             font-weight: 700
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 24)
+            font-size: 16px
+            line-height: 24px
         .box-column
             align-items: center
         .hudevo__speedometr_icon
-            @include fluid("font-size", 24)
+            font-size: 24px
             color: #A6B1BA
         .hudevo__speedometr_text
-            @include fluid("margin-top", 4)
+            margin-top: 4px
             font-weight: 700
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 24)
+            font-size: 14px
+            line-height: 24px
         .active
             color: #F82847
         .hudevo__speedometr_fuel
-            @include fluid("margin-top", 24)
-            @include fluid("width", 252)
-            @include fluid("height", 8)
+            margin-top: 24px
+            width: 252px
+            height: 8px
             display: flex
             background: rgba(166,177,186,0.4)
-            @include fluid("margin-bottom", 5)
+            margin-bottom: 5px
             .filled
                 height: 100%
                 background: #F82847
@@ -401,49 +401,49 @@ $circleTransitionDelay: 185ms
         flex-direction: column
         align-items: flex-end
         line-height: initial
-        @include fluid("margin-bottom", 40)
+        margin-bottom: 40px
         z-index: 2
         .hudevo__weaponbox
             display: flex
             flex-direction: column
             align-items: flex-end
-            @include fluid("height", 122)
+            height: 122px
         .align-end
             align-items: flex-end
         .hudevo__playerinfo_link
-            @include fluid("margin-bottom", 5)
+            margin-bottom: 5px
             font-weight: 600
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 14)
+            font-size: 18px
+            line-height: 14px
         .hudevo__playerinfo_online
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("width", 59)
-            @include fluid("height", 22)
+            width: 59px
+            height: 22px
             font-weight: 400
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
-            @include fluid("margin-right", 4)
+            font-size: 14px
+            line-height: 16px
+            margin-right: 4px
             .hudevoicon-person
-                @include fluid("margin-right", 6)
-                @include fluid("font-size", 12)
+                margin-right: 6px
+                font-size: 12px
         .hudevo__playerinfo_name
             background: #DA2640
-            @include fluid("height", 22)
+            height: 22px
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("padding-left", 12)
-            @include fluid("padding-right", 12)
+            padding-left: 12px
+            padding-right: 12px
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
         .hudevo__playerinfo_logo
             background: #DA2640
-            @include fluid("margin-left", 6)
-            @include fluid("width", 41)
-            @include fluid("height", 41)
+            margin-left: 6px
+            width: 41px
+            height: 41px
             display: flex
             align-items: center
             justify-content: center
@@ -457,24 +457,24 @@ $circleTransitionDelay: 185ms
                 .hudevo__playerinfo_icon
                     opacity: 0
             .hudevo__playerinfo_icon
-                @include fluid("width", 19)
-                @include fluid("height", 17)
+                width: 19px
+                height: 17px
                 background-image: url(./images/r.svg)
                 background-size: contain
                 background-position: center
                 background-repeat: no-repeat
         .hudevo__playerinfo_money
             position: relative
-            @include fluid("min-width", 150)
-            @include fluid("height", 30)
+            min-width: 150px
+            height: 30px
             display: flex
             align-items: center
             justify-content: flex-end
-            @include fluid("padding-right", 14)
-            @include fluid("margin-right", 5)
+            padding-right: 14px
+            margin-right: 5px
             font-weight: 500
-            @include fluid("font-size", 20)
-            @include fluid("line-height", 24)
+            font-size: 20px
+            line-height: 24px
 
         .hudevo__playerinfo_hide
             opacity: 0
@@ -484,56 +484,56 @@ $circleTransitionDelay: 185ms
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("width", 30)
-            @include fluid("height", 30)
-            @include fluid("font-size", 16)
+            width: 30px
+            height: 30px
+            font-size: 16px
             background: #DA2640
         .hudevo__playerinfo_weapon
-            @include fluid("width", 177)
-            @include fluid("height", 60)
+            width: 177px
+            height: 60px
             display: flex
             align-items: center
             justify-content: center
             .hudevo__weapon_image
-                @include fluid("width", 143)
-                @include fluid("height", 53)
+                width: 143px
+                height: 53px
                 background-image: url(./images/weapon.png)
                 background-size: contain
                 background-position: center
                 background-repeat: no-repeat
         .hudevo__playerinfo_white
-            @include fluid("width", 22)
-            @include fluid("height", 22)
+            width: 22px
+            height: 22px
             background: white
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("margin-right", 2)
+            margin-right: 2px
             color: #252525
             line-height: initial
         .hudevo__playerinfo_ammo
             background: white
-            @include fluid("height", 22)
-            @include fluid("min-width", 22)
-            @include fluid("padding-left", 5)
-            @include fluid("padding-right", 5)
+            height: 22px
+            min-width: 22px
+            padding-left: 5px
+            padding-right: 5px
             display: flex
             align-items: center
             justify-content: center
             text-align: center
             color: #252525
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("margin-right", 2)
+            font-size: 14px
+            margin-right: 2px
             line-height: initial
         .hudevo__playerinfo_red
             color: white
             background: #DA2640
-            @include fluid("height", 22)
-            @include fluid("font-size", 14)
+            height: 22px
+            font-size: 14px
             font-weight: 600
-            @include fluid("padding-left", 5)
-            @include fluid("padding-right", 5)
+            padding-left: 5px
+            padding-right: 5px
             display: flex
             align-items: center
             justify-content: center
@@ -552,11 +552,11 @@ $circleTransitionDelay: 185ms
         align-items: center
         color: rgba(253, 255, 252, 0.25)
         .hudevoicon-star
-            @include fluid("margin-left", 8)
+            margin-left: 8px
             &.active
                 color: white
     .mb-5
-        @include fluid("margin-bottom", 5)
+        margin-bottom: 5px
     .hudevo__quests
         display: flex
         flex-direction: column
@@ -565,21 +565,21 @@ $circleTransitionDelay: 185ms
             display: flex
             flex-direction: column
             align-items: flex-start
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
             .box-flex
                 align-items: center
             .hudevo__quest_circle
-                @include fluid("width", 20)
-                @include fluid("height", 20)
+                width: 20px
+                height: 20px
                 border-radius: 50%
                 display: flex 
                 align-items: center
                 justify-content: center
                 @include fluid("border", 2, "solid rgba(255, 255, 255, 0.25)")
-                @include fluid("margin-right", 8)
+                margin-right: 8px
                 .questcircle
-                    @include fluid("height", 10)
-                    @include fluid("width", 10)
+                    height: 10px
+                    width: 10px
                     border-radius: 50%
                     background: #F82847
                     &.purple
@@ -587,54 +587,54 @@ $circleTransitionDelay: 185ms
             .hudevo__quest_title
                 text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
                 font-weight: 600
-                @include fluid("font-size", 15)
-                @include fluid("line-height", 14)
+                font-size: 15px
+                line-height: 14px
             .hudevo__quest_square
                 background: #67FF4F
-                @include fluid("width", 5)
-                @include fluid("height", 5)
-                @include fluid("margin-right", 5)
+                width: 5px
+                height: 5px
+                margin-right: 5px
             .hudevo__quest_subtitle
                 text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
                 font-weight: 400
-                @include fluid("font-size", 13)
-                @include fluid("line-height", 14)
-                @include fluid("max-width", 197)
+                font-size: 13px
+                line-height: 14px
+                max-width: 197px
             .hudevo__quest_button
-                @include fluid("min-width", 24)
-                @include fluid("min-height", 24)
-                @include fluid("padding-left", 5)
-                @include fluid("padding-right", 5)
-                @include fluid("padding-bottom", 3)
-                @include fluid("padding-top", 3)
+                min-width: 24px
+                min-height: 24px
+                padding-left: 5px
+                padding-right: 5px
+                padding-bottom: 3px
+                padding-top: 3px
                 display: flex
                 align-items: center
                 justify-content: center
                 font-weight: 600
-                @include fluid("font-size", 14)
-                @include fluid("line-height", 17)
+                font-size: 14px
+                line-height: 17px
                 background: #F82847
                 &.purple
                     background: #9b7ae3 
             .hudevo__quest_info
-                @include fluid("min-width", 24)
-                @include fluid("min-height", 24)
+                min-width: 24px
+                min-height: 24px
                 background: white
                 color: #252525
-                @include fluid("margin-left", 3)
-                @include fluid("padding-left", 5)
-                @include fluid("padding-right", 5)
-                @include fluid("padding-bottom", 3)
-                @include fluid("padding-top", 3)
+                margin-left: 3px
+                padding-left: 5px
+                padding-right: 5px
+                padding-bottom: 3px
+                padding-top: 3px
                 display: flex
                 align-items: center
                 justify-content: center
                 font-weight: 400
-                @include fluid("font-size", 13)
-                @include fluid("line-height", 15)  
+                font-size: 13px
+                line-height: 15px
 
     .mb-6
-        @include fluid("margin-bottom", 6)
+        margin-bottom: 6px
 
     .hudevo__lobby
         display: flex
@@ -643,48 +643,48 @@ $circleTransitionDelay: 185ms
         align-items: flex-end
         .hudevo__lobby_header
             background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
-            @include fluid("width", 139)
-            @include fluid("height", 20)
-            @include fluid("margin-right", 2)
-            @include fluid("padding-right", 5)
+            width: 139px
+            height: 20px
+            margin-right: 2px
+            padding-right: 5px
             display: flex
             align-items: center
             justify-content: flex-end
             font-weight: 500
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
+            font-size: 14px
+            line-height: 16px
             text-align: right
             color: #252525
         .hudevo__lobby_count
             background: #F82847
-            @include fluid("width", 36)
-            @include fluid("height", 20)
+            width: 36px
+            height: 20px
             display: flex
             align-items: center
             justify-content: center
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
         .hudevo__lobby_element
-            @include fluid("margin-top", 7)
-            @include fluid("width", 177)
-            @include fluid("height", 30)
+            margin-top: 7px
+            width: 177px
+            height: 30px
             display: flex
             align-items: center
             justify-content: flex-end
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             color: #FFFFFF
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
-            @include fluid("padding-right", 10)
+            padding-right: 10px
             .hudevoicon-person
-                @include fluid("margin-left", 8)
-                @include fluid("font-size", 14)
+                margin-left: 8px
+                font-size: 14px
         .hudevo__lobby_health
-            @include fluid("width", 177)
+            width: 177px
             background: rgba(255, 255, 255, 0.25)
-            @include fluid("height", 4)
+            height: 4px
             display: flex
             .currenthealth
                 width: 30%
@@ -696,46 +696,46 @@ $circleTransitionDelay: 185ms
 
 
     .adminmenu
-        @include fluid("width", 520)
+        width: 520px
         height: auto
         background: rgba(30,38,47,0.9)
         border-radius: 7px
         z-index: 20001
         position: absolute
-        @include fluid("right", 50)
-        @include fluid("padding", 10)
+        right: 50px
+        padding: 10px
         top: 50%
         .adminmenu__grid
             display: grid
             grid-template-columns: repeat(2, 1fr)
             grid-template-rows: repeat(2, 1fr)
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
             .adminmenu__element
                 @include fluid("border", 1, "solid gray")
                 display: flex
                 justify-content: space-between
-                @include fluid("width", 250)
-                @include fluid("padding-left", 5)
-                @include fluid("padding-right", 5)
+                width: 250px
+                padding-left: 5px
+                padding-right: 5px
                 .gray
                     color: #A6B1BA
         .adminmenu__title
-            @include fluid("font-size", 18)
+            font-size: 18px
             font-weight: bold
-            @include fluid("margin-bottom", 6)
+            margin-bottom: 6px
 
 
 
 
 
     .hudevo__chat_obman
-        @include fluid("height", 308)
-        @include fluid("width", 500)
+        height: 308px
+        width: 500px
         opacity: 0
         z-index: -1
         pointer-events: none
     .hudevo__chat-block
-        @include fluid("height", 308)
+        height: 308px
         width: 100%
         position: absolute
         left: 0
@@ -749,11 +749,11 @@ $circleTransitionDelay: 185ms
             display: flex
             flex-direction: column
             transition: opacity ease .2s                
-            @include fluid("border-radius", 8)
-            //@include fluid("padding-left", 14)
-            //@include fluid("padding-right", 14)
-            @include fluid("padding-bottom", 11)
-            //@include fluid("padding-top", 11)
+            border-radius: 8px
+            //padding-left: 14px
+            //padding-right: 14px
+            padding-bottom: 11px
+            //padding-top: 11px
             &.chatbackground
                 background: rgba(30, 38, 47, 0.2)
             &.noActive
@@ -767,23 +767,23 @@ $circleTransitionDelay: 185ms
                 direction: rtl
                 text-align: left
                 overflow-y: auto
-                @include fluid("padding-left", 10)                    
+                padding-left: 10px
                 box-sizing: border-box
                 //user-select: text
 
                 .scroll
-                    @include fluid("padding-left", 7)
+                    padding-left: 7px
 
                 &::-webkit-scrollbar
-                    @include fluid("width", 3)
+                    width: 3px
 
                 &::-webkit-scrollbar-track
                     background: rgba(253,255,252,0.4)
-                    @include fluid("border-radius", 4)
+                    border-radius: 4px
 
                 &::-webkit-scrollbar-thumb
                     background: #FDFFFC
-                    @include fluid("border-radius", 6)
+                    border-radius: 6px
                 p
                     font-family: 'TTNorms-Medium'
                     font-weight: 500
@@ -793,7 +793,7 @@ $circleTransitionDelay: 185ms
                     //font-style: normal
                     position: relative
                     direction: ltr
-                    //@include fluid("margin-left", 10)
+                    //margin-left: 10px
                     //text-shadow: 0 0 3px #00000014, 0 0 3px #0000001f
                     word-break: keep-all
                     //filter: drop-shadow(0px 0px 1px black)
@@ -804,37 +804,37 @@ $circleTransitionDelay: 185ms
                     //    color: #ccc
 
                     .chat__span
-                        @include fluid("max-height", 28)
-                        @include fluid("max-width", 28)
+                        max-height: 28px
+                        max-width: 28px
                         @include fluid("border", 1, "solid white")
-                        @include fluid("padding", 5)
-                        @include fluid("margin-right", 7)
-                        @include fluid("border-radius", 3)
+                        padding: 5px
+                        margin-right: 7px
+                        border-radius: 3px
                         box-sizing: border-box
                         &.market
                             background: #2BB6A8
-                            @include fluid("font-size", 18)
+                            font-size: 18px
                             border: 0
                         &.shop
                             background: #FF9F1C
                             border: 0
-                            @include fluid("padding-top", 6)
-                            @include fluid("padding-bottom", 6)
-                            @include fluid("padding-left", 5)
-                            @include fluid("padding-right", 5)
+                            padding-top: 6px
+                            padding-bottom: 6px
+                            padding-left: 5px
+                            padding-right: 5px
             
             .hudevo__chat_input_block
-                @include fluid("margin-top", 20)
-                @include fluid("min-height", 30)
-                @include fluid("width", 500)
-                @include fluid("margin-left", 10)
+                margin-top: 20px
+                min-height: 30px
+                width: 500px
+                margin-left: 10px
                 overflow: hidden
                 .hudevo__chat_input_box
                     position: relative
                     width: 100%
                     display: flex
                     align-items: center
-                    @include fluid("height", 35)
+                    height: 35px
                     background: rgba(0,0,0,0.25)
 
                     .hudevo__chat_input_chat     
@@ -844,12 +844,12 @@ $circleTransitionDelay: 185ms
                         justify-content: center
                         top: 50%
                         transform: translateY(-50%)
-                        @include fluid("height", 16)
-                        @include fluid("width", 64)
-                        @include fluid("padding-right", 6)
-                        @include fluid("padding-left", 10)
+                        height: 16px
+                        width: 64px
+                        padding-right: 6px
+                        padding-left: 10px
                         @include fluid("border-right", 1, "solid rgba(255, 255, 255, 0.15)")
-                        @include fluid("font-size", 12)
+                        font-size: 12px
                         text-transform: uppercase
                         box-sizing: border-box
                         
@@ -857,8 +857,8 @@ $circleTransitionDelay: 185ms
                         width: 100%
                         height: 100%
                         border: 0
-                        //@include fluid("margin-left", 10)
-                        @include fluid("padding-left", 70)
+                        //margin-left: 10px
+                        padding-left: 70px
                         background: rgba(255,255,255,0.0)
                         color: white
                         font-family: 'TTNorms-Regular'
@@ -868,44 +868,44 @@ $circleTransitionDelay: 185ms
                     .hudevo__chat_input_send
                         display: flex
                         align-items: center
-                        @include fluid("height", 22)
-                        @include fluid("padding-right", 10)
-                        @include fluid("padding-left", 6)
-                        @include fluid("margin-left", 6)
+                        height: 22px
+                        padding-right: 10px
+                        padding-left: 6px
+                        margin-left: 6px
                         @include fluid("border-left", 1, "solid rgba(255, 255, 255, 0.15)")
                         .hudevo__chat_input_send_icon
-                            @include fluid("font-size", 20)
+                            font-size: 20px
                             color: rgba(255, 255, 255, 0.6)
                             &.active
                                 color: rgba(255, 255, 255, 1)
 
             .hudevo__chat_buttons_helpcmd
                 background: rgba(0, 0, 0, 0.25)
-                @include fluid("margin-left", 10)
-                @include fluid("font-size", 12)
-                @include fluid("width", 500)
-                @include fluid("margin-top", 6)
-                @include fluid("padding-right", 10)
-                @include fluid("padding-left", 6)
-                @include fluid("max-height", 138)
+                margin-left: 10px
+                font-size: 12px
+                width: 500px
+                margin-top: 6px
+                padding-right: 10px
+                padding-left: 6px
+                max-height: 138px
                 overflow: hidden
                 overflow-y: auto
                 
                 &::-webkit-scrollbar
-                    @include fluid("width", 3)
+                    width: 3px
 
                 &::-webkit-scrollbar-track
                     background: rgba(253,255,252,0.4)
-                    @include fluid("border-radius", 4)
+                    border-radius: 4px
                 &::-webkit-scrollbar-thumb
                     background: #FDFFFC
-                    @include fluid("border-radius", 6)
+                    border-radius: 6px
                 
             .hudevo__chat_buttons_block
-                @include fluid("width", 500)
-                @include fluid("margin-top", 6)
-                @include fluid("margin-left", 10)
-                @include fluid("height", 35)
+                width: 500px
+                margin-top: 6px
+                margin-left: 10px
+                height: 35px
                 width: 100%
                 .hudevo__chat_buttons
                     display: flex
@@ -914,9 +914,9 @@ $circleTransitionDelay: 185ms
                     .hudevo__chat_buttons_key
                         display: flex
                         align-items: center
-                        @include fluid("height", 26)
-                        @include fluid("margin-right", 8)
-                        @include fluid("padding-right", 6)
+                        height: 26px
+                        margin-right: 8px
+                        padding-right: 6px
                         @include fluid("border-right", 1, "solid rgba(255, 255, 255, 0.15)")
                     .hudevo__chat_button
                         cursor: pointer
@@ -924,9 +924,9 @@ $circleTransitionDelay: 185ms
                         display: flex
                         align-items: center
                         justify-content: center
-                        @include fluid("padding-left", 19)
-                        @include fluid("padding-right", 19)
-                        @include fluid("margin-right", 6)
+                        padding-left: 19px
+                        padding-right: 19px
+                        margin-right: 6px
                         background: rgba(255,255,255,0.15)
                         font-family: 'RF Dewi Extended'
                         &.active
@@ -935,17 +935,17 @@ $circleTransitionDelay: 185ms
     .hudevo__petcontrol
         display: flex
         flex-direction: column
-        @include fluid("font-size", 16)
+        font-size: 16px
         justify-content: flex-end
         margin-bottom: auto
-        @include fluid("margin-top", 10)
+        margin-top: 10px
         .hudevo__lobby_health
             display: flex
-            @include fluid("width", 191)
-            @include fluid("height", 4)
+            width: 191px
+            height: 4px
             background: rgba(255, 255, 255, 0.25)
             position: relative
-            @include fluid("margin-top", 2)
+            margin-top: 2px
 
         .hudevo__lobby_health_current
             height: 100%
@@ -955,57 +955,57 @@ $circleTransitionDelay: 185ms
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             color: #FFFFFF
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
-            @include fluid("margin-left", 40)
+            margin-left: 40px
         .box-flex
             align-items: center
         .hudevo__petbox
             width: fit-content
-            @include fluid("height", 56)
+            height: 56px
             display: flex
             justify-content: space-between
             align-items: center
-            @include fluid("padding", 14)
-            @include fluid("padding-right", 32)
+            padding: 14px
+            padding-right: 32px
             position: relative
         .petcontrol__buttons
             display: flex
             flex-wrap: wrap
-            @include fluid("gap", 7)
-            @include fluid("width", 250)
-            @include fluid("margin-top", 5)
+            gap: 7px
+            width: 250px
+            margin-top: 5px
             .box-flex
                 align-items: center
         .petcontrol__button
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("height", 20)
-            @include fluid("min-width", 20)
+            height: 20px
+            min-width: 20px
             background: rgba(255, 255, 255, 0.25)
-            @include fluid("margin-right", 3)
+            margin-right: 3px
             &.active
                 background: white
                 color: #252525
         .petcontrol__button_text
             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 12.3%, rgba(255, 255, 255, 0.19) 100%)
-            @include fluid("padding-left", 8)
-            @include fluid("padding-right", 8)
-            @include fluid("padding-bottom", 2)
-            @include fluid("padding-top", 2)
+            padding-left: 8px
+            padding-right: 8px
+            padding-bottom: 2px
+            padding-top: 2px
             display: flex
             align-items: center
             justify-content: center
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
             font-weight: 400
-            @include fluid("font-size", 13)
-            @include fluid("line-height", 15)
+            font-size: 13px
+            line-height: 15px
         .petcontrol__pet
-            @include fluid("height", 36)
-            @include fluid("width", 36)
+            height: 36px
+            width: 36px
             @include fluid("border", 3, "solid #F82847")
             background: rgba(255, 255, 255, 0.1)
             border-radius: 50%
@@ -1018,8 +1018,8 @@ $circleTransitionDelay: 185ms
             top: 50%
             transform: translate(0%, -50%)
             .petcontrol__pet_img
-                @include fluid("height", 34)
-                @include fluid("width", 34)
+                height: 34px
+                width: 34px
                 background-size: contain
                 background-repeat: no-repeat
                 background-position: center
@@ -1030,112 +1030,112 @@ $circleTransitionDelay: 185ms
         justify-content: space-between
         height: fit-content
         .hudevo__map
-            @include fluid("margin-right", 30)
+            margin-right: 30px
     .hudevo__placetime
         display: flex
         flex-direction: column
         align-items: flex-start
         position: relative
-        @include fluid("margin-left", 10)
+        margin-left: 10px
         .placetime__icon
-            @include fluid("font-size", 20)
+            font-size: 20px
         .placetime__buttons
             display: flex
             align-items: center
             .playerinfo__box
-                @include fluid("margin-right", 12)
+                margin-right: 12px
             .playerinfo__box_key
                 position: absolute
                 @include fluid("bottom", -9)
                 @include fluid("right", -3)
                 text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
                 font-weight: 400
-                @include fluid("font-size", 14)
-                @include fluid("line-height", 20)
+                font-size: 14px
+                line-height: 20px
                 font-family: 'RF Dewi'
                 color: white
         .hudevo__placetime_image
-            @include fluid("width", 169)
-            @include fluid("height", 44)
+            width: 169px
+            height: 44px
             background-image: url(./images/bottom-info.png)
             background-size: cover
             background-position: center
             background-repeat: no-repeat
-            @include fluid("padding-left", 25)
+            padding-left: 25px
             display: flex
             align-items: flex-start
             justify-content: center
             position: relative
             flex-direction: column
             font-family: 'Gilroy'
-            @include fluid("margin-bottom", 14)
+            margin-bottom: 14px
             .hudevo__placetime_cirlce
-                @include fluid("min-width", 24)
-                @include fluid("min-height", 24)
-                @include fluid("width", 24)
-                @include fluid("height", 24)
+                min-width: 24px
+                min-height: 24px
+                width: 24px
+                height: 24px
                 border-radius: 50%
                 display: flex
                 align-items: center
                 justify-content: center
                 @include fluid("border", 1, "solid #F82847")
                 font-weight: 600
-                @include fluid("font-size", 14)
-                @include fluid("line-height", 14)
+                font-size: 14px
+                line-height: 14px
                 position: absolute
                 top: 0%
                 @include fluid("left", -12)
                 transform: translate(0%, 50%)
             .hudevo__placetime_title
                 font-weight: 600
-                @include fluid("font-size", 18)
-                @include fluid("line-height", 21)
+                font-size: 18px
+                line-height: 21px
                 color: #FFFFFF
                 text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
                 white-space: nowrap
             .hudevo__placetime_subtitle
                 white-space: nowrap
                 font-weight: 400
-                @include fluid("font-size", 14)
-                @include fluid("line-height", 16)
+                font-size: 14px
+                line-height: 16px
                 color: #FFFFFF
                 text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
             .hudevoicon-clock
-                @include fluid("font-size", 18)
+                font-size: 18px
     .hudevo__dropitem
-        @include fluid("margin-top", 43)
+        margin-top: 43px
         display: flex
         flex-direction: column
         .hudevo__dropitem_header
-            @include fluid("width", 349)
-            @include fluid("height", 25)
+            width: 349px
+            height: 25px
             background: #F82847
             display: flex
             align-items: center
-            @include fluid("padding-left", 9)
+            padding-left: 9px
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 400
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
-            @include fluid("margin-bottom", 3)
+            font-size: 14px
+            line-height: 16px
+            margin-bottom: 3px
         .hudevo__dropitem_subheader
-            @include fluid("margin-bottom", 3)
-            @include fluid("margin-left", 3)
-            @include fluid("height", 25)
-            @include fluid("width", 24)
+            margin-bottom: 3px
+            margin-left: 3px
+            height: 25px
+            width: 24px
             display: flex
             align-items: center
             justify-content: center
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             background: #F82847
         .hudevo__dropitem_image
-            @include fluid("width", 90)
-            @include fluid("height", 90)
+            width: 90px
+            height: 90px
             position: relative
             display: flex
             align-items: center
@@ -1143,8 +1143,8 @@ $circleTransitionDelay: 185ms
             background: white
             overflow: hidden
             .dropitem__image
-                @include fluid("width", 70)
-                @include fluid("height", 70)
+                width: 70px
+                height: 70px
                 background-position: center
                 background-size: contain
                 background-repeat: no-repeat
@@ -1152,50 +1152,50 @@ $circleTransitionDelay: 185ms
                 z-index: 1
             .dropitem__absolute
                 position: absolute
-                @include fluid("left", 130)
+                left: 130px
                 @include fluid("bottom", -10)
                 z-index: 0
                 font-weight: 900
-                @include fluid("font-size", 144)
-                @include fluid("line-height", 184)
+                font-size: 144px
+                line-height: 184px
                 letter-spacing: -0.34em
                 color: rgba(37, 37, 37, 0.03)
         .hudevo__dropitem_info
-            @include fluid("width", 256)
-            @include fluid("height", 90)
+            width: 256px
+            height: 90px
             display: flex
             flex-direction: column
             align-items: flex-start
-            @include fluid("padding-top", 10)
-            @include fluid("padding-left", 14)
-            @include fluid("padding-right", 14)
-            @include fluid("padding-bottom", 10)
+            padding-top: 10px
+            padding-left: 14px
+            padding-right: 14px
+            padding-bottom: 10px
             background: white
-            @include fluid("margin-right", 3)
-            @include fluid("margin-left", 3)
+            margin-right: 3px
+            margin-left: 3px
             .hudevo__dropitem_title
                 font-family: 'Gilroy'
                 font-style: normal
                 font-weight: 600
-                @include fluid("font-size", 14)
-                @include fluid("line-height", 17)
+                font-size: 14px
+                line-height: 17px
                 color: #252525
-                @include fluid("margin-bottom", 1)
+                margin-bottom: 1px
             .hudevo__dropitem_subtitle
                 font-family: 'Gilroy'
                 font-style: normal
                 font-weight: 400
-                @include fluid("font-size", 13)
-                @include fluid("line-height", 15)
+                font-size: 13px
+                line-height: 15px
                 color: #252525
         .hudevo__dropitem_take
-            @include fluid("width", 24)
-            @include fluid("height", 90)
+            width: 24px
+            height: 90px
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 400
-            @include fluid("font-size", 13)
-            @include fluid("line-height", 15)
+            font-size: 13px
+            line-height: 15px
             color: #252525
             background: white
             display: flex
@@ -1206,23 +1206,23 @@ $circleTransitionDelay: 185ms
    
     .hudevo__restart
         position: absolute
-        @include fluid("margin-top",10)
+        margin-top: 10px
         display: flex
         align-items: center
-        @include fluid("right", 0)
-        @include fluid("bottom", 10)
+        right: 0px
+        bottom: 10px
         .restart__icon
             color: #FF9F1C
-            @include fluid("font-size",24)
-            @include fluid("margin-right",12)
+            font-size: 24px
+            margin-right: 12px
     .hudevo__activecapt
-        @include fluid("margin-top", 20)
+        margin-top: 20px
         display: flex
         align-items: center
         justify-content: center
         flex-direction: column
         font-family: 'Gilroy'
-        @include fluid("width", 475)
+        width: 475px
         .hudevo__activecapt_image
             display: flex
             align-items: center
@@ -1238,67 +1238,67 @@ $circleTransitionDelay: 185ms
             font-weight: 600
             font-size: 14px
             line-height: 14px
-            @include fluid("margin-bottom", 18)
+            margin-bottom: 18px
             text-align: center
         .hudevo__activecapt_time
             font-weight: 500
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
             color: #FFFFFF
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
-            @include fluid("margin-bottom", 20)
+            margin-bottom: 20px
         .hudevoicon-skull, .hudevoicon-war-person
-            @include fluid("font-size", 18)
+            font-size: 18px
         .mr
-            @include fluid("margin-right", 10)
+            margin-right: 10px
         .ml
-            @include fluid("margin-left", 10)
+            margin-left: 10px
         .box-flex
             font-weight: 700
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 18)
+            font-size: 18px
+            line-height: 18px
             color: #FFFFFF
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
         .hudevo__activecapt_square
-            @include fluid("width", 10)
-            @include fluid("height", 10)
+            width: 10px
+            height: 10px
             &.green
                 background: #2AD300
             &.red
                 background: #F82847
         .hudevo__activecapt_line
-            @include fluid("height", 3)
-            @include fluid("width", 475)
+            height: 3px
+            width: 475px
             display: flex
             justify-content: space-between
             align-items: center
             background: rgba(255,255,255,0.3)
             .hudevo__activecapt_left
-                @include fluid("width", 90)
+                width: 90px
                 height: 100%
                 background: #2AD300
             .hudevo__activecapt_center
-                @include fluid("width", 90)
+                width: 90px
                 height: 100%
                 background: #f8b628
             .hudevo__activecapt_right
                 background: #F82847
-                @include fluid("width", 90)
+                width: 90px
                 height: 100%
         .fs-10
-            @include fluid("font-size", 10)
+            font-size: 10px
             text-align: center
         .activewidth
-            @include fluid("max-width", 150)
-            @include fluid("min-width", 150)
+            max-width: 150px
+            min-width: 150px
             &.l
                 text-align: left
             &.r
                 text-align: right
     .mt-14
-        @include fluid("margin-top", 14)
+        margin-top: 14px
     .mt-5
-        @include fluid("margin-top", 5)
+        margin-top: 5px
     
     .hudevo__streamer
         display: flex
@@ -1307,7 +1307,7 @@ $circleTransitionDelay: 185ms
         font-family: 'Gilroy'
         position: absolute
         right: 0
-        @include fluid("bottom", 80)
+        bottom: 80px
         .hudevo__streamer_image
             width: 183px
             height: 30px
@@ -1315,43 +1315,43 @@ $circleTransitionDelay: 185ms
             background-size: contain
             background-position: center
             background-repeat: no-repeat
-            @include fluid("margin-bottom", 7)
+            margin-bottom: 7px
     .hudevo__taxicount
         display: flex
         flex-direction: column
         font-family: 'Gilroy'
-        @include fluid("bottom", 20)
-        @include fluid("margin-top", 10)
+        bottom: 20px
+        margin-top: 10px
         .hudevo__taxicount_title
-            @include fluid("height", 20)
+            height: 20px
             font-style: normal
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             text-align: left
             color: #FFFFFF
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
-            @include fluid("padding-right", 8)
-            @include fluid("padding-left", 17) 
+            padding-right: 8px
+            padding-left: 17px
         .box-flex
             align-items: center
         .hudevo__taxicount_thin
             font-style: normal
             font-weight: 400
-            @include fluid("font-size", 12)
-            @include fluid("line-height", 14)
+            font-size: 12px
+            line-height: 14px
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
-            @include fluid("margin-right", 10)
+            margin-right: 10px
         .hudevo__taxicount_cost
-            @include fluid("width", 56)
-            @include fluid("height", 20)
+            width: 56px
+            height: 20px
             display: flex
             align-items: center
             justify-content: center
             background: #F82847
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
 
     .hudevo__greenzone
         position: absolute
@@ -1362,35 +1362,35 @@ $circleTransitionDelay: 185ms
         display: flex
         flex-direction: column
         align-items: center
-        @include fluid("width", 83)
-        @include fluid("height", 90)
+        width: 83px
+        height: 90px
         color: #67FF4F
         .hudevoicon-shield
-            @include fluid("margin-top", 9)
+            margin-top: 9px
             filter: drop-shadow(0px 0px 23px #67FF4F)
-            @include fluid("font-size", 35)
-            @include fluid("margin-bottom", 4)
+            font-size: 35px
+            margin-bottom: 4px
         .hudevo__greenzone_text
-            @include fluid("margin-bottom", 8)
-            @include fluid("max-width", 60)
+            margin-bottom: 8px
+            max-width: 60px
             text-align: center
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 400
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
             color: #FFFFFF
             text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
             b
                 font-weight: 600
     .hudevo__bottom_usebutton
-        @include fluid("height", 40)
-        @include fluid("margin-top", 10)
-        @include fluid("margin-bottom", 10)
+        height: 40px
+        margin-top: 10px
+        margin-bottom: 10px
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("font-size", 20)
+        font-size: 20px
         position: relative
         &::after
             content: ''
@@ -1399,31 +1399,31 @@ $circleTransitionDelay: 185ms
             bottom: 0
             width: 100%
             background: linear-gradient(270deg, #F82847 0%, rgba(248, 40, 71, 0) 100%)
-            @include fluid("height", 2)
+            height: 2px
         #ProgressBarKey
-            @include fluid("width", 40)
-            @include fluid("height", 40)
+            width: 40px
+            height: 40px
             position: relative
-            @include fluid("margin-right", 14)
+            margin-right: 14px
         .progressbar-text
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("width", 30)
-            @include fluid("height", 30)
+            width: 30px
+            height: 30px
             color: #000000
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 400
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
+            font-size: 14px
+            line-height: 16px
             background: white
     .hudevo-usebutton__text
         font-family: 'Gilroy'
         font-style: normal
         font-weight: 400
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 16)
+        font-size: 14px
+        line-height: 16px
         text-align: center
         display: flex
         align-items: center
@@ -1484,8 +1484,8 @@ $circleTransitionDelay: 185ms
         align-items: flex-start
         position: relative
         .hudevo__event_image
-            @include fluid("width", 233)
-            @include fluid("height", 102)
+            width: 233px
+            height: 102px
             background-image: url(./images/event.png)
             background-size: contain
             background-position: center
@@ -1509,8 +1509,8 @@ $circleTransitionDelay: 185ms
         flex-direction: column
         align-items: flex-start
         .hudevo__battlepass_image
-            @include fluid("width", 357)
-            @include fluid("height", 93)
+            width: 357px
+            height: 93px
             background-image: url(./images/battlepass-info.png)
             background-size: contain
             background-position: center
@@ -1522,26 +1522,26 @@ $circleTransitionDelay: 185ms
             transform: translate(-50%, 0%)
     .hudevo__notification_subtitle
         background: #F82847
-        @include fluid("padding-left", 5)
-        @include fluid("padding-right", 5)
-        @include fluid("padding-bottom", 2)
-        @include fluid("padding-top", 2)
+        padding-left: 5px
+        padding-right: 5px
+        padding-bottom: 2px
+        padding-top: 2px
         font-family: 'Gilroy'
         font-style: normal
         font-weight: 600
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 14)
+        font-size: 14px
+        line-height: 14px
         color: white
         text-transform: uppercase
         text-align: center
         &.battlepass
-            @include fluid("margin-top", 32)
-            @include fluid("margin-left", 4)
+            margin-top: 32px
+            margin-left: 4px
         &.mt-51
-            @include fluid("margin-top", 51)
+            margin-top: 51px
     .hudevo__battlepass_background
-        @include fluid("width", 356)
-        @include fluid("height", 37)
+        width: 356px
+        height: 37px
         background-image: url(./images/battlepass-background.png)
         background-size: cover
         background-position: center
@@ -1552,11 +1552,11 @@ $circleTransitionDelay: 185ms
         justify-content: center
         color: #252525
         font-weight: 600
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 14)
+        font-size: 24px
+        line-height: 14px
     .hudevo__notification_title
-        @include fluid("width", 268)
-        @include fluid("height", 37)
+        width: 268px
+        height: 37px
         background: white
         align-self: center
         display: flex
@@ -1565,18 +1565,18 @@ $circleTransitionDelay: 185ms
         color: #252525
         text-align: center
         font-weight: 600
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 14)
+        font-size: 24px
+        line-height: 14px
         &.fs-14
             font-family: 'Gilroy'
             font-weight: 500
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 14)
+            font-size: 14px
+            line-height: 14px
         &.large
             width: fit-content
-            @include fluid("padding-right", 9)
-            @include fluid("padding-left", 9)
-            @include fluid("height", 21)
+            padding-right: 9px
+            padding-left: 9px
+            height: 21px
             text-align: center
     .hudevo__winner
         display: flex
@@ -1584,18 +1584,18 @@ $circleTransitionDelay: 185ms
         align-items: center
         position: relative
         flex-direction: column
-        @include fluid("margin-bottom", 10)
-        @include fluid("width", 444)
-        @include fluid("height", 272)
+        margin-bottom: 10px
+        width: 444px
+        height: 272px
         background-image: url(./images/winner.png)
         background-size: cover
         background-position: center
         background-repeat: no-repeat
-        @include fluid("padding-top", 40)
+        padding-top: 40px
         .hudevo__winner_image
-            @include fluid("margin-top", 15)
-            @include fluid("width", 119)
-            @include fluid("height", 88)
+            margin-top: 15px
+            width: 119px
+            height: 88px
             background-image: url(./images/money.png)
             background-size: cover
             background-position: center
@@ -1608,10 +1608,10 @@ $circleTransitionDelay: 185ms
         align-items: center
         position: relative
         flex-direction: column
-        @include fluid("margin-bottom", 10)
+        margin-bottom: 10px
         .hudevo__level_image
-            @include fluid("width", 244)
-            @include fluid("height", 66)
+            width: 244px
+            height: 66px
             background-image: url(./images/level.png)
             background-size: cover
             background-position: center
@@ -1619,20 +1619,20 @@ $circleTransitionDelay: 185ms
             display: flex
             justify-content: space-between
             align-items: center
-            @include fluid("margin-bottom", 14)
+            margin-bottom: 14px
             .level
                 font-weight: 600
-                @include fluid("font-size", 22)
-                @include fluid("width", 40)
+                font-size: 22px
+                width: 40px
                 text-align: center
-                @include fluid("margin-left", 13)
+                margin-left: 13px
             .newlevel
-                @include fluid("width", 40)
+                width: 40px
                 color: rgba(255, 255, 255, 0.55)
                 font-weight: 600
-                @include fluid("font-size", 18)
+                font-size: 18px
                 text-align: center
-                @include fluid("margin-right", 10)
+                margin-right: 10px
 
     .hudevo__weekprise
         display: flex
@@ -1640,8 +1640,8 @@ $circleTransitionDelay: 185ms
         align-items: center
         position: relative
         .hudevo__weekprise_prise
-            @include fluid("width", 201)
-            @include fluid("height", 134)
+            width: 201px
+            height: 134px
             background-image: url(./images/prise.png)
             background-size: cover
             background-position: center
@@ -1651,8 +1651,8 @@ $circleTransitionDelay: 185ms
             justify-content: center
             @include fluid("margin-right", -32)
             .hudevo__weekprise_image
-                @include fluid("width", 113)
-                @include fluid("height", 113)
+                width: 113px
+                height: 113px
                 background-image: url(./images/money.png)
                 background-size: contain
                 background-position: center
@@ -1661,8 +1661,8 @@ $circleTransitionDelay: 185ms
             position: absolute
             left: 0
             top: 0
-            @include fluid("width", 346)
-            @include fluid("height", 110)
+            width: 346px
+            height: 110px
             background-image: url(./images/sprite.png)
             background-size: contain
             background-position: center
@@ -1671,18 +1671,18 @@ $circleTransitionDelay: 185ms
         .align-right
             align-self: flex-end
             font-weight: 600
-            @include fluid("font-size", 13)
-            @include fluid("line-height", 14)
+            font-size: 13px
+            line-height: 14px
         .justify-start
             justify-content: flex-start
     .hudevo__notification_text
         align-self: center
-        @include fluid("margin-top", 6)
+        margin-top: 6px
         @include fluid("border-top", 3, "solid #F82847")
-        @include fluid("padding-top", 8)
-        @include fluid("padding-bottom", 14)
-        @include fluid("padding-left", 12)
-        @include fluid("padding-right", 12)
+        padding-top: 8px
+        padding-bottom: 14px
+        padding-left: 12px
+        padding-right: 12px
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%)
         text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.45)
         text-align: center
@@ -1691,15 +1691,15 @@ $circleTransitionDelay: 185ms
         align-items: center
         justify-content: center
         font-weight: 400
-        @include fluid("font-size", 13)
-        @include fluid("line-height", 14)
+        font-size: 13px
+        line-height: 14px
         &.large
-            @include fluid("max-width", 350)
+            max-width: 350px
         &.small
-            @include fluid("margin-top", 5)
-            @include fluid("max-width", 228)
+            margin-top: 5px
+            max-width: 228px
         &.medium
-            @include fluid("width", 268)
+            width: 268px
         b
             font-weight: 600
     .hudevo__center_bottom
@@ -1709,23 +1709,23 @@ $circleTransitionDelay: 185ms
         margin-top: auto
         justify-content: center
     .hudevo__playerinfo_button
-        @include fluid("min-width", 20)
-        @include fluid("height", 20)
-        @include fluid("padding-left", 6)
-        @include fluid("padding-right", 6)
+        min-width: 20px
+        height: 20px
+        padding-left: 6px
+        padding-right: 6px
         background: rgba(255, 255, 255, 0.25)
         display: flex
         align-items: center
         justify-content: center
         font-style: normal
         font-weight: 400
-        @include fluid("font-size", 13)
-        @include fluid("line-height", 15)
+        font-size: 13px
+        line-height: 15px
         font-family: 'Gilroy'
         position: relative
         &.bottom
-            @include fluid("min-width", 32)
-            @include fluid("height", 32)
+            min-width: 32px
+            height: 32px
             position: relative
         &:hover
             background: rgba(255,255,255,1)
@@ -1777,8 +1777,8 @@ $circleTransitionDelay: 185ms
             @include fluid("border", 2, "solid")
             border-image-source: linear-gradient(43.64deg, rgba(248, 40, 71, 0) -1.83%, #F82847 73.21%) !important
             border-image-slice: 1 !important
-            @include fluid("width", 28)
-            @include fluid("height", 28)
+            width: 28px
+            height: 28px
             display: flex
             align-items: center
             justify-content: center
@@ -1786,8 +1786,8 @@ $circleTransitionDelay: 185ms
             font-family: 'Gilroy'
             font-style: normal
             font-weight: 600
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 17)
+            font-size: 14px
+            line-height: 17px
             background: transparent
             &.pressed, &:hover
                 color: white !important
@@ -1795,7 +1795,7 @@ $circleTransitionDelay: 185ms
                 border-image-source: linear-gradient(217.64deg, rgba(248, 40, 71, 0) -1.83%, #F82847 73.21%) !important
 
     .w-228
-        @include fluid("width", 228)
+        width: 228px
     .hudevo__elementparams
         border-width: 2px
         border-top-style: solid
@@ -1831,8 +1831,8 @@ $circleTransitionDelay: 185ms
 
         .hudevo__placetime
             .hudevo__placetime_image
-                @include fluid("width", 169)
-                @include fluid("height", 44)
+                width: 169px
+                height: 44px
                 background-image: url(./images/bottom-info-night.png) !important
                 background-size: cover
                 background-position: center
@@ -1840,4 +1840,4 @@ $circleTransitionDelay: 185ms
         .hudevo__notification_text
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) !important
     .mr-6
-        @include fluid("margin-right", 6)
+        margin-right: 6px

@@ -1,5 +1,6 @@
 import React from 'react';
-import LSCustoms from '../pages/business/lscustom/index';
+
+import RentCar from '../pages/business/rentcar/index';
 
 const body = document.querySelector('body');
 // @ts-ignore
@@ -11,7 +12,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <LSCustoms />
+            <RentCar />
 
         </>
     )

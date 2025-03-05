@@ -5,7 +5,7 @@
     display: flex
     flex-direction: column
     align-items: center
-    @include fluid("padding-top", 82)
+    padding-top: 82px
     height: 100%
     width: 100%
     
@@ -24,8 +24,8 @@
         margin: auto
         background: url('../images/rightSummerTree.png') no-repeat
         background-size: contain
-        @include fluid("width", 874)
-        @include fluid("height", 1080)
+        width: 874px
+        height: 1080px
 
 
     &::after
@@ -37,8 +37,8 @@
         margin: auto
         background: url('../images/leftSummerTree.png') no-repeat
         background-size: contain
-        @include fluid("width", 874)
-        @include fluid("height", 1080)
+        width: 874px
+        height: 1080px
 
     .event__bottom
         content: ""
@@ -49,8 +49,8 @@
         margin: auto
         background: url('../images/water.png') no-repeat
         background-size: cover
-        @include fluid("width", 1920)
-        @include fluid("height", 200)
+        width: 1920px
+        height: 200px
         z-index: 5
     &-snow
         position: absolute       
@@ -60,40 +60,40 @@
         margin: auto
         background: url('../images/snow.png') no-repeat
         background-size: cover
-        @include fluid("width", 1920)
-        @include fluid("height", 1080)
+        width: 1920px
+        height: 1080px
 
     &-logo
         display: flex
         background: url('../images/summerLogo.png') no-repeat
-        @include fluid("width", 464)
-        @include fluid("height", 280)
+        width: 464px
+        height: 280px
         background-size: contain
         background-position: center
         margin: auto
         z-index: 1
         position: relative
-        @include fluid("margin-bottom", 23)
+        margin-bottom: 23px
         
     &-main
         background: rgba(27, 30, 40, 0.9)
         box-shadow: 0px 4px 60px rgba(65, 120, 255, 0.6)
-        @include fluid("border-radius", 6)
-        @include fluid("width", 617)
-        @include fluid("height", 717)
+        border-radius: 6px
+        width: 617px
+        height: 717px
         z-index: 0
 
 
 
 
     .btn
-        @include fluid("width", 125)
-        @include fluid("height", 43)
+        width: 125px
+        height: 43px
         display: flex
         align-items: center
         justify-content: center
         font-weight: bold
-        @include fluid("font-size", 14)
+        font-size: 14px
         transition: ease all .2s
         z-index: 10000
         &.green
@@ -105,9 +105,9 @@
     &-list
         display: flex
         width: 100%
-        @include fluid("max-width", 480)
-        @include fluid("padding-top", 25)
-        @include fluid("max-height", 356)
+        max-width: 480px
+        padding-top: 25px
+        max-height: 356px
         overflow-y: auto
         overflow-x: hidden
         flex-direction: column
@@ -116,7 +116,7 @@
         z-index: 1
                     
         &::-webkit-scrollbar 
-            @include fluid("width", 3)   
+            width: 3px
         
         /* Track */
         &::-webkit-scrollbar-track 
@@ -130,7 +130,7 @@
 
 
         &:after
-            @include fluid("min-height", 1)
+            min-height: 1px
             content: ""
             width: 100%
             display: flex
@@ -140,10 +140,10 @@
             justify-content: space-evenly
             width: 100%
             align-items: center
-            @include fluid("min-height", 60)
-            @include fluid("width", 470)
-            @include fluid("margin-bottom", 37)
-            @include fluid("padding-bottom", 40)
+            min-height: 60px
+            width: 470px
+            margin-bottom: 37px
+            padding-bottom: 40px
             &:last-child
                 margin-bottom: 0
             .event-list-box
@@ -152,31 +152,31 @@
                 flex-direction: column
                 .title
                     font-weight: bold
-                    @include fluid("font-size", 12)
-                    @include fluid("width", 180)
+                    font-size: 12px
+                    width: 180px
                 .descr
                     font-weight: bold
-                    @include fluid("font-size", 9)
-                    @include fluid("width", 180)
+                    font-size: 9px
+                    width: 180px
                     color: #C1C1C1
     .event__main_title
-        @include fluid("font-size", 12)
+        font-size: 12px
         text-align: center
-        @include fluid("margin-bottom", 30)
-        @include fluid("padding-left", 10)
-        @include fluid("padding-right", 10)
+        margin-bottom: 30px
+        padding-left: 10px
+        padding-right: 10px
         height: max-content
 
     &-icon-sun
         background: url('../images/sun.png') no-repeat
-        @include fluid("width", 81)
-        @include fluid("height", 81)
+        width: 81px
+        height: 81px
         background-size: cover
 
     &-icon-gift
         background: url('../images/gift_summer.png') no-repeat
-        @include fluid("width", 60)
-        @include fluid("height", 60)
+        width: 60px
+        height: 60px
         background-size: cover
         align-items: center
         justify-content: center
@@ -186,10 +186,10 @@
         display: flex
         align-items: center
         justify-content: space-between
-        @include fluid("margin-bottom", 31)
-        @include fluid("width", 386)
+        margin-bottom: 31px
+        width: 386px
         margin: 0 auto
-        @include fluid("padding-top", 25)
+        padding-top: 25px
         font-weight: bold
 
         .yellow
@@ -197,6 +197,6 @@
 
 
         span
-            @include fluid("margin-right", 5)
+            margin-right: 5px
     .event-list
         padding-top: 0

@@ -12,39 +12,39 @@
     align-items: center
     justify-content: center
     font-weight: bold
-    @include fluid("font-size", 18)
-    @include fluid("line-height", 24)
+    font-size: 18px
+    line-height: 24px
     color: #FFFFFF
     font-family: 'TTNorms-Regular'
     background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.58) 0%, #011627 100%)
     letter-spacing: 0.02em
-    @include fluid("padding-left", 247)
-    @include fluid("padding-right", 247)
-    @include fluid("padding-bottom", 185)
-    @include fluid("padding-top", 178)
+    padding-left: 247px
+    padding-right: 247px
+    padding-bottom: 185px
+    padding-top: 178px
     .questsprise-header
         display: flex
         flex-direction: column
         align-items: center
         justify-content: center
         color: #FF9F1C
-        @include fluid("font-size", 36)
-        @include fluid("line-height", 42)
+        font-size: 36px
+        line-height: 42px
         font-weight: bold
         letter-spacing: 0.01em
         text-transform: uppercase
         font-family: 'TTNorms-Bold'
         .box-between
-            @include fluid("width", 100)
+            width: 100px
             display: flex
             justify-content: space-between
             align-items: flex-end
             .icon-star-small
-                @include fluid("font-size", 22)
-                @include fluid("line-height", 24)
+                font-size: 22px
+                line-height: 24px
             .icon-star-big
-                @include fluid("font-size", 32)
-                @include fluid("line-height", 36)
+                font-size: 32px
+                line-height: 36px
     .questsprise-questname-main
         position: relative
         text-transform: uppercase
@@ -62,8 +62,8 @@
             top: 50%
             left: 50%
             transform: translate(-50%, -70%)
-            @include fluid("font-size", 56)
-            @include fluid("line-height", 62)
+            font-size: 56px
+            line-height: 62px
             letter-spacing: 0.01em
             text-transform: uppercase
             display: flex
@@ -71,10 +71,10 @@
             justify-content: center
             z-index: 1
         .questprise-backgroundtext
-            @include fluid("font-size", 96)
-            @include fluid("line-height", 100)
-            @include fluid("stroke-dasharray", 500)
-            @include fluid("stroke-dashoffset", 500)
+            font-size: 96px
+            line-height: 100px
+            stroke-dasharray: 500px
+            stroke-dashoffset: 500px
             animation: dash 5s linear infinite alternate forwards
             fill: none
         .questprise-backgroundblock
@@ -83,87 +83,87 @@
             dominant-baseline: middle
             position: relative
     .questprise-description
-        @include fluid("width", 694)
+        width: 694px
         font-weight: 500
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 21)
+        font-size: 18px
+        line-height: 21px
         text-align: center
-        @include fluid("margin-bottom", 70)
+        margin-bottom: 70px
 
     .questprise-prise
-        @include fluid("width", 740)
-        @include fluid("height", 200)
+        width: 740px
+        height: 200px
         position: relative
         display: flex
         justify-content: space-between
         margin-bottom: auto
         .questprise-center-maintext
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
-            @include fluid("margin-bottom", 54)
+            font-size: 24px
+            line-height: 28px
+            margin-bottom: 54px
         .box-money
-            @include fluid("margin-bottom", 35)
+            margin-bottom: 35px
             display: flex
             align-items: center
             .questsnewdialogicon-money
-                @include fluid("font-size", 24)
-                @include fluid("margin-right", 14)
+                font-size: 24px
+                margin-right: 14px
         .box-exp
             display: flex
             align-items: center
             color: #FF9F1C
             .questsnewdialogicon-exp
-                @include fluid("font-size", 24)
-                @include fluid("margin-right", 14)
+                font-size: 24px
+                margin-right: 14px
         
         .questprise-smalltext
-            @include fluid("margin-top", 26)
-            @include fluid("margin-bottom", 26)
+            margin-top: 26px
+            margin-bottom: 26px
             font-weight: 500
         .questprise-grid
             display: grid
             grid-template-columns: repeat(4, 1fr)
             grid-template-columns: repeat(4, 1fr)
-            @include fluid("gap", 16)
+            gap: 16px
             .questprise-grid__item
                 background: rgba(253, 255, 252, 0.15)
-                @include fluid("width", 80)
-                @include fluid("height", 80)
+                width: 80px
+                height: 80px
                 display: flex
                 align-items: center
                 justify-content: center
 
                 .questprise-grid__item_icon
                     colro: #FFFFFF
-                    @include fluid("font-size", 32)
+                    font-size: 32px
     .quests-newbutton
         display: flex
         align-items: center
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 1)
+        font-size: 18px
+        line-height: 1px
         .quests-button
             background: #FDFFFC
-            @include fluid("padding-left", 12)
-            @include fluid("padding-right", 12)
-            @include fluid("padding-bottom", 6)
-            @include fluid("padding-top", 6)
-            @include fluid("border-radius", 6)
-            @include fluid("margin-right", 26)
+            padding-left: 12px
+            padding-right: 12px
+            padding-bottom: 6px
+            padding-top: 6px
+            border-radius: 6px
+            margin-right: 26px
             color: black
-            @include fluid("min-height", 40)
+            min-height: 40px
             font-weight: 500
             display: flex
             justify-content: center
             align-items: center
             font-weight: bold
         &.myata
-            @include fluid("margin-bottom", 40)
+            margin-bottom: 40px
             .quests-button
                 background: #2BB6A8
                 color: white
         &.right
-            @include fluid("margin-left", 26)
+            margin-left: 26px
             flex-direction: row-reverse
             .quests-button
                 margin-right: 0
-                @include fluid("margin-left", 26)
+                margin-left: 26px

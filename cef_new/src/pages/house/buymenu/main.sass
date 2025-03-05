@@ -16,12 +16,12 @@
     font-family: 'TTNorms-Regular'
     color: white
     font-weight: 500
-    @include fluid("font-size", 16)
-    @include fluid("line-height", 19)
-    @include fluid("padding-top", 60)
-    @include fluid("padding-bottom", 80)
-    @include fluid("padding-left", 80)
-    @include fluid("padding-right", 80)
+    font-size: 16px
+    line-height: 19px
+    padding-top: 60px
+    padding-bottom: 80px
+    padding-left: 80px
+    padding-right: 80px
     position: relative
     .rielt__buy
         width: 100%
@@ -37,34 +37,34 @@
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        @include fluid("font-size", 700)
+        font-size: 700px
         opacity: 0.03
     .rielt__info_flex
         display: flex
         height: fit-content
-        @include fluid("width", 400)
+        width: 400px
         justify-content: space-between
-        @include fluid("margin-bottom", 18)
+        margin-bottom: 18px
         .rielt__stat
-            @include fluid("font-size", 16)
-            @include fluid("margin-bottom", 10)
-            @include fluid("line-height", 16)
-            @include fluid("width", 160)
+            font-size: 16px
+            margin-bottom: 10px
+            line-height: 16px
+            width: 160px
             text-align: right
     .rielt__buy_flex
         z-index: 1
         display: flex
-        @include fluid("margin-bottom", 10)
-        @include fluid("margin-top", 90)
+        margin-bottom: 10px
+        margin-top: 90px
         .rielt__line
-            @include fluid("width", 86)
-            @include fluid("height", 40)
+            width: 86px
+            height: 40px
             background: url(./images/lines.png)
             background-position: center
             background-size: contain
             background-repeat: no-repeat
-            @include fluid("margin-left", 54)
-            @include fluid("margin-right", 54)
+            margin-left: 54px
+            margin-right: 54px
         .box-column
             align-items: center
     .rielt__buy_center
@@ -73,30 +73,30 @@
         flex-direction: column
         align-items: center
         .box-column
-            @include fluid("margin-top", 20)
+            margin-top: 20px
         .rielt__upgrade_element
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("font-size", 16)
+            font-size: 16px
             background: rgba(255,255,255,0.1)
-            @include fluid("width", 300)
-            @include fluid("height", 40) 
-            @include fluid("margin-bottom", 10) 
+            width: 300px
+            height: 40px
+            margin-bottom: 10px
             &:hover
                 background: rgba(255,255,255,0.07)
     .rielt__info
         z-index: 1
-        @include fluid("margin-top", 236)
-        @include fluid("margin-bottom", 40)
+        margin-top: 236px
+        margin-bottom: 40px
         color: rgba(255,255,255,0.7)
-        @include fluid("font-size", 24) 
+        font-size: 24px
         letter-spacing: 0.05em
         text-align: center
         span
             color: white
         &.small
-            @include fluid("font-size", 16) 
+            font-size: 16px
         &.m-0
             margin-top: 0
             text-align: right
@@ -108,22 +108,22 @@
         color: rgba(255,255,255,0.7)
     .rielt__stat
         z-index: 1
-        @include fluid("font-size", 48)
-        @include fluid("line-height", 57)
+        font-size: 48px
+        line-height: 57px
         &.mint
             color: #2BB6A8
         &.orange
             color: #FF9F1C
     .rielt__header
         z-index: 1
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 28)
+        font-size: 24px
+        line-height: 28px
         text-align: center
     .rielt__panel
         z-index: 1
         width: 100%
         height: 100%
-        @include fluid("max-height", 872)
+        max-height: 872px
     .rielt__mainmenu
         z-index: 1
         display: flex
@@ -132,34 +132,34 @@
         width: 100%
         height: 100%
         &::-webkit-scrollbar
-            @include fluid("width", 4)
+            width: 4px
         &::-webkit-scrollbar-track
             background: rgba(255, 255, 255, 0.2)
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         &::-webkit-scrollbar-thumb
             background: white
-            @include fluid("border-radius", 6)
+            border-radius: 6px
     .rielt__mainmenu_block
         display: flex
         flex-direction: column
         align-items: left
-        @include fluid("width", 400)
-        @include fluid("min-width", 400)
-        @include fluid("max-width", 400)
+        width: 400px
+        min-width: 400px
+        max-width: 400px
         &.parking
-            @include fluid("width", 300)
-            @include fluid("min-width", 300)
-            @include fluid("max-width", 300)
-            @include fluid("padding-right", 15)
+            width: 300px
+            min-width: 300px
+            max-width: 300px
+            padding-right: 15px
             box-sizing: border-box
             overflow-y: auto
             overflow-x: hidden
     .rielt__mainmenu_categorie
         position: relative
-        @include fluid("height", 60)
-        @include fluid("width", 286)
-        @include fluid("padding-left", 20)
-        @include fluid("margin-bottom", 6)
+        height: 60px
+        width: 286px
+        padding-left: 20px
+        margin-bottom: 6px
         display: flex
         align-items: center
         background: rgba(255,255,255,.2)
@@ -176,17 +176,17 @@
             .line
                 background: black
         &.big
-            @include fluid("height", 100)
+            height: 100px
         .rielt__mainmenu_categorie-header
             color: white
             font-weight: 500
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
 
         .line
             position: absolute
-            @include fluid("height", 32)
-            @include fluid("width", 4)
+            height: 32px
+            width: 4px
             position: absolute
             top: 50%
             left: 0%
@@ -213,63 +213,63 @@
     .rielt__main_menu
         z-index: 1
         width: 100%
-        @include fluid("width", 460)
-        @include fluid("max-height", 460)
-        @include fluid("padding-right", 15)
-        @include fluid("height", 460)
+        width: 460px
+        max-height: 460px
+        padding-right: 15px
+        height: 460px
         display: flex
         flex-direction: column
         align-items: center
         overflow-y: auto
         &::-webkit-scrollbar
-            @include fluid("width", 4)
+            width: 4px
         &::-webkit-scrollbar-track
             background: rgba(255, 255, 255, 0.2)
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         &::-webkit-scrollbar-thumb
             background: white
-            @include fluid("border-radius", 6)
+            border-radius: 6px
     .rielt__gray
         z-index: 1
         color: rgba(255,255,255,0.7)
-        @include fluid("font-size", 12) 
+        font-size: 12px
         &.ml
-            @include fluid("margin-left", 10)
+            margin-left: 10px
         .rielt__white
             font-weight: bold
-            @include fluid("font-size", 14)
+            font-size: 14px
             color: white
     .rielt__box_button
         display: flex
         align-items: center
-        @include fluid("margin-bottom", 20)
+        margin-bottom: 20px
     .rielt__button_orange
         background: #FF9F1C
         border-radius: 6px
-        @include fluid("width", 40)
-        @include fluid("margin-right", 10)
-        @include fluid("height", 40)
+        width: 40px
+        margin-right: 10px
+        height: 40px
         display: flex
         align-items: center
         justify-content: center
         color: black
     .rielt__element
         z-index: 1
-        @include fluid("min-height", 90)
+        min-height: 90px
         width: 100%
         background: rgba(255, 255, 255, 0.1)
         display: flex
         align-items: center
         justify-content: space-between
-        @include fluid("padding-right", 20)
-        @include fluid("padding-left", 20)
-        @include fluid("margin-bottom", 10)
+        padding-right: 20px
+        padding-left: 20px
+        margin-bottom: 10px
         position: relative
         .rielt__garage_icon
-            @include fluid("font-size", 40)
-            @include fluid("margin-right", 10)
+            font-size: 40px
+            margin-right: 10px
         &.small
-            @include fluid("min-height", 70)
+            min-height: 70px
             .box-flex
                 align-items: center
         &:hover
@@ -278,19 +278,19 @@
             .rielt__gray
                 color: rgba(0,0,0,0.7)
         .rielt__element_icon
-            @include fluid("font-size", 60)
-            @include fluid("margin-right", 23)
+            font-size: 60px
+            margin-right: 23px
         .box-column
             display: flex
             flex-direction: column
             align-items: flex-start
             .rielt__info
                 text-align: inherit
-                @include fluid("font-size", 14)
+                font-size: 14px
         .line
             position: absolute
             height: 100%
-            @include fluid("width", 4)
+            width: 4px
             position: absolute
             top: 50%
             left: 0%
@@ -304,7 +304,7 @@
             align-items: center
             justify-content: space-between
         &.big
-            @include fluid("height", 120)
+            height: 120px
         .green
             color: #2BB6A8
         .house_element_center
@@ -317,45 +317,45 @@
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("height", 40)
-        @include fluid("min-width", 40)
-        @include fluid("width", 40)
-        @include fluid("border-radius", 6)
-        @include fluid("font-size",18)
-        @include fluid("padding-left",7)
-        @include fluid("padding-right",7)
+        height: 40px
+        min-width: 40px
+        width: 40px
+        border-radius: 6px
+        font-size: 18px
+        padding-left: 7px
+        padding-right: 7px
         font-family: "TTNorms-Bold"
         background: #FDFFFC
         color: black
     .rielt__text_big
-        @include fluid("font-size", 64)
-        @include fluid("line-height", 76)
+        font-size: 64px
+        line-height: 76px
     
     .m-60
-        @include fluid("margin-top", 64)
-        @include fluid("margin-bottom", 64)
+        margin-top: 64px
+        margin-bottom: 64px
 
     .rielt__rielt_grid
         display: grid
         grid-template-rows: repeat(2, 1fr) 
         grid-template-columns: repeat(4, 1fr) 
-        @include fluid("max-height", 390)
-        @include fluid("height", 390)
-        @include fluid("gap", 15)
+        max-height: 390px
+        height: 390px
+        gap: 15px
         overflow-x: auto
-        @include fluid("padding-top", 10)
-        @include fluid("padding-left", 15)
-        @include fluid("padding-right", 15)
+        padding-top: 10px
+        padding-left: 15px
+        padding-right: 15px
         &::-webkit-scrollbar
-            @include fluid("width", 4)
+            width: 4px
         &::-webkit-scrollbar-track
             background: rgba(255, 255, 255, 0.2)
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         &::-webkit-scrollbar-thumb
             background: white
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         .rielt__rielt_element
-            @include fluid("font-size", 181)
+            font-size: 181px
             color: rgba(255,255,255,0.1)
             position: relative
             &:hover
@@ -371,26 +371,26 @@
                 top: 0%
                 left: 50%
                 transform: translate(-50%, -6%)
-                @include fluid("font-size", 16)
+                font-size: 16px
                 font-family: 'TTNorms-Regular'
                 display: flex
                 align-items: center
                 justify-content: center
                 flex-direction: column
             .rielt__rielt_number
-                @include fluid("font-size", 16)
+                font-size: 16px
                 font-weight: 500
-                @include fluid("margin-bottom", 10)
+                margin-bottom: 10px
                 color: #FF9F1C
             .rielt__rielt_icon
-                @include fluid("font-size", 62)
-                @include fluid("margin-bottom", 12)
+                font-size: 62px
+                margin-bottom: 12px
                 color: white
             .rielt__gray
-                @include fluid("font-size", 16)
+                font-size: 16px
             .rielt__rielt_price
-                @include fluid("margin-top", 4)
-                @include fluid("font-size", 24)
+                margin-top: 4px
+                font-size: 24px
                 color: white
                 font-weight: 500
                 font-family: 'TTNorms-Bold'
@@ -400,17 +400,17 @@
         align-items: center
         text-align: center
     .rielt__rielt_title
-        @include fluid("font-size", 64)
-        @include fluid("margin-bottom", 20)
+        font-size: 64px
+        margin-bottom: 20px
         font-family: 'TTNorms-Bold'
         &.font-36
-            @include fluid("font-size", 36)
+            font-size: 36px
     .rielt__rielt_subtitle
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 21)
+        font-size: 18px
+        line-height: 21px
         text-align: center
     .rielt__rielt_none
-        @include fluid("font-size", 420)
+        font-size: 420px
         display: flex
         align-items: center
         justify-content: center
@@ -434,33 +434,33 @@
         display: flex
         flex-direction: column
         align-items: center
-        @include fluid("max-width", 250)
+        max-width: 250px
         text-align: center
         width: 100%
         &.left
-            @include fluid("max-width", 300)
+            max-width: 300px
             align-items: flex-start
             text-align: left
         .rielt__rielt_house-icon
             color: white
-            @include fluid("font-size", 140)
-            @include fluid("margin-bottom", 35)
+            font-size: 140px
+            margin-bottom: 35px
         .rielt__rielt_stat
-            @include fluid("margin-top", 30)
+            margin-top: 30px
         .rielt__gray
-            @include fluid("font-size", 16)
+            font-size: 16px
 
         .rielt__rielt_header
             color: #FFC062
-            @include fluid("font-size", 24)
+            font-size: 24px
             font-weight: bold
             font-family: 'TTNorms-Bold'
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
         .rielt__rielt_stat
             display: flex
             flex-direction: column
             width: 100%
-            @include fluid("margin-bottom", 100)
+            margin-bottom: 100px
             .rielt__rielt_element
                 width: 100%
                 display: flex
@@ -468,7 +468,7 @@
                 .box-column
                     text-align: right
         .rielt__rielt_price
-            @include fluid("font-size", 36)
-            @include fluid("line-height", 42)
+            font-size: 36px
+            line-height: 42px
             font-weight: bold
             font-family: 'TTNorms-Bold' 

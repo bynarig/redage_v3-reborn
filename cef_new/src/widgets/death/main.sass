@@ -15,9 +15,9 @@
     color: white
     .popup__death_timer
         border-radius: 50%
-        @include fluid("height", 168)
-        @include fluid("width", 168)
-        @include fluid("font-size", 42)
+        height: 168px
+        width: 168px
+        font-size: 42px
         @include fluid("border", 4, "solid rgba(255,255,255,0.15)")
         display: flex
         align-items: center
@@ -25,29 +25,29 @@
         font-family: 'TTNorms-Bold'
         font-weight: bold
     .popup__death_title
-        @include fluid("margin-top", 67)
-        @include fluid("margin-bottom", 38)
-        @include fluid("font-size", 48)
+        margin-top: 67px
+        margin-bottom: 38px
+        font-size: 48px
         font-family: 'TTNorms-Bold'
         font-weight: bold
         color: #E71D36
     .popup__death_subtitle
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 25)
-        @include fluid("max-width", 462)
+        font-size: 18px
+        line-height: 25px
+        max-width: 462px
         text-align: center
     .popup__death__buttons
         display: flex
         justify-content: space-between
-        @include fluid("width", 590)
-        @include fluid("margin-top", 43)
+        width: 590px
+        margin-top: 43px
         .popup__death_button
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("border-radius", 4)
-            @include fluid("width", 186)
-            @include fluid("height", 40)
+            border-radius: 4px
+            width: 186px
+            height: 40px
             background: rgba(255,255,255,0.2)
             cursor: pointer
             &:hover
@@ -58,6 +58,6 @@
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        @include fluid("font-size", 480)
+        font-size: 480px
         color: rgba(255,255,255,0.2)
         z-index: -1

@@ -62,6 +62,9 @@ importers:
       rage-rpc:
         specifier: ^0.4.0
         version: 0.4.0
+      rangeslider.js:
+        specifier: ^2.3.3
+        version: 2.3.3(jquery@3.7.1)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -74,6 +77,9 @@ importers:
       react-i18next:
         specifier: ^15.4.1
         version: 15.4.1(i18next@24.2.2(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-rangeslider:
+        specifier: ^2.2.0
+        version: 2.2.0(react@19.0.0)
       react-redux:
         specifier: ^9.2.0
         version: 9.2.0(@types/react@19.0.10)(react@19.0.0)(redux@5.0.1)
@@ -1187,6 +1193,9 @@ packages:
     resolution: {integrity: sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
+  classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
+
   cli-boxes@3.0.0:
     resolution: {integrity: sha512-/lzGpEWL/8PfI0BmBOPRwp0c/wFNX1RdUML3jK/RcSBA9T8mZDdQpqYBKtCFTOfQbwPqWEOpjqW+Fnayc0969g==}
     engines: {node: '>=10'}
@@ -2296,6 +2305,12 @@ packages:
     resolution: {integrity: sha512-aGNQPNpM4Qd8w3UpAZGY2ax8naLiiSPDAT+jKi/cz9Gigg9ON1ODc9xpWS8Kjsf1eIBHAEXcYcQtRU7NqabM/Q==}
     engines: {node: '>=10', npm: '>=6'}
 
+  rangeslider.js@2.3.3:
+    resolution: {integrity: sha512-FNpe62R6DfGRPAB5rpDKkZtaMDZ0CFqoLprXtNbYiincgld0bHm/Gs/7iuiSD/naM5C3sz+icY3jghKDcGR17g==}
+    engines: {node: '>=0.8.0'}
+    peerDependencies:
+      jquery: '>=1.9.0'
+
   rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
@@ -2326,6 +2341,12 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-rangeslider@2.2.0:
+    resolution: {integrity: sha512-5K7Woa+cyqZ5wiW5+KhqGV+3+FiFxGKQ9rUxTMh52sObXVYEeBbfxFrp1eBvS8mRIxnUbHz9ppnFP0LhwOyNeg==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.0
 
   react-redux@9.2.0:
     resolution: {integrity: sha512-ROY9fvHhwOD9ySfrF0wmvu//bKCQ6AeZZq1nJNtbDC+kk5DuSuNX/n6YWYF/SYy7bSba4D4FSz8DJeKY/S/r+g==}
@@ -2399,6 +2420,9 @@ packages:
 
   reselect@5.1.1:
     resolution: {integrity: sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==}
+
+  resize-observer-polyfill@1.5.1:
+    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3885,6 +3909,8 @@ snapshots:
 
   chalk@5.0.1: {}
 
+  classnames@2.5.1: {}
+
   cli-boxes@3.0.0: {}
 
   clipboardy@3.0.0:
@@ -5047,6 +5073,10 @@ snapshots:
       custom-event: 1.0.1
       ev-pos: 1.0.1
 
+  rangeslider.js@2.3.3(jquery@3.7.1):
+    dependencies:
+      jquery: 3.7.1
+
   rc@1.2.8:
     dependencies:
       deep-extend: 0.6.0
@@ -5074,6 +5104,12 @@ snapshots:
       react-dom: 19.0.0(react@19.0.0)
 
   react-is@16.13.1: {}
+
+  react-rangeslider@2.2.0(react@19.0.0):
+    dependencies:
+      classnames: 2.5.1
+      react: 19.0.0
+      resize-observer-polyfill: 1.5.1
 
   react-redux@9.2.0(@types/react@19.0.10)(react@19.0.0)(redux@5.0.1):
     dependencies:
@@ -5146,6 +5182,8 @@ snapshots:
   require-from-string@2.0.2: {}
 
   reselect@5.1.1: {}
+
+  resize-observer-polyfill@1.5.1: {}
 
   resolve-from@4.0.0: {}
 

@@ -8,37 +8,37 @@
     flex-direction: column 
     align-items: center 
     justify-content: center 
-    @include fluid("padding-top", 45)    
-    @include fluid("padding-bottom", 45) 
-    @include fluid("padding-left", 144) 
-    @include fluid("padding-right", 144) 
+    padding-top: 45px
+    padding-bottom: 45px
+    padding-left: 144px
+    padding-right: 144px
     color: white 
     font-family: "UniNeue" 
     font-style: normal 
     font-weight: bold 
 
     .module_stock 
-        @include fluid("width", 600) 
-        @include fluid("height", 370)
+        width: 600px
+        height: 370px
         background: rgba(27, 30, 40, 0.9)
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         overflow: hidden
 
     .count 
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("margin-top", 22)
-        @include fluid("margin-bottom", 22)
+        margin-top: 22px
+        margin-bottom: 22px
         font-weight: bold
-        @include fluid("font-size", 18)
+        font-size: 18px
 
         .gray
             color: #C1C1C1
             margin-right: 3px
     .button
         display: flex
-        @include fluid("width", 422)
+        width: 422px
         justify-content: space-between
         margin: 0 auto
         
@@ -46,15 +46,15 @@
             justify-content: center
 
         .btn
-            @include fluid("width", 200)
-            @include fluid("height", 39)
+            width: 200px
+            height: 39px
             display: flex
             align-items: center
             transition: background ease .1s
             font-weight: bold
             justify-content: center
-            @include fluid("font-size", 18)
-            @include fluid("border-radius", 2)
+            font-size: 18px
+            border-radius: 2px
 
             &.green
                 border: 1px solid #27AE60
@@ -71,8 +71,8 @@
         background: rgba(23, 25, 33, 0.9)
         display: flex
         width: 100%
-        @include fluid("margin-bottom", 22)
-        @include fluid("height", 180)
+        margin-bottom: 22px
+        height: 180px
         justify-content: space-between
 
         .contain 
@@ -84,17 +84,17 @@
             align-items: center
         .icon-block
             display: flex
-            @include fluid("width", 60)
-            @include fluid("height", 60)
-            @include fluid("margin-bottom", 8)
+            width: 60px
+            height: 60px
+            margin-bottom: 8px
             position: relative
 
             .ic::after
                 position: absolute
                 content: ""
                 display: flex
-                @include fluid("width", 60)
-                @include fluid("height", 60)
+                width: 60px
+                height: 60px
                 background-size: 100%
             .ic.cash::after
                 background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M1.25004 25.5001C6.0743 25.5001 10.0001 21.5743 10.0001 16.75C10.0001 16.0591 9.44098 15.5 8.75004 15.5H5.00004C2.24367 15.5001 0 17.7425 0 20.5V24.25C0 24.941 0.559102 25.5001 1.25004 25.5001Z' fill='white'/%3e%3cpath d='M54.9996 15.5H51.2496C50.5586 15.5 49.9995 16.0591 49.9995 16.75C49.9995 21.5743 53.9253 25.5001 58.7496 25.5001C59.4405 25.5001 59.9996 24.941 59.9996 24.25V20.5C59.9996 17.7424 57.756 15.5 54.9996 15.5Z' fill='white'/%3e%3cpath d='M1.25004 48C0.559102 48 0 48.5591 0 49.25V53C0 55.7576 2.24367 58.0001 5.00004 58.0001H8.75004C9.44098 58.0001 10.0001 57.441 10.0001 56.75C9.99996 51.9258 6.07418 48 1.25004 48Z' fill='white'/%3e%3cpath d='M58.7496 48C53.9253 48 49.9995 51.9258 49.9995 56.75C49.9995 57.441 50.5586 58.0001 51.2496 58.0001H54.9996C57.756 58.0001 59.9996 55.7577 59.9996 53V49.25C59.9996 48.5591 59.4405 48 58.7496 48Z' fill='white'/%3e%3cpath d='M58.75 28C52.5463 28 47.5 22.9536 47.5 16.75C47.5 16.0591 46.9409 15.5 46.2499 15.5H42.4999V13C42.4999 10.2425 40.2562 8 37.4999 8H22.5C19.7436 8 17.5 10.2424 17.5 13V15.5H13.75C13.059 15.5 12.4999 16.0591 12.4999 16.75C12.4999 22.9537 7.45348 28 1.24992 28C0.559102 28 0 28.5591 0 29.2501V44.2501C0 44.941 0.559102 45.5001 1.25004 45.5001C7.45371 45.5001 12.5 50.5466 12.5 56.7501C12.5 57.441 13.0591 58.0002 13.7501 58.0002H46.25C46.941 58.0002 47.5001 57.441 47.5001 56.7501C47.5001 50.5464 52.5465 45.5001 58.7501 45.5001C59.441 45.5001 60.0001 44.941 60.0001 44.2501V29.2501C60 28.5591 59.4409 28 58.75 28ZM29.375 36.7501H30.6251C33.0372 36.7501 35 38.713 35 41.125C35 43.3232 33.3648 45.1305 31.25 45.4368V46.75C31.25 47.441 30.6909 48.0001 30 48.0001C29.3091 48.0001 28.75 47.441 28.75 46.75V45.5H26.25C25.5591 45.5 25 44.9409 25 44.25C25 43.559 25.5591 42.9999 26.25 42.9999H30.625C31.6577 42.9999 32.5 42.1589 32.5 41.1249C32.5 40.091 31.6576 39.2499 30.625 39.2499H29.3749C26.9629 39.2499 25 37.287 25 34.875C25 32.6768 26.6352 30.8695 28.75 30.5632V29.2501C28.75 28.5591 29.3091 28 30 28C30.6909 28 31.25 28.5591 31.25 29.2501V30.5001H33.75C34.4409 30.5001 35 31.0592 35 31.7502C35 32.4411 34.4409 33.0002 33.75 33.0002H29.375C28.3423 33.0002 27.5 33.8412 27.5 34.8752C27.5 35.9091 28.3423 36.7501 29.375 36.7501ZM37.5 15.5001H22.5V13H37.5V15.5001Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3crect width='60' height='60' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ")
@@ -111,11 +111,11 @@
 
         .title
             font-weight: bold
-            @include fluid("font-size", 24)
+            font-size: 24px
 
         .arrows 
             background: #303648
-            @include fluid("width", 50)
+            width: 50px
             display: flex
             align-items: center
             justify-content: center 

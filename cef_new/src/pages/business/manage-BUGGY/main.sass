@@ -14,14 +14,14 @@
     align-items: center
     width: 100%
     height: 100%
-    @include fluid("padding-top", 56)
-    @include fluid("padding-bottom", 40)
-    @include fluid("padding-left", 80)
-    @include fluid("padding-right", 80)
+    padding-top: 56px
+    padding-bottom: 40px
+    padding-left: 80px
+    padding-right: 80px
     font-family: 'TTNorms-Regular'
     font-style: normal
     font-weight: 500
-    @include fluid("font-size", 18)
+    font-size: 18px
     background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.6) 0%, rgba(1, 22, 39, 0.74) 100%)
     color: white
     -webkit-user-select: none
@@ -37,24 +37,24 @@
         justify-content: space-between
         position: relative
         z-index: 1
-        @include fluid("min-height", 40)
-        @include fluid("max-height", 40)
+        min-height: 40px
+        max-height: 40px
         .header
-            @include fluid("width", 138)
-            @include fluid("height", 26)
+            width: 138px
+            height: 26px
             background-image: url(./img/logo.png)
             background-position: center
             background-repeat: no-repeat
             background-size: cover
 
         .box-date
-            @include fluid("width", 138)
+            width: 138px
             font-style: normal
             font-weight: bold
             display: flex
             justify-content: flex-end
-            @include fluid("font-size", 10)
-            @include fluid("line-height", 10)
+            font-size: 10px
+            line-height: 10px
             color: white
 
             .box-time
@@ -62,9 +62,9 @@
                 flex-direction: column
                 align-items: center
                 .time
-                    @include fluid("margin-bottom", 5)
-                    @include fluid("font-size", 24)
-                    @include fluid("line-height", 24)
+                    margin-bottom: 5px
+                    font-size: 24px
+                    line-height: 24px
         .nav
             display: flex
             align-items: center
@@ -74,14 +74,14 @@
                 display: flex
                 align-items: center
                 justify-content: center
-                @include fluid("margin-left", 59)
-                @include fluid("margin-right", 59)
+                margin-left: 59px
+                margin-right: 59px
 
                 .item
-                    @include fluid("padding-top", 10)
-                    @include fluid("padding-bottom", 10)
-                    @include fluid("margin-left", 15)
-                    @include fluid("margin-right", 15)
+                    padding-top: 10px
+                    padding-bottom: 10px
+                    margin-left: 15px
+                    margin-right: 15px
                     @include fluid("border-top", 1, "solid rgba(255, 255, 255, 0)")
                     @include fluid("border-bottom", 1, "solid rgba(255, 255, 255, 0)")
                     color: rgba(255,255,255,0.5)
@@ -93,7 +93,7 @@
                         @include fluid("border-bottom", 2, "solid #E71D36")
 
                 .gamemenu__item_absolute
-                    @include fluid("font-size", 50)
+                    font-size: 50px
                     position: absolute
                     top: 50%
                     left: 50%
@@ -101,12 +101,12 @@
                     opacity: 0.1
                     z-index: 0
     .box-key
-        @include fluid("width", 40)
-        @include fluid("height", 40)
+        width: 40px
+        height: 40px
         background: white
         color: black
-        @include fluid("border-radius", 6)
-        @include fluid("font-size", 18)
+        border-radius: 6px
+        font-size: 18px
         box-sizing: border-box
         display: flex
         align-items: center
@@ -114,53 +114,53 @@
         cursor: pointer
         font-family: 'TTNorms-Medium'
         &:hover, &.active
-            @include fluid("font-size", 18)
+            font-size: 18px
     .bizmanage__box
         width: 100%
         height: 100%
-        @include fluid("margin-top", 78)
+        margin-top: 78px
         display: flex
         justify-content: space-between
     .bizmanage__title
         font-style: normal
         font-weight: bold
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 28)
+        font-size: 24px
+        line-height: 28px
         letter-spacing: 0.05em
-        @include fluid("margin-bottom", 10)
+        margin-bottom: 10px
     .bizmanage__info
         font-weight: 500
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 21)
+        font-size: 18px
+        line-height: 21px
         letter-spacing: 0.05em
         color: #FDFFFC
         opacity: 0.5
-        @include fluid("margin-bottom", 30)
+        margin-bottom: 30px
     .bizmanage__mr-15
-        @include fluid("font-size", 40)
-        @include fluid("margin-right", 15)
+        font-size: 40px
+        margin-right: 15px
     .bizmanage__box_left
-        @include fluid("max-width", 234)  
-        @include fluid("min-width", 234) 
+        max-width: 234px
+        min-width: 234px
         display: flex
         flex-direction: column
         .box-flex
             align-items: center
-            @include fluid("margin-bottom", 20)
+            margin-bottom: 20px
     .bizmanage__subtitle
         font-weight: 500
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 21)
+        font-size: 18px
+        line-height: 21px
     .bizmanage__text
         font-weight: 500
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 17)
+        font-size: 14px
+        line-height: 17px
     .green
         color: #6DCA42
     .gray
         font-weight: 500
-        @include fluid("font-size", 10)
-        @include fluid("line-height", 12)
+        font-size: 10px
+        line-height: 12px
         letter-spacing: 0.05em
         opacity: 0.5
     .bizmanage__button_block
@@ -172,16 +172,16 @@
             .bizmanage__button
                 background: #e7e9e7
         .bizmanage__button
-            @include fluid("padding-left", 12)
-            @include fluid("padding-right", 12)
-            @include fluid("padding-top", 9)
-            @include fluid("padding-bottom", 9)
+            padding-left: 12px
+            padding-right: 12px
+            padding-top: 9px
+            padding-bottom: 9px
             background: #FDFFFC
-            @include fluid("border-radius", 6)
-            @include fluid("margin-right", 26)
+            border-radius: 6px
+            margin-right: 26px
             font-weight: 500
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
             color: #000000
         &.reverse
             flex-direction: row-reverse
@@ -191,35 +191,35 @@
             transform: translate(-50%, -50%)
             .bizmanage__button
                 margin: 0
-                @include fluid("margin-left", 26)
+                margin-left: 26px
     .w-1
         width: 100%
     .bizmanage__main
-        @include fluid("width", 992)
+        width: 992px
         height: 100%
         .box-between
-            @include fluid("margin-bottom", 40)
+            margin-bottom: 40px
     .box-between
         width: 100%
         display: flex
         justify-content: space-between
         align-items: center
     .bizmanage__main_info
-        @include fluid("width", 312)
-        @include fluid("height", 100)
+        width: 312px
+        height: 100px
         background: rgba(255, 255, 255, 0.1)
-        @include fluid("border-radius", 6)
+        border-radius: 6px
         .bizmanage__mr-15
-            @include fluid("font-size", 50)
+            font-size: 50px
         .bizmanage__subtitle
             font-weight: bold
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
             letter-spacing: 0.05em
         .gray
             font-weight: 500
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)
+            font-size: 16px
+            line-height: 19px
             text-align: center
             letter-spacing: 0.05em
         .red
@@ -229,51 +229,51 @@
         align-items: center
         justify-content: space-between
         background: rgba(253, 255, 252, 0.1)
-        @include fluid("border-radius", 6)
-        @include fluid("width", 446)
-        @include fluid("height", 70)
-        @include fluid("margin-bottom", 10)
-        @include fluid("padding-left", 20)
-        @include fluid("padding-right", 20)
+        border-radius: 6px
+        width: 446px
+        height: 70px
+        margin-bottom: 10px
+        padding-left: 20px
+        padding-right: 20px
         .box-flex
             align-items: center
         &:last-child
             margin: 0
         .bizmanage__element_image
-            @include fluid("width", 50)
-            @include fluid("height", 50)
+            width: 50px
+            height: 50px
             background: url('./img/person.png')
             background-repeat: no-repeat
             background-size: contain
             background-position: center
-            @include fluid("margin-right", 10)
+            margin-right: 10px
     .bizmanage__grid
         display: grid
         grid-template-rows: repeat(3, 1fr)
         grid-template-columns: repeat(3, 1fr)
-        @include fluid("gap", 20)
+        gap: 20px
         overflow-y: auto
         overflow-x: hidden
-        @include fluid("height", 500)
-        @include fluid("width", 782)
-        @include fluid("padding-right", 20)
+        height: 500px
+        width: 782px
+        padding-right: 20px
         &::-webkit-scrollbar
-            @include fluid("width", 3)
+            width: 3px
 
         &::-webkit-scrollbar-track
             background: rgba(253,255,252,0.4)
-            @include fluid("border-radius", 4)
+            border-radius: 4px
         &::-webkit-scrollbar-thumb
             background: rgba(253,255,252,0.7)
-            @include fluid("border-radius", 6)
+            border-radius: 6px
         .bizmanage__grid_element
-            @include fluid("width", 240)
-            @include fluid("height", 240)
-            @include fluid("border-radius", 6)
+            width: 240px
+            height: 240px
+            border-radius: 6px
             display: flex
             flex-direction: column
             align-items: center
-            @include fluid("padding", 28)
+            padding: 28px
             &.stock
                 background: rgba(255, 255, 255, 0.1)
                 @include fluid("border", 1, "solid rgba(255, 255, 255, 0.5)")
@@ -282,109 +282,109 @@
                     transition: 0.5s ease
                     background: rgba(255, 255, 255, 0.3)
         .bizmanage__grid_image
-            @include fluid("width", 100)
-            @include fluid("height", 100)
+            width: 100px
+            height: 100px
             background: url('./img/person.png')
             background-repeat: no-repeat
             background-size: contain
             background-position: center
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
         .bizmanage__grid_title
             font-weight: 500
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
             text-align: center
             letter-spacing: 0.05em
             color: #FFFFFF
         .bizmanage__grid_subtitle
-            @include fluid("margin-top", 5)
+            margin-top: 5px
             font-weight: 500
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)
+            font-size: 16px
+            line-height: 19px
             text-align: center
             letter-spacing: 0.05em
             color: #FFFFFF
             opacity: 0.8
-            @include fluid("margin-bottom", 12)
+            margin-bottom: 12px
         .bizmanage__grid_button
             width: 100%
-            @include fluid("height", 40)
+            height: 40px
             background: rgba(231, 29, 54, 0.1)
             @include fluid("border", 1, "solid #E71D36")
             box-sizing: border-box
-            @include fluid("border-radius", 4)
+            border-radius: 4px
             font-weight: 500
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)
+            font-size: 16px
+            line-height: 19px
             letter-spacing: 0.05em
             transition: all 0.5s ease
             &:hover
                 transition: all 0.5s ease
                 background: rgba(231, 29, 54, 0.5)
     .bizmanage__button_green
-        @include fluid("width", 300)
-        @include fluid("height", 40)
+        width: 300px
+        height: 40px
         background: rgba(43,182,168,0.5)
         box-sizing: border-box
-        @include fluid("border-radius", 4)
+        border-radius: 4px
         font-weight: 500
-        @include fluid("font-size", 16)
-        @include fluid("line-height", 19)
+        font-size: 16px
+        line-height: 19px
         letter-spacing: 0.05em
         transition: all 0.5s ease
-        @include fluid("margin-top", 20)
+        margin-top: 20px
         align-self: center
         &:hover
             transition: all 0.5s ease
             background: rgba(43,182,168,0.7)
     .bizmanage__information
-        @include fluid("width", 735)
-        @include fluid("height", 440)
+        width: 735px
+        height: 440px
         display: flex
         flex-direction: column
         align-items: center
         .bizmanage__information_image
-            @include fluid("width", 200)
-            @include fluid("height", 200)
+            width: 200px
+            height: 200px
             background: url('./img/person.png')
             background-repeat: no-repeat
             background-size: contain
             background-position: center
-            @include fluid("margin-right", 50)
+            margin-right: 50px
         .bizmanage__information_title
             font-weight: bold
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
             letter-spacing: 0.05em
-            @include fluid("margin-bottom", 20)
+            margin-bottom: 20px
         .bizmanage__information_subtitle
             font-weight: 500
-            @include fluid("font-size", 18)
-            @include fluid("line-height", 21)
+            font-size: 18px
+            line-height: 21px
             letter-spacing: 0.05em
             color: #FFFFFF
             opacity: 0.8
-            @include fluid("max-width", 445)
-            @include fluid("margin-bottom", 26)
+            max-width: 445px
+            margin-bottom: 26px
         .box-flex
             .box-column
                 text-align: left
-                @include fluid("margin-right", 24)
+                margin-right: 24px
                 .small
-                    @include fluid("font-size", 14)
-                    @include fluid("line-height", 17)
+                    font-size: 14px
+                    line-height: 17px
                     text-align: center
                     letter-spacing: 0.05em
                     font-weight: 500
                     text-align: left
-                    @include fluid("margin-top", 4)
+                    margin-top: 4px
         .bizmanage__grid
-            @include fluid("margin-top", 20)
-            @include fluid("min-height", 360)
-            @include fluid("max-height", 360)
+            margin-top: 20px
+            min-height: 360px
+            max-height: 360px
             .box-flex
-                @include fluid("height", 100)
-                @include fluid("width", 240)
+                height: 100px
+                width: 240px
                 display: flex
                 align-items: center
                 justify-content: center
@@ -392,7 +392,7 @@
                     background: rgba(255, 255, 255, 0.1)
                     @include fluid("border", 1, "solid #FFFFFF")
                     box-sizing: border-box
-                    @include fluid("border-radius", 6)
+                    border-radius: 6px
                     transition: all 0.5s ease
                     &:hover
                         transition: all 0.5s ease

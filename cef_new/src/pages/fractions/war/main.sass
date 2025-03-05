@@ -9,12 +9,12 @@
     height: 100%
     font-family: 'TTNorms-Regular'
     background: rgba(1,22,39,0.9)
-    @include fluid("padding-left", 98)
-    @include fluid("padding-top", 56)
-    @include fluid("padding-right", 62)
-    @include fluid("padding-bottom", 60)
-    @include fluid("font-size", 12)
-    @include fluid("line-height", 14)
+    padding-left: 98px
+    padding-top: 56px
+    padding-right: 62px
+    padding-bottom: 60px
+    font-size: 12px
+    line-height: 14px
     letter-spacing: 0.05em
     font-weight: 500
     color: white
@@ -24,15 +24,15 @@
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7)
     .war__title
         font-weight: 700
-        @include fluid("font-size", 32)
-        @include fluid("line-height", 38)
-        @include fluid("margin-bottom", 5)
+        font-size: 32px
+        line-height: 38px
+        margin-bottom: 5px
         pointer-events: none
     .war__subtitle
         color: #869199
         font-weight: 500
-        @include fluid("font-size", 20)
-        @include fluid("line-height", 24)
+        font-size: 20px
+        line-height: 24px
         pointer-events: none
         &.white
             color: white
@@ -40,44 +40,44 @@
         display: flex
         justify-content: space-between
         align-items: center
-        @include fluid("width", 780)
-        @include fluid("height", 53)
-        @include fluid("border-radius", 8)
+        width: 780px
+        height: 53px
+        border-radius: 8px
         background: rgba(0, 0, 0, 0.35)
-        @include fluid("padding", 12)
+        padding: 12px
         font-weight: 500
-        @include fluid("font-size", 20)
-        @include fluid("line-height", 24)
-        @include fluid("margin-top", 13)
-        @include fluid("margin-bottom", 17)
+        font-size: 20px
+        line-height: 24px
+        margin-top: 13px
+        margin-bottom: 17px
         pointer-events: none
         .fractionsicon-warning
-            @include fluid("font-size", 34)
+            font-size: 34px
             color: #DA2640
-            @include fluid("margin-right", 20)
+            margin-right: 20px
         .war__notification_text
             font-weight: 500
-            @include fluid("font-size", 14)
-            @include fluid("line-height", 16)
+            font-size: 14px
+            line-height: 16px
             color: #A6B1BA
         &.small
-            @include fluid("min-width", 491)
-            @include fluid("max-width", 491)
+            min-width: 491px
+            max-width: 491px
             align-items: center
             justify-content: center
-            @include fluid("margin-bottom", 10)
-            @include fluid("font-size", 12)
+            margin-bottom: 10px
+            font-size: 12px
             &.atack
                 @include fluid("border-left", 2, "solid red")
             &.protect
                 @include fluid("border-left", 2, "solid #30c620")
         &.megasmall
-            @include fluid("min-width", 320)
-            @include fluid("max-width", 320)
+            min-width: 320px
+            max-width: 320px
             align-items: center
             justify-content: center
-            @include fluid("margin-bottom", 10)
-            @include fluid("font-size", 12)
+            margin-bottom: 10px
+            font-size: 12px
         div
             display: flex
             align-items: center
@@ -90,27 +90,27 @@
         font-family: 'RF Dewi Extended'
         font-style: normal
         font-weight: 700
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 17)
+        font-size: 14px
+        line-height: 17px
         letter-spacing: -0.03em
         color: #d6d7dd
-        @include fluid("margin-bottom", 7)
+        margin-bottom: 7px
         pointer-events: none
     .war__text_title
         font-family: 'RF Dewi Extended'
         font-style: normal
         font-weight: 400
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 22)
+        font-size: 18px
+        line-height: 22px
         letter-spacing: -0.03em
         color: #FFFFFF
-        @include fluid("padding-top", 2)
-        @include fluid("padding-bottom", 2)
-        @include fluid("padding-right", 19)
-        @include fluid("padding-left", 73)
+        padding-top: 2px
+        padding-bottom: 2px
+        padding-right: 19px
+        padding-left: 73px
         z-index: 2
         position: relative
-        @include fluid("margin-bottom", 15)
+        margin-bottom: 15px
         pointer-events: none
         &::after
             position: absolute
@@ -130,22 +130,22 @@
             height: 100%
         &.big
             font-weight: 700
-            @include fluid("font-size", 36) 
-            @include fluid("line-height", 43)
-            @include fluid("padding-bottom", 8)
+            font-size: 36px
+            line-height: 43px
+            padding-bottom: 8px
         &.green
             color: #00ff08
     .war__button
-        @include fluid("width", 211)
-        @include fluid("height", 40)
+        width: 211px
+        height: 40px
         background: rgba(255, 255, 255, 0.15)
-        @include fluid("border-radius", 8)
+        border-radius: 8px
         display: flex
         align-items: center
         justify-content: center
         font-weight: 500
-        @include fluid("font-size", 20)
-        @include fluid("line-height", 24)
+        font-size: 20px
+        line-height: 24px
         color: rgba(255, 255, 255, 0.85)
         cursor: pointer
         &.active

@@ -13,8 +13,8 @@
     justify-content: center
     background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
     z-index: 100    
-    @include fluid("font-size", 16)
-    @include fluid("line-height", 19)
+    font-size: 16px
+    line-height: 19px
     font-family: 'TTNorms-Regular'
     font-weight: 500
     box-sizing: border-box
@@ -23,81 +23,81 @@
         display: flex
         flex-direction: column
         background: rgba(30, 38, 47, 0.8)
-        @include fluid("border-radius", 8)
-        @include fluid("padding", 24)
-        @include fluid("max-width", 560)
+        border-radius: 8px
+        padding: 24px
+        max-width: 560px
     .popup__newhud_esc
         position: absolute
-        @include fluid("left", 50)
-        @include fluid("top", 42)
+        left: 50px
+        top: 42px
         display: flex
         align-items: center
         font-family: 'Montserrat-Medium'
-        @include fluid("font-size", 20)
+        font-size: 20px
         line-height: 100%
         .popup__newhud_escbutton
-            @include fluid("width", 56)
-            @include fluid("height", 28)
+            width: 56px
+            height: 28px
             background: #FFFFFF
-            @include fluid("border-radius", 3)
+            border-radius: 3px
             color: #1E262F
             font-weight: 600
-            @include fluid("margin-right", 16)
+            margin-right: 16px
 
     .popup__newhud_title
-        @include fluid("font-size", 24)
-        @include fluid("line-height", 28)
+        font-size: 24px
+        line-height: 28px
         font-family: 'TTNorms-Medium'
         font-weight: 500
-        @include fluid("line-height", 28)
+        line-height: 28px
         display: flex
         align-items: center
         .popup__newhud_icon
-            @include fluid("margin-right", 10)
+            margin-right: 10px
             color: #869199
     .popup__newhud_line
         width: 100%
-        @include fluid("height", 1)
+        height: 1px
         background: rgba(253,255,252,0.2)
-        @include fluid("width", 450)
-        @include fluid("margin-top", 15)
-        @include fluid("margin-bottom", 12)
+        width: 450px
+        margin-top: 15px
+        margin-bottom: 12px
     .popup__newhud_text
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 25)
-        @include fluid("letter-spacing", 1)
-        @include fluid("width", 450)
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 1px
+        width: 450px
         text-align: left
         font-weight: normal
         color: #A6B1BA
-        @include fluid("margin-top", 24)
-        @include fluid("max-height", 800)
-        @include fluid("padding-right", 8)
+        margin-top: 24px
+        max-height: 800px
+        padding-right: 8px
         overflow-y: auto
         width: 100%
         &::-webkit-scrollbar
-            @include fluid("width", 3)
+            width: 3px
 
         &::-webkit-scrollbar-track
             background: rgba(253,255,252,0.2)
-            @include fluid("border-radius", 2)
+            border-radius: 2px
 
         &::-webkit-scrollbar-thumb
             background: #C6D1DA
-            @include fluid("border-radius", 6)
+            border-radius: 6px
 
     .popup__newhud__many__buttons
         display: flex
         justify-content: space-between
-        @include fluid("width", 564)
-        @include fluid("margin-top", 15)
+        width: 564px
+        margin-top: 15px
         .popup__newhud_button
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("border-radius", 4)
-            @include fluid("width", 166)
-            @include fluid("height", 40)
+            border-radius: 4px
+            width: 166px
+            height: 40px
             background: rgba(255,255,255,0.2)
             cursor: pointer
             &:hover

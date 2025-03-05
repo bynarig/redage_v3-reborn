@@ -16,13 +16,13 @@
     justify-content: center
     flex-direction: column
     .newauthentication__popup_title
-        @include fluid("font-size", 46)
-        @include fluid("line-height", 62)
-        @include fluid("margin-bottom", 10)
+        font-size: 46px
+        line-height: 62px
+        margin-bottom: 10px
         font-weight: bold
     .newauthentication__popup_subtitle
-        @include fluid("font-size", 32)
-        @include fluid("line-height", 46)
+        font-size: 32px
+        line-height: 46px
         opacity: 0.7
     .newauthentication__popup_iconmail
         position: absolute
@@ -30,7 +30,7 @@
         left: 50%
         transform: translate(-50%, -50%)
         opacity: 0.1
-        @include fluid("font-size", 220)
+        font-size: 220px
             
 #newauthentication
     font-family: "TTNorms-Regular"
@@ -43,7 +43,7 @@
     height: 100%
     color: rgba(243,243,243,1.0)
     background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0) 0%, rgba(1, 22, 39, 0.85) 100%)
-    @include fluid("font-size", 18)
+    font-size: 18px
     .newauthentication__popup
         width: 100%
         height: 100%
@@ -58,13 +58,13 @@
         justify-content: center
         flex-direction: column
         .newauthentication__popup_title
-            @include fluid("font-size", 46)
-            @include fluid("line-height", 62)
-            @include fluid("margin-bottom", 10)
+            font-size: 46px
+            line-height: 62px
+            margin-bottom: 10px
             font-weight: bold
         .newauthentication__popup_subtitle
-            @include fluid("font-size", 32)
-            @include fluid("line-height", 46)
+            font-size: 32px
+            line-height: 46px
             opacity: 0.7
         .newauthentication__popup_iconmail
             position: absolute
@@ -72,10 +72,10 @@
             left: 50%
             transform: translate(-50%, -50%)
             opacity: 0.1
-            @include fluid("font-size", 220)
+            font-size: 220px
     .auth__small_text
-        @include fluid("font-size", 12)
-        @include fluid("margin-top", 16)
+        font-size: 12px
+        margin-top: 16px
         opacity: 0.75
     .box-center
         display: flex
@@ -83,8 +83,8 @@
         justify-content: center
     .header
         width: 100%
-        @include fluid("height", 40)
-        @include fluid("margin-top", 30)
+        height: 40px
+        margin-top: 30px
         color: #A3A4A5
         position: relative
         z-index: 1
@@ -95,56 +95,56 @@
             display: flex
             align-items: center
         .header__money
-            @include fluid("width", 250)
-            @include fluid("height", 26)
+            width: 250px
+            height: 26px
             display: flex
             align-items: center
             justify-content: center
             font-weight: 500
-            @include fluid("font-size", 18)
+            font-size: 18px
             color: white
             font-family: "TTNorms-Medium"
             .header__money_redbucks
-                @include fluid("width", 34)
-                @include fluid("height", 34)
-                @include fluid("margin-left", 10)
+                width: 34px
+                height: 34px
+                margin-left: 10px
                 background-image: url('images/redbucks.png')
                 background-size: contain
                 background-position: center
                 background-repeat: no-repeat
         .header__logo
-            @include fluid("width", 250)
-            @include fluid("height", 26)
+            width: 250px
+            height: 26px
             background-image: url('images/logo.png')
             background-size: contain
             background-position: center
             background-repeat: no-repeat
         .header-key
-            @include fluid("width", 40)
-            @include fluid("height", 40) 
+            width: 40px
+            height: 40px
             box-sizing: border-box
-            @include fluid("border-radius", 5)
-            @include fluid("margin-right", 60) 
+            border-radius: 5px
+            margin-right: 60px
             cursor: pointer
             color: white
             border: 1px solid rgba(253,255,252,0.6)
             font-family: "TTNorms-Bold"
-            @include fluid("border-radius", 6)  
+            border-radius: 6px
             &.active
                 background: white
                 color: black
             &:last-child
                 margin-right: 0
-                @include fluid("margin-left", 60)
+                margin-left: 60px
                 
 
         .header__element
             display: flex
             align-items: center
-            @include fluid("height", 40) 
+            height: 40px
             font-family: 'Montserrat-Medium'
-            @include fluid("margin-left", 24) 
-            @include fluid("margin-right", 24) 
+            margin-left: 24px
+            margin-right: 24px
             color: rgba(255,255,255,0.6)
             cursor: pointer
             &.active
@@ -154,19 +154,19 @@
     .main
         width: 100%
         height: 100%
-        @include fluid("padding-top", 100) 
-        @include fluid("padding-right", 50)
+        padding-top: 100px
+        padding-right: 50px
         display: flex
         justify-content: flex-end
         position: relative
         color: #CCCCCC
         .main__box
-            @include fluid("width", 376)
+            width: 376px
             display: flex
             justify-content: space-between
             z-index: 0
             .main__forms
-                @include fluid("width", 350)
+                width: 350px
                 display: flex
                 flex-direction: column
     .main__buttons_box
@@ -175,39 +175,39 @@
         &.main__buttons_registration
             justify-content: space-between
         .main__input
-            @include fluid("width", 260)
+            width: 260px
     .main__button
         background: rgba(253,255,252,0.1)
-        @include fluid("height", 70)
-        @include fluid("border-radius", 5)
+        height: 70px
+        border-radius: 5px
         display: flex
         text-transform: uppercase
         cursor: pointer
         color: white
-        @include fluid("margin-right", 25)
+        margin-right: 25px
         &:last-child
             margin-right: 0
         &.main_button_size_large
-            @include fluid("width", 254)
+            width: 254px
             align-self: center
         &.main_button_size_small
-            @include fluid("width", 70)
+            width: 70px
             display: flex
             flex-direction: column
         b
-            @include fluid("font-size", 42)
+            font-size: 42px
         &.main__button_restore
             width: 100%
-            @include fluid("margin-top", 15)
+            margin-top: 15px
         &.main__button_mail
-            @include fluid("width", 354)
+            width: 354px
             align-self: center
             font-weight: 600
-            @include fluid("font-size", 22)
+            font-size: 22px
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("margin-top", 40)
+            margin-top: 40px
             transition: all 0.5s ease
             z-index: 10000
             &:hover
@@ -218,11 +218,11 @@
 
         .main__button_right
             height: 100%
-            @include fluid("width", 90)
+            width: 90px
         .main__button_square
-            @include fluid("width", 34)
-            @include fluid("height", 34)
-            @include fluid("border-radius", 2)
+            width: 34px
+            height: 34px
+            border-radius: 2px
             background-color: white
             color: black
         .main__button_left
@@ -231,7 +231,7 @@
             box-sizing: border-box
             @include fluid("border-right", 2, "solid #7E7E7E")
             font-weight: 600
-            @include fluid("font-size", 22)
+            font-size: 22px
             &.none
                 border: none
         .main__button_top
@@ -243,14 +243,14 @@
             height: 45%
             width: 100%
             .main__button_rectangle
-                @include fluid("width", 36)
-                @include fluid("height", 36)
-                @include fluid("border-radius", 2)
+                width: 36px
+                height: 36px
+                border-radius: 2px
                 background-color: white
                 color: black
     .main__scroll
-        @include fluid("width", 6)
-        @include fluid("height", 156)
+        width: 6px
+        height: 156px
         background: rgba(253,255,252,0.15)
         box-sizing: border-box
         &.big
@@ -262,9 +262,9 @@
         display: flex
         flex-direction: column
         align-items: center
-        @include fluid("padding-top", 100)
+        padding-top: 100px
         overflow-x: auto
-        @include fluid("height", 946)
+        height: 946px
         ::-webkit-scrollbar 
             width: resize(4)
             margin-right: resize(10)
@@ -280,16 +280,16 @@
             background: rgba(255,64,64,0)
             border-radius: 100px
         .news-box
-            @include fluid("width", 600)
+            width: 600px
             display: flex
             flex-direction: column
             align-items: center
-            @include fluid("margin-bottom", 20)
+            margin-bottom: 20px
             height: inherit
             &:hover, &.active
                 .news-box__text_background
                     opacity: 1
-                    @include fluid("margin-top", 216)
+                    margin-top: 216px
                     height: auto
                     transition: all 1s
                 
@@ -298,26 +298,26 @@
                 background-size: cover
                 background-position: center
                 background-repeat: no-repeat
-                @include fluid("width", 600)
-                @include fluid("height", 220)
+                width: 600px
+                height: 220px
                 text-transform: uppercase
-                @include fluid("font-size", 20)
+                font-size: 20px
                 display: flex
-                @include fluid("padding-left", 30)
-                @include fluid("padding-bottom", 15)
-                @include fluid("border-radius", 5)
+                padding-left: 30px
+                padding-bottom: 15px
+                border-radius: 5px
                 align-items: flex-end
                 position: absolute
                 z-index: 1
             
             .news-box__text_background
-                @include fluid("font-size", 16)
-                @include fluid("width", 580) 
-                @include fluid("padding-top", 15)
-                @include fluid("padding-right", 30)
-                @include fluid("padding-bottom", 15)
-                @include fluid("padding-left", 30)
-                @include fluid("line-height", 25)
+                font-size: 16px
+                width: 580px
+                padding-top: 15px
+                padding-right: 30px
+                padding-bottom: 15px
+                padding-left: 30px
+                line-height: 25px
                 z-index: 0
                 font-weight: 300
                 box-sizing: border-box
@@ -329,61 +329,61 @@
                 border-radius: 6px
 
                 .subtitle
-                    @include fluid("font-size", 14)
+                    font-size: 14px
                     color: #A7A7A7
                     font-weight: 600
                 .news-box__element
                     display: flex
-                    @include fluid("margin-bottom", 10)
+                    margin-bottom: 10px
                     &:first-child
-                        @include fluid("margin-bottom", 0)
+                        margin-bottom: 0px
                     .news-box__square
-                        @include fluid("max-width", 14) 
-                        @include fluid("height", 14) 
+                        max-width: 14px
+                        height: 14px
                         box-sizing: border-box
                         @include fluid("border", 3, "solid rgba(183,42,43,0.5)")
                         background-color: #E3393A
-                        @include fluid("border-radius", 3)
+                        border-radius: 3px
                     .news-box__text
                         font-weight: 100
                         font-style: normal
                 .box-flex
                     display: flex
                 .square_box
-                    @include fluid("padding-top", 5)
-                    @include fluid("min-width", 28) 
+                    padding-top: 5px
+                    min-width: 28px
                     
 
     .newauthentification__characters
         display: flex
         align-items: flex-start
-        @include fluid("padding-top", 60)
+        padding-top: 60px
         justify-content: space-between
         height: 100%
         width: 100%
-        @include fluid("padding-right", 80)
-        @include fluid("padding-left", 80)
+        padding-right: 80px
+        padding-left: 80px
         .auth__characters
-            @include fluid("margin-left", 40)
+            margin-left: 40px
             .auth__characters_header
                 display: flex
                 align-items: center
-                @include fluid("font-size", 24)
-                @include fluid("line-height", 28)
+                font-size: 24px
+                line-height: 28px
                 text-transform: uppercase
                 color: #FDFFFC
-                @include fluid("margin-bottom", 56)
+                margin-bottom: 56px
 
                 span
-                    @include fluid("margin-right", 20)
+                    margin-right: 20px
             .auth__characters_hover
                 @include fluid("margin-top", -80)
                 z-index: 0
                 display: flex
                 align-items: center
                 justify-content: space-around
-                @include fluid("width", 300)
-                @include fluid("min-height", 80)
+                width: 300px
+                min-height: 80px
                 border-radius: 6px
                 opacity: 0
                 &.column
@@ -395,27 +395,27 @@
                     align-items: center
                     justify-content: space-between
                     width: 100%
-                    @include fluid("margin-bottom", 16)
-                    @include fluid("margin-top", 16)
+                    margin-bottom: 16px
+                    margin-top: 16px
                 .auth__characters_button
                     position: relative
-                    @include fluid("width", 142)
-                    @include fluid("height", 42)
+                    width: 142px
+                    height: 42px
                     border: 1px solid rgba(253,255,252,0.4)
-                    @include fluid("padding-right", 14)
-                    @include fluid("padding-left", 14)
+                    padding-right: 14px
+                    padding-left: 14px
                     display: flex
                     align-items: center
-                    @include fluid("font-size", 14)
+                    font-size: 14px
                     border-radius: 6px
                     box-sizing: border-box
                     &:hover, &.active
                         background: rgba(253, 255, 252, 0.1)
                         border: 1px solid rgba(253, 255, 252, 0)
                     .box
-                        @include fluid("min-width", 30)
-                        @include fluid("min-height", 30)
-                        @include fluid("margin-right", 10)
+                        min-width: 30px
+                        min-height: 30px
+                        margin-right: 10px
                         border-radius: 6px
                         box-sizing: border-box
                         background: white
@@ -424,14 +424,14 @@
                             color: white
                             background: #E71D36
                 .auth__characters_input
-                    @include fluid("height", 42)
+                    height: 42px
             .auth__characters_block
                 position: relative
-                @include fluid("width", 300)
-                @include fluid("height", 80)
-                @include fluid("margin-bottom", 16)
+                width: 300px
+                height: 80px
+                margin-bottom: 16px
                 &:last-child
-                    @include fluid("margin-bottom", 0)
+                    margin-bottom: 0px
                 &:hover, &.active
                     .auth__characters_character
                         border: 1px solid rgba(253,255,252,0)
@@ -442,7 +442,7 @@
                     .auth__characters_hover
                         opacity: 1
                         transition: all 1s
-                        @include fluid("margin-top", 0)
+                        margin-top: 0px
             .auth__characters_character
                 display: flex
                 justify-content: space-between
@@ -450,21 +450,21 @@
                 border: 1px solid rgba(253,255,252,0.4)
                 box-sizing: border-box
                 border-radius: 6px
-                @include fluid("width", 300)
-                @include fluid("height", 80)
-                @include fluid("padding-left", 30)
-                @include fluid("padding-right", 30)
+                width: 300px
+                height: 80px
+                padding-left: 30px
+                padding-right: 30px
                 z-index: 1
                 &:last-child
                     margin-bottom: 0
                 b
-                    @include fluid("font-size", 24)
-                    @include fluid("line-height", 28)
+                    font-size: 24px
+                    line-height: 28px
                 .auth__characters_circle
-                    @include fluid("width", 60)
-                    @include fluid("height", 60)
+                    width: 60px
+                    height: 60px
                     position: relative
-                    @include fluid("font-size", 10)
+                    font-size: 10px
                     .auth__characters_circle_text
                     .auth__characters_circle_text
                         position: absolute
@@ -482,39 +482,39 @@
             flex-direction: column
             align-items: center
             justify-content: flex-end
-            @include fluid("padding-bottom", 56)
+            padding-bottom: 56px
             .auth__buttons
                 display: flex
                 justify-content: space-between
                 align-items: center
-                @include fluid("width", 400)
+                width: 400px
             .auth__spawn_elements
                 display: flex
                 justify-content: center
-                @include fluid("margin-bottom", 45)
-                @include fluid("width", 690)
+                margin-bottom: 45px
+                width: 690px
                 .auth__spawn_element
-                    @include fluid("border-radius", 4)
+                    border-radius: 4px
                     box-sizing: border-box
-                    @include fluid("width", 200)
-                    @include fluid("height", 200)
+                    width: 200px
+                    height: 200px
                     @include fluid("border", 3, "solid rgba(253,255,252,0.4)")
-                    @include fluid("padding-left", 24)
-                    @include fluid("padding-right", 29)
-                    @include fluid("padding-bottom", 22)
-                    @include fluid("padding-top", 18)
-                    @include fluid("font-size", 20)
-                    @include fluid("margin-bottom", 15)
-                    @include fluid("margin-right", 45)
+                    padding-left: 24px
+                    padding-right: 29px
+                    padding-bottom: 22px
+                    padding-top: 18px
+                    font-size: 20px
+                    margin-bottom: 15px
+                    margin-right: 45px
                     position: relative
                     &:last-child
                         margin-right: 0
                         
                     span
                         position: absolute
-                        @include fluid("right", 30)
-                        @include fluid("bottom", 23)
-                        @include fluid("font-size", 50)
+                        right: 30px
+                        bottom: 23px
+                        font-size: 50px
                     &.use
                         &:hover, &.active
                             background: rgba(253,255,252,0.1)
@@ -523,49 +523,49 @@
                     &.nouse
                         opacity: 0.65
         .main__button_square
-            @include fluid("width", 34)
-            @include fluid("height", 34)
-            @include fluid("border-radius", 2)
+            width: 34px
+            height: 34px
+            border-radius: 2px
             background-color: white
             color: black
             font-weight: bold
             &.large
                 width: auto
                 height: auto
-                @include fluid("padding-left", 9)
-                @include fluid("padding-right", 9)
-                @include fluid("padding-bottom", 7)        
-                @include fluid("padding-top", 7) 
+                padding-left: 9px
+                padding-right: 9px
+                padding-bottom: 7px
+                padding-top: 7px
         .auth__stats
-            @include fluid("width", 440)
+            width: 440px
             display: flex
             flex-direction: column
             align-items: center
-            @include fluid("padding-top", 84) 
+            padding-top: 84px
             .auth__stat
-                @include fluid("width", 386)
+                width: 386px
                 display: flex
                 justify-content: space-between
-                @include fluid("margin-bottom", 13)
+                margin-bottom: 13px
                 .gray
                     color: #FDFFFC
                     opacity: 0.8
         .auth__donate_element
             box-sizing: border-box
-            @include fluid("width", 440)
-            @include fluid("height", 68)
+            width: 440px
+            height: 68px
             @include fluid("border", 1, "solid rgba(253,255,252,0.4)")
-            @include fluid("padding-left", 27)
-            @include fluid("padding-right", 27)
-            @include fluid("font-size", 16)
+            padding-left: 27px
+            padding-right: 27px
+            font-size: 16px
             border-radius: 6px
             display: flex
             justify-content: space-between
             align-items: center
             position: relative
-            @include fluid("margin-top", 15)
+            margin-top: 15px
             .absolute
-                @include fluid("font-size", 40)
+                font-size: 40px
                 position: absolute
                 left: 16%
                 top: 50%
@@ -574,22 +574,22 @@
             .box-flex
                 align-items: center
                 .auth-dollar
-                    @include fluid("font-size", 24)
+                    font-size: 24px
                     color: #E71D36
-                    @include fluid("margin-left", 10)
+                    margin-left: 10px
             .line
                 background: white
-                @include fluid("width", 2)
-                @include fluid("height", 46)
-                @include fluid("margin-left", 32)
-                @include fluid("margin-right", 32)
+                width: 2px
+                height: 46px
+                margin-left: 32px
+                margin-right: 32px
     .auth__characters_input
-        @include fluid("width", 300)
-        @include fluid("height", 45)
+        width: 300px
+        height: 45px
         width: 100%
-        @include fluid("margin-bottom", 15)
-        @include fluid("border-radius", 5)
-        @include fluid("padding", 23)
+        margin-bottom: 15px
+        border-radius: 5px
+        padding: 23px
         @include fluid("border", 2, "solid rgba(253,255,252,0.5)")
         background: transparent
         display: flex
@@ -598,14 +598,14 @@
         border-radius: 6px
         box-sizing: border-box
         font-family: "TTNorms-Regular"
-        @include fluid("font-size", 18)
+        font-size: 18px
         color: rgba(253,255,252,0.5)
         &.main__input_error
             @include fluid("border", 2, "solid #BE2020")
         .main__input_text
             background-color: rgba(32,32,32,0.0)
             font-family: inherit
-            @include fluid("font-size", 18)
+            font-size: 18px
             color: white
             caret-color: #808080
         .main__input_text::-webkit-input-placeholder 
@@ -619,25 +619,25 @@
         display: flex
         align-items: flex-start
         justify-content: space-between
-        @include fluid("width", 530)
-        @include fluid("margin-bottom", 50)
+        width: 530px
+        margin-bottom: 50px
         .auth__customization_leftside
-            @include fluid("min-width", 190)
+            min-width: 190px
         .auth__customization_characteristics
             display: flex
             flex-direction: column
             align-items: center
             justify-content: space-between
             .auth__scroll
-                @include fluid("width", 14)
-                @include fluid("height", 33)
+                width: 14px
+                height: 33px
                 background: url(./images/scroll.png)
                 background-repeat: no-repeat
                 background-size: contain
                 background-position: center
             .auth__customization_header
-                @include fluid("font-size", 24)
-                @include fluid("margin-bottom", 40)
+                font-size: 24px
+                margin-bottom: 40px
                 letter-spacing: 0.01em
                 color: #FDFFFC
                 font-family: "TTNorms-Bold"
@@ -660,17 +660,17 @@
                 flex-direction: column
                 overflow-y: scroll
                 align-items: center
-                @include fluid("height", 336)
+                height: 336px
                 
                 .auth__customization_element
                     display: flex
                     align-items: center
                     justify-content: space-between
-                    @include fluid("padding-left", 20)
-                    @include fluid("padding-right", 20)
-                    @include fluid("min-width", 434)
-                    @include fluid("min-height", 38)
-                    @include fluid("margin-bottom", 16)
+                    padding-left: 20px
+                    padding-right: 20px
+                    min-width: 434px
+                    min-height: 38px
+                    margin-bottom: 16px
 
                     &:last-child
                         margin-bottom: 0
@@ -679,10 +679,10 @@
                         background: white
                         
                         .auth__customization_icon
-                            @include fluid("font-size", 20)
+                            font-size: 20px
                             color: black
                     .auth__customization_icon
-                        @include fluid("font-size", 20)
+                        font-size: 20px
                         color: white
                     .box-flex
                         align-items: center
@@ -690,7 +690,7 @@
                         flex-direction: column
                         align-items: flex-start
                         height: auto
-                        @include fluid("min-height", 52)
+                        min-height: 52px
                         &:hover
                             color: white
                             background: transparent
@@ -698,16 +698,16 @@
                         display: flex
                         align-items: center
                         justify-content: center
-                        @include fluid("width", 100)
-                        @include fluid("height", 4)
+                        width: 100px
+                        height: 4px
                         .slider
                             background: #E71D36
-                            @include fluid("width", 12)
-                            @include fluid("height", 12)  
+                            width: 12px
+                            height: 12px
                             border-radius: 50%   
                             
                         .rangeslider
-                            @include fluid("height", 4)
+                            height: 4px
                             background: rgba(255,255,255,0.2)
                             
                         .rangeslider__fill
@@ -716,31 +716,31 @@
                         .rangeslider__handle 
                             border: none
                             background: #E71D36
-                            @include fluid("top", 2)
-                            @include fluid("width", 12)
-                            @include fluid("height", 12)
+                            top: 2px
+                            width: 12px
+                            height: 12px
 
                     .auth__customization_colors
                         display: grid
-                        @include fluid("width", 290)
+                        width: 290px
                         grid-template-columns: repeat(10, 1fr)
                         grid-template-rows: repeat(1, 1fr)
-                        @include fluid("grid-gap", 10)
-                        @include fluid("margin-top", 10)
+                        grid-gap: 10px
+                        margin-top: 10px
                         .auth__customization_color
                             background: #B07947
-                            @include fluid("width", 20)
-                            @include fluid("height", 20) 
+                            width: 20px
+                            height: 20px
                             &.active, &:hover
                                 box-sizing: border-box
                                 @include fluid("border", 2, "solid #FFFFFF")
                     .auth__customization_text
-                        @include fluid("font-size", 16)
-                        @include fluid("margin-left", 16)
-                        @include fluid("margin-right", 16)
+                        font-size: 16px
+                        margin-left: 16px
+                        margin-right: 16px
 
     .auth__customization_categories
-        @include fluid("padding-top", 69)
+        padding-top: 69px
         display: flex
         flex-direction: column
         justify-content: flex-start
@@ -749,15 +749,15 @@
             display: flex
             align-items: center
             justify-content: center
-            @include fluid("width", 60)
-            @include fluid("height", 60) 
+            width: 60px
+            height: 60px
             border: 1px solid rgba(253,255,252,0.4)
             box-sizing: border-box
             color: rgba(253,255,252,0.4)
-            @include fluid("font-size", 32)
+            font-size: 32px
             border-radius: 6px
             box-sizing: border-box
-            @include fluid("margin-bottom", 16)
+            margin-bottom: 16px
             &:last-child
                 margin-bottom: 0
             &:hover, &.active
@@ -767,47 +767,47 @@
             
             &.random
                 margin-bottom: 0
-                @include fluid("margin-top", 46)
+                margin-top: 46px
     .auth__customization_image
-        @include fluid("width", 304)
-        @include fluid("height", 124)
+        width: 304px
+        height: 124px
         background-image: url('images/back.png')
         background-size: contain
         background-position: center
         background-repeat: no-repeat
-        @include fluid("margin-bottom", 16)
+        margin-bottom: 16px
         position: relative
         .auth__customization_father
             z-index: 2
-            @include fluid("width", 124)
-            @include fluid("height", 124)
+            width: 124px
+            height: 124px
             background-image: url('images/father.png')
             background-size: contain
             background-position: center
             background-repeat: no-repeat
             position: absolute
             bottom: 0
-            @include fluid("left", 67)
+            left: 67px
         .auth__customization_mother
             z-index: 1
-            @include fluid("width", 124)
-            @include fluid("height", 124)
+            width: 124px
+            height: 124px
             background-image: url('images/mother.png')
             background-size: contain
             background-position: center
             background-repeat: no-repeat
             position: absolute
             bottom: 0
-            @include fluid("right", 67)
+            right: 67px
     .auth__square_range
-        @include fluid("width", 134)
-        @include fluid("height", 134)
+        width: 134px
+        height: 134px
         background-image: url('images/setka.png')
         background-size: contain
         background-position: center
         background-repeat: no-repeat
-        @include fluid("margin-bottom", 16)
-        @include fluid("margin-top", 96)
+        margin-bottom: 16px
+        margin-top: 96px
         align-self: center
         position: absolute
         top: 50%
@@ -846,19 +846,19 @@
             left: 0
             top: 0
             background: #E71D36
-            @include fluid("width", 14)
-            @include fluid("height", 14)  
+            width: 14px
+            height: 14px
             border-radius: 50%  
 
     .auth__long_range
-        @include fluid("width", 134)
-        @include fluid("height", 28)
+        width: 134px
+        height: 28px
         background-image: url('images/setka_small.png')
         background-size: contain
         background-position: center
         background-repeat: no-repeat
-        @include fluid("margin-bottom", 26)
-        @include fluid("margin-top", 26)
+        margin-bottom: 26px
+        margin-top: 26px
         position: relative
         align-items: center
         display: flex
@@ -877,17 +877,17 @@
             left: 0
             top: 0
             background: #E71D36
-            @include fluid("width", 14)
-            @include fluid("height", 14)  
+            width: 14px
+            height: 14px
             border-radius: 50%  
     .auth__customisation_center
         display: flex
         align-items: center
         flex-direction: column
     .auth__sliders
-        @include fluid("width", 346)
-        @include fluid("padding-top", 16)
-        @include fluid("padding-bottom", 16)
+        width: 346px
+        padding-top: 16px
+        padding-bottom: 16px
         display: flex
         align-items: center
         justify-content: space-between
@@ -896,13 +896,13 @@
         display: flex
         align-items: center
         justify-content: space-between
-        @include fluid("min-width", 210)
-        @include fluid("max-width", 210)
+        min-width: 210px
+        max-width: 210px
         text-align: center
     .margin-top-20
-        @include fluid("margin-top", 20)
+        margin-top: 20px
     .auth__slider_text
-        @include fluid("width", 120)
+        width: 120px
         &.slider-left
             text-align: left
         &.slider-right

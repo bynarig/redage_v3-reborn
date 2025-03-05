@@ -14,9 +14,9 @@
     flex-direction: column
     align-items: center
     color: white
-    @include fluid("padding-left", 80)
-    @include fluid("padding-right", 80)
-    @include fluid("font-size", 16)
+    padding-left: 80px
+    padding-right: 80px
+    font-size: 16px
     ::-webkit-scrollbar 
         width: resize(4)
         height: resize(4)
@@ -37,21 +37,21 @@
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("height", 40)
-        @include fluid("min-width", 40)
-        @include fluid("border-radius", 6)
-        @include fluid("font-size",18)
-        @include fluid("padding-left",7)
-        @include fluid("padding-right",7)
+        height: 40px
+        min-width: 40px
+        border-radius: 6px
+        font-size: 18px
+        padding-left: 7px
+        padding-right: 7px
         font-family: "TTNorms-Bold"
         background: #FDFFFC
         color: black
     .slider
-        @include fluid("margin-top", 15)
+        margin-top: 15px
         .rangeslider
-            @include fluid("height", 4)
+            height: 4px
             background: rgba(255, 255, 255, 0.1)
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
             
         .rangeslider__fill
             background: white
@@ -59,34 +59,34 @@
         .rangeslider__handle 
             border: none
             background: white
-            @include fluid("top", 2)
-            @include fluid("width", 20)
-            @include fluid("height", 20)
+            top: 2px
+            width: 20px
+            height: 20px
         
         .info 
             display: flex
             justify-content: space-between
             color: #C1C1C1
             font-weight: 500
-            @include fluid("font-size", 16)
+            font-size: 16px
             
             span 
-            @include fluid("margin-bottom", 20)
+            margin-bottom: 20px
 
             span:nth-child(2) 
                 font-weight: bold
                 color: #fff
-                @include fluid("padding-left", 4)
+                padding-left: 4px
                 
     .slider.style 
 
         .rangeslider__fill
             background: #171921
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
     .newbarbershop__top
-        @include fluid("padding-top", 60)
-        @include fluid("padding-left", 320)
-        @include fluid("padding-right", 320)
+        padding-top: 60px
+        padding-left: 320px
+        padding-right: 320px
         display: flex
         flex-direction: column
         align-items: center
@@ -95,23 +95,23 @@
             letter-spacing: 0.05em
             color: #FFFFFF
             opacity: 0.7
-            @include fluid("font-size", 24)
-            @include fluid("margin-top", 24)
+            font-size: 24px
+            margin-top: 24px
         .newbarbershop__top_header
             display: flex
             align-items: center
             justify-content: space-between
             width: 100%
         .newbarbershop__category
-            @include fluid("height", 80)
-            @include fluid("width", 80)
-            @include fluid("border-radius", 15)
+            height: 80px
+            width: 80px
+            border-radius: 15px
             display: flex
             align-items: center
             justify-content: center
             box-sizing: border-box
             background: rgba(255, 255, 255, 0.1)
-            @include fluid("font-size",40)
+            font-size: 40px
             color: rgba(255,255,255,0.2)
 
             &.active
@@ -131,30 +131,30 @@
         justify-content: space-between
         align-items: center
         .newbarbershop__help
-            @include fluid("width", 380)
+            width: 380px
             background: rgba(255,255,255,0.1)
             display: flex
             flex-direction: column
             .newbarbershop__help_img
-                @include fluid("height", 180)
-                @include fluid("width", 380)
-                @include fluid("margin-bottom", 12)
+                height: 180px
+                width: 380px
+                margin-bottom: 12px
                 background: url(./images/keyboard.png)
                 background-repeat: no-repeat
                 background-size: contain
                 background-position: center
             .newbarbershop__help_main
-                @include fluid("padding-top", 12)
-                @include fluid("padding-bottom", 12)
-                @include fluid("padding-right", 20)
-                @include fluid("padding-left", 20)
-                @include fluid("font-size", 14)
+                padding-top: 12px
+                padding-bottom: 12px
+                padding-right: 20px
+                padding-left: 20px
+                font-size: 14px
                 color: rgba(255,255,255,0.7)
                 .box-between
                     display: flex
                     justify-content: space-between
                     align-items: center
-                    @include fluid("margin-top", 12)
+                    margin-top: 12px
                     .underline
                         text-decoration: underline
         .newbarbershop__menu
@@ -163,41 +163,41 @@
             height: 100%
             .box-flex
                 align-items: center
-                @include fluid("font-size", 24)
+                font-size: 24px
                 font-family: "TTNorms-Bold"
                 .newbarbershop__button
-                    @include fluid("margin-right", 14)
+                    margin-right: 14px
             .newbarbershop__menu_info
-                @include fluid("margin-top", 18)
-                @include fluid("margin-bottom", 24)
+                margin-top: 18px
+                margin-bottom: 24px
                 color: rgba(255,255,255,0.7)
             .newbarbershop__menu_list
                 display: flex
                 flex-direction: column
-                @include fluid("padding-right", 18)
-                @include fluid("margin-bottom", 18)
-                @include fluid("height", 258)
+                padding-right: 18px
+                margin-bottom: 18px
+                height: 258px
                 overflow-y: auto
                 .newbarbershop__menu_element
                     font-weight: 700
                     display: flex
                     justify-content: space-between
                     align-items: center
-                    @include fluid("padding-right", 18)
-                    @include fluid("padding-left", 18)
+                    padding-right: 18px
+                    padding-left: 18px
                     position: relative
                     background: rgba(255,255,255,0.1)
-                    @include fluid("min-height", 60)
-                    @include fluid("width", 400)
-                    @include fluid("margin-bottom", 6)
+                    min-height: 60px
+                    width: 400px
+                    margin-bottom: 6px
                     .newbarbershop__menu_element-absolute
                         position: absolute
                         left: 0%
                         top: 50%
                         transform: translate(0%, -50%)
                         background: rgba(255,255,255,0.2)
-                        @include fluid("height", 34)
-                        @include fluid("width", 4)
+                        height: 34px
+                        width: 4px
                     .newbarber__menu_price
                         color: rgba(109,202,66,0.7)
                     &:hover
@@ -212,16 +212,16 @@
             .newbarbershop__menu_colors
                 display: flex
                 align-items: center
-                @include fluid("width", 400)   
-                @include fluid("padding-bottom", 10)    
+                width: 400px
+                padding-bottom: 10px
                 //justify-content: space-between
                 //overflow-x: auto
                 //overflow-y: hidden
                 .newbarbershop__menu_color
                     transform: skew(-2deg, -2deg)
-                    @include fluid("height", 41)
-                    @include fluid("min-width", 41)
-                    @include fluid("border-radius", 8)
+                    height: 41px
+                    min-width: 41px
+                    border-radius: 8px
                     display: flex
                     align-items: center
                     justify-content: center
@@ -229,7 +229,7 @@
                     background: rgba(255, 255, 255, 0.1)
                     color: white
                     font-weight: 700
-                    @include fluid("margin-right", 8)
+                    margin-right: 8px
                     &.active
                         background: white;
                         color: black;
@@ -243,12 +243,12 @@
         width: 100%
         display: flex
         justify-content: space-between
-        @include fluid("padding-bottom", 80)
+        padding-bottom: 80px
         .box-flex
             align-items: center
             &:first-child
                 .newbarbershop__button
-                    @include fluid("margin-right", 25)
+                    margin-right: 25px
             &:last-child
                 .newbarbershop__button
-                    @include fluid("margin-left", 25)
+                    margin-left: 25px

@@ -7,109 +7,109 @@
     align-items: center
     justify-content: space-between
     font-weight: bold
-    @include fluid("font-size", 18)
-    @include fluid("line-height", 24)
+    font-size: 18px
+    line-height: 24px
     color: #FFFFFF
     font-family: 'TTNorms-Regular'
-    @include fluid("padding-left", 100)
-    @include fluid("padding-right", 100) 
+    padding-left: 100px
+    padding-right: 100px
     .main__button_square
-        @include fluid("width", 62)
-        @include fluid("height", 62)
-        @include fluid("margin-left", 20)
-        @include fluid("border-radius", 2)
+        width: 62px
+        height: 62px
+        margin-left: 20px
+        border-radius: 2px
         background-color: white
         color: black
     .support__header
-        @include fluid("height", 58)
+        height: 58px
         display: flex
         align-items: center
-        @include fluid("margin-bottom", 20)
+        margin-bottom: 20px
         .support__icon
-            @include fluid("margin-right", 13) 
-            @include fluid("width", 50)
-            @include fluid("height", 50)
+            margin-right: 13px
+            width: 50px
+            height: 50px
             background-position: center
             background-repeat: no-repeat
             background-size: contain
 
         .support__header_title
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
         .support__header_subtitle
                 color: rgba(255,255,255,0.7)
-                @include fluid("margin-top", 14)
+                margin-top: 14px
                 text-decoration: underline
-                @include fluid("font-size", 16)
-                @include fluid("line-height", 19)
+                font-size: 16px
+                line-height: 19px
                 font-family: 'TTNorms-Regular'
                 font-weight: 300
                 &:hover
                     color: rgba(255,255,255,0.4)
     .support__nav
-        @include fluid("width", 300)
+        width: 300px
         display: flex
         flex-direction: column
-        @include fluid("height", 750)
+        height: 750px
         .support__title
-            @include fluid("font-size", 24)
-            @include fluid("line-height", 28)
+            font-size: 24px
+            line-height: 28px
             color: white
-            @include fluid("margin-top", 30)
-            @include fluid("margin-bottom", 20)
+            margin-top: 30px
+            margin-bottom: 20px
             font-weight: bold
             font-family: 'TTNorms-Bold'
             &:first-child
                 margin-top: 0
         .support__subtitle
             font-weight: bold
-            @include fluid("font-size", 16)
-            @include fluid("line-height", 19)  
+            font-size: 16px
+            line-height: 19px
             color: rgba(255,255,255,0.5)
-            @include fluid("margin-bottom", 10)
+            margin-bottom: 10px
             &.hover, &.active
                 color: white
     .support__background
-        @include fluid("width", 730)
-        @include fluid("height", 750)
+        width: 730px
+        height: 750px
         display: flex
         flex-direction: column
         box-sizing: border-box
 
     .supportchat__block
-        @include fluid("width", 730)
-        @include fluid("height", 650)
+        width: 730px
+        height: 650px
         background: rgba(255,255,255,0.1)
-        @include fluid("border-radius", 8)
-        @include fluid("padding", 24)
+        border-radius: 8px
+        padding: 24px
         .restartchat__header
-            @include fluid("margin-bottom", 5)
+            margin-bottom: 5px
         .supportchat__chat_messages
             background: rgba(255,255,255,0.1)
-            @include fluid("height", 515)
-            @include fluid("max-height", 515)
+            height: 515px
+            max-height: 515px
             overflow-y: auto
             width: 100%
-            @include fluid("padding", 12)
+            padding: 12px
             display: flex
             flex-direction: column
             &::-webkit-scrollbar
-                @include fluid("width", 3)
+                width: 3px
 
             &::-webkit-scrollbar-track
                 background: rgba(253,255,252,0.2)
-                @include fluid("border-radius", 2)
+                border-radius: 2px
 
             &::-webkit-scrollbar-thumb
                 background: #C6D1DA
-                @include fluid("border-radius", 6)
+                border-radius: 6px
             .supportchat__chat_message
-                @include fluid("font-size", 14)
-                @include fluid("margin-bottom", 10)
+                font-size: 14px
+                margin-bottom: 10px
                 background: white
                 color: black
-                @include fluid("padding", 8)
-                @include fluid("border-radius", 12)
+                padding: 8px
+                border-radius: 12px
                 width: fit-content
                 display: flex
                 flex-direction: column
@@ -117,38 +117,38 @@
                 justify-content: flex-start
                 &.me
                     align-self: flex-end
-                    @include fluid("margin-right", 10)
+                    margin-right: 10px
                 &.admin
                     align-self: flex-start
-                    @include fluid("margin-left", 10)
+                    margin-left: 10px
                 .time
-                    @include fluid("font-size", 10)
-                    @include fluid("line-height", 10)
+                    font-size: 10px
+                    line-height: 10px
                 .admin
                     color: #81191A
         .supportchat__chat_input
             background: rgba(255,255,255,0.1)
             width: 100%
-            @include fluid("height", 50)
+            height: 50px
             display: flex
             align-items: center
             justify-content: space-between
-            @include fluid("padding-left", 10)
-            @include fluid("padding-right", 10)
-            @include fluid("margin-top", 20)
+            padding-left: 10px
+            padding-right: 10px
+            margin-top: 20px
             .supportchat__input
                 font-family: inherit
-                @include fluid("font-size", 14)
+                font-size: 14px
                 color: #869199
                 width: 100%
-                @include fluid("height", 40)
-                @include fluid("margin-right", 10)
+                height: 40px
+                margin-right: 10px
                 background: rgba(255,255,255,0.1)
-                @include fluid("padding-left", 10)
+                padding-left: 10px
             .supportchat__sendbutton
                 background: rgba(255,255,255,0.1)
-                @include fluid("width", 40)
-                @include fluid("height", 40)
+                width: 40px
+                height: 40px
                 display: flex
                 align-items: center
                 justify-content: center
@@ -158,15 +158,15 @@
                     background: white
                     color: black
     .support__wiki
-        @include fluid("width", 730)
-        @include fluid("height", 750)
+        width: 730px
+        height: 750px
         &::-webkit-scrollbar
-            @include fluid("width", 3)
+            width: 3px
 
         &::-webkit-scrollbar-track
             background: rgba(253,255,252,0.2)
-            @include fluid("border-radius", 2)
+            border-radius: 2px
 
         &::-webkit-scrollbar-thumb
             background: #C6D1DA
-            @include fluid("border-radius", 6)
+            border-radius: 6px

@@ -13,9 +13,9 @@
     align-items: center
     justify-content: center
     color: white
-    @include fluid("padding-left", 112)
-    @include fluid("padding-right", 112)
-    @include fluid("font-size", 16)
+    padding-left: 112px
+    padding-right: 112px
+    font-size: 16px
     ::-webkit-scrollbar 
         width: 0
         opacity: 0
@@ -32,7 +32,7 @@
         flex-direction: column
         .newpetshop__button_control
             font-weight: bold
-            @include fluid("font-size",26)
+            font-size: 26px
             background: rgba(253,255,252,0.1)
             transition: all 0.5s linear
 
@@ -40,17 +40,17 @@
                 transition: all 0.5s linear
                 background: rgba(253,255,252,1)
             &:last-child
-                @include fluid("margin-top",30)
+                margin-top: 30px
     .newpetshop__button_control
         display: flex
         align-items: center
         justify-content: center
-        @include fluid("height", 40)
-        @include fluid("min-width", 40)
-        @include fluid("border-radius", 6)
-        @include fluid("font-size",18)
-        @include fluid("padding-left",7)
-        @include fluid("padding-right",7)
+        height: 40px
+        min-width: 40px
+        border-radius: 6px
+        font-size: 18px
+        padding-left: 7px
+        padding-right: 7px
         font-family: "TTNorms-Bold"
         background: #FDFFFC
         color: black
@@ -60,8 +60,8 @@
         flex-direction: column
         height: 100%
         position: relative
-        @include fluid("margin-right",100)
-        @include fluid("margin-left",100)
+        margin-right: 100px
+        margin-left: 100px
         z-index: 2
         
         .newpetshop__animals_height
@@ -69,15 +69,15 @@
             flex-direction: column
             align-items: center
             overflow-x: scroll
-            @include fluid("padding-left", 4)
-            @include fluid("padding-right", 4)
+            padding-left: 4px
+            padding-right: 4px
             .newpetshop__animal
                 transform: skew(-2deg, -2deg)
-                @include fluid("min-height", 258)
-                @include fluid("width", 258)
+                min-height: 258px
+                width: 258px
                 border: 2px solid rgba(255,255,255,0.1)
-                @include fluid("border-radius", 15)
-                @include fluid("margin-top",50)
+                border-radius: 15px
+                margin-top: 50px
                 display: flex
                 align-items: center
                 justify-content: center
@@ -89,12 +89,12 @@
 
                 .newpetshop__animal_img
                     pointer-events: none
-                    @include fluid("height", 258)
-                    @include fluid("width", 258)
+                    height: 258px
+                    width: 258px
                     background-size: contain
                     background-repeat: no-repeat
                     background-position: center
-                    @include fluid("border-radius", 15)
+                    border-radius: 15px
 
     .newpetshop__main
         display: flex
@@ -104,27 +104,27 @@
             display: flex
             align-items: flex-start
             flex-direction: column
-            @include fluid("width", 463)
+            width: 463px
             .newpetshop__title
                 font-weight: bold
-                @include fluid("font-size", 24)
+                font-size: 24px
                 font-family: "TTNorms-Bold"
-                @include fluid("margin-bottom", 24)
+                margin-bottom: 24px
             .newpetshop__subtitle
                 font-weight: bold
-                @include fluid("font-size", 24)
+                font-size: 24px
                 font-family: "TTNorms-Bold"
-                @include fluid("margin-bottom", 24)
+                margin-bottom: 24px
                 color: #2BB6A8
             .newpetshop__feature
                 display: flex
                 align-items: center
-                @include fluid("margin-bottom", 10)
+                margin-bottom: 10px
                 .newpetshop__circle
                     background: rgba(43,182,168,0.2)
-                    @include fluid("height", 22)
-                    @include fluid("min-width", 22)
-                    @include fluid("margin-right", 12)
+                    height: 22px
+                    min-width: 22px
+                    margin-right: 12px
                     border-radius: 100%
                     display: flex
                     align-items: center
@@ -133,12 +133,12 @@
                         opacity: 0
                     .newpetshop__circle_circle
                         background: #2BB6A8
-                        @include fluid("height", 12)
-                        @include fluid("width", 12)
+                        height: 12px
+                        width: 12px
                         border-radius: 100%
         .newpetshop__info
-            @include fluid("width", 478)
-            @include fluid("height", 389)
+            width: 478px
+            height: 389px
             position: relative
             display: flex
             flex-direction: column
@@ -150,8 +150,8 @@
                 top: 50%
                 transform: translate(-50%, -50%)
                 opacity: 0.06
-                @include fluid("width", 478)
-                @include fluid("height", 389)
+                width: 478px
+                height: 389px
                 background-size: contain
                 background-repeat: no-repeat
                 background-position: center
@@ -160,29 +160,29 @@
                 display: flex
                 align-items: center
                 font-family: "TTNorms-Bold"
-                @include fluid("font-size", 46)
-                @include fluid("line-height", 57)
-                @include fluid("margin-bottom", 27)
+                font-size: 46px
+                line-height: 57px
+                margin-bottom: 27px
                 .newpetshop__icon
                     background-image: url('images/dog.svg')
-                    @include fluid("width", 50)
-                    @include fluid("height", 50)
-                    @include fluid("margin-right", 24)
+                    width: 50px
+                    height: 50px
+                    margin-right: 24px
                     background-size: contain
                     background-repeat: no-repeat
                     background-position: center
     .newpetshop__buttons
-        @include fluid("right", 50)
+        right: 50px
         height: 100%
         display: flex
         align-items: flex-end
         flex-direction: column
         justify-content: space-between
-        @include fluid("padding-top", 38)
-        @include fluid("padding-bottom", 38)
+        padding-top: 38px
+        padding-bottom: 38px
         position: absolute
         width: fit-content
         .box-flex
             align-items: center
         .newpetshop__button_control
-            @include fluid("margin-left", 26)
+            margin-left: 26px

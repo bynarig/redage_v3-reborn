@@ -1,12 +1,12 @@
 @import @/views/assets/css/main.sass
 
 .main__input
-    @include fluid("width", 350)
-    @include fluid("height", 70)
+    width: 350px
+    height: 70px
     width: 100%
-    @include fluid("margin-bottom", 15)
-    @include fluid("border-radius", 5)
-    @include fluid("padding", 23)
+    margin-bottom: 15px
+    border-radius: 5px
+    padding: 23px
     @include fluid("border", 2, "solid rgba(253,255,252,0.5)")
     display: flex
     align-items: center
@@ -16,12 +16,12 @@
     &.main__input_error
         @include fluid("border", 2, "solid #BE2020")
     .main__input_icon
-        @include fluid("margin-right", 23)
-        @include fluid("font-size", 18)
+        margin-right: 23px
+        font-size: 18px
     .main__input_text
         background-color: rgba(32,32,32,0.0)
         font-family: inherit
-        @include fluid("font-size", 18)
+        font-size: 18px
         color: white
         caret-color: #808080
         width: 100%
@@ -32,5 +32,5 @@
         box-sizing: border-box
         @include fluid("border", 2, "solid rgb(27, 43, 56)" ) 
     &.settings
-        @include fluid("width", 240)
-        @include fluid("height", 62)
+        width: 240px
+        height: 62px

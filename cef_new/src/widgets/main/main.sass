@@ -24,9 +24,9 @@
         background-position: center
         background-size: cover
         background-repeat: no-repeat
-        @include fluid("width", 452)
-        @include fluid("height", 452)
-        @include fluid("padding-top", 55)
+        width: 452px
+        height: 452px
+        padding-top: 55px
         display: flex
         flex-direction: column
         align-items: center
@@ -38,18 +38,18 @@
         top: 50%
         transform: translate(-50%, -50%)
         z-index: -1
-        @include fluid("font-size", 452)
+        font-size: 452px
         opacity: 0.1
     .mainpopup__smallback
-        @include fluid("font-size", 120)
-        @include fluid("margin-bottom", 45)
+        font-size: 120px
+        margin-bottom: 45px
         
     .popup__title
-        @include fluid("font-size", 44)
-        @include fluid("line-height", 30)
+        font-size: 44px
+        line-height: 30px
         letter-spacing: 1px
         text-transform: uppercase
-        @include fluid("margin-bottom", 36)
+        margin-bottom: 36px
         font-family: "TTNorms-Bold"
         font-weight: bold
         color: #FF9F1C
@@ -61,22 +61,22 @@
         &.restart
             color: #2F80ED
     .popup__subtitle
-        @include fluid("font-size", 18)
-        @include fluid("line-height", 25)
-        @include fluid("width", 380)
+        font-size: 18px
+        line-height: 25px
+        width: 380px
         font-weight: 500
-        @include fluid("margin-bottom", 30)
+        margin-bottom: 30px
         text-align: center
     .popup__input
-        @include fluid("width", 380)
-        @include fluid("height", 41)
+        width: 380px
+        height: 41px
         background: rgba(253, 255, 252, 0.05)
         text-align: center
         font-family: inherit
-        @include fluid("font-size", 14)
-        @include fluid("line-height", 21)
+        font-size: 14px
+        line-height: 21px
         border: 1px solid rgba(253, 255, 252, 0.05)
-        @include fluid("margin-bottom", 10)
+        margin-bottom: 10px
         color: #DFDFDF
         display: flex
         align-items: center
@@ -87,26 +87,26 @@
     .box-between
         display: flex
         justify-content: space-between
-        @include fluid("width", 380)
+        width: 380px
     .popup__button
         background: rgba(253, 255, 252, 0.1)
         border: 1px solid rgba(253, 255, 252, 0.7)
         box-sizing: border-box
         border-radius: 4px
-        @include fluid("width", 142)
-        @include fluid("height", 40)
+        width: 142px
+        height: 40px
         color: white
         display: flex
         align-items: center
         justify-content: center
         font-weight: 500
-        @include fluid("font-size", 16)
-        @include fluid("line-height", 19)
+        font-size: 16px
+        line-height: 19px
         z-index: 10000000000000 
         &.orange
             background: #FF9F1C
         &.big
-            @include fluid("width", 221)
+            width: 221px
         &:hover
             opacity: 0.9
         &.red

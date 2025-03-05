@@ -6,54 +6,54 @@
 	color: #FFFFFF 
 	width: 100%
 	background: rgba(255, 255, 255, 0.12)
-	@include fluid("border-radius", 6) 
-	@include fluid("margin-top", 25) 
+	border-radius: 6px
+	margin-top: 25px
 	.panel-row 
 		position: relative 
-		@include fluid("margin-left", 18) 
-		@include fluid("margin-right", 23) 
+		margin-left: 18px
+		margin-right: 23px
 		&:first-child 
-			@include fluid("margin-top", 10) 
-			@include fluid("margin-bottom", 6) 
+			margin-top: 10px
+			margin-bottom: 6px
 		&:after 
 			content: "" 
 			display: table 
 			clear: both 
 	&.big 
 		.panel-row 
-			@include fluid("margin-right", 18) 
+			margin-right: 18px
 	.panel-header 
 		background: rgba(255, 255, 255, 0.12)
 		border-radius: 6px 6px 0px 0px 
 		display: flex 
 		align-items: center 
 		justify-content: center 
-		@include fluid("margin-bottom", 12) 
-		@include fluid("height", 47) 
+		margin-bottom: 12px
+		height: 47px
 		color: white 
 	.swatch 
 		display: inline-block 
-		@include fluid("width", 28) 
-		@include fluid("height", 28) 
+		width: 28px
+		height: 28px
 		background: #ccc 
 		@include fluid("border", 1, "solid rgba(255, 255, 255, 0.2)")
 		box-sizing: border-box 
 		@include fluid("border-radius", 4, " undefined")
 		cursor: pointer 
 	.default-swatches 
-		@include fluid("width", 193) 
-		@include fluid("height", 61) 
+		width: 193px
+		height: 61px
 		display: grid 
 		grid-template-columns: repeat(6, 1fr) 
 		grid-template-rows: repeat(2, 1fr) 
 		&.big1 
-			@include fluid("width", 348) 
-			@include fluid("height", 560) 
+			width: 348px
+			height: 560px
 			grid-template-columns: repeat(10, 1fr) 
 			grid-template-rows: repeat(16, 1fr) 
 		&.big2 
-			@include fluid("width", 348) 
-			@include fluid("height", 64) 
+			width: 348px
+			height: 64px
 			grid-template-columns: repeat(10, 1fr) 
 			grid-template-rows: repeat(2, 1fr) 
 		.swatch 
@@ -71,8 +71,8 @@
 		&.dragging 
 			transition: none 
 	.color-cursor#spectrum-cursor 
-		@include fluid("width", 30) 
-		@include fluid("height", 30) 
+		width: 30px
+		height: 30px
 		@include fluid("margin-left", -15) 
 		@include fluid("margin-top", -15) 
 		top: 0 
@@ -80,15 +80,15 @@
 	.color-cursor#hue-cursor 
 		top: 0 
 		left: 50% 
-		@include fluid("height", 20) 
-		@include fluid("width", 20) 
+		height: 20px
+		width: 20px
 		@include fluid("margin-top", -10) 
 		@include fluid("margin-left", -10) 
 		pointer-events: none 
 	.spectrum-map 
 		position: relative 
-		@include fluid("width", 258) 
-		@include fluid("height", 193) 
+		width: 258px
+		height: 193px
 		overflow: hidden 
 		@include fluid("border", 1, "solid rgba(23, 25, 33, 0.4)")
 		box-sizing: border-box 
@@ -106,10 +106,10 @@
 		position: absolute 
 		top: 0 
 		bottom: 0 
-		@include fluid("right", 24) 
-		@include fluid("width", 12) 
+		right: 24px
+		width: 12px
 	#hue-canvas 
-		@include fluid("border-radius", 8) 
+		border-radius: 8px
 		position: absolute 
 		top: 0 
 		right: 0 
@@ -121,21 +121,21 @@
 	.color-button 
 		background: #2A3137 
 		border: 0 
-		@include fluid("border-radius", 4) 
+		border-radius: 4px
 		color: #8B949A 
 		font-size: 1rem 
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) 
 		outline: none 
 		cursor: pointer 
-		@include fluid("padding", 4) 
+		padding: 4px
 		&:active 
 			background: #262c31 
 		&.preview 
 			position: absolute 
 			right: 0 
 			top: 0 
-			@include fluid("width", 61) 
-			@include fluid("height", 61) 
+			width: 61px
+			height: 61px
 			display: block 
 			background: #ccc 
 			@include fluid("border", 1, "solid rgba(255, 255, 255, 0.2)")
@@ -143,53 +143,53 @@
 			@include fluid("border-radius", 4, " undefined")
 		&.swatch 
 			display: inline-block 
-			@include fluid("padding", 6) 
-			@include fluid("width", 142) 
+			padding: 6px
+			width: 142px
 			margin: 10px auto 0 
 		&.mode-toggle 
 			position: absolute 
 			top: 0 
 			right: 0 
-			@include fluid("width", 68) 
-			@include fluid("height", 40) 
+			width: 68px
+			height: 40px
 	.value-fields 
 		display: none 
 		align-items: center 
-		@include fluid("margin-bottom", 17) 
+		margin-bottom: 17px
 		&.active 
 			display: flex 
 		.field-label 
-			@include fluid("margin-right", 5) 
+			margin-right: 5px
 			font-style: normal 
 			font-weight: bold 
-			@include fluid("font-size", 18) 
+			font-size: 18px
 		.field-input 
-			@include fluid("width", 37) 
-			@include fluid("height", 35) 
+			width: 37px
+			height: 35px
 			background: rgba(255, 255, 255, 0.12)
 			@include fluid("border", 1, "solid rgba(255, 255, 255, 0.2)") 
 			box-sizing: border-box 
 			@include fluid("border-radius", 6, " undefined")
 			font-style: normal 
 			font-weight: bold 
-			@include fluid("font-size", 14) 
+			font-size: 14px
 			color: white 
 			text-align: center 
 	.rgb-fields 
 		.field-group 
 			display: flex 
 			align-items: center 
-			@include fluid("margin-right", 8) 
+			margin-right: 8px
 	.color-indicator 
 		display: inline-block 
 		vertical-align: middle 
-		@include fluid("margin-right", 10) 
-		@include fluid("width", 20) 
-		@include fluid("height", 20) 
-		@include fluid("border-radius", 4) 
+		margin-right: 10px
+		width: 20px
+		height: 20px
+		border-radius: 4px
 		background: #ccc 
 .mrt-18 
-	@include fluid("margin-top", 18) 
+	margin-top: 18px
 .color-picker-panel input::-webkit-outer-spin-button,
 .color-picker-panel input::-webkit-inner-spin-button 
 	-webkit-appearance: none 
