@@ -61,24 +61,3 @@ export interface CharData {
     Licenses: number[];
     JobsSkills: JobSkill[];
 }
-
-export interface CharState {
-    charData: CharData;
-    charUUID: number;
-    charName: string;
-    charGender: boolean;
-    charMoney: number;
-    charBankMoney: number;
-    charWorkID: number;
-    charIsLeader: boolean;
-    charFractionID: number;
-    charFractionLVL: number;
-    charOrganizationID: number;
-    charEXP: number;
-    charLVL: number;
-    charWanted: number;
-    charIsPet: boolean;
-    charCreateDate: string;
-    isOrgTable: boolean;
-    charSim: number;
-}
