@@ -3,6 +3,7 @@ import ClothesShop from "#/pages/business/clothes";
 import BusinessMenu from "src/pages/business/menu-unneeded";
 import WeaponShop from "#/pages/business/weaponshop";
 import HorseBetting from "#/pages/casino/horse";
+import CasinoJackpot from "#/pages/casino/jacpot";
 // import {useDispatch, useSelector} from 'react-redux';
 // import {RootState} from '#/shared/store'; // Adjust path as needed
 // import {executeClient} from '#/shared/api/rage'
@@ -182,7 +183,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <HorseBetting/>
+            <CasinoJackpot/>
             {/*<div*/}
             {/*    onKeyDown={handleKeydown}*/}
             {/*    onKeyUp={handleKeyup}*/}
