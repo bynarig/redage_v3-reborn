@@ -11,7 +11,10 @@ interface Window {
   router: any;
   playerlist: any;
   authShop: () => void;
-
+    getItem: (itemId: number) => ItemInfo;
 
 }
+interface Document {
+    cloud: string;
 
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import ClothesShop from "#/pages/business/clothes";
+import BusinessMenu from "src/pages/business/menu-unneeded";
+import WeaponShop from "#/pages/business/weaponshop";
 // import {useDispatch, useSelector} from 'react-redux';
 // import {RootState} from '#/shared/store'; // Adjust path as needed
 // import {executeClient} from '#/shared/api/rage'
@@ -179,7 +181,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <ClothesShop/>
+            <WeaponShop/>
             {/*<div*/}
             {/*    onKeyDown={handleKeydown}*/}
             {/*    onKeyUp={handleKeyup}*/}
