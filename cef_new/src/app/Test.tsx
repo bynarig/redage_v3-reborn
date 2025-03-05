@@ -1,7 +1,5 @@
 import React from 'react';
-import Donate from "#/pages/donate/main";
-import DonateMainMenu from "#/pages/donate/main";
-import PopupChange from '#/pages/donate/main/popup/popupchange';
+import LSCustoms from '../pages/business/lscustom/index';
 
 const body = document.querySelector('body');
 // @ts-ignore
@@ -13,7 +11,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <PopupChange />
+            <LSCustoms />
 
         </>
     )

@@ -1,40 +1,63 @@
-<script>
-    import { translateText } from '#/shared/locale'
-    import { executeClient } from 'api/rage'
-    export const id;
-    export const icon;
-    export const text;
-    export const price;
-    export const onSelectItem;
-    export const selectItem;
-    export const lvl = false;
+import React from 'react';
+import { translateText } from '#/shared/locale';
+import { executeClient } from '#/shared/api/rage';
 
-    const onSelect = (index) => {
-        onSelectItem (index);
-        executeClient ('client.custom.item', index);
-    }
+interface ItemProps {
+  id: number;
+  icon: string;
+  text: string;
+  price: number;
+  onSelectItem: (id: number) => void;
+  selectItem: number;
+  lvl?: number | false;
+}
 
-    const onBuy = () => {
-        executeClient ('client.custom.buy')
-    }
-</script>
+const Item: React.FC<ItemProps> = ({ 
+  id, 
+  icon, 
+  text, 
+  price, 
+  onSelectItem, 
+  selectItem,
+  lvl = false 
+}) => {
+  const onSelect = (index: number) => {
+    onSelectItem(index);
+    executeClient('client.custom.item', index);
+  };
 
-<li class={"listitems " + (selectItem !== id || "active")} id={id} on:click={onBuy} on:mouseenter={e => onSelect (id)}>
-    <i class={'icon ilsc-' + icon}></i>
-    <div class="flex un">
-        {#if lvl}
-        <div class="title headersm">
+  const onBuy = () => {
+    executeClient('client.custom.buy');
+  };
+
+  return (
+    <li 
+      className={`listitems ${selectItem === id ? 'active' : ''}`} 
+      id={String(id)} 
+      onClick={onBuy} 
+      onMouseEnter={() => onSelect(id)}
+    >
+      <i className={`icon ilsc-${icon}`}></i>
+      <div className="flex un">
+        {lvl !== false && (
+          <div className="title headersm">
             <span>{translateText('vehicle', 'Уровень')}</span>
-            <ul class="lvl">
-                {#each new Array(4).fill(0) as _, index}
-                    <li class="star" class:active={index >= lvl}></li>
-                {/each}
+            <ul className="lvl">
+              {Array(4).fill(0).map((_, index) => (
+                <li 
+                  key={index} 
+                  className={`star ${index < Number(lvl) ? 'active' : ''}`}
+                ></li>
+              ))}
             </ul>
-            
-        </div>
-        {/if}
-    
-        <div class="desc">{@html text}</div>
-        <div class="price">{price} <span>$</span></div>                        
-    </div>                        
-</li>
+          </div>
+        )}
+      
+        <div className="desc" dangerouslySetInnerHTML={{ __html: text }}></div>
+        <div className="price">{price} <span>$</span></div>                        
+      </div>                        
+    </li>
+  );
+};
+
+export default Item;

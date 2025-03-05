@@ -1,110 +1,164 @@
-<script>
-    import { translateText } from '#/shared/locale'
-    import './assets/css/iconsarenda.css'
-    import './assets/css/main.sass'
-	import { fade } from 'svelte/transition';
-    import { accountVip } from 'store/account'
-    import { charMoney, charLVL } from 'store/chars'
-    import rangeslider from 'components/rangeslider/index'
-    import { format } from 'api/formatter'
-    import { executeClient } from 'api/rage'
-    export const viewData;
+import React, { useEffect, useState } from 'react';
+import { translateText } from '#/shared/locale';
+import { useSelector } from 'react-redux';
+import { RootState } from '#/shared/store';
+import { format } from '#/shared/api/formatter';
+import { executeClient } from '#/shared/api/rage';
+import { motion, AnimatePresence } from 'framer-motion';
+import { selectCharMoney, selectCharVip, selectCharLVL } from '#/shared/store/chars';
+import { ENVIRONMENT } from '#/env';
+import { mockAirVehicles } from '#/shared/data/mock/shops/air';
 
-    if (!viewData) viewData = '[]';
 
-    let HourValue = 0;
+interface VehicleItem {
+  Model: string;
+  Number: string;
+  Price: number;
+  IsSpawn: boolean;
+}
 
-    const VehicleArray = JSON.parse (viewData);
-
-    let SelectVehicle = -1;
-
-    const onAction = (number, func) => {
-        executeClient ("client.vehicle.action", number, func);
-        onExit ();
-    }
-
-    const onExit = () => {        
-        executeClient ('client.vehicleair.exit');
-    }
+interface AirPageProps {
+  viewData?: string;
+}
 
 
 
-    const handleKeyDown = (event) => {
-        const { keyCode } = event;
-        if (keyCode !== 27) return;
+const AirPage: React.FC<AirPageProps> = ({ viewData = '[]' }) => {
+  const [hourValue, setHourValue] = useState<number>(0);
+  const [selectVehicle, setSelectVehicle] = useState<number>(-1);
+  
+  // Use mock data in development, real data in production
+  const useDevMockData = ENVIRONMENT === 'development';
+  const vehicleArray: VehicleItem[] = useDevMockData ? mockAirVehicles : JSON.parse(viewData);
+  
+  const charMoney = useSelector(selectCharMoney);
+  const charVip = useSelector(selectCharVip);
+  const charLVL = useSelector(selectCharLVL);
 
-        if (SelectVehicle !== -1) SelectVehicle = -1;
-        else onExit ();
-    }
+  const onAction = (number: string, func: string) => {
+    executeClient("client.vehicle.action", number, func);
+    onExit();
+  };
 
-</script>
+  const onExit = () => {
+    executeClient('client.vehicleair.exit');
+  };
 
-<svelte:window on:keyup={handleKeyDown}/>
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const { keyCode } = event;
+      if (keyCode !== 27) return;
 
-<div id="air-page">
-    <div class="arenda" class:nonactive={SelectVehicle !== -1}>
-        <div class="arenda-header">
-            <div class="arenda-header__text">
-                <div class="arenda-header__title">{translateText('vehicle', 'Покупка воздушного транспорта')}</div>
-                <div class="arenda-header__main-text">{translateText('vehicle', 'Приехали за своим личным воздушным транспортным средством? Как ни странно - вы по адресу! Если Вы владеете личным вертолетом или самолетом - вы можете заспавнить его тут.')}</div>
-            </div>
-            <span class="arendaicon-off"  on:click={onExit} />
+      if (selectVehicle !== -1) setSelectVehicle(-1);
+      else onExit();
+    };
+
+    window.addEventListener('keyup', handleKeyDown);
+    return () => window.removeEventListener('keyup', handleKeyDown);
+  }, [selectVehicle]);
+
+  // The rest of your component remains the same...
+  return (
+    <div className="w-full h-full bg-base-100 bg-opacity-80" id="air-page">
+      <div className={`p-4 ${selectVehicle !== -1 ? 'opacity-50 pointer-events-none' : ''}`}>
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h2 className="text-2xl font-bold text-primary">
+              {translateText('vehicle', 'Покупка воздушного транспорта')}
+            </h2>
+            <p className="text-sm text-base-content">
+              {translateText('vehicle', 'Приехали за своим личным воздушным транспортным средством? Как ни странно - вы по адресу! Если Вы владеете личным вертолетом или самолетом - вы можете заспавнить его тут.')}
+            </p>
+          </div>
+          <button 
+            onClick={onExit}
+            className="btn btn-circle btn-ghost text-xl"
+          >
+            ×
+          </button>
         </div>
-        <div class="arenda-main">
-            {#each VehicleArray as item, index}
-            <div class="arenda-main__element">
-                <div class="arenda-main__title">{item.Model}</div>
-                <div class="arenda-main__price">{item.IsSpawn ? "Вызван" : ""}</div>
-                <div class="arenda-main__img" style="background-image: url({document.cloud}inventoryItems/vehicle/{item.Model.toLowerCase()}.png)" />
-                <div class="arenda-main__button" on:click={() => SelectVehicle = index}>
-                    {translateText('vehicle', 'Действие')}
-                </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {vehicleArray.map((item, index) => (
+            <div key={index} className="card bg-base-200 shadow-lg">
+              <div className="card-body">
+                <h3 className="card-title">{item.Model}</h3>
+                {item.IsSpawn && <div className="badge badge-primary">Вызван</div>}
+                <div 
+                  className="h-40 bg-center bg-no-repeat bg-contain my-2" 
+                  style={{backgroundImage: `url(${document.cloud}inventoryItems/vehicle/${item.Model.toLowerCase()}.png)`}}
+                />
+                <button 
+                  className="btn btn-primary w-full" 
+                  onClick={() => setSelectVehicle(index)}
+                >
+                  {translateText('vehicle', 'Действие')}
+                </button>
+              </div>
             </div>
-            {/each}
+          ))}
         </div>
-    </div>
-    {#if SelectVehicle !== -1}
-    <div class="props-arenda">
-        <div class="arenda-customize" transition:fade={{duration: 200}}>
-            <div class="arenda-customize__title">{translateText('vehicle', 'Действие')}</div>
-            <div class="arenda-customize__subtitle">{VehicleArray [SelectVehicle].Model}</div>
-            <div class="arenda-customize__img" style="background-image: url({document.cloud}inventoryItems/vehicle/{VehicleArray [SelectVehicle].Model.toLowerCase()}.png)" />
-            {#if !VehicleArray [SelectVehicle].IsSpawn}
-                <div class="arenda-customize__button" on:click={() => onAction (VehicleArray [SelectVehicle].Number, "spawn")}>
+      </div>
+
+      {/* The modal part remains unchanged */}
+      <AnimatePresence>
+        {selectVehicle !== -1 && (
+          <motion.div 
+            className="fixed inset-0 flex items-center justify-center z-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">{translateText('vehicle', 'Действие')}</h2>
+                <p>{vehicleArray[selectVehicle].Model}</p>
+                
+                <div 
+                  className="h-40 bg-center bg-no-repeat bg-contain my-4" 
+                  style={{backgroundImage: `url(${document.cloud}inventoryItems/vehicle/${vehicleArray[selectVehicle].Model.toLowerCase()}.png)`}}
+                />
+                
+                {!vehicleArray[selectVehicle].IsSpawn ? (
+                  <button 
+                    className="btn btn-primary w-full mb-2"
+                    onClick={() => onAction(vehicleArray[selectVehicle].Number, "spawn")}
+                  >
                     {translateText('vehicle', 'Вызвать')}
-                </div>
-            {:else}
-                <div class="arenda-customize__button"
-                     on:click={() => onAction (VehicleArray [SelectVehicle].Number, "tune")}>
+                  </button>
+                ) : (
+                  <button 
+                    className="btn btn-primary w-full mb-2"
+                    onClick={() => onAction(vehicleArray[selectVehicle].Number, "tune")}
+                  >
                     {translateText('vehicle', 'Тюнинговать')}
-                </div>
-                <!--<div class="arenda-customize__button"
-                     on:click={() => onAction (VehicleArray [SelectVehicle].Number, "repair")}>
-                    Восстановить (10$)
-                </div>
-                <div class="arenda-customize__button"
-                     on:click={() => onAction (VehicleArray [SelectVehicle].Number, "key")}>
-                    Получить дубликат ключа
-                </div>
-                <div class="arenda-customize__button"
-                     on:click={() => onAction (VehicleArray [SelectVehicle].Number, "changekey")}>
-                    Сменить замки (100$)
-                </div>
-                <div class="arenda-customize__button"
-                     on:click={() => onAction (VehicleArray [SelectVehicle].Number, "evac")}>
-                    Эвакуировать машину (25$)
-                </div>
-                <div class="arenda-customize__button"
-                     on:click={() => onAction (VehicleArray [SelectVehicle].Number, "gps")}>
-                    Отметить в GPS
-                </div>-->
-            {/if}
-            <div class="arenda-customize__button" on:click={() => onAction (VehicleArray [SelectVehicle].Number, "sell")}>
-                {translateText('vehicle', 'Продать')}
-                <div class="arenda-customize__money">${format("money", VehicleArray [SelectVehicle].Price)}</div>
+                  </button>
+                )}
+                
+                <button 
+                  className="btn btn-secondary w-full mb-2"
+                  onClick={() => onAction(vehicleArray[selectVehicle].Number, "sell")}
+                >
+                  <div className="flex flex-col items-center">
+                    <span>{translateText('vehicle', 'Продать')}</span>
+                    <span className="text-xs">${format("money", vehicleArray[selectVehicle].Price)}</span>
+                  </div>
+                </button>
+                
+                <button 
+                  className="btn btn-ghost w-full"
+                  onClick={() => setSelectVehicle(-1)}
+                >
+                  Закрыть
+                </button>
+              </div>
             </div>
-            <div class="arenda-customize__exit" on:click={() => SelectVehicle = -1}>Закрыть</div>
-        </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
-    {/if}
-</div>
+  );
+};
+
+export default AirPage;

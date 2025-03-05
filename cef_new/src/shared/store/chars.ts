@@ -113,6 +113,7 @@ export const selectCharFractionID = (state: RootState) => state.char.charData.Fr
 export const selectCharFractionLVL = (state: RootState) => state.char.charData.FractionLVL;
 export const selectCharEXP = (state: RootState) => state.char.charData.EXP;
 export const selectCharLVL = (state: RootState) => state.char.charData.LVL;
+export const selectCharVip = (state: RootState) => state.char.charData.Vip;
 export const selectCharWanted = (state: RootState) => state.char.charData.Status;
 export const selectCharSim = (state: RootState) => state.char.charData.Sim;
 export const selectCharCreateDate = (state: RootState) => state.char.charData.CreateDate;

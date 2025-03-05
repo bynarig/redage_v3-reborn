@@ -10,4 +10,13 @@ export default defineConfig({
     outDir: path.resolve(__dirname, '../client_packages/interface'), // Output directory
     // emptyOutDir: true, // Optional: Clears the output directory before building
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+        @import #/store/assets/css/main.sass
+        `
+      }
+    }
+  }
 });
