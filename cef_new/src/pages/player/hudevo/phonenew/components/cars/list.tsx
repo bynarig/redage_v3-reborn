@@ -3,7 +3,7 @@
     import { TimeFormat } from 'api/moment'
     import {currentPage} from '../../stores'
 
-    import { executeClient, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClient, executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import {hasJsonStructure} from "api/functions";
     export const OnUpdatePage;
     let carsList = [{

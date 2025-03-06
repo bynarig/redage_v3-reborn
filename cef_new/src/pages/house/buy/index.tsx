@@ -1,5 +1,5 @@
 <script>
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
 
     import HouseBuyPanel from './elements/housebuypanel.svelte';
     import HousePopup from './elements/popup.svelte';

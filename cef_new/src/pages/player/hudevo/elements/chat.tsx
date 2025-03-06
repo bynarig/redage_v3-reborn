@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import moment from 'moment';
-    import { executeClient, invokeMethod } from 'api/rage'
+    import { executeClient, invokeMethod } from '#/shared/api/rage'
     import Commands from 'json/commands.js'
     import { format } from 'api/formatter'
     import CustomKey from './Key.svelte'

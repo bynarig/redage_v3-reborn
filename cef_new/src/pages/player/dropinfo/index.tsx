@@ -9,7 +9,7 @@
 
     let isUpdateType = viewData;
 
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
 
     const HandleKeyUp = (event) => {
         const { keyCode } = event;

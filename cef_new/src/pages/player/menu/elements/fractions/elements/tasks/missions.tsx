@@ -1,5 +1,5 @@
 <script>
-    import { executeClient, executeClientToGroup } from 'api/rage'
+    import { executeClient, executeClientToGroup } from '#/shared/api/rage'
     import { format } from "api/formatter";
     executeClientToGroup('missionsLoad')
 

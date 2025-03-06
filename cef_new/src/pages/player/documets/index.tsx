@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { onMount } from 'svelte'
     import { onDestroy } from 'svelte'
     import './css/main.sass';

@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { setGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { setGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { charName, FractionLVL } from 'store/chars';
     import { TimeFormat, GetTime } from 'api/moment'
     import { serverDateTime } from 'store/server'

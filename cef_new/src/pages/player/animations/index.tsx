@@ -6,7 +6,7 @@
     import AnimElement from './element.svelte'
     import { storeAnimFavorites, storeAnimBind } from 'store/animation'
     import { spring } from 'svelte/motion';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
     export const viewData;
     import keys from 'store/keys'

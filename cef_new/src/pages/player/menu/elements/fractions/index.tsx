@@ -1,5 +1,5 @@
 <script>
-    import { setGroup, executeClient, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { setGroup, executeClient, executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     export const selectView;
 

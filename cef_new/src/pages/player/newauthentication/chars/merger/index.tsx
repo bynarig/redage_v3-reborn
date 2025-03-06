@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import './main.sass'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     
     export const isMerger;
     export const SetMerger;

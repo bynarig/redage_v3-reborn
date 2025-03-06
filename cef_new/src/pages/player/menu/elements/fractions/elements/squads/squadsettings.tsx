@@ -13,7 +13,7 @@
     export const onlineData;
 
 
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
 
 
     import { setPopup } from "../../data";

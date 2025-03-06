@@ -6,7 +6,7 @@
     import { getQuest } from 'json/quests/quests.js';
     import { format } from 'api/formatter'
     import { storeQuests, selectQuest } from 'store/quest'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const visible;
 
     let QuestsList = [];

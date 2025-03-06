@@ -32,7 +32,7 @@
 
     import Item from './item.svelte'
 
-    import { executeClient, executeClientAsync, executeClientToGroup } from 'api/rage'
+    import { executeClient, executeClientAsync, executeClientToGroup } from '#/shared/api/rage'
 
 
     let streetName = "";

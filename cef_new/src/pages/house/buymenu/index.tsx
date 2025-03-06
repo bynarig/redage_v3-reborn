@@ -1,5 +1,5 @@
 <script>
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import './main.sass'
     import './fonts/style.css'
     import { format } from 'api/formatter'

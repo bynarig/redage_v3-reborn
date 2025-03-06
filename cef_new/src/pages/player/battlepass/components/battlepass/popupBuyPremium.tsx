@@ -3,7 +3,7 @@
     import { isPopupBuyOpened } from '../../stores.js'
     import { format } from 'api/formatter'
     import { accountRedbucks } from 'store/account'
-    import { executeClientToGroup, executeClientAsyncToGroup} from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup} from '#/shared/api/rage'
 
     const pricePremium = 19999;
 

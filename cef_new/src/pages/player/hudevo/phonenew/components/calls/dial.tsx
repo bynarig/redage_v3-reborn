@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
     import { validate } from 'api/validation';
 
     export const updateView;

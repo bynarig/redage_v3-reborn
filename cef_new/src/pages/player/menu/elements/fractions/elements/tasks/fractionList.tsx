@@ -1,6 +1,6 @@
 <script>
     export const onSetLoad;
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
     executeClientToGroup('tasksLoad')
 
     import Tasks from './tasks.svelte'

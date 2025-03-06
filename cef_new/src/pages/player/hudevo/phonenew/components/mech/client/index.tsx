@@ -8,7 +8,7 @@
     export const closeMenu;
 
 
-    import { executeClientAsync, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientAsync, executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
 
     let streetName = "";

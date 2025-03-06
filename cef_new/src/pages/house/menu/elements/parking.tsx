@@ -2,7 +2,7 @@
     import { vehicleModelsToMoto, colorData } from '#/json/vehicles'
 
 
-    import {executeClient, executeClientAsync, executeClientAsyncToGroup} from 'api/rage'
+    import {executeClient, executeClientAsync, executeClientAsyncToGroup} from '#/shared/api/rage'
 	import { selectPopup, popudData } from '#/store/house/menu/stores.js';
 
     let houseData = {}

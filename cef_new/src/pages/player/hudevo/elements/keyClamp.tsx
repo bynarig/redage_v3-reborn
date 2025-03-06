@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import ProgressBar from 'progressbar.js';
     import { fade } from 'svelte/transition';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import keysName from 'json/keys.js'
     
     let toggled = false;

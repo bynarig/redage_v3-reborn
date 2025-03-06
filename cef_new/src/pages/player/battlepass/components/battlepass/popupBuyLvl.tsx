@@ -3,7 +3,7 @@
     import { isPopupLvlOpened } from '../../stores.js'
     import { format } from 'api/formatter'
     import { accountRedbucks } from 'store/account'
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
 
     const prices = [
         {

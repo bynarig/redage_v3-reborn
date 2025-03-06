@@ -4,7 +4,7 @@
     import { setPopup } from "../../data";
     import { charUUID } from 'store/chars';
 
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
     executeClientToGroup('membersLoad')
 
     let members = [];

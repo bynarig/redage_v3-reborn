@@ -6,7 +6,7 @@
     import SquadInfo from './squadinfo.svelte'
 
 
-    import { setGroup, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { setGroup, executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     executeClientToGroup('departmentsLoad')
 
     let isLoad = false;

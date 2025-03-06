@@ -1,5 +1,5 @@
 <script>
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { charIsPet } from 'store/chars'
     import keysName from 'json/keys.js'
     import keys from 'store/keys'

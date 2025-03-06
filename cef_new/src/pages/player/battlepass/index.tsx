@@ -11,7 +11,7 @@
     import './main.sass' 
     import './assets/fonts/style.css' 
 
-    import { setGroup, executeClientToGroup } from 'api/rage'
+    import { setGroup, executeClientToGroup } from '#/shared/api/rage'
 
 
     setGroup (".battlepass.");

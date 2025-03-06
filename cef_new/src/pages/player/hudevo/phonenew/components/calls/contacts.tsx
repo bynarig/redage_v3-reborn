@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { charSim } from 'store/chars';
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { selectNumber } from './../../stores'
 
     export const updateView;

@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClientAsyncToGroup, executeClientToGroup } from 'api/rage'
+    import { executeClientAsyncToGroup, executeClientToGroup } from '#/shared/api/rage'
     import {format} from "api/formatter";
 
     export const selectedAddId;

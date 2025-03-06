@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     export const visible;
     import { charGender, charMoney } from 'store/chars'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { ItemType, ItemId, itemsInfo } from 'json/itemsInfo.js'
     import { clothesData, ItemToWeaponHash, WeaponHashToItem, stageItem, clearSlot, defaulSelectItem, defaulHoverItem, maxSlots, otherName, otherType, clothes, clothesId, clothesName, itemIdCaseToId } from './functions.js';
     import { format } from 'api/formatter'

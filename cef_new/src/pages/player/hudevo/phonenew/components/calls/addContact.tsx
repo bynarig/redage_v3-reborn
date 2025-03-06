@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { validate } from 'api/validation';
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
     import { selectNumber } from './../../stores'
 
     export const updateView;

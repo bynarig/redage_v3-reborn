@@ -3,7 +3,7 @@
     export const SetPopup;
     export const popupData;
     import { format } from 'api/formatter'
-    import {executeClient, executeClientAsync} from 'api/rage'
+    import {executeClient, executeClientAsync} from '#/shared/api/rage'
 
     let caseData = {};
     let isLoad = false;

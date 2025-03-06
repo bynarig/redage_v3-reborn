@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import { format } from "api/formatter";
 
-    import { executeClientAsync} from 'api/rage'
+    import { executeClientAsync} from '#/shared/api/rage'
 
     let selectTaxi = {}
 

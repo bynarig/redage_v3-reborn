@@ -4,7 +4,7 @@
     import { setTime, elapsedUp } from 'api/moment'
     import Header from '../header.svelte'
     import HomeButton from '../homebutton.svelte'
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { pageBack } from './../../stores'
 
     let getComingPhone = false;

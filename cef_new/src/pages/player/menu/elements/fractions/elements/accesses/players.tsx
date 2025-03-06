@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClientToGroup } from 'api/rage'
+    import { executeClientToGroup } from '#/shared/api/rage'
     import Access from '../access/index.svelte'
     import { charUUID } from 'store/chars';
 

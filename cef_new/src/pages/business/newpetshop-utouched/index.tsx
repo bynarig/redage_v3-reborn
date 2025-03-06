@@ -7,7 +7,7 @@
     if (hasJsonStructure (viewData))
         viewData = JSON.parse(viewData);
 
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import './main.sass'   
     const Pets = [
         {

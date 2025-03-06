@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import moment from 'moment';
-    import {executeClientAsyncToGroup, executeClientToGroup} from 'api/rage'
+    import {executeClientAsyncToGroup, executeClientToGroup} from '#/shared/api/rage'
     import { addListernEvent } from 'api/functions'
 
     executeClientToGroup ("isList", true);

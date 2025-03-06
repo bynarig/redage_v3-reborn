@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     export const popupData;
     import { onDestroy } from 'svelte';
-    import {executeClient, executeClientAsync} from 'api/rage'
+    import {executeClient, executeClientAsync} from '#/shared/api/rage'
     import './main.sass';
 
     let caseData = {}

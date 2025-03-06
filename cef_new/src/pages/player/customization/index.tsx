@@ -3,7 +3,7 @@
     import { gender, updateGender, updateIndex, initCustom } from 'store/customization';
     import Create from '#/store/player/newauthentication/chars/create/index.svelte';
     import CreateNewCustomization from 'store/random/index.js'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
 
     updateIndex (0);
     CreateNewCustomization (false);

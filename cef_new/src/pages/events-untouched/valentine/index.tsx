@@ -3,7 +3,7 @@
     import './main.sass';
     import './fonts/style.css';
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const viewData;
 
     import LoveNote from './loveNote.svelte'

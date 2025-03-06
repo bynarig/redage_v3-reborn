@@ -65,7 +65,7 @@
     }
 
     import { format } from 'api/formatter'
-    import { setGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { setGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     setGroup (".businessmanage.");
 

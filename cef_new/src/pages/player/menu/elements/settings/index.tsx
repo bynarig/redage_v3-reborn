@@ -3,7 +3,7 @@
     import { accountData, accountIsSession } from 'store/account'
     import './main.sass';
     import { storeSettings } from 'store/settings'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import InputBlock from './input_item.svelte';
     import ListButton from './listbutton.svelte';
     import InputCustom from 'components/input/index.svelte'

@@ -3,7 +3,7 @@
     import './assets/css/main.sass'
 
 	import { fade } from 'svelte/transition';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { format } from 'api/formatter'
     
     import ore_coal from './assets/images/ore_coal.png'

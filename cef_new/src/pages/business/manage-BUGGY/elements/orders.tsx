@@ -1,7 +1,7 @@
 <script>
 
     import { format } from 'api/formatter'
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     let orders = []
     executeClientAsyncToGroup("getOrders").then((result) => {

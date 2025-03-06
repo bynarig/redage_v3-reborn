@@ -5,7 +5,7 @@
     import { storeQuests, selectQuest } from 'store/quest'
     import keys from 'store/keys'
     import keysName from 'json/keys.js'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { isHelp } from 'store/hud'
 
     let QuestsList = [];

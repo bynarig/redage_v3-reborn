@@ -6,7 +6,7 @@
 
     import { isPopupBuyOpened } from '../../stores.js'
 
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     export const selectPage = 0;
     export const currentLvl = 0;

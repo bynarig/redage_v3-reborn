@@ -1,5 +1,5 @@
 <script>
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const viewData;
 
     import './assets/css/index.css'

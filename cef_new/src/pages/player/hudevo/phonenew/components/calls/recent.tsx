@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { TimeFormat } from 'api/moment'
     import { currentPage, selectNumber } from './../../stores'
     import { validate } from 'api/validation';

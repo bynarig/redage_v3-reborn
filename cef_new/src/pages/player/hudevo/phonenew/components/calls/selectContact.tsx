@@ -6,7 +6,7 @@
 
     import { validate } from 'api/validation';
     import { selectedImage, selectedImageFunc, selectNumber } from './../../stores'
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { onCall, onMessage } from "#/store/player/hudevo/phonenew/data";
 
     let contactData = {};

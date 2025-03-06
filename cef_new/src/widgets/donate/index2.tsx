@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import axios from 'axios';
     import qs from 'querystring';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { accountLogin } from 'store/account'
     import { serverDonatMultiplier, serverId } from 'store/server'
     import './main.sass'

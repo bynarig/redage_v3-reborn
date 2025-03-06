@@ -1,6 +1,6 @@
 <script>
     import { format } from 'api/formatter'
-    import { setGroup, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { setGroup, executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     setGroup (".businessmanage.");
 

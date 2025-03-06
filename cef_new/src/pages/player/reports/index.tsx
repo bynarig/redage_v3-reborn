@@ -1,5 +1,5 @@
 <script>
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import RALogo from './images/ra-logo.png'
     import './css/main.css'
     import { selected, reportsData, text } from './index'

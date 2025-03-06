@@ -3,7 +3,7 @@
     import { selectChar, selectType, selectIndex, settings } from './../store.js';
     import { updateIndex } from 'store/customization';
     import CharacterMain from './characterMain.svelte'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     
 
     //Авто спавн

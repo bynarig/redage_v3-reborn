@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientAsyncToGroup } from '#/shared/api/rage'
     import { loadImage } from 'api/functions'
     import { TimeFormatStartOf } from 'api/moment'
     import { messageType, formatMessage } from './data.js'

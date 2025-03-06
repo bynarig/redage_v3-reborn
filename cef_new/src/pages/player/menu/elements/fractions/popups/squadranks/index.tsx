@@ -5,7 +5,7 @@
 
     const popupData = getPopupData();
 
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     executeClientToGroup('membersLoad')
 
     let members = [];

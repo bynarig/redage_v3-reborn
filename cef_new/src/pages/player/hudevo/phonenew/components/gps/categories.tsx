@@ -5,7 +5,7 @@
     export const updateHeightMap;
 
 
-    import { executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientAsyncToGroup } from '#/shared/api/rage'
 
     let data = []
 

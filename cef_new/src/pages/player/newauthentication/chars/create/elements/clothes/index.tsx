@@ -2,7 +2,7 @@
     import { gender, customization, updateClothes} from 'store/customization';
     import ClothButton from './clothbutton.svelte';
     import clothes from './clothes.js';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
 
     const componentsData = [
         {key: "head", cam: "hat", title: "Головной убор"},

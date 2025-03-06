@@ -5,7 +5,7 @@
     export const OnUpdatePage;
 
     import { format } from 'api/formatter'
-    import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from 'api/rage'
+    import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from '#/shared/api/rage'
 
     const functionData = [
         {

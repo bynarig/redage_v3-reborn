@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import { onMount } from 'svelte';
 
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { addListernEvent } from 'api/functions'
     import { GetTime } from 'api/moment'
 

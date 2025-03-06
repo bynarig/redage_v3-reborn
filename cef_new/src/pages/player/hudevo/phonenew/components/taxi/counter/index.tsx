@@ -7,7 +7,7 @@
 
     import { format } from "api/formatter";
 
-    import { executeClientAsyncToGroup} from 'api/rage'
+    import { executeClientAsyncToGroup} from '#/shared/api/rage'
 
     let selectTaxi = {}
 

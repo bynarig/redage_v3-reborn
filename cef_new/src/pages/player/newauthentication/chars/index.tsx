@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import {executeClient, executeClientAsync} from 'api/rage'
+    import {executeClient, executeClientAsync} from '#/shared/api/rage'
 	import News from './../news/index.svelte';
 	import Chars from './chars.svelte';
 	import Merger from './merger/index.svelte';

@@ -3,7 +3,7 @@
     import './main.sass';
     import { format } from 'api/formatter'
     import { storeSettings } from 'store/settings'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
 
     let notifications = [];
 

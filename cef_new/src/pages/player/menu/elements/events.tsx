@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import './assets/sass/main.sass'
     import { charGender } from 'store/chars';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { ItemId } from 'json/itemsInfo.js'
     export const visible;
 

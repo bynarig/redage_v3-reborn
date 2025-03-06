@@ -1,7 +1,7 @@
 <script>
     import ProdInfo from './prodInfo.svelte';
 
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     let stocks = []
     executeClientAsyncToGroup("getStocks").then((result) => {

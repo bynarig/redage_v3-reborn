@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import './main.sass'
     import { format } from "api/formatter";
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { executeClientToGroup, executeClientAsyncToGroup } from "api/rage";
 
     executeClientToGroup('getUpgrate')

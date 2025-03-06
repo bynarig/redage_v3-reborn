@@ -2,7 +2,7 @@
     import  './assets/css/iconscircle.css';
     import  './assets/css/circle.sass';
     import { charFractionID, charOrganizationID } from 'store/chars'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const popupData;
     const    
         prefix = "circle-",

@@ -1,7 +1,7 @@
 <script>    
     import { translateText } from '#/shared/locale'
     export const isSendCreator = false;
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { gender, FirstName, LastName } from 'store/customization';
     import { selectIndex } from './../store.js';
     import Appearance from './elements/appearance/index.svelte';

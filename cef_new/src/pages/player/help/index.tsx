@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { slide, fade } from 'svelte/transition';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import './css/main.sass';
     
     import SelectMain from './elements/index.svelte'

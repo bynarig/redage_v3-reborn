@@ -1,5 +1,5 @@
 <script>
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import { onDestroy } from 'svelte'
 
     import './css/main.css'

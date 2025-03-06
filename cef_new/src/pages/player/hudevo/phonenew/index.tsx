@@ -4,7 +4,7 @@
     import { onDestroy } from 'svelte';
 
     import { onMount } from 'svelte';
-    import { setGroup, executeClientAsyncToGroup, executeClientToGroup } from 'api/rage'
+    import { setGroup, executeClientAsyncToGroup, executeClientToGroup } from '#/shared/api/rage'
     import {currentPage, selectedImage, selectedImageFunc, selectNumber} from './stores'
 
     setGroup (".phone.");

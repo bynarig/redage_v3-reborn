@@ -1,7 +1,7 @@
 <script>
     import  './assets/css/iconscircle.css';
     import  './assets/css/circle.sass';
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     import keys from 'store/keys'
     export const popupData;
 

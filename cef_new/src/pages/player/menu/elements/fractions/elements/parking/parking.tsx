@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     import { onInputFocus, onInputBlur } from "#/store/player/menu/elements/fractions/data.js";
     executeClientToGroup('vehiclesLoad')
 

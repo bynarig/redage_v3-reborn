@@ -5,7 +5,7 @@
     import { updateIndex } from 'store/customization';
     import moment from 'moment';
     import { setTime, elapsed } from 'api/moment'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const charid;
     export const char;
     

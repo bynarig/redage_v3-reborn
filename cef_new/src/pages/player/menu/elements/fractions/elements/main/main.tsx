@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { setGroup, executeClientToGroup, executeClientAsyncToGroup } from 'api/rage'
+    import { setGroup, executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     executeClientToGroup('mainLoad')
 
 

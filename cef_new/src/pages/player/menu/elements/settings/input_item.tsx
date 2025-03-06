@@ -1,6 +1,6 @@
 <script>
     import rangeslider from 'components/rangeslider/index'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const id;
     export const min;
     export const max;

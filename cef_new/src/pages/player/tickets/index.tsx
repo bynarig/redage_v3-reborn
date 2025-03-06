@@ -3,7 +3,7 @@
     import './fonts/style.css'
     import { format } from 'api/formatter'
     import moment from 'moment'
-    import { executeClient } from 'api/rage'
+    import { executeClient } from '#/shared/api/rage'
     export const viewData;
 
     if (!viewData)
