@@ -4,9 +4,9 @@
     import { charData } from 'store/chars';
     import { format } from '#/shared/api/formatter'
     import moment from 'moment'
-    import fraction from 'json/fraction.js'
-    import jobs from 'json/jobs.js'
-    import vipinfo from 'json/vipinfo.js'
+    import fraction from '#/shared/data/fraction.js'
+    import jobs from '#/shared/data/jobs.js'
+    import vipinfo from '#/shared/data/vipinfo.js'
     export const visible;
 
     let selectCharData = $charData;   

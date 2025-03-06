@@ -3,7 +3,7 @@
     import './main.sass';
     import './fonts/style.css';
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
-    import { getQuest, getActors } from 'json/quests/quests.js';
+    import { getQuest, getActors } from '#/shared/data/quests/quests.js';
     //questsnewdialogicon-
 	import { fade, fly } from 'svelte/transition';
     import { format } from '#/shared/api/formatter'

@@ -1,7 +1,7 @@
 <script>
     import { selectChar } from './../store.js';
     import { format } from '#/shared/api/formatter'
-    import fraction from 'json/fraction.js'
+    import fraction from '#/shared/data/fraction.js'
 
     import Spawn from './spawn.svelte'
 

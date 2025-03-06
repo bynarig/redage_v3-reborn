@@ -4,7 +4,7 @@
     import { fly } from 'svelte/transition';
     import { isInputToggled, isHelp } from 'store/hud'
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
 	import router from 'router';
 
     let isHint = false;

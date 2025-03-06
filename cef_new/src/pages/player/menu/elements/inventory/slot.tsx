@@ -1,5 +1,5 @@
 <script>
-    import { ItemType, itemsInfo, ItemId } from 'json/itemsInfo.js'
+    import { ItemType, itemsInfo, ItemId } from '#/shared/data/itemsInfo.js'
     import { getPng } from './getPng.js'
 
     export const item;

@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import { fly } from 'svelte/transition';
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
 
     const InfoData = {
         Warehouse: translateText('player2', 'Открыть склад'),

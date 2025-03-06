@@ -3,7 +3,7 @@
     import './main.sass';
     import './fonts/style.css';
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
-    import { getQuest } from 'json/quests/quests.js';
+    import { getQuest } from '#/shared/data/quests/quests.js';
     import { format } from '#/shared/api/formatter'
     import { storeQuests, selectQuest } from 'store/quest'
     import { executeClient } from '#/shared/api/rage'

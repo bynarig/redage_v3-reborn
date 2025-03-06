@@ -3,7 +3,7 @@
     import './assets/sass/main.sass'
     import { charGender } from 'store/chars';
     import { executeClient } from '#/shared/api/rage'
-    import { ItemId } from 'json/itemsInfo.js'
+    import { ItemId } from '#/shared/data/itemsInfo.js'
     export const visible;
 
     const eventItem = ItemId.Giftcoin;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './garage.css';
+
 
 interface Vehicle {
   model: string;

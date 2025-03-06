@@ -1,5 +1,5 @@
 <script>
-    import { itemsInfo } from 'json/itemsInfo.js'
+    import { itemsInfo } from '#/shared/data/itemsInfo.js'
     import { serverDonatMultiplier } from 'store/server'
     import { charWanted, charMoney, charBankMoney } from 'store/chars'
     import { isWaterMark, isPlayer } from 'store/hud'

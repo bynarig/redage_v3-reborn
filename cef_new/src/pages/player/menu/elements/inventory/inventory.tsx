@@ -3,7 +3,7 @@
     export const visible;
     import { charGender, charMoney } from 'store/chars'
     import { executeClient } from '#/shared/api/rage'
-    import { ItemType, ItemId, itemsInfo } from 'json/itemsInfo.js'
+    import { ItemType, ItemId, itemsInfo } from '#/shared/data/itemsInfo.js'
     import { clothesData, ItemToWeaponHash, WeaponHashToItem, stageItem, clearSlot, defaulSelectItem, defaulHoverItem, maxSlots, otherName, otherType, clothes, clothesId, clothesName, itemIdCaseToId } from './functions.js';
     import { format } from '#/shared/api/formatter'
     import wComponents from './wComponents.js';
@@ -15,7 +15,7 @@
     import '../../fonts/newinv/style.css'
     import { getPng } from './getPng.js'
 
-    import inventoryWeapons from 'json/inventoryweapons.js'
+    import inventoryWeapons from '#/shared/data/inventoryweapons.js'
 
 
     let

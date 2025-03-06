@@ -1,7 +1,7 @@
 <script>
     import { executeClient } from '#/shared/api/rage'
     import { charIsPet } from 'store/chars'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
     import keys from 'store/keys'
     import { isInputToggled } from 'store/hud'
     import CustomKey from './Key.svelte'

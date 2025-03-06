@@ -1,5 +1,5 @@
 
-import { ItemType, ItemId } from 'json/itemsInfo.js'
+import { ItemType, ItemId } from '#/shared/data/itemsInfo.js'
 
 const Bool = (text) => {
     return String(text).toLowerCase() === "true";

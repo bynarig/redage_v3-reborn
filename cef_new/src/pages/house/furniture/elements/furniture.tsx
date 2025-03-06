@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './furniture.css';
+
 
 interface FurnitureItem {
   name: string;

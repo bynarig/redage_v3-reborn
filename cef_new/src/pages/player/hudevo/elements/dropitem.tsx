@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import { fly } from 'svelte/transition';
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
     import { isInputToggled } from 'store/hud'
     import { getPng } from '#/store/player/menu/elements/inventory/getPng.js'
 

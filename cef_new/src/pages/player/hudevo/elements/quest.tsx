@@ -1,10 +1,10 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { fly } from 'svelte/transition';
-    import { getQuest } from 'json/quests/quests.js';
+    import { getQuest } from '#/shared/data/quests/quests.js';
     import { storeQuests, selectQuest } from 'store/quest'
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
     import { executeClient } from '#/shared/api/rage'
     import { isHelp } from 'store/hud'
 

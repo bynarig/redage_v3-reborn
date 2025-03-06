@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import moment from 'moment';
     import { executeClient, invokeMethod } from '#/shared/api/rage'
-    import Commands from 'json/commands.js'
+    import Commands from '#/shared/data/commands.js'
     import { format } from '#/shared/api/formatter'
     import CustomKey from './Key.svelte'
     import { isInputToggled, isHelp } from 'store/hud'

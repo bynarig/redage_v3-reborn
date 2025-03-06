@@ -3,7 +3,7 @@
     import { serverDateTime } from 'store/server'
     import { isInputToggled, isWaterMark, isPlayer, isHelp, isPhone } from 'store/hud'
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
     import { charFractionID, charOrganizationID } from 'store/chars'
     import CustomKey from './Key.svelte'
 

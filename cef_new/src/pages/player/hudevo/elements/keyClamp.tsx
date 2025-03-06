@@ -3,7 +3,7 @@
     import ProgressBar from 'progressbar.js';
     import { fade } from 'svelte/transition';
     import { executeClient } from '#/shared/api/rage'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
     
     let toggled = false;
     let ProgressBarId;

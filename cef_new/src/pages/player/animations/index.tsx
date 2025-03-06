@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import './main.sass';
     import './fonts/style.css';
-    import Animations from 'json/animations.js'
+    import Animations from '#/shared/data/animations.js'
     import AnimElement from './element.svelte'
     import { storeAnimFavorites, storeAnimBind } from 'store/animation'
     import { spring } from 'svelte/motion';
@@ -10,7 +10,7 @@
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
     export const viewData;
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
     
     let searchText = "";
     let animMenuList = [

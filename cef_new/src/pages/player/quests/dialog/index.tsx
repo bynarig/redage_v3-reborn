@@ -3,7 +3,7 @@
     import './main.sass';
     import './fonts/style.css';
 
-    import { getQuest, getActors } from 'json/quests/quests.js';
+    import { getQuest, getActors } from '#/shared/data/quests/quests.js';
 	import { fade, fly } from 'svelte/transition';
     import { executeClient } from '#/shared/api/rage';
     import Achivment from '#/store/quests/achivment/index.svelte';

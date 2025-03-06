@@ -4,7 +4,7 @@
     import { fly } from 'svelte/transition';
     import { inVehicle, isInputToggled } from 'store/hud'
     import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+    import keysName from '#/shared/data/keys.js'
 
     let speed = 10;
     let maxSpeed = 100;

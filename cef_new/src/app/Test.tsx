@@ -12,6 +12,9 @@ import WeazelNews from '#/pages/fractions/weazelnews';
 import HouseBuy from '#/pages/house/buy';
 import HouseBuyMenu from '#/pages/house/buymenu';
 import HouseFurniture from '#/pages/house/furniture';
+import ParkingComponent from '#/pages/house/furniture/elements/parking';
+import HouseMenu from '#/pages/house/menu';
+import RealEstateAgency from '#/pages/house/rieltagency';
 
 const body = document.querySelector('body');
 // @ts-ignore
@@ -23,7 +26,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <HouseFurniture />
+            <RealEstateAgency />
 
         </>
     )

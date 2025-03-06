@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './upgrades.css';
+
 
 interface Upgrade {
   id: number;
