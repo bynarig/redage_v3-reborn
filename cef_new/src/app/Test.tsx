@@ -1,7 +1,9 @@
 import React from 'react';
 
 
-import FractionsCraft from "#/pages/fractions/craft"
+
+
+import Wanted from '#/pages/fractions/onboardcomputer';
 
 const body = document.querySelector('body');
 // @ts-ignore
@@ -13,7 +15,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <FractionsCraft />
+            <Wanted />
 
         </>
     )

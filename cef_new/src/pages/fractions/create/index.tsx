@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { translateText } from '#/shared/locale';
 import { format } from '#/shared/api/formatter';
 import { executeClient } from '#/shared/api/rage';
-import './main.css'; // Change to CSS to avoid SASS compilation issues
+import './main.sass'; // Change to CSS to avoid SASS compilation issues
 
 interface FractionCreateProps {
   viewData?: number;

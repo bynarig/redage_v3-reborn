@@ -1,33 +1,27 @@
-<script>
-    import { translateText } from '#/shared/locale'
-    import {executeClientAsyncToGroup, executeClientToGroup} from 'api/rage'
-    import { addListernEvent } from 'api/functions'
+import React, { useState } from 'react';
+import DataBase from './datalist';
+import Info from './info';
 
-    const getList = () => {
+interface DatabaseProps {
+  // Add any props that might be passed to this component
+}
 
-        executeClientAsyncToGroup("getDataBaseList").then((result) => {
-            if (result && typeof result === "string")
-                adsList = JSON.parse(result);
-        });
-    }
-    getList();
+const Database: React.FC<DatabaseProps> = (props) => {
+  // State for the current view
+  const [selectView, setSelectView] = useState<'DataBase' | 'Info'>('DataBase');
+  
+  // Function to change the current view
+  const onChangePage = (page: 'DataBase' | 'Info') => {
+    setSelectView(page);
+  };
+  
+  // Render the appropriate component based on the current view
+  return (
+    <>
+      {selectView === 'DataBase' && <DataBase onChangePage={onChangePage} />}
+      {selectView === 'Info' && <Info onChangePage={onChangePage} />}
+    </>
+  );
+};
 
-    addListernEvent ("updateDataList", getList) 
-</script>
-<div class="policecomputer__title">DataBase</div>
-<div class="policecomputer__input">
-    <div class="bortovoiicon-loop"></div>
-    <input placeholder="Введите имя и фамилию..">
-</div>
-<div class="policecomputer__info_grid database mt-24">
-    {#each new Array(30) as item}
-        <div class="policecomputer__database_element">
-            <div class="policecomputer__database_image"></div>
-            <div class="policecomputer__database_number">{translateText('fractions', 'Досье')} №43332</div>
-            <div class="policecomputer__database_name">Vitaliy Zdobich</div>
-            <div class="policecomputer__database_info">
-                {translateText('fractions', 'УК')} <span class="white">12.6, 13.4</span> {translateText('fractions', 'АК')} <span class="white">12.6, 13.4</span>
-            </div>
-        </div>
-    {/each}
-</div>
+export default Database;
