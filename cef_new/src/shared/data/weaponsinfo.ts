@@ -476,15 +476,6 @@ export default {
         accuracy: 3,
         range: 2
     },
-    "Bullpup Rifle Mk2": {
-        desc: "Улучшеная штурмовая винтовка из Китая, обойма вмещает в себя 30 патронов.",
-        caliber: 7.62,
-        img: 'NeedName.png',
-        damage: 2,
-        ratefire: 3,
-        accuracy: 2,
-        range: 2
-    },
     "Heavy Sniper": {
         desc: "Крупнокалиберная снайперская винтовка, обойма вмещает в себя 6 патронов.",
         caliber: 7.62,
