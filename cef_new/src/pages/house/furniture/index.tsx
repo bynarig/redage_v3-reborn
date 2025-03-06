@@ -1,6 +1,6 @@
 <script>
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import './main.sass'
     import './fonts/style.css'
     import { ItemType, itemsInfo } from 'json/itemsInfo.js'

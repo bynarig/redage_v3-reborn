@@ -3,8 +3,8 @@
     import { onMount } from 'svelte';
 
     import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
-    import { addListernEvent } from 'api/functions'
-    import { GetTime } from 'api/moment'
+    import { addListernEvent } from '#/shared/api/functions'
+    import { GetTime } from '#/shared/api/moment'
 
     import Awards from './awards.svelte'
     import Tasks from './tasks.svelte'

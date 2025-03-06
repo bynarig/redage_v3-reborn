@@ -1,81 +1,143 @@
-<script>
-    import { translateText } from '#/shared/locale'
-    import moment from 'moment';
-    import {executeClientAsyncToGroup, executeClientToGroup} from '#/shared/api/rage'
-    import { addListernEvent } from 'api/functions'
+import React, { useState, useEffect } from 'react';
+import { translateText } from '#/shared/locale';
+import moment from 'moment-timezone';
+import { executeClientAsyncToGroup, executeClientToGroup } from '#/shared/api/rage';
+import { addListernEvent } from '#/shared/api/functions';
+// import { categorieName } from "#/store/player/hudevo/phonenew/components/news/data";
 
-    executeClientToGroup ("isList", true);
+interface Advertisement {
+  ID: number;
+  AD: string;
+  Author: string;
+  Link?: string;
+  Type: number;
+  Opened: string | number; // Timestamp or ISO string
+  Editor?: string;
+}
 
-    import { onDestroy } from 'svelte'
-    onDestroy(() => {
-        executeClientToGroup ("isList", false);
+interface AdvertisementListProps {
+  onSelectAdvert: (id: number) => void;
+  getCount: () => void;
+}
+
+const AdvertisementList: React.FC<AdvertisementListProps> = ({ onSelectAdvert, getCount }) => {
+  const [adsList, setAdsList] = useState<Advertisement[]>([]);
+  
+  const getList = () => {
+    // Update count in parent component
+    getCount();
+    
+    // Fetch list of advertisements
+    executeClientAsyncToGroup("getAdsList").then((result) => {
+      if (result && typeof result === "string") {
+        try {
+          const parsedList = JSON.parse(result);
+          setAdsList(parsedList);
+        } catch (error) {
+          console.error("Error parsing advertisement list:", error);
+          setAdsList([]);
+        }
+      }
     });
-
-    let adsList;
-    export const getCount;
-
-    const getList = () => {
-
-        getCount ();
-
-
-        executeClientAsyncToGroup("getAdsList").then((result) => {
-            if (result && typeof result === "string")
-                adsList = JSON.parse(result);
-        });
-    }
+  };
+  
+  // Initial fetch when component mounts
+  useEffect(() => {
+    // Tell server we're viewing the list
+    executeClientToGroup("isList", true);
+    
+    // Get the initial list
     getList();
-
-    addListernEvent ("updateListAdverts", getList)
-
-    export const onSelectAdvert;
-
-    import { categorieName } from "#/store/player/hudevo/phonenew/components/news/data";
-</script>
-<div class="weazelnews__title">{translateText('fractions', 'Список объявлений')}</div>
-{#if typeof adsList == 'object' && adsList.length}
-    <div class="weazelnews__comments big">
-        {#each adsList as advert}
-            <div class="weazelnews__comments_element">
-                <div class="box-between">
-                    <div class="mr-10">{translateText('fractions', 'Объявление')} №{advert.ID}</div>
-                    <div class="weazelnews__button"  on:click={() => onSelectAdvert (advert.ID)}>{translateText('fractions', 'Редактировать')}</div>
+    
+    // Set up event listener for updates
+    addListernEvent("updateListAdverts", getList);
+    
+    // Cleanup on unmount
+    return () => {
+      executeClientToGroup("isList", false);
+      // Note: In a proper React implementation, we would also need to remove the event listener
+      // but since 'addListernEvent' doesn't appear to have a corresponding removal method,
+      // we'll have to assume it's handled elsewhere or redesigned for React
+    };
+  }, []);
+  
+  return (
+    <>
+      <div className="weazelnews__title">{translateText('fractions', 'Список объявлений')}</div>
+      
+      {Array.isArray(adsList) && adsList.length > 0 ? (
+        <div className="weazelnews__comments big">
+          {adsList.map((advert) => (
+            <div key={advert.ID} className="weazelnews__comments_element">
+              <div className="box-between">
+                <div className="mr-10">{translateText('fractions', 'Объявление')} №{advert.ID}</div>
+                <div 
+                  className="weazelnews__button" 
+                  onClick={() => onSelectAdvert(advert.ID)}
+                >
+                  {translateText('fractions', 'Редактировать')}
                 </div>
-                <div class="box-flex mt-4">
-                    <div class="box-column mr-20">
-                        <div class="weazelnews__info_title">{translateText('fractions', 'Отправитель')}:</div>
-                        <div class="weazelnews__info_subtitle">{advert.Author}</div>
-                    </div>
-                    <div class="box-column">
-                        <div class="weazelnews__info_title">{translateText('fractions', 'Дата и время')}:</div>
-                        <div class="weazelnews__info_subtitle">
-                            {moment(advert.Opened).format('HH:mm от DD.MM.YYYY')}
-                        </div>
-                    </div>
+              </div>
+              
+              <div className="box-flex mt-4">
+                <div className="box-column mr-20">
+                  <div className="weazelnews__info_title">{translateText('fractions', 'Отправитель')}:</div>
+                  <div className="weazelnews__info_subtitle">{advert.Author}</div>
                 </div>
-                {#if advert.Link && /(?:jpg|jpeg|png)/g.test(advert.Link)}
-                    <div class="weazelnews__info_title mt-20">{translateText('fractions', 'Изображение')}:</div>
-                    <div class="weazelnews__person_image map mt-4" style="background-image: url({advert.Link})"></div>
-                {/if}
-                <div class="weazelnews__info_title mt-24">Описание:</div>
-                <div class="weazelnews__info_subtitle f-regular">
-                    {advert.AD}
+                <div className="box-column">
+                  <div className="weazelnews__info_title">{translateText('fractions', 'Дата и время')}:</div>
+                  <div className="weazelnews__info_subtitle">
+                    {moment(advert.Opened).format('HH:mm от DD.MM.YYYY')}
+                  </div>
                 </div>
-                {#if Object.values(categorieName)[advert.Type]}
-                    <div class="weazelnews__info_title mt-24">{translateText('fractions', 'Категория')}:</div>
-                    <div class="weazelnews__info_subtitle f-regular">
-                        {Object.values(categorieName)[advert.Type]}
-                    </div>
-                {/if}
-                {#if advert.Editor && advert.Editor.length}
-                    <div class="box-column mt-20">
-                        <div class="weazelnews__info_title">{translateText('fractions', 'Редактирует')}:</div>
-                        <div class="weazelnews__info_subtitle">{advert.Editor}</div>
-                    </div>
-                {/if}
+              </div>
+              
+              {advert.Link && /(?:jpg|jpeg|png)/g.test(advert.Link) && (
+                <>
+                  <div className="weazelnews__info_title mt-20">
+                    {translateText('fractions', 'Изображение')}:
+                  </div>
+                  <div 
+                    className="weazelnews__person_image map mt-4" 
+                    style={{ backgroundImage: `url(${advert.Link})` }}
+                  />
+                </>
+              )}
+              
+              <div className="weazelnews__info_title mt-24">Описание:</div>
+              <div className="weazelnews__info_subtitle f-regular">
+                {advert.AD}
+              </div>
+              
+              {/* {categorieName[advert.Type] && (
+                <>
+                  <div className="weazelnews__info_title mt-24">
+                    {translateText('fractions', 'Категория')}:
+                  </div>
+                  <div className="weazelnews__info_subtitle f-regular">
+                    {categorieName[advert.Type]}
+                  </div>
+                </>
+              )} */}
+              
+              {advert.Editor && (
+                <div className="box-column mt-20">
+                  <div className="weazelnews__info_title">
+                    {translateText('fractions', 'Редактирует')}:
+                  </div>
+                  <div className="weazelnews__info_subtitle">{advert.Editor}</div>
+                </div>
+              )}
             </div>
-        {/each}
-    </div>
-{:else}
-    <div class="weazelnews__info_title mt-20">{translateText('fractions', 'Сейчас объявлений нет, но они скоро появятся')}..</div>
-{/if}
+          ))}
+        </div>
+      ) : (
+        <div className="weazelnews__info_title mt-20">
+          {translateText('fractions', 'Сейчас объявлений нет, но они скоро появятся')}..
+        </div>
+      )}
+    </>
+  );
+};
+
+export default AdvertisementList;

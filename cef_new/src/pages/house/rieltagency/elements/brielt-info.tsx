@@ -1,6 +1,6 @@
 <script>
     import { businessType } from 'json/realEstate.js'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     export const selectData;
     export const buyPrice;
 </script>

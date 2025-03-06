@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'    
     import { otherStatsData } from 'store/account'
     import { charData } from 'store/chars';
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import moment from 'moment'
     import fraction from 'json/fraction.js'
     import jobs from 'json/jobs.js'

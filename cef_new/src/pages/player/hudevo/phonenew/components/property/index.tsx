@@ -11,7 +11,7 @@
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("loadProperty");
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phoneMainPropertyLoad", updateLoad);
 
     import PropertyList from './list.svelte';

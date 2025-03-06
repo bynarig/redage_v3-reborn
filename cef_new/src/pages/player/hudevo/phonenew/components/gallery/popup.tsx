@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { loadImage } from 'api/functions'
+    import { loadImage } from '#/shared/api/functions'
 
     import {executeClient, executeClientAsyncToGroup} from "api/rage";
     import { selectedImage, selectedImageFunc } from './../../stores'

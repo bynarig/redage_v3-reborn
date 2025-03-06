@@ -17,7 +17,7 @@
 
 
     import { setPopup } from "../../data";
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     const onUpdateCallback = (name, tag) => {
         let check = format("rank", name);

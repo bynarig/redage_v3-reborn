@@ -18,7 +18,7 @@
         isLoad = true;
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phoneBusinessStatsInit", initTime);
 
 
@@ -48,7 +48,7 @@
         });
     }*/
 
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { chart } from "svelte-apexcharts";
     let options = {
         labels: [],

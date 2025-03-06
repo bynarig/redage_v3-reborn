@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { format } from 'api/formatter'
+import { format } from '#/shared/api/formatter'
 
 export const text = writable("");
 export const selected = writable(false);

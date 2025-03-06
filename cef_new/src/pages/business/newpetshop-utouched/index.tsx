@@ -496,7 +496,7 @@
         }
     }
 
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     const OnSelectPet = (pet, index) => {
         if (pet === Select)
             return;

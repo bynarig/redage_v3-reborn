@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import {executeClientAsync, executeClientToGroup, executeClientAsyncToGroup, executeClient} from '#/shared/api/rage'
-    import { addListernEvent, hasJsonStructure, loadImage } from 'api/functions'
+    import { addListernEvent, hasJsonStructure, loadImage } from '#/shared/api/functions'
     import moment from 'moment';
 
     import { messageType, messageStatus, chatStatusName, formatMessage, getMessageUniqueKey, inputMaxLength } from './data.js'
@@ -352,7 +352,7 @@
 
 
 
-    import { TimeFormatStartOf } from 'api/moment'
+    import { TimeFormatStartOf } from '#/shared/api/moment'
     import { fade } from 'svelte/transition'
     import {currentView} from "#/store/player/hudevo/phonenew/components/calls/stores";
     import {currentPage} from "#/store/player/hudevo/phonenew/stores";

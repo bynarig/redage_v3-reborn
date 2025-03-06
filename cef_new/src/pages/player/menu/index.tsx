@@ -6,7 +6,7 @@
     import './fonts/gamemenu/style.css';
 
     import { serverDateTime, isEvent } from 'store/server'
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
 
     export const visible = false;
     

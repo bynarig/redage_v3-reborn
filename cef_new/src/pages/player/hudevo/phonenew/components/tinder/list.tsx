@@ -23,7 +23,7 @@
 
     getList ();
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phone.tinder.getList", getList)
 
     const onAction = (isLove) => {

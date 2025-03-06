@@ -1,8 +1,8 @@
 <script>
     import { translateText } from '#/shared/locale'
 
-    import { TimeFormat } from 'api/moment'
-    import { loadImage } from 'api/functions'
+    import { TimeFormat } from '#/shared/api/moment'
+    import { loadImage } from '#/shared/api/functions'
 
     import moment from 'moment';
     import { executeClientAsyncToGroup, executeClientToGroup } from "api/rage";

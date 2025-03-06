@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     import { format } from "api/formatter";
     import {executeClientAsyncToGroup, executeClientToGroup} from "api/rage";
     import { hasJsonStructure } from "api/functions";

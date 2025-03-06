@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     export const onMainPage;
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     export const selectedId;
 
 

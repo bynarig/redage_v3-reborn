@@ -4,8 +4,8 @@
     import copy from 'copy-to-clipboard';
     import { isFraction } from "#/store/player/menu/elements/fractions/index.svelte";
     import {setPopup} from "../../../data";
-    import { TimeFormat } from 'api/moment'
-    import { format } from 'api/formatter'
+    import { TimeFormat } from '#/shared/api/moment'
+    import { format } from '#/shared/api/formatter'
 
     export const settings;
 

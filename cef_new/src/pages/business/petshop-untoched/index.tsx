@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     import '../../assets/sass/store.sass';
 

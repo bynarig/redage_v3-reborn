@@ -4,7 +4,7 @@
     import { selectChar, selectType, selectIndex, settings } from './../store.js';
     import { updateIndex } from 'store/customization';
     import moment from 'moment';
-    import { setTime, elapsed } from 'api/moment'
+    import { setTime, elapsed } from '#/shared/api/moment'
     import { executeClient } from '#/shared/api/rage'
     export const charid;
     export const char;

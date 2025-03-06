@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { addListernEvent } from 'api/functions'
+    import { addListernEvent } from '#/shared/api/functions'
 
     import { getPngToItemId } from '#/store/player/menu/elements/inventory/getPng.js'
 

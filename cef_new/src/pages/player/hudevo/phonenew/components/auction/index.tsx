@@ -10,7 +10,7 @@
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("auction.load");
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("auction.load", updateLoad)
     import { fade } from 'svelte/transition'
 

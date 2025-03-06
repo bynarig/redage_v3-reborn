@@ -287,7 +287,7 @@
         progressBarId = null;
     };
 
-    import { addListernEvent } from 'api/functions'
+    import { addListernEvent } from '#/shared/api/functions'
     addListernEvent ("updateMissions", () => {
         onSelectPage (selectPage)
     })

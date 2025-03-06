@@ -1,5 +1,5 @@
 <script>
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     import { fly } from 'svelte/transition';
 
     import { getPngUrl, getTimeFromMinsText } from "#/store/player/menu/elements/rewardslist/elements/data";

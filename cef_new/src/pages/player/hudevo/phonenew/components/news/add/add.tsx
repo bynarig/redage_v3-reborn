@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { executeClientAsyncToGroup } from "api/rage";
 
     export const onSelected;
@@ -31,7 +31,7 @@
         cameraLink = link;
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     import {validate} from "api/validation";
     addListernEvent ("cameraLink", updateCameraLink);
 

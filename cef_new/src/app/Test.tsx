@@ -8,6 +8,7 @@ import PoliceComputer from '#/pages/fractions/policecomputer';
 import SearchReport from '#/pages/fractions/search-report';
 import Stock from '#/pages/fractions/stock';
 import Ticket from '#/pages/fractions/ticket';
+import WeazelNews from '#/pages/fractions/weazelnews';
 
 const body = document.querySelector('body');
 // @ts-ignore
@@ -19,7 +20,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <Ticket />
+            <WeazelNews />
 
         </>
     )

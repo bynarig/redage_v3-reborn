@@ -4,7 +4,7 @@
     import './fonts/gamemenu/style.css';
 
     import { serverDateTime } from 'store/server'
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     export const visible = false;
     
     let selectView = "Main";
@@ -64,7 +64,7 @@
         }
     }
 
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { setGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     setGroup (".businessmanage.");

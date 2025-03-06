@@ -29,7 +29,7 @@
             setAvatar (link);
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("cameraLink", updateCameraLink)
 </script>
 

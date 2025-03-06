@@ -1,6 +1,6 @@
 <script>
     import { houseType } from 'json/realEstate.js'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     export const houseData;
     export const onSelectData;
 

@@ -2,7 +2,7 @@
     import { fade } from 'svelte/transition';
     import { charData } from 'store/chars'
     import moment from 'moment'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 </script>
 
 <div class="newyearstats__stats" in:fade={{  duration: 1000 }}>

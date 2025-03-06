@@ -22,7 +22,7 @@
 
     import { setPopup } from "../../data";
     import { executeClientToGroup } from "api/rage";
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     const onCreateCallback = (name, tag) => {
         let check = format("rank", name);

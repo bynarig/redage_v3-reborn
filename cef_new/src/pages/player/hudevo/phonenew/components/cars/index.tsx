@@ -29,7 +29,7 @@
         selectedCar = item;
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent("phoneCarsLoad", updateLoad);
 
     import { fade } from 'svelte/transition'    

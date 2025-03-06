@@ -2,7 +2,7 @@
     import { executeClient } from '#/shared/api/rage'
     import './main.sass'
     import './fonts/style.css'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { houseType } from 'json/realEstate.js'
     import keys from 'store/keys'
     import keysName from 'json/keys.js'

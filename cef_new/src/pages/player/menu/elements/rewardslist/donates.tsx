@@ -14,7 +14,7 @@
         rewardList = JSON.parse(json)
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent("rewardList.donate.init", updateLoad);
 
     const onTake = (item) => {

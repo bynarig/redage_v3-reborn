@@ -3,7 +3,7 @@
 
     import mapImage from './map.jpg'
 
-    import { loadImage } from 'api/functions'
+    import { loadImage } from '#/shared/api/functions'
 
     export const getPosition = false;
 

@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import { executeClientToGroup, executeClientAsyncToGroup } from "api/rage";
     import { charUUID } from 'store/chars';
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
 
     export const settings;
     let board = { };

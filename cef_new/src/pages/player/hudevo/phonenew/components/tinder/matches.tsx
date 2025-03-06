@@ -12,7 +12,7 @@
     }
     getList ();
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phone.tinder.getLikes", getList)
 </script>
 <div class="newphone__maps_headertitleGPS newphone__project_padding16">Ваши совпадения:</div>

@@ -1,6 +1,6 @@
 <script>
 
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
 
     let orders = []

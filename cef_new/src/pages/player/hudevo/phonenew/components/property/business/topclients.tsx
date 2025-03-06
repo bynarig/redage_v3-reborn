@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     export const onSelectedViewBusiness;
 
@@ -19,7 +19,7 @@
         isLoad = true;
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phoneBusinessStatsInit", initTime);
     import { fade } from 'svelte/transition'
 </script>

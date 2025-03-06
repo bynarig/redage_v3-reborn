@@ -64,7 +64,7 @@
     }
 
     getData();
-    import { addListernEvent } from 'api/functions'
+    import { addListernEvent } from '#/shared/api/functions'
     addListernEvent ("phone.taxi.load", getData);
     import { fade } from 'svelte/transition'
 

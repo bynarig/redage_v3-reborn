@@ -2,7 +2,7 @@
 <script>
     import mapImage from './map.jpg'
 
-    import { loadImage, loadAwaitImage } from 'api/functions'
+    import { loadImage, loadAwaitImage } from '#/shared/api/functions'
 
     export const getPosition = false;
 

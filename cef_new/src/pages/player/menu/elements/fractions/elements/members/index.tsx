@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import moment from 'moment'
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
     executeClientToGroup('membersLoad')
 

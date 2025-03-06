@@ -130,7 +130,7 @@
         })
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent("table.missions", updateLoad);
 
     const onUse = () => {

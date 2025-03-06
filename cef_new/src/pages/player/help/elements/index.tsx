@@ -1,5 +1,5 @@
 <script>
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { slide, fade } from 'svelte/transition';
     export const selectDropMain;
     export const active;

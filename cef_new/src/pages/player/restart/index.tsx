@@ -36,7 +36,7 @@
         setTimeout(() => OnScrollDown(), 0);
     };
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("restart.addMessage", AddChatMessage)
 
     let chatElement;

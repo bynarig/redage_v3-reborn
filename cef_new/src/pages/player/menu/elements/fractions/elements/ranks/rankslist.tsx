@@ -5,7 +5,7 @@
 
     export const ranks;
 
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     const onCreateCallback = (rankName, score) => {
         let check = format("rank", rankName);

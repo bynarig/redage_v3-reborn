@@ -1,6 +1,6 @@
 <script>
     import {executeClient, executeClientAsync} from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 	import { selectPopup, popudData } from '#/store/house/menu/stores.js';
     import {hasJsonStructure} from "api/functions";
     //

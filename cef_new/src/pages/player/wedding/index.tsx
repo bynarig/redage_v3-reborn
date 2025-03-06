@@ -1,6 +1,6 @@
 <script>
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { charMoney } from 'store/chars.js'
     import './main.sass';
     import InputCustom from 'components/input/index.svelte'

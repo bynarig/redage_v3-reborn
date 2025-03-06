@@ -2,7 +2,7 @@
     export const viewData;
     export const onBuy;
     export const onExit;
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 </script>
 <div id="house__popup">
     <div class="house__popup_block">

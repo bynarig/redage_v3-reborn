@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import Access from '../access/index.svelte'
     import { executeClientToGroup } from "api/rage";
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { onInputFocus, onInputBlur } from "#/store/player/menu/elements/fractions/data.js";
 
     export const departmentId;

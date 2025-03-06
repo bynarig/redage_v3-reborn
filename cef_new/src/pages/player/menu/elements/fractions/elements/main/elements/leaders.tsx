@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import {executeClientAsyncToGroup} from "api/rage";
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
 
     let leader = {}
 

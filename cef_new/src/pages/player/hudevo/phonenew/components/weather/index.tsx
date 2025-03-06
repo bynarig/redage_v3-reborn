@@ -1,7 +1,7 @@
 <script>
     import Header from '../header.svelte'
     import HomeButton from '../homebutton.svelte'
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     import { serverDateTime } from 'store/server'
 
     import { executeClientAsyncToGroup } from "api/rage";

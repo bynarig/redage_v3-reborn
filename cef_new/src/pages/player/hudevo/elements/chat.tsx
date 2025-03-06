@@ -3,7 +3,7 @@
     import moment from 'moment';
     import { executeClient, invokeMethod } from '#/shared/api/rage'
     import Commands from 'json/commands.js'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import CustomKey from './Key.svelte'
     import { isInputToggled, isHelp } from 'store/hud'
     export const SafeSone;

@@ -14,7 +14,7 @@
         cameraLink = link;
     }
 
-    import {addListernEvent, hasJsonStructure} from 'api/functions';
+    import {addListernEvent, hasJsonStructure} from '#/shared/api/functions';
     import { validate } from "api/validation";
 
     addListernEvent ("cameraLink", updateCameraLink);

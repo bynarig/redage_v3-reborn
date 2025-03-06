@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import moment from 'moment';
-    import { setTime, elapsedUp } from 'api/moment'
+    import { setTime, elapsedUp } from '#/shared/api/moment'
     import Header from '../header.svelte'
     import HomeButton from '../homebutton.svelte'
     import { executeClientToGroup, executeClientAsyncToGroup } from '#/shared/api/rage'
@@ -34,7 +34,7 @@
         executeClientToGroup ('mute', false);
     }
 
-    import { addListernEvent } from 'api/functions'
+    import { addListernEvent } from '#/shared/api/functions'
     addListernEvent ("callAccept", updateStatus)
     addListernEvent ("downPhone", pageBack)
 

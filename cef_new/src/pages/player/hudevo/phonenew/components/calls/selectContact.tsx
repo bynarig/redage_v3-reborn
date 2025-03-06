@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { addListernEvent } from 'api/functions'
+    import { addListernEvent } from '#/shared/api/functions'
 
     export const updateListContacts;
 

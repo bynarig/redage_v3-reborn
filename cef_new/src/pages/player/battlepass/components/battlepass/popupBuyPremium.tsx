@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { isPopupBuyOpened } from '../../stores.js'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { accountRedbucks } from 'store/account'
     import { executeClientToGroup, executeClientAsyncToGroup} from '#/shared/api/rage'
 

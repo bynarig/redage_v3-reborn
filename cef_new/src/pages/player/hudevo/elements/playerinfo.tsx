@@ -4,7 +4,7 @@
     import { charWanted, charMoney, charBankMoney } from 'store/chars'
     import { isWaterMark, isPlayer } from 'store/hud'
     import { fly } from 'svelte/transition';
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import CountUp from 'api/countup';
     export const SafeSone;
     

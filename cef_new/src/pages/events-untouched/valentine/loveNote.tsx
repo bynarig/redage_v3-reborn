@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import KeyAnimation from '#/components/keyAnimation/index.svelte';
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     export const viewData;
 
     let nameValue = "";

@@ -1,7 +1,7 @@
 <script>
     import { fly, fade } from 'svelte/transition';
     import './main.sass';
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { storeSettings } from 'store/settings'
     import { executeClient } from '#/shared/api/rage'
 

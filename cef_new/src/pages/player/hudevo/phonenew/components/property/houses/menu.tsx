@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { executeClientToGroup, executeClient, executeClientAsyncToGroup } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { hasJsonStructure } from "api/functions";
 
     let menuAccess = []

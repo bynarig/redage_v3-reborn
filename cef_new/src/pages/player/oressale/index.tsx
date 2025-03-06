@@ -4,7 +4,7 @@
 
 	import { fade } from 'svelte/transition';
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     
     import ore_coal from './assets/images/ore_coal.png'
     import ore_iron from './assets/images/ore_iron.png'

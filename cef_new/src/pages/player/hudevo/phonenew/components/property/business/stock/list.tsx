@@ -1,6 +1,6 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import {executeClientAsyncToGroup, executeClientToGroup} from "api/rage";
     import {addListernEvent, hasJsonStructure} from "api/functions";
     import { getPng } from './../data'

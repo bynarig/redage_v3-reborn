@@ -1,7 +1,7 @@
 <script>
     import { translateText } from '#/shared/locale'
     import { executeClientAsyncToGroup } from "api/rage";
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     export const selectIndex;
     export const onSelectIndex;

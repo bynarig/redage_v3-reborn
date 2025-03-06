@@ -1,6 +1,6 @@
 <script>
     import { serverDateTime } from 'store/server'
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
 	import { onMount, onDestroy } from 'svelte';
     import { charSim } from "store/chars";
 

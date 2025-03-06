@@ -31,7 +31,7 @@
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("tinder.load");
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phone.tinder.load", updateLoad)
     import { fade } from 'svelte/transition'
 

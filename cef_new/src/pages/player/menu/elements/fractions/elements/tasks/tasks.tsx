@@ -11,7 +11,7 @@
         rewardList = JSON.parse(json)
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent("table.tasks", updateLoad);
 </script>
 

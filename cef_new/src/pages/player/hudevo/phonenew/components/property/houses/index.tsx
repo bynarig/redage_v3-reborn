@@ -9,7 +9,7 @@
     import { executeClientToGroup, executeClient } from "api/rage";
     executeClientToGroup ("house.load");
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phoneHouseInit", updateLoad);
 
     import Menu from './menu.svelte';

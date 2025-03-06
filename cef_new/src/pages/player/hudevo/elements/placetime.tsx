@@ -1,5 +1,5 @@
 <script>
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     import { serverDateTime } from 'store/server'
     import { isInputToggled, isWaterMark, isPlayer, isHelp, isPhone } from 'store/hud'
     import keys from 'store/keys'

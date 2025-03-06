@@ -6,7 +6,7 @@
 	import Merger from './merger/index.svelte';
     import { isInput } from '#/store/player/newauthentication/store.js';
     import { accountRedbucks } from 'store/account'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 	//import Registration from './registration/index.svelte';
     let PagesSorted = ["News", "Chars"];
 

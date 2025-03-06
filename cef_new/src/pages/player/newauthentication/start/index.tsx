@@ -4,7 +4,7 @@
 	import Registration from './registration/index.svelte';
 	import News from './../news/index.svelte';
     import Restore from './restore/index.svelte';
-    import { addListernEvent } from 'api/functions'
+    import { addListernEvent } from '#/shared/api/functions'
 
     import { isInput, isSend } from '#/store/player/newauthentication/store.js';
     import {accountLogin} from "store/account";

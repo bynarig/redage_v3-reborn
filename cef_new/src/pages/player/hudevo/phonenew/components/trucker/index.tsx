@@ -36,7 +36,7 @@
         isLoad = true;
     }
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent("phoneTruckerLoad", getData);
 
     import Select from './select.svelte'

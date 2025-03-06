@@ -10,7 +10,7 @@
     import { executeClientToGroup } from "api/rage";
     executeClientToGroup ("business.load", selectedId);
 
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("phoneBusinessInit", updateLoad);
 
 

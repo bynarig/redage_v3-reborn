@@ -1,10 +1,10 @@
 <script>
     import { translateText } from '#/shared/locale'
-    import { TimeFormat, GetTime } from 'api/moment'
+    import { TimeFormat, GetTime } from '#/shared/api/moment'
     import { serverDateTime } from 'store/server'
     import { charFractionID } from 'store/chars'
     import { fly } from 'svelte/transition';
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
 
     let cashValue = 0;
     window.PayDay = async (cash) => {

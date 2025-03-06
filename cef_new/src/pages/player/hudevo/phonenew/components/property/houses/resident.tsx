@@ -4,7 +4,7 @@
 
     export const onSelectedViewHouse;
 
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     import { hasJsonStructure } from "api/functions";
     import { executeClient, executeClientToGroup, executeClientAsyncToGroup } from "api/rage";
 

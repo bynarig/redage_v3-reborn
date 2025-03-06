@@ -1,10 +1,10 @@
 <script>
-    import { TimeFormat } from 'api/moment'
+    import { TimeFormat } from '#/shared/api/moment'
     import { translateText } from '#/shared/locale'
     export const selectedCar;
     export const OnUpdatePage;
 
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import {executeClient, executeClientAsyncToGroup, executeClientToGroup} from '#/shared/api/rage'
 
     const functionData = [

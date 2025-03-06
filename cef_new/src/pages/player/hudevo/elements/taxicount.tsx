@@ -15,7 +15,7 @@
     }
 
     getCounter();
-    import { addListernEvent } from 'api/functions';
+    import { addListernEvent } from '#/shared/api/functions';
     addListernEvent ("hud.taxi.updateCounter", getCounter);
 
 

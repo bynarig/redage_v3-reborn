@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     import './main.sass';
     import { executeClient } from '#/shared/api/rage'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import { clothesData, clothesDataToName, MaxClothesComponent, UndershortData, UndershortName, TorsosData } from './data.js'
     let state = {
         componentId: 0,

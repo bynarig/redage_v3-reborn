@@ -1,7 +1,7 @@
 <script>
     import './main.sass'
     import './fonts/style.css'
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import moment from 'moment'
     import { executeClient } from '#/shared/api/rage'
     export const viewData;

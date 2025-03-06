@@ -2,7 +2,7 @@
     import { translateText } from '#/shared/locale'
     export const SetPopup;
     export const popupData;
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import {executeClient, executeClientAsync} from '#/shared/api/rage'
 
     let caseData = {};

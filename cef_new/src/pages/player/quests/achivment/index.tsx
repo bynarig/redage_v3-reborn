@@ -6,7 +6,7 @@
     import { getQuest, getActors } from 'json/quests/quests.js';
     //questsnewdialogicon-
 	import { fade, fly } from 'svelte/transition';
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     export const questData;
     export const onEnter;
 </script>

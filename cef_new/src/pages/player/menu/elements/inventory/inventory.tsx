@@ -5,7 +5,7 @@
     import { executeClient } from '#/shared/api/rage'
     import { ItemType, ItemId, itemsInfo } from 'json/itemsInfo.js'
     import { clothesData, ItemToWeaponHash, WeaponHashToItem, stageItem, clearSlot, defaulSelectItem, defaulHoverItem, maxSlots, otherName, otherType, clothes, clothesId, clothesName, itemIdCaseToId } from './functions.js';
-    import { format } from 'api/formatter'
+    import { format } from '#/shared/api/formatter'
     import wComponents from './wComponents.js';
     import wMaxHP from './wMaxHP.js';
     import rangeslider from 'components/rangeslider/index'
