@@ -1,6 +1,7 @@
 import React from 'react';
 
-import RentCar from '../pages/business/rentcar/index';
+
+import FractionClothes from '../pages/fractions/clothes/index';
 
 const body = document.querySelector('body');
 // @ts-ignore
@@ -12,7 +13,7 @@ const test: React.FC = () => {
     // @ts-ignore
     return (
         <>
-            <RentCar />
+            <FractionClothes />
 
         </>
     )
