@@ -1,121 +1,162 @@
-<script>
-    import { executeClient } from '#/shared/api/rage'
-    import './main.sass'
-    import './fonts/style.css'
-    import { format } from '#/shared/api/formatter'
-    import { houseType } from 'json/realEstate.js'
-    import keys from 'store/keys'
-    import keysName from 'json/keys.js'
+import React, { useState, useEffect } from 'react';
+import { executeClient } from '#/shared/api/rage';
+import './main.sass';
+import './fonts/style.css';
+import { format } from '#/shared/api/formatter';
+import { houseType } from '#/shared/data/realEstate';
+import keys from '#/shared/store/keys';
+import keysName from '#/shared/data/keys';
 
+interface HouseData {
+  id: number;
+  type: number;
+  owner?: string;
+  price?: number;
+  tax?: number;
+  cars?: number;
+  door?: boolean;
+}
 
-    export const viewData;
+interface HouseBuyMenuProps {
+  viewData?: string | HouseData;
+}
 
-    $: if (viewData && typeof viewData === "string") {
-        viewData = JSON.parse (viewData)
+const HouseBuyMenu: React.FC<HouseBuyMenuProps> = ({ viewData: initialViewData }) => {
+  // Parse the viewData if it's a string
+  const [viewData, setViewData] = useState<HouseData>(() => {
+    if (!initialViewData) return {} as HouseData;
+    
+    if (typeof initialViewData === 'string') {
+      try {
+        return JSON.parse(initialViewData);
+      } catch (error) {
+        console.error('Error parsing viewData:', error);
+        return {} as HouseData;
+      }
     }
+    
+    return initialViewData as HouseData;
+  });
 
-    const handleKeyUp = (event) => {
-        const { keyCode } = event;
-        
-        if (keyCode === 27) 
-            onEsc ();
-    }
+  // Handle keyboard events
+  useEffect(() => {
+    const handleKeyUp = (event: KeyboardEvent) => {
+      if (event.keyCode === 27) { // ESC key
+        onEsc();
+      }
+    };
 
-    const handleKeyDown = (event) => {
-        const { keyCode } = event;
-        
-        if (keyCode === 13)
-            onBuy ();
-        else if (keyCode === 69)
-            onInt ();
-    }
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.keyCode === 13) { // ENTER key
+        onBuy();
+      } else if (event.keyCode === 69) { // E key
+        onInt();
+      }
+    };
 
-    const onEsc = () => {        
-        executeClient ("client.houseinfo.close");
-    }
+    // Add event listeners
+    window.addEventListener('keyup', handleKeyUp);
+    window.addEventListener('keydown', handleKeyDown);
 
-    const onBuy = () => {
-        executeClient ("client.houseinfo.action", "buy");
-    }
+    // Clean up
+    return () => {
+      window.removeEventListener('keyup', handleKeyUp);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
-    const onInt = () => {
-        executeClient ("client.houseinfo.action", "int");
-    }
-</script>
+  // Action handlers
+  const onEsc = () => {
+    executeClient("client.houseinfo.close");
+  };
 
-<svelte:window on:keyup={handleKeyUp} on:keydown={handleKeyDown} />
+  const onBuy = () => {
+    executeClient("client.houseinfo.action", "buy");
+  };
 
-<div id="rielt">
-    <div class="rielt__panel">
-        <div class="rielt__header">Информация о доме</div>
-        <div class="rielt__mainmenu">
-            <div class="rielt__mainmenu_block">
-        </div>
-        <div class="rielt__mainmenu_center">
-            <div class="rielt__rielt_info">
-                <div class="houseicon-house rielt__rielt_house-icon"></div>
-                <div class="rielt__rielt_header">Дом №{viewData.id}</div>
-                <div class="rielt__gray">{viewData.owner ? "" : "Замечательный дом по доступной цене"}</div>
-                <div class="rielt__rielt_stat">
-                    {#if viewData.tax != undefined}
-                    <div class="rielt__rielt_element">
-                        <div class="rielt__gray">Налоги:</div>
-                        <div>${format("money", viewData.tax)}</div>
-                    </div>
-                    {/if}
-                    <div class="rielt__rielt_element">
-                        <div class="rielt__gray">Класс:</div>
-                        <div>{houseType[viewData.type]}</div>
-                    </div>
-                    {#if viewData.cars != undefined}
-                    <div class="rielt__rielt_element">
-                        <div class="rielt__gray">Гаражных мест:</div>
-                        <div>{viewData.cars}</div>
-                    </div>
-                    {/if}
-                    {#if viewData.owner != undefined}
-                    <div class="rielt__rielt_element">
-                        <div class="rielt__gray">Владелец:</div>
-                        <div>{viewData.owner.replace(/_/g, ' ')}</div>
-                    </div>
-                    {/if}
-                    {#if viewData.door != undefined}
-                    <div class="rielt__rielt_element">
-                        <div class="rielt__gray">Состояние дверей:</div>
-                        <div>{!viewData.door ? "Открыты" : "Закрыты"}</div>
-                    </div>
-                    {/if}
+  const onInt = () => {
+    executeClient("client.houseinfo.action", "int");
+  };
+
+  return (
+    <div id="rielt">
+      <div className="rielt__panel">
+        <div className="rielt__header">Информация о доме</div>
+        <div className="rielt__mainmenu">
+          <div className="rielt__mainmenu_block">
+            {/* Left side content if needed */}
+          </div>
+          <div className="rielt__mainmenu_center">
+            <div className="rielt__rielt_info">
+              <div className="houseicon-house rielt__rielt_house-icon"></div>
+              <div className="rielt__rielt_header">Дом №{viewData.id}</div>
+              <div className="rielt__gray">{viewData.owner ? "" : "Замечательный дом по доступной цене"}</div>
+              <div className="rielt__rielt_stat">
+                {viewData.tax !== undefined && (
+                  <div className="rielt__rielt_element">
+                    <div className="rielt__gray">Налоги:</div>
+                    <div>${format("money", viewData.tax)}</div>
+                  </div>
+                )}
+                <div className="rielt__rielt_element">
+                  <div className="rielt__gray">Класс:</div>
+                  <div>{houseType[viewData.type]}</div>
                 </div>
-                {#if viewData.price}
-                <div class="box-column">
-                    <div class="rielt__rielt_price">${format("money", viewData.price)}</div>
-                    <div class="rielt__gray">Гос. цена:</div>
+                {viewData.cars !== undefined && (
+                  <div className="rielt__rielt_element">
+                    <div className="rielt__gray">Гаражных мест:</div>
+                    <div>{viewData.cars}</div>
+                  </div>
+                )}
+                {viewData.owner !== undefined && (
+                  <div className="rielt__rielt_element">
+                    <div className="rielt__gray">Владелец:</div>
+                    <div>{viewData.owner.replace(/_/g, ' ')}</div>
+                  </div>
+                )}
+                {viewData.door !== undefined && (
+                  <div className="rielt__rielt_element">
+                    <div className="rielt__gray">Состояние дверей:</div>
+                    <div>{!viewData.door ? "Открыты" : "Закрыты"}</div>
+                  </div>
+                )}
+              </div>
+              {viewData.price && (
+                <div className="box-column">
+                  <div className="rielt__rielt_price">${format("money", viewData.price)}</div>
+                  <div className="rielt__gray">Гос. цена:</div>
                 </div>
-                {/if}
+              )}
             </div>
+          </div>
+          <div className="rielt__mainmenu_block">
+            {/* Right side content if needed */}
+          </div>
         </div>
-        <div class="rielt__mainmenu_block">
-         
-        </div>
-    </div>
-    <div class="box-between">
-        {#if viewData.owner == undefined}
-        <div class="house__bottom_left">
-            <div class="house_bottom_buttons" on:click={onInt}>
-                <div>Посмотреть интерьер</div>
-                <div class="house_bottom_button">E</div>
-            </div>
-        </div>
-        <div class="house_bottom_buttons back" on:click={onBuy}>
-            <div>Купить дом</div>
-            <div class="house_bottom_button">ENTER</div>
-        </div>
-        {/if}
-        <div class="house_bottom_buttons esc" on:click={onEsc}>
+        <div className="box-between">
+          {viewData.owner === undefined && (
+            <>
+              <div className="house__bottom_left">
+                <div className="house_bottom_buttons" onClick={onInt}>
+                  <div>Посмотреть интерьер</div>
+                  <div className="house_bottom_button">E</div>
+                </div>
+              </div>
+              <div className="house_bottom_buttons back" onClick={onBuy}>
+                <div>Купить дом</div>
+                <div className="house_bottom_button">ENTER</div>
+              </div>
+            </>
+          )}
+          <div className="house_bottom_buttons esc" onClick={onEsc}>
             <div>Выйти</div>
-            <div class="house_bottom_button">ESC</div>
+            <div className="house_bottom_button">ESC</div>
+          </div>
         </div>
+        <div className="houseicon-house rielt__background"></div>
+      </div>
     </div>
-    <div class="houseicon-house rielt__background"></div>
-    </div>
-</div>
+  );
+};
+
+export default HouseBuyMenu;

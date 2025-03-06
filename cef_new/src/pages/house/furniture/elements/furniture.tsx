@@ -1,170 +1,170 @@
-<script>
-    let furnitureData = [
-        {
-            name: "Сигнализация",
-            price: "500000"
-        },
-        {
-            name: "Столы",
-        },
-        {
-            name: "Стулья",
-        },
-        {
-            name: "Картины",
-        },
-    ]
-</script>
-{#if false}
-    <div class="box-column">
-        <div class="house__main_menu">
-            {#each furnitureData as furniture, index}
-                <div class="house__element">
-                    {#if furniture.price}
-                    <div class="box-between">
-                        <div>{furniture.name}</div>
-                        <div class="green">${furniture.price}</div>
-                    </div>
-                    {:else}
-                        <div class="box-center" style="width:100%">
-                            <div>{furniture.name}</div>
-                        </div>
-                    {/if}
-            
-                </div>
-            {/each}
-        </div>
-        <div class="house__info small m-0 margin-none">
-            Список доступных улучшений для дома
-        </div>
-    </div>
-{/if}
-{#if true}
-    <div class="house__furniture">
-        <div class="house__furniture_element">
-            <div class="box-between">
-                <div class="box-column">
-                    <div class="house__furniture_title">Лампа</div>
-                    <div class="house__furniture_text money">$20.000</div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                </div>
-                <div class="house__furniture_image"></div>
-            </div>
-            <div class="box-between">
-                <div class="house__element_button">
-                    <div class="houseicon-safe house__furniture_icon"></div>
-                    Купить за наличные
-                </div>
-                <div class="house__element_button">
-                    <div class="houseicon-garage house__furniture_icon"></div>
-                    Скрафтить самому
-                </div>
-            </div>
-        </div>
-        <div class="house__furniture_element">
-            <div class="box-between">
-                <div class="box-column">
-                    <div class="house__furniture_title">Лампа</div>
-                    <div class="house__furniture_text money">$20.000</div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                </div>
-                <div class="house__furniture_image"></div>
-            </div>
-            <div class="box-between">
-                <div class="house__element_button">
-                    <div class="houseicon-safe house__furniture_icon"></div>
-                    Купить за наличные
-                </div>
-                <div class="house__element_button">
-                    <div class="houseicon-garage house__furniture_icon"></div>
-                    Скрафтить самому
-                </div>
-            </div>
-        </div>
-        <div class="house__furniture_element">
-            <div class="box-between">
-                <div class="box-column">
-                    <div class="house__furniture_title">Лампа</div>
-                    <div class="house__furniture_text money">$20.000</div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                </div>
-                <div class="house__furniture_image"></div>
-            </div>
-            <div class="box-between">
-                <div class="house__element_button">
-                    <div class="houseicon-safe house__furniture_icon"></div>
-                    Купить за наличные
-                </div>
-                <div class="house__element_button">
-                    <div class="houseicon-garage house__furniture_icon"></div>
-                    Скрафтить самому
-                </div>
-            </div>
-        </div>
-        <div class="house__furniture_element">
-            <div class="box-between">
-                <div class="box-column">
-                    <div class="house__furniture_title">Лампа</div>
-                    <div class="house__furniture_text money">$20.000</div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                    <div class="box-flex">
-                        <div class="house__furniture_smallimage"></div>
-                        <div class="house__furniture_text">10 сосны</div>
-                    </div>
-                </div>
-                <div class="house__furniture_image"></div>
-            </div>
-            <div class="box-between">
-                <div class="house__element_button">
-                    <div class="houseicon-safe house__furniture_icon"></div>
-                    Купить за наличные
-                </div>
-                <div class="house__element_button">
-                    <div class="houseicon-garage house__furniture_icon"></div>
-                    Скрафтить самому
-                </div>
-            </div>
-        </div>
+import React, { useState } from 'react';
+import './furniture.css';
 
-    </div>
-{/if}
+interface FurnitureItem {
+  name: string;
+  price?: string;
+}
+
+interface FurnitureCraftItem {
+  name: string;
+  amount: number;
+  image: string;
+}
+
+interface FurnitureDetailItem {
+  title: string;
+  price: string;
+  craftItems: FurnitureCraftItem[];
+  image: string;
+}
+
+interface FurnitureComponentProps {
+  showFurnitureList?: boolean;
+}
+
+const FurnitureComponent: React.FC<FurnitureComponentProps> = ({ showFurnitureList = false }) => {
+  // Sample furniture data
+  const furnitureData: FurnitureItem[] = [
+    {
+      name: "Сигнализация",
+      price: "500000"
+    },
+    {
+      name: "Столы",
+    },
+    {
+      name: "Стулья",
+    },
+    {
+      name: "Картины",
+    },
+  ];
+
+  // Sample detailed furniture items
+  const furnitureDetails: FurnitureDetailItem[] = [
+    {
+      title: "Лампа",
+      price: "20.000",
+      craftItems: [
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" }
+      ],
+      image: "/path/to/lamp.png"
+    },
+    {
+      title: "Лампа",
+      price: "20.000",
+      craftItems: [
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" }
+      ],
+      image: "/path/to/lamp.png"
+    },
+    {
+      title: "Лампа",
+      price: "20.000",
+      craftItems: [
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" }
+      ],
+      image: "/path/to/lamp.png"
+    },
+    {
+      title: "Лампа",
+      price: "20.000",
+      craftItems: [
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" },
+        { name: "10 сосны", amount: 10, image: "/path/to/pine.png" }
+      ],
+      image: "/path/to/lamp.png"
+    }
+  ];
+  
+  // Handlers for buying and crafting
+  const handleBuy = (item: FurnitureDetailItem) => {
+    console.log('Buying item for cash:', item.title);
+    // Add your logic to buy for cash here
+  };
+  
+  const handleCraft = (item: FurnitureDetailItem) => {
+    console.log('Crafting item:', item.title);
+    // Add your logic to craft the item here
+  };
+
+  return (
+    <>
+      {showFurnitureList ? (
+        <div className="box-column">
+          <div className="house__main_menu">
+            {furnitureData.map((furniture, index) => (
+              <div key={index} className="house__element">
+                {furniture.price ? (
+                  <div className="box-between">
+                    <div>{furniture.name}</div>
+                    <div className="green">${furniture.price}</div>
+                  </div>
+                ) : (
+                  <div className="box-center" style={{ width: '100%' }}>
+                    <div>{furniture.name}</div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="house__info small m-0 margin-none">
+            Список доступных улучшений для дома
+          </div>
+        </div>
+      ) : (
+        <div className="house__furniture">
+          {furnitureDetails.map((item, index) => (
+            <div key={index} className="house__furniture_element">
+              <div className="box-between">
+                <div className="box-column">
+                  <div className="house__furniture_title">{item.title}</div>
+                  <div className="house__furniture_text money">${item.price}</div>
+                  {item.craftItems.map((craftItem, craftIndex) => (
+                    <div key={craftIndex} className="box-flex">
+                      <div 
+                        className="house__furniture_smallimage"
+                        style={{ backgroundImage: `url(${craftItem.image})` }}
+                      ></div>
+                      <div className="house__furniture_text">{craftItem.name}</div>
+                    </div>
+                  ))}
+                </div>
+                <div 
+                  className="house__furniture_image"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                ></div>
+              </div>
+              <div className="box-between">
+                <div 
+                  className="house__element_button"
+                  onClick={() => handleBuy(item)}
+                >
+                  <div className="houseicon-safe house__furniture_icon"></div>
+                  Купить за наличные
+                </div>
+                <div 
+                  className="house__element_button"
+                  onClick={() => handleCraft(item)}
+                >
+                  <div className="houseicon-garage house__furniture_icon"></div>
+                  Скрафтить самому
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
+  );
+};
+
+export default FurnitureComponent;
