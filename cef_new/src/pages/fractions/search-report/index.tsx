@@ -1,50 +1,70 @@
-<script>
-    import { translateText } from '#/shared/locale'
-    import './css/main.css'
-    import { executeClient } from 'api/rage'
-    export const viewData;
-    let
-        name = "",
-        weapons = [],
-        items = [];    
-	
-    $: {
-        if (viewData) {
-            if (name !== viewData.Name)
-                name = viewData.Name;
+import React, { useState, useEffect } from 'react';
+import { translateText } from '#/shared/locale';
+import { executeClient } from '#/shared/api/rage';
+import './css/main.css';
 
-            if (weapons !== viewData.Weapons)
-                weapons = viewData.Weapons;
+interface SearchReportProps {
+  viewData?: {
+    Name: string;
+    Weapons: string[];
+    Items: string[];
+  };
+}
 
-            if (items !== viewData.Items)
-                items = viewData.Items;
-        }
+const SearchReport: React.FC<SearchReportProps> = ({ viewData }) => {
+  const [name, setName] = useState<string>('');
+  const [weapons, setWeapons] = useState<string[]>([]);
+  const [items, setItems] = useState<string[]>([]);
+
+  // Update state when viewData changes
+  useEffect(() => {
+    if (viewData) {
+      if (name !== viewData.Name) {
+        setName(viewData.Name);
+      }
+      
+      if (weapons !== viewData.Weapons) {
+        setWeapons(viewData.Weapons);
+      }
+      
+      if (items !== viewData.Items) {
+        setItems(viewData.Items);
+      }
     }
+  }, [viewData]);
 
-    const onBtn = (id) => {
-        executeClient ('bsearch', id);
-    }
-</script>
+  const onBtn = (id: number) => {
+    executeClient('bsearch', id);
+  };
 
-<div class="bsearch">
-    <div on:click={() => onBtn(0)} class="icon-exit btn-close"></div>
-    <div class="list">
+  return (
+    <div className="bsearch">
+      <div onClick={() => onBtn(0)} className="icon-exit btn-close"></div>
+      <div className="list">
         <p>{translateText('fractions', 'Имя и фамилия')}: {name}</p>
         <p>{translateText('fractions', 'Оружие')}:</p>
         <ul>
-            {#each weapons as value, index}
-                <li>{value}</li>
-            {/each}
+          {weapons.map((value, index) => (
+            <li key={index}>{value}</li>
+          ))}
         </ul>
         <p>{translateText('fractions', 'Предметы инвентаря')}:</p>
         <ul>
-            {#each items as value, index}
-                <li>{value}</li>
-            {/each}
+          {items.map((value, index) => (
+            <li key={index}>{value}</li>
+          ))}
         </ul>
+      </div>
+      <div className="btns">
+        <div onClick={() => onBtn(1)} className="btn">
+          {translateText('fractions', 'Лицензии')}
+        </div>
+        <div onClick={() => onBtn(2)} className="btn">
+          {translateText('fractions', 'Паспорт')}
+        </div>
+      </div>
     </div>
-    <div class="btns">
-        <div on:click={() => onBtn(1)} class="btn">{translateText('fractions', 'Лицензии')}</div>
-        <div on:click={() => onBtn(2)} class="btn">{translateText('fractions', 'Паспорт')}</div>
-    </div>
-</div>
+  );
+};
+
+export default SearchReport;
