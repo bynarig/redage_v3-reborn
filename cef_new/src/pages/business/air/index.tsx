@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { translateText } from '#/shared/locale';
 import { useSelector } from 'react-redux';
-import { RootState } from '#/shared/store';
 import { format } from '#/shared/api/formatter';
 import { executeClient } from '#/shared/api/rage';
-import { motion, AnimatePresence } from 'framer-motion';
 import { selectCharMoney, selectCharVip, selectCharLVL } from '#/shared/store/chars';
 import { ENVIRONMENT } from '#/env';
 import { mockAirVehicles } from '#/shared/data/mock/shops/air';
 
+// Import shared UI components
+import Button from '#/shared/ui/Button';
+import Badge from '#/shared/ui/Badge';
+import Modal from '#/shared/ui/Modal';
+import Input from '#/shared/ui/Input';
+import VehicleGrid from '#/shared/ui/VehicleGrid';
+import EmptyState from '#/shared/ui/EmptyState';
+import PageContainer from '#/shared/ui/PageContainer';
 
 interface VehicleItem {
   Model: string;
@@ -21,143 +27,159 @@ interface AirPageProps {
   viewData?: string;
 }
 
-
-
 const AirPage: React.FC<AirPageProps> = ({ viewData = '[]' }) => {
-  const [hourValue, setHourValue] = useState<number>(0);
-  const [selectVehicle, setSelectVehicle] = useState<number>(-1);
+  const [selectedVehicle, setSelectedVehicle] = useState<VehicleItem | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   
   // Use mock data in development, real data in production
   const useDevMockData = ENVIRONMENT === 'development';
-  const vehicleArray: VehicleItem[] = useDevMockData ? mockAirVehicles : JSON.parse(viewData);
+  const allVehicles: VehicleItem[] = useDevMockData ? mockAirVehicles : JSON.parse(viewData);
+  
+  // Filter vehicles based on search query
+  const vehicles = allVehicles.filter(vehicle => 
+    vehicle.Model.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   
   const charMoney = useSelector(selectCharMoney);
   const charVip = useSelector(selectCharVip);
   const charLVL = useSelector(selectCharLVL);
 
-  const onAction = (number: string, func: string) => {
-    executeClient("client.vehicle.action", number, func);
-    onExit();
+  const handleAction = (number: string, action: string) => {
+    executeClient("client.vehicle.action", number, action);
+    handleExit();
   };
 
-  const onExit = () => {
+  const handleExit = () => {
     executeClient('client.vehicleair.exit');
   };
 
+  // Handle ESC key
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      const { keyCode } = event;
-      if (keyCode !== 27) return;
-
-      if (selectVehicle !== -1) setSelectVehicle(-1);
-      else onExit();
+    const handleKeyUp = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        if (selectedVehicle) {
+          setSelectedVehicle(null);
+        } else {
+          handleExit();
+        }
+      }
     };
 
-    window.addEventListener('keyup', handleKeyDown);
-    return () => window.removeEventListener('keyup', handleKeyDown);
-  }, [selectVehicle]);
+    window.addEventListener('keyup', handleKeyUp);
+    return () => window.removeEventListener('keyup', handleKeyUp);
+  }, [selectedVehicle]);
 
-  // The rest of your component remains the same...
   return (
-    <div className="w-full h-full bg-base-100 bg-opacity-80" id="air-page">
-      <div className={`p-4 ${selectVehicle !== -1 ? 'opacity-50 pointer-events-none' : ''}`}>
-        <div className="flex justify-between items-center mb-6">
-          <div>
-            <h2 className="text-2xl font-bold text-primary">
-              {translateText('vehicle', 'Покупка воздушного транспорта')}
-            </h2>
-            <p className="text-sm text-base-content">
-              {translateText('vehicle', 'Приехали за своим личным воздушным транспортным средством? Как ни странно - вы по адресу! Если Вы владеете личным вертолетом или самолетом - вы можете заспавнить его тут.')}
-            </p>
-          </div>
-          <button 
-            onClick={onExit}
-            className="btn btn-circle btn-ghost text-xl"
-          >
-            ×
-          </button>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {vehicleArray.map((item, index) => (
-            <div key={index} className="card bg-base-200 shadow-lg">
-              <div className="card-body">
-                <h3 className="card-title">{item.Model}</h3>
-                {item.IsSpawn && <div className="badge badge-primary">Вызван</div>}
-                <div 
-                  className="h-40 bg-center bg-no-repeat bg-contain my-2" 
-                  style={{backgroundImage: `url(${document.cloud}inventoryItems/vehicle/${item.Model.toLowerCase()}.png)`}}
+    <PageContainer
+      title={translateText('vehicle', 'Воздушный транспорт')}
+      onClose={handleExit}
+    >
+      <div className="mb-6">
+        <Input
+          placeholder={translateText('general', 'Поиск техники...')}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          startIcon={<i className="fas fa-search"></i>}
+          endIcon={
+            searchQuery ? (
+              <button 
+                className="btn btn-ghost btn-circle btn-sm" 
+                onClick={() => setSearchQuery('')}
+              >
+                <i className="fas fa-times"></i>
+              </button>
+            ) : undefined
+          }
+          fullWidth
+        />
+      </div>
+
+      {vehicles.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {vehicles.map((vehicle) => (
+            <div 
+              key={vehicle.Number}
+              className="card bg-base-100 shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => setSelectedVehicle(vehicle)}
+            >
+              <figure>
+                <img 
+                  src="https://www.piesandtacos.com/wp-content/uploads/2021/03/spring-macarons-500x500.jpg"
+                  alt={vehicle.Model}
+                  className="h-40 w-full object-cover"
                 />
-                <button 
-                  className="btn btn-primary w-full" 
-                  onClick={() => setSelectVehicle(index)}
-                >
-                  {translateText('vehicle', 'Действие')}
-                </button>
+              </figure>
+              <div className="card-body p-4">
+                <div className="flex justify-between items-center">
+                  <h3 className="card-title text-base">{vehicle.Model}</h3>
+                  {vehicle.IsSpawn && (
+                    <Badge color="success">
+                      {translateText('vehicle', 'Вызван')}
+                    </Badge>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      ) : (
+        <div className="text-center py-16">
+          <div className="text-5xl opacity-20 mb-4">
+            <i className="fas fa-search"></i>
+          </div>
+          <h3 className="text-xl font-bold mb-2">
+            {translateText('vehicle', 'Техника не найдена')}
+          </h3>
+          <p className="text-base-content opacity-60">
+            {translateText('vehicle', 'Попробуйте изменить параметры поиска')}
+          </p>
+        </div>
+      )}
 
-      {/* The modal part remains unchanged */}
-      <AnimatePresence>
-        {selectVehicle !== -1 && (
-          <motion.div 
-            className="fixed inset-0 flex items-center justify-center z-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="card w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">{translateText('vehicle', 'Действие')}</h2>
-                <p>{vehicleArray[selectVehicle].Model}</p>
-                
-                <div 
-                  className="h-40 bg-center bg-no-repeat bg-contain my-4" 
-                  style={{backgroundImage: `url(${document.cloud}inventoryItems/vehicle/${vehicleArray[selectVehicle].Model.toLowerCase()}.png)`}}
-                />
-                
-                {!vehicleArray[selectVehicle].IsSpawn ? (
-                  <button 
-                    className="btn btn-primary w-full mb-2"
-                    onClick={() => onAction(vehicleArray[selectVehicle].Number, "spawn")}
-                  >
-                    {translateText('vehicle', 'Вызвать')}
-                  </button>
-                ) : (
-                  <button 
-                    className="btn btn-primary w-full mb-2"
-                    onClick={() => onAction(vehicleArray[selectVehicle].Number, "tune")}
-                  >
-                    {translateText('vehicle', 'Тюнинговать')}
-                  </button>
-                )}
-                
-                <button 
-                  className="btn btn-secondary w-full mb-2"
-                  onClick={() => onAction(vehicleArray[selectVehicle].Number, "sell")}
+      <Modal
+        isOpen={!!selectedVehicle}
+        onClose={() => setSelectedVehicle(null)}
+        title={selectedVehicle?.Model}
+      >
+        {selectedVehicle && (
+          <div className="flex flex-col gap-4">
+            <img 
+              src="https://www.piesandtacos.com/wp-content/uploads/2021/03/spring-macarons-500x500.jpg"
+              alt={selectedVehicle.Model}
+              className="w-full rounded-lg"
+            />
+            
+            <div className="grid grid-cols-1 gap-2">
+              {!selectedVehicle.IsSpawn ? (
+                <Button
+                  color="primary"
+                  fullWidth
+                  onClick={() => handleAction(selectedVehicle.Number, "spawn")}
                 >
-                  <div className="flex flex-col items-center">
-                    <span>{translateText('vehicle', 'Продать')}</span>
-                    <span className="text-xs">${format("money", vehicleArray[selectVehicle].Price)}</span>
-                  </div>
-                </button>
-                
-                <button 
-                  className="btn btn-ghost w-full"
-                  onClick={() => setSelectVehicle(-1)}
+                  {translateText('vehicle', 'Вызвать')}
+                </Button>
+              ) : (
+                <Button
+                  color="primary"
+                  fullWidth
+                  onClick={() => handleAction(selectedVehicle.Number, "tune")}
                 >
-                  Закрыть
-                </button>
-              </div>
+                  {translateText('vehicle', 'Тюнинговать')}
+                </Button>
+              )}
+              
+              <Button
+                color="secondary"
+                fullWidth
+                onClick={() => handleAction(selectedVehicle.Number, "sell")}
+              >
+                {translateText('vehicle', 'Продать')} - ${format("money", selectedVehicle.Price)}
+              </Button>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+      </Modal>
+    </PageContainer>
   );
 };
 

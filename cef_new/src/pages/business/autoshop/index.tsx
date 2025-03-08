@@ -2,11 +2,12 @@ import React, {useEffect, useState} from "react";
 import {executeClient} from "#api/rage";
 import {useTranslateText} from "#shared/locale";
 import {format} from "#api/formatter";
-import carInfo from "./carInfo.js";
+import carInfo from "#/shared/data/carInfo.js";
 import {IconArmchair, IconArrowBigRightLines, IconBrandCashapp, IconBrandSpeedtest, IconPackage, IconSteeringWheel} from "@tabler/icons-react";
-import {generateMockCars} from "src/shared/data/mock/shops/cars";
+import {generateMockCars} from "#/shared/data/mock/shops/cars";
 import Button from "#shared/ui/Button";
 import ColorPicker from "#shared/ui/ColorPicker";
+import { ENVIRONMENT } from "#/env.js";
 
 const AutoShop: React.FC = () => {
     const [selectedColor, setSelectedColor] = useState<string>("#000000");
@@ -23,7 +24,7 @@ const AutoShop: React.FC = () => {
     const [isDonateAutoroom, setIsDonateAutoroom] = useState<boolean>(false);
 
     useEffect(() => {
-        if (process.env.NODE_ENV === "development") {
+        if (ENVIRONMENT === "development") {
             const mockCars = generateMockCars();
             setList(mockCars);
         } else {
@@ -195,23 +196,23 @@ const AutoShop: React.FC = () => {
                 )}
             </div>
             <div className="relative" onMouseEnter={() => executeClient("client.camera.toggled", false)} onMouseLeave={() => executeClient("client.camera.toggled", true)}>
-                {select !== -1 && list[select] && (
-                    <>
-                        <Button
-                            name={`${translateText("business.business.Купить за")} ${isDonateAutoroom ? `${format("money", list[select].price)}RB` : `$${format("money", list[select].price)}`}`}
-                            onClick={() => executeClient("buyAuto", 1)}
-                        />
-                        <Button
-                            name={`${translateText("business.Купить для семьи за")} ${isDonateAutoroom ? `${format("money", list[select].price)}RB` : `$${format("money", list[select].gosPrice)}`}`}
-                            onClick={() => executeClient("buyAuto", 2)}
-                        />
-                    </>
-                )}
-                <Button
-                    name={`${translateText("business.Выйти")}`}
-                    onClick={() => executeClient("closeAuto")}
-                />
-            </div>
+    {select !== -1 && list[select] && (
+        <>
+            <Button
+                name={`${translateText("business.Купить за")} ${isDonateAutoroom ? `${format("money", list[select].price)}RB` : `$${format("money", list[select].price)}`}`}
+                onClick={() => executeClient("buyAuto", 1)}
+            />
+            <Button
+                name={`${translateText("business.Купить для семьи за")} ${isDonateAutoroom ? `${format("money", list[select].price)}RB` : `$${format("money", list[select].gosPrice)}`}`}
+                onClick={() => executeClient("buyAuto", 2)}
+            />
+        </>
+    )}
+    <Button
+        name={`${translateText("business.Выйти")}`}
+        onClick={() => executeClient("closeAuto")}
+    />
+</div>
         </div>
     );
 };

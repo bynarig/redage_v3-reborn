@@ -6,7 +6,7 @@ import FilterBlur from './components/filterblur/index.tsx';
 //Игрока'
 import PlayerBattlePass from '#/pages/player/battlepass/index.tsx';
 import PlayerRentCar from '#/pages/business/rentcar/index.tsx';
-import PlayerAuthentication from '#/pages/player/newauthentication/index.tsx';
+import PlayerAuthentication from '#/pages/player/authentication/index.tsx';
 import PlayerCustomization from '#/pages/player/customization/index.tsx';
 import PlayerAtm from '#/pages/player/atm/index.tsx';
 import PlayerBinder from '#/pages/player/binder/index.tsx';

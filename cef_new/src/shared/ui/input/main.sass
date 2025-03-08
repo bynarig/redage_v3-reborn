@@ -1,36 +1,115 @@
 @import @/views/assets/css/main.sass
 
-.main__input
-    width: 350px
-    height: 70px
+.popup__newhud_boxinput
+    position: absolute
+    top: 0
+    left: 0
     width: 100%
-    margin-bottom: 15px
-    border-radius: 5px
-    padding: 23px
-    @include fluid("border", 2, "solid rgba(253,255,252,0.5)")
+    height: 100%
+    z-index: 1
     display: flex
+    flex-direction: column
     align-items: center
+    justify-content: center
+    background: radial-gradient(50% 50% at 50% 50%, rgba(1, 22, 39, 0.27) 0%, rgba(1, 22, 39, 0.74) 100%)
+    z-index: 100    
+    font-size: 16px
+    line-height: 19px
+    font-family: 'TTNorms-Regular'
+    font-weight: 500
     box-sizing: border-box
-    border-radius: 6px
-    box-sizing: border-box
-    &.main__input_error
-        @include fluid("border", 2, "solid #BE2020")
-    .main__input_icon
-        margin-right: 23px
-        font-size: 18px
-    .main__input_text
-        background-color: rgba(32,32,32,0.0)
-        font-family: inherit
-        font-size: 18px
-        color: white
-        caret-color: #808080
+    color: white
+    .popup__newhud_box
+        display: flex
+        flex-direction: column
+        background: rgba(30, 38, 47, 0.8)
+        border-radius: 8px
+        padding: 24px
+        max-width: 528px
+    .popup__newhud_esc
+        position: absolute
+        left: 50px
+        top: 42px
+        display: flex
+        align-items: center
+        font-family: 'Montserrat-Medium'
+        font-size: 20px
+        line-height: 100%
+        .popup__newhud_escbutton
+            width: 56px
+            height: 28px
+            background: #FFFFFF
+            border-radius: 3px
+            color: #1E262F
+            font-weight: 600
+            margin-right: 16px
+
+    .popup__newhud_title
+        font-size: 24px
+        line-height: 28px
+        font-family: 'TTNorms-Medium'
+        font-weight: 500
+        line-height: 28px
+        display: flex
+        align-items: center
+        .popup__newhud_icon
+            margin-right: 10px
+            color:#869199
+    .popup__newhud_line
         width: 100%
-    .main__input_text::-webkit-input-placeholder 
-        color:#CCCCCC
-    &:hover, &:focus, &.hover
-        background: rgba(253,255,252,0.1)
-        box-sizing: border-box
-        @include fluid("border", 2, "solid rgb(27, 43, 56)" ) 
-    &.settings
-        width: 240px
-        height: 62px
+        height: 1px
+        background: rgba(253,255,252,0.2)
+        width: 450px
+        margin-top: 15px
+        margin-bottom: 12px
+    .popup__newhud_text
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 1px
+        width: 450px
+        text-align: center
+        font-weight: 500
+    .popup__newhud_subtitle
+        margin-top: 24px
+        color: #869199
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+    .popup__newhud_input
+        width: 100%
+        min-height: 52px
+        background: transparent
+        margin-top: 12px
+        padding-left: 28px
+        padding-right: 18px
+        background: rgba(255,255,255,0.12)
+        border-radius: 6px
+        color: #A6B1BA
+        font-family: 'TTNorms-Regular'
+        letter-spacing: 1px
+        font-size: 18px
+        text-align: left
+        &::placeholder
+            color: rgba(255, 255, 255, 0.5)
+
+    .popup__newhud_textarea
+        padding-top: 8px
+        height: 134px
+        width: 100%
+        min-height: 52px
+        background: transparent
+        margin-top: 12px
+        padding-left: 28px
+        padding-right: 18px
+        background: rgba(255,255,255,0.12)
+        border-radius: 6px
+        color: #A6B1BA
+        font-family: 'TTNorms-Regular'
+        letter-spacing: 1px
+        font-size: 18px
+        text-align: left
+        resize: none
+        outline: none
+        border: none
+        &::placeholder
+            color: rgba(255, 255, 255, 0.5)

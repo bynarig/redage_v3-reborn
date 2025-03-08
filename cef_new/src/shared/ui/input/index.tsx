@@ -1,75 +1,43 @@
 <script>
-    import './main.sass';
-    export const placeholder;
-    export const type;
-    export const icon;
-    export const setValue;
-    export const value;
-    export const isFocus = false;
-    export const updateLang;
-    export const settingsClass;
-    export const settingsMargin;
-    import { isInput } from '@/views/player/newauthentication/store.js';
+    import { translateText } from '#/shared/locale'
+    import { executeClient } from '#/shared/api/rage'
+    import './main.sass'
+    import { fly } from 'svelte/transition';
 
-    let TextInput;
+    export const popupData;
 
-    $: {
-        if (isFocus) {
-            TextInput.focus();
-        }
+    let title = popupData.title,
+        plholder = popupData.plholder,
+        input = "",
+        len = popupData.length;
+        
+    const onSend = () => {
+        executeClient ('input', input);
+        input = "";
     }
 
-    const OnClick = () => {
-        TextInput.focus();
+    const HandleKeyDown = (event) => {
+        const { keyCode } = event;
+        if (keyCode == 13) onSend ()
     }
-
-    let focusInput = false;
-
-    const onFuncFocus = () => {
-        focusInput = true;
-        isInput.set(true);
-    }
-
-    const onFuncBlur = () => {
-        focusInput = false;
-        isInput.set(false);
-    }
-
-    const enLower = 'abcdefghijklmnopqrstuvwxyz'
-    const rusLower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-
-    $: if (updateLang && focusInput && value && value.length) {
-        if (enLower.indexOf (value [value.length - 1].toLowerCase()) !== -1) 
-            updateLang ("en")
-        else if (rusLower.indexOf (value [value.length - 1].toLowerCase()) !== -1) 
-            updateLang ("ru")
-    }
-
 </script>
 
-<div class="main__input" on:click={OnClick} class:hover={focusInput} class:settings={settingsClass} class:m-0={settingsMargin}>
-    {#if icon}
-        <span class="main__input_icon {icon}" />
-    {/if}
-    {#if type === "password"}
-    <input
-        type="password"
-        bind:value={value}
-        bind:this={TextInput}
-        on:input={(event) => {if (setValue) setValue (event.target.value)}}
-        placeholder={placeholder}
-        class="main__input_text" 
-        on:focus={ onFuncFocus }
-        on:blur={ onFuncBlur } />
-    {:else}
-    <input
-        type="text"
-        bind:value={value}
-        bind:this={TextInput}
-        on:input={(event) => {if (setValue) setValue (event.target.value)}}
-        placeholder={placeholder}
-        class="main__input_text" 
-        on:focus={ onFuncFocus }
-        on:blur={ onFuncBlur } />
-    {/if}
+<svelte:window on:keyup={HandleKeyDown} />
+<div class="popup__newhud_boxinput">
+    <!--<div class="popup__newhud_esc">
+        <div class="popup__newhud_escbutton box-center">ESC</div>
+        <div>Закрыть</div>
+    </div>-->
+    <div class="popup__newhud_box">
+        <div class="popup__newhud_title">
+            <span class="hud__icon-info popup__newhud_icon"/> {title}
+        </div>
+        <!--<div class="popup__newhud_subtitle">
+            {title}
+        </div>-->
+        <input class="popup__newhud_input" placeholder={plholder} maxLength={len} bind:value={input} />
+        <div class="popup__newhud__buttons">
+            <div class="popup__newhud_button" in:fly={{ y: 50, duration: 350 }} on:click={onSend}>{translateText('popups', 'Подтвердить')}</div>
+        </div>
+    </div>
 </div>
